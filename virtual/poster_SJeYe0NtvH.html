@@ -1,16 +1,44 @@
 <!doctype html>
 <html lang="en">
+  
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
     <title> ICLR: Neural Text Generation With Unlikelihood Training </title>
 </head>
 
+
   <body >
-    
+
 <!-- NAV -->
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -18,87 +46,174 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 
 <style>
-    body{font-family: 'Lato', sans-serif;}
+  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
+  .btn-group{background-color: white}
+  .btn {background-color: white}
+  #main-nav {padding-top:10px; padding-bottom:10px;}
+  .card {font-family: 'Cuprum'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
+  .header {font: "Montserrat"; }
+
+
+
+  #abstractExample.collapse:not(.show) {
+  display: block;
+  /* height = lineheight * no of lines to display */
+  height: 4.5em;
+  overflow: hidden;
+  }
+
+  #abstractExample.collapsing {
+  height: 4.5em;
+  }
+
+
+#absShow.collapsed:after {
+  content: '+ Show More';
+}
+
+#absShow:not(.collapsed):after {
+  content: '- Show Less';
+}
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
-  <a class="navbar-brand" href="#">
-    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="livestream.html">Live Stream</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="papers.html">Papers</a>
-      </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="paper_vis.html">PaperVis</a>
-      </li>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
 
-
-
-
-
-
-
-
-
-
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="livestream.html">Live</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="paper_vis.html">PapersVis</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="sponsors.html">Sponsors</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        
       </ul>
-</div>
+    </div>
   </div>
 </nav>
 
 
 <div class="container">
-  
+
  <!-- Title -->
 
-<div class="card" >
+<div class="card m-3" style="">
   <div class="card-body">
-    <h3 class="card-title">Neural Text Generation With Unlikelihood Training</h3>
-    <h6 class="card-subtitle mb-2 text-muted">
+    <h3 class="card-title" style="font-family: 'Cuprum'; font-weight: 700; font-size2.4em; color: #2294e0">Neural Text Generation With Unlikelihood Training</h3>
+
+    <h5 class="card-subtitle mb-2 text-muted">    <span class="font-weight-bold">Authors:</span> 
       Sean Welleck,
+
       
       Ilia Kulikov,
+
       
       Stephen Roller,
+
       
       Emily Dinan,
+
       
       Kyunghyun Cho,
+
       
-      Jason Weston,
+      Jason Weston
+
       
-    </h6>
-    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> Neural text generation is a key tool in natural language applications, but it is well known there are major problems at its core. In particular, standard likelihood training and decoding leads to dull and repetitive outputs. While some post-hoc fixes...</p>
-    <p class="card-text"><span class="font-weight-bold">Abstract:</span> Neural text generation is a key tool in natural language applications, but it is well known there are major problems at its core. In particular, standard likelihood training and decoding leads to dull and repetitive outputs. While some post-hoc fixes have been proposed, in particular top-k and nucleus sampling, they do not address the fact that the token-level probabilities predicted by the model are poor. In this paper we show that the likelihood objective itself is at fault, resulting in a model that assigns too much probability to sequences containing repeats and frequent words, unlike those from the human training distribution. We propose a new objective, unlikelihood training, which forces unlikely generations to be assigned lower probability by the model. We show that both token and sequence level unlikelihood training give less repetitive, less dull text while maintaining perplexity, giving superior generations using standard greedy or beam search. According to human evaluations, our approach with standard beam search also outperforms the currently popular decoding methods of nucleus sampling or beam blocking, thus providing a strong alternative to existing techniques.</p>
-    
-    <center>
-      <a class="card-link"  href="http://www.openreview.net/pdf/b1605077dc551ef983c69ef382a249fb5048060d.pdf">Paper</a>
-      <a class="card-link"  href="http://www.openreview.net/forum?id=SJeYe0NtvH">OpenReview</a>
+    </h5>
+
+    <center class="p-3">
+      <a class="card-link" data-toggle="collapse" role="button" href="#details">
+        <button class="btn btn-outline-secondary">
+          Abstract
+        </button>
+      </a>
+
+
+      <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/b1605077dc551ef983c69ef382a249fb5048060d.pdf">
+        <button class="btn btn-outline-secondary">
+          Paper
+        </button>
+      </a>
+      <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=SJeYe0NtvH">
+        <button class="btn btn-outline-secondary">
+          OpenReview
+        </button>
+      </a>
     <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
 
-      <a href="https://drive.google.com/open?id=1rTksP8hubiXcYzJ8RBl83R8Ent5EtLOj" class="card-link">Code</a>
-      <a href="" class="card-link">Slides</a>
+    <a href="https://drive.google.com/open?id=1rTksP8hubiXcYzJ8RBl83R8Ent5EtLOj" target="_blank"  class="card-link">
+      <button class="btn btn-outline-secondary">
+        Code
+      </button>
+    </a>
+
+    <a href="" target="_blank"  class="card-link">
+      <button class="btn btn-outline-secondary">
+        Slides
+      </button>
+    </a>
     </center>
+
+  </div>
+</div>
+
+<div id="details" class="card m-3 collapse" style="font-family: 'Cuprum'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+  <div class="card-body">
+    <p class="card-text">
+      <div id="abstractExample">
+        <span class="font-weight-bold">Abstract:</span>
+        Neural text generation is a key tool in natural language applications, but it is well known there are major problems at its core. In particular, standard likelihood training and decoding leads to dull and repetitive outputs. While some post-hoc fixes have been proposed, in particular top-k and nucleus sampling, they do not address the fact that the token-level probabilities predicted by the model are poor. In this paper we show that the likelihood objective itself is at fault, resulting in a model that assigns too much probability to sequences containing repeats and frequent words, unlike those from the human training distribution. We propose a new objective, unlikelihood training, which forces unlikely generations to be assigned lower probability by the model. We show that both token and sequence level unlikelihood training give less repetitive, less dull text while maintaining perplexity, giving superior generations using standard greedy or beam search. According to human evaluations, our approach with standard beam search also outperforms the currently popular decoding methods of nucleus sampling or beam blocking, thus providing a strong alternative to existing techniques.
+      </div>
+
+    </p>
+
     <p></p>
     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
       
       <a href="keyword_language modeling.html" class="text-secondary text-decoration-none">language modeling</a>,
       
-      <a href="keyword_machine learning.html" class="text-secondary text-decoration-none">machine learning</a>,
+      <a href="keyword_machine learning.html" class="text-secondary text-decoration-none">machine learning</a>
       
-    </p>    
+    </p>
   </div>
 </div>
 
@@ -117,39 +232,51 @@
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
-  zoomRatio: 0.4,
-  hideTitle: true
+        zoomRatio: 0.4,
+        hideTitle: true
     });
 </script>
 
 
 <!-- Buttons -->
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
-<!--   <center> -->
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
-
-<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
-
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
-<!-- </div> -->
-<!--   <center> -->
-<center>
-    <h2> Paper Discussion       </h2>
-    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterSJeYe0NtvH/">Chat</a></span>
-</center>
-<p></p>
-<!-- Gitter -->
-<div id="gitter" class="gitter container" height="600px">
+<div class="container" style="padding-bottom: 30px; padding-top:30px">
   <center>
-    <div class="border">
-      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterSJeYe0NtvH/~embed" width="900px" height="400px"></iframe> </center>
-    </div>
+    <h2> Paper Discussion       </h2>
+    <!-- <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterSJeYe0NtvH/">Chat</a></span> -->
   </center>
+  <p></p>
+
+  <!-- Gitter -->
+  <div id='discourse-comments'></div>
+
+
+<script type="text/javascript">
+  DiscourseEmbed = { discourseUrl: 'https://iclr.trydiscourse.com/',
+                     discourseEmbedUrl: 'http://iclr.cc/virtual/SJeYe0NtvH'};
+
+  (function() {
+    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  })();
+</script>
+
+
+  <!-- <div id="gitter" class="gitter container" height="600px"> -->
+  <!--   <center> -->
+  <!--     <div class="border"> -->
+  <!--       <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterSJeYe0NtvH/~embed" width="900px" height="400px"></iframe> </center> -->
+  <!--     </div> -->
+  <!--   </center> -->
+  <!-- </div> -->
 </div>
 
-<!-- Recs -->
-<p></p>
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
   <center>
     <h2> Similar Papers </h2>
 </div>
@@ -160,17 +287,17 @@
     <div class="card-deck">
 
       
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_rygGQyrFvH.html" class="text-dark"><h5 class="card-title">The Curious Case of Neural Text Degeneration</h5></a>      
+        <a href="poster_rygGQyrFvH.html" class="text-dark"><h5 class="card-title">The Curious Case of Neural Text Degeneration</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> Current language generation systems either aim for high likelihood and devolve into generic repetition or miscalibrate their stochasticity—we provide evidence of both and propose a solution: Nucleus Sampling.</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_rygGQyrFvH.html" class="btn btn-primary">Visit</a>
@@ -181,17 +308,17 @@
 
   </div>
   
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_B1l4SgHKDH.html" class="text-dark"><h5 class="card-title">Residual Energy-Based Models for Text Generation</h5></a>      
+        <a href="poster_B1l4SgHKDH.html" class="text-dark"><h5 class="card-title">Residual Energy-Based Models for Text Generation</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> We show that Energy-Based models when trained on the residual of an auto-regressive language model can be used effectively and efficiently to generate text. </p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_B1l4SgHKDH.html" class="btn btn-primary">Visit</a>
@@ -202,17 +329,17 @@
 
   </div>
   
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_S1efxTVYDr.html" class="text-dark"><h5 class="card-title">Data-dependent Gaussian Prior Objective for Language Generation</h5></a>      
+        <a href="poster_S1efxTVYDr.html" class="text-dark"><h5 class="card-title">Data-dependent Gaussian Prior Objective for Language Generation</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> We introduce an extra data-dependent Gaussian prior objective to augment the current MLE training, which is designed to capture the prior knowledge in the ground-truth data.</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_S1efxTVYDr.html" class="btn btn-primary">Visit</a>
@@ -223,17 +350,17 @@
 
   </div>
   
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_Hye1RJHKwB.html" class="text-dark"><h5 class="card-title">Training Generative Adversarial Networks from Incomplete Observations using Factorised Discriminators</h5></a>      
+        <a href="poster_Hye1RJHKwB.html" class="text-dark"><h5 class="card-title">Training Generative Adversarial Networks from Incomplete Observations using Factorised Discriminators</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> We decompose the discriminator in a GAN in a principled way so that each component can be independently trained on different parts of the input. The resulting &#34;FactorGAN&#34; can be used for semi-supervised learning and in missing data scenarios.</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_Hye1RJHKwB.html" class="btn btn-primary">Visit</a>

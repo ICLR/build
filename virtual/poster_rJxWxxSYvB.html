@@ -1,16 +1,44 @@
 <!doctype html>
 <html lang="en">
+  
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
     <title> ICLR: Spike-based causal inference for weight alignment </title>
 </head>
 
+
   <body >
-    
+
 <!-- NAV -->
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -18,73 +46,157 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 
 <style>
-    body{font-family: 'Lato', sans-serif;}
+  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
+  .btn-group{background-color: white}
+  .btn {background-color: white}
+  #main-nav {padding-top:10px; padding-bottom:10px;}
+  .card {font-family: 'Cuprum'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
+  .header {font: "Montserrat"; }
+
+
+
+  #abstractExample.collapse:not(.show) {
+  display: block;
+  /* height = lineheight * no of lines to display */
+  height: 4.5em;
+  overflow: hidden;
+  }
+
+  #abstractExample.collapsing {
+  height: 4.5em;
+  }
+
+
+#absShow.collapsed:after {
+  content: '+ Show More';
+}
+
+#absShow:not(.collapsed):after {
+  content: '- Show Less';
+}
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
-  <a class="navbar-brand" href="#">
-    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="livestream.html">Live Stream</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="papers.html">Papers</a>
-      </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="paper_vis.html">PaperVis</a>
-      </li>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
 
-
-
-
-
-
-
-
-
-
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="livestream.html">Live</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="paper_vis.html">PapersVis</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="sponsors.html">Sponsors</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        
       </ul>
-</div>
+    </div>
   </div>
 </nav>
 
 
 <div class="container">
-  
+
  <!-- Title -->
 
-<div class="card" >
+<div class="card m-3" style="">
   <div class="card-body">
-    <h3 class="card-title">Spike-based causal inference for weight alignment</h3>
-    <h6 class="card-subtitle mb-2 text-muted">
+    <h3 class="card-title" style="font-family: 'Cuprum'; font-weight: 700; font-size2.4em; color: #2294e0">Spike-based causal inference for weight alignment</h3>
+
+    <h5 class="card-subtitle mb-2 text-muted">    <span class="font-weight-bold">Authors:</span> 
       Jordan Guerguiev,
+
       
       Konrad Kording,
+
       
-      Blake Richards,
+      Blake Richards
+
       
-    </h6>
-    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> We present a learning rule for feedback weights in a spiking neural network that addresses the weight transport problem.</p>
-    <p class="card-text"><span class="font-weight-bold">Abstract:</span> In artificial neural networks trained with gradient descent, the weights used for processing stimuli are also used during backward passes to calculate gradients. For the real brain to approximate gradients, gradient information would have to be propagated separately, such that one set of synaptic weights is used for processing and another set is used for backward passes. This produces the so-called &#34;weight transport problem&#34; for biological models of learning, where the backward weights used to calculate gradients need to mirror the forward weights used to process stimuli. This weight transport problem has been considered so hard that popular proposals for biological learning assume that the backward weights are simply random, as in the feedback alignment algorithm. However, such random weights do not appear to work well for large networks. Here we show how the discontinuity introduced in a spiking system can lead to a solution to this problem. The resulting algorithm is a special case of an estimator used for causal inference in econometrics, regression discontinuity design. We show empirically that this algorithm rapidly makes the backward weights approximate the forward weights. As the backward weights become correct, this improves learning performance over feedback alignment on tasks such as Fashion-MNIST and CIFAR-10. Our results demonstrate that a simple learning rule in a spiking network can allow neurons to produce the right backward connections and thus solve the weight transport problem.</p>
-    
-    <center>
-      <a class="card-link"  href="http://www.openreview.net/pdf/857516daf7cda3fae833c10b2e12ed6cf6094d49.pdf">Paper</a>
-      <a class="card-link"  href="http://www.openreview.net/forum?id=rJxWxxSYvB">OpenReview</a>
+    </h5>
+
+    <center class="p-3">
+      <a class="card-link" data-toggle="collapse" role="button" href="#details">
+        <button class="btn btn-outline-secondary">
+          Abstract
+        </button>
+      </a>
+
+
+      <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/857516daf7cda3fae833c10b2e12ed6cf6094d49.pdf">
+        <button class="btn btn-outline-secondary">
+          Paper
+        </button>
+      </a>
+      <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=rJxWxxSYvB">
+        <button class="btn btn-outline-secondary">
+          OpenReview
+        </button>
+      </a>
     <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
 
-      <a href="https://anonfile.com/51V8Ge66n3/Code_zip" class="card-link">Code</a>
-      <a href="" class="card-link">Slides</a>
+    <a href="https://anonfile.com/51V8Ge66n3/Code_zip" target="_blank"  class="card-link">
+      <button class="btn btn-outline-secondary">
+        Code
+      </button>
+    </a>
+
+    <a href="" target="_blank"  class="card-link">
+      <button class="btn btn-outline-secondary">
+        Slides
+      </button>
+    </a>
     </center>
+
+  </div>
+</div>
+
+<div id="details" class="card m-3 collapse" style="font-family: 'Cuprum'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+  <div class="card-body">
+    <p class="card-text">
+      <div id="abstractExample">
+        <span class="font-weight-bold">Abstract:</span>
+        In artificial neural networks trained with gradient descent, the weights used for processing stimuli are also used during backward passes to calculate gradients. For the real brain to approximate gradients, gradient information would have to be propagated separately, such that one set of synaptic weights is used for processing and another set is used for backward passes. This produces the so-called &#34;weight transport problem&#34; for biological models of learning, where the backward weights used to calculate gradients need to mirror the forward weights used to process stimuli. This weight transport problem has been considered so hard that popular proposals for biological learning assume that the backward weights are simply random, as in the feedback alignment algorithm. However, such random weights do not appear to work well for large networks. Here we show how the discontinuity introduced in a spiking system can lead to a solution to this problem. The resulting algorithm is a special case of an estimator used for causal inference in econometrics, regression discontinuity design. We show empirically that this algorithm rapidly makes the backward weights approximate the forward weights. As the backward weights become correct, this improves learning performance over feedback alignment on tasks such as Fashion-MNIST and CIFAR-10. Our results demonstrate that a simple learning rule in a spiking network can allow neurons to produce the right backward connections and thus solve the weight transport problem.
+      </div>
+
+    </p>
+
     <p></p>
     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
       
@@ -108,9 +220,9 @@
       
       <a href="keyword_biologically.html" class="text-secondary text-decoration-none">biologically</a>,
       
-      <a href="keyword_plausible.html" class="text-secondary text-decoration-none">plausible</a>,
+      <a href="keyword_plausible.html" class="text-secondary text-decoration-none">plausible</a>
       
-    </p>    
+    </p>
   </div>
 </div>
 
@@ -129,39 +241,51 @@
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
-  zoomRatio: 0.4,
-  hideTitle: true
+        zoomRatio: 0.4,
+        hideTitle: true
     });
 </script>
 
 
 <!-- Buttons -->
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
-<!--   <center> -->
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
-
-<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
-
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
-<!-- </div> -->
-<!--   <center> -->
-<center>
-    <h2> Paper Discussion       </h2>
-    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterrJxWxxSYvB/">Chat</a></span>
-</center>
-<p></p>
-<!-- Gitter -->
-<div id="gitter" class="gitter container" height="600px">
+<div class="container" style="padding-bottom: 30px; padding-top:30px">
   <center>
-    <div class="border">
-      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterrJxWxxSYvB/~embed" width="900px" height="400px"></iframe> </center>
-    </div>
+    <h2> Paper Discussion       </h2>
+    <!-- <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterrJxWxxSYvB/">Chat</a></span> -->
   </center>
+  <p></p>
+
+  <!-- Gitter -->
+  <div id='discourse-comments'></div>
+
+
+<script type="text/javascript">
+  DiscourseEmbed = { discourseUrl: 'https://iclr.trydiscourse.com/',
+                     discourseEmbedUrl: 'http://iclr.cc/virtual/rJxWxxSYvB'};
+
+  (function() {
+    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  })();
+</script>
+
+
+  <!-- <div id="gitter" class="gitter container" height="600px"> -->
+  <!--   <center> -->
+  <!--     <div class="border"> -->
+  <!--       <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterrJxWxxSYvB/~embed" width="900px" height="400px"></iframe> </center> -->
+  <!--     </div> -->
+  <!--   </center> -->
+  <!-- </div> -->
 </div>
 
-<!-- Recs -->
-<p></p>
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
   <center>
     <h2> Similar Papers </h2>
 </div>
@@ -172,17 +296,17 @@
     <div class="card-deck">
 
       
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_ByeUBANtvB.html" class="text-dark"><h5 class="card-title">Learning to solve the credit assignment problem</h5></a>      
+        <a href="poster_ByeUBANtvB.html" class="text-dark"><h5 class="card-title">Learning to solve the credit assignment problem</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> Perturbations can be used to train feedback weights to learn in fully connected and convolutional neural networks</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_ByeUBANtvB.html" class="btn btn-primary">Visit</a>
@@ -193,17 +317,17 @@
 
   </div>
   
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_HklQYxBKwS.html" class="text-dark"><h5 class="card-title">Neural tangent kernels, transportation mappings, and universal approximation</h5></a>      
+        <a href="poster_HklQYxBKwS.html" class="text-dark"><h5 class="card-title">Neural tangent kernels, transportation mappings, and universal approximation</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> The NTK linearization is a universal approximator, even when looking arbitrarily close to initialization</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_HklQYxBKwS.html" class="btn btn-primary">Visit</a>
@@ -214,17 +338,17 @@
 
   </div>
   
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_rkg1ngrFPr.html" class="text-dark"><h5 class="card-title">Information Geometry of Orthogonal Initializations and Training</h5></a>      
+        <a href="poster_rkg1ngrFPr.html" class="text-dark"><h5 class="card-title">Information Geometry of Orthogonal Initializations and Training</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> nearly isometric DNN initializations imply low parameter space curvature, and a lower condition number, but that&#39;s not always great</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_rkg1ngrFPr.html" class="btn btn-primary">Visit</a>
@@ -235,17 +359,17 @@
 
   </div>
   
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_r1e_FpNFDr.html" class="text-dark"><h5 class="card-title">Generalization bounds for deep convolutional neural networks</h5></a>      
+        <a href="poster_r1e_FpNFDr.html" class="text-dark"><h5 class="card-title">Generalization bounds for deep convolutional neural networks</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> We prove generalization bounds for convolutional neural networks that take account of weight-tying</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_r1e_FpNFDr.html" class="btn btn-primary">Visit</a>

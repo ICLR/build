@@ -1,16 +1,44 @@
 <!doctype html>
 <html lang="en">
+  
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
     <title> ICLR: Bayesian Meta Sampling for Fast Uncertainty Adaptation </title>
 </head>
 
+
   <body >
-    
+
 <!-- NAV -->
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -18,79 +46,165 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 
 <style>
-    body{font-family: 'Lato', sans-serif;}
+  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
+  .btn-group{background-color: white}
+  .btn {background-color: white}
+  #main-nav {padding-top:10px; padding-bottom:10px;}
+  .card {font-family: 'Cuprum'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
+  .header {font: "Montserrat"; }
+
+
+
+  #abstractExample.collapse:not(.show) {
+  display: block;
+  /* height = lineheight * no of lines to display */
+  height: 4.5em;
+  overflow: hidden;
+  }
+
+  #abstractExample.collapsing {
+  height: 4.5em;
+  }
+
+
+#absShow.collapsed:after {
+  content: '+ Show More';
+}
+
+#absShow:not(.collapsed):after {
+  content: '- Show Less';
+}
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
-  <a class="navbar-brand" href="#">
-    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="livestream.html">Live Stream</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="papers.html">Papers</a>
-      </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="paper_vis.html">PaperVis</a>
-      </li>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
 
-
-
-
-
-
-
-
-
-
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="livestream.html">Live</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="paper_vis.html">PapersVis</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="sponsors.html">Sponsors</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        
       </ul>
-</div>
+    </div>
   </div>
 </nav>
 
 
 <div class="container">
-  
+
  <!-- Title -->
 
-<div class="card" >
+<div class="card m-3" style="">
   <div class="card-body">
-    <h3 class="card-title">Bayesian Meta Sampling for Fast Uncertainty Adaptation</h3>
-    <h6 class="card-subtitle mb-2 text-muted">
+    <h3 class="card-title" style="font-family: 'Cuprum'; font-weight: 700; font-size2.4em; color: #2294e0">Bayesian Meta Sampling for Fast Uncertainty Adaptation</h3>
+
+    <h5 class="card-subtitle mb-2 text-muted">    <span class="font-weight-bold">Authors:</span> 
       Zhenyi Wang,
+
       
       Yang Zhao,
+
       
       Ping Yu,
+
       
       Ruiyi Zhang,
+
       
-      Changyou Chen,
+      Changyou Chen
+
       
-    </h6>
-    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> We proposed a Bayesian meta sampling method for adapting the model uncertainty in meta learning</p>
-    <p class="card-text"><span class="font-weight-bold">Abstract:</span> Meta learning has been making impressive progress for fast model adaptation. However, limited work has been done on learning fast uncertainty adaption for Bayesian modeling. In this paper, we propose to achieve the goal by placing meta learning on the space of probability measures, inducing the concept of meta sampling for fast uncertainty adaption. Specifically, we propose a Bayesian meta sampling framework consisting of two main components: a meta sampler and a sample adapter. The meta sampler is constructed by adopting a neural-inverse-autoregressive-flow (NIAF) structure, a variant of the recently proposed neural autoregressive flows, to efficiently generate meta samples to be adapted. The sample adapter moves meta samples to task-specific samples, based on a newly proposed and general Bayesian sampling technique, called optimal-transport Bayesian sampling. The combination of the two components allows a simple learning procedure for the
-meta sampler to be developed, which can be efficiently optimized via standard back-propagation. Extensive experimental results demonstrate the efficiency and effectiveness of the proposed framework, obtaining better sample quality and faster
-uncertainty adaption compared to related methods.</p>
-    
-    <center>
-      <a class="card-link"  href="http://www.openreview.net/pdf/4154655603ea1d11b4db771ce5a50c05cae46d52.pdf">Paper</a>
-      <a class="card-link"  href="http://www.openreview.net/forum?id=Bkxv90EKPB">OpenReview</a>
+    </h5>
+
+    <center class="p-3">
+      <a class="card-link" data-toggle="collapse" role="button" href="#details">
+        <button class="btn btn-outline-secondary">
+          Abstract
+        </button>
+      </a>
+
+
+      <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/4154655603ea1d11b4db771ce5a50c05cae46d52.pdf">
+        <button class="btn btn-outline-secondary">
+          Paper
+        </button>
+      </a>
+      <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=Bkxv90EKPB">
+        <button class="btn btn-outline-secondary">
+          OpenReview
+        </button>
+      </a>
     <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
 
-      <a href="" class="card-link">Code</a>
-      <a href="" class="card-link">Slides</a>
+    <a href="" target="_blank"  class="card-link">
+      <button class="btn btn-outline-secondary">
+        Code
+      </button>
+    </a>
+
+    <a href="" target="_blank"  class="card-link">
+      <button class="btn btn-outline-secondary">
+        Slides
+      </button>
+    </a>
     </center>
+
+  </div>
+</div>
+
+<div id="details" class="card m-3 collapse" style="font-family: 'Cuprum'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+  <div class="card-body">
+    <p class="card-text">
+      <div id="abstractExample">
+        <span class="font-weight-bold">Abstract:</span>
+        Meta learning has been making impressive progress for fast model adaptation. However, limited work has been done on learning fast uncertainty adaption for Bayesian modeling. In this paper, we propose to achieve the goal by placing meta learning on the space of probability measures, inducing the concept of meta sampling for fast uncertainty adaption. Specifically, we propose a Bayesian meta sampling framework consisting of two main components: a meta sampler and a sample adapter. The meta sampler is constructed by adopting a neural-inverse-autoregressive-flow (NIAF) structure, a variant of the recently proposed neural autoregressive flows, to efficiently generate meta samples to be adapted. The sample adapter moves meta samples to task-specific samples, based on a newly proposed and general Bayesian sampling technique, called optimal-transport Bayesian sampling. The combination of the two components allows a simple learning procedure for the
+meta sampler to be developed, which can be efficiently optimized via standard back-propagation. Extensive experimental results demonstrate the efficiency and effectiveness of the proposed framework, obtaining better sample quality and faster
+uncertainty adaption compared to related methods.
+      </div>
+
+    </p>
+
     <p></p>
     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
       
@@ -100,9 +214,9 @@ uncertainty adaption compared to related methods.</p>
       
       <a href="keyword_Meta Learning.html" class="text-secondary text-decoration-none">Meta Learning</a>,
       
-      <a href="keyword_Variational Inference.html" class="text-secondary text-decoration-none">Variational Inference</a>,
+      <a href="keyword_Variational Inference.html" class="text-secondary text-decoration-none">Variational Inference</a>
       
-    </p>    
+    </p>
   </div>
 </div>
 
@@ -121,39 +235,51 @@ uncertainty adaption compared to related methods.</p>
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
-  zoomRatio: 0.4,
-  hideTitle: true
+        zoomRatio: 0.4,
+        hideTitle: true
     });
 </script>
 
 
 <!-- Buttons -->
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
-<!--   <center> -->
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
-
-<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
-
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
-<!-- </div> -->
-<!--   <center> -->
-<center>
-    <h2> Paper Discussion       </h2>
-    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterBkxv90EKPB/">Chat</a></span>
-</center>
-<p></p>
-<!-- Gitter -->
-<div id="gitter" class="gitter container" height="600px">
+<div class="container" style="padding-bottom: 30px; padding-top:30px">
   <center>
-    <div class="border">
-      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterBkxv90EKPB/~embed" width="900px" height="400px"></iframe> </center>
-    </div>
+    <h2> Paper Discussion       </h2>
+    <!-- <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterBkxv90EKPB/">Chat</a></span> -->
   </center>
+  <p></p>
+
+  <!-- Gitter -->
+  <div id='discourse-comments'></div>
+
+
+<script type="text/javascript">
+  DiscourseEmbed = { discourseUrl: 'https://iclr.trydiscourse.com/',
+                     discourseEmbedUrl: 'http://iclr.cc/virtual/Bkxv90EKPB'};
+
+  (function() {
+    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  })();
+</script>
+
+
+  <!-- <div id="gitter" class="gitter container" height="600px"> -->
+  <!--   <center> -->
+  <!--     <div class="border"> -->
+  <!--       <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterBkxv90EKPB/~embed" width="900px" height="400px"></iframe> </center> -->
+  <!--     </div> -->
+  <!--   </center> -->
+  <!-- </div> -->
 </div>
 
-<!-- Recs -->
-<p></p>
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
   <center>
     <h2> Similar Papers </h2>
 </div>
@@ -164,17 +290,17 @@ uncertainty adaption compared to related methods.</p>
     <div class="card-deck">
 
       
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_rkeZIJBYvr.html" class="text-dark"><h5 class="card-title">Learning to Balance: Bayesian Meta-Learning for Imbalanced and Out-of-distribution Tasks</h5></a>      
+        <a href="poster_rkeZIJBYvr.html" class="text-dark"><h5 class="card-title">Learning to Balance: Bayesian Meta-Learning for Imbalanced and Out-of-distribution Tasks</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> A novel meta-learning model that adaptively balances the effect of the meta-learning and task-specific learning, and also class-specific learning within each task.</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_rkeZIJBYvr.html" class="btn btn-primary">Visit</a>
@@ -185,17 +311,17 @@ uncertainty adaption compared to related methods.</p>
 
   </div>
   
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_BklEFpEYwS.html" class="text-dark"><h5 class="card-title">Meta-Learning without Memorization</h5></a>      
+        <a href="poster_BklEFpEYwS.html" class="text-dark"><h5 class="card-title">Meta-Learning without Memorization</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> We identify and formalize the memorization problem in meta-learning and solve this problem with novel meta-regularization method, which greatly expand the domain that meta-learning can be  applicable to and effective on.</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_BklEFpEYwS.html" class="btn btn-primary">Visit</a>
@@ -206,17 +332,17 @@ uncertainty adaption compared to related methods.</p>
 
   </div>
   
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_HkgB2TNYPS.html" class="text-dark"><h5 class="card-title">A Theoretical Analysis of the Number of Shots in Few-Shot Learning</h5></a>      
+        <a href="poster_HkgB2TNYPS.html" class="text-dark"><h5 class="card-title">A Theoretical Analysis of the Number of Shots in Few-Shot Learning</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> The paper analyzes the effect of shot number on prototypical networks and proposes a robust method when the shot number differs from meta-training to meta-testing time.</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_HkgB2TNYPS.html" class="btn btn-primary">Visit</a>
@@ -227,17 +353,17 @@ uncertainty adaption compared to related methods.</p>
 
   </div>
   
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_rklp93EtwH.html" class="text-dark"><h5 class="card-title">Automated Relational Meta-learning</h5></a>      
+        <a href="poster_rklp93EtwH.html" class="text-dark"><h5 class="card-title">Automated Relational Meta-learning</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> Addressing task heterogeneity problem in meta-learning by introducing meta-knowledge graph</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_rklp93EtwH.html" class="btn btn-primary">Visit</a>

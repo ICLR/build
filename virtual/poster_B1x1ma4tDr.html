@@ -1,16 +1,44 @@
 <!doctype html>
 <html lang="en">
+  
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
     <title> ICLR: DDSP: Differentiable Digital Signal Processing </title>
 </head>
 
+
   <body >
-    
+
 <!-- NAV -->
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -18,76 +46,161 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 
 <style>
-    body{font-family: 'Lato', sans-serif;}
+  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
+  .btn-group{background-color: white}
+  .btn {background-color: white}
+  #main-nav {padding-top:10px; padding-bottom:10px;}
+  .card {font-family: 'Cuprum'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
+  .header {font: "Montserrat"; }
+
+
+
+  #abstractExample.collapse:not(.show) {
+  display: block;
+  /* height = lineheight * no of lines to display */
+  height: 4.5em;
+  overflow: hidden;
+  }
+
+  #abstractExample.collapsing {
+  height: 4.5em;
+  }
+
+
+#absShow.collapsed:after {
+  content: '+ Show More';
+}
+
+#absShow:not(.collapsed):after {
+  content: '- Show Less';
+}
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
-  <a class="navbar-brand" href="#">
-    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="livestream.html">Live Stream</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="papers.html">Papers</a>
-      </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="paper_vis.html">PaperVis</a>
-      </li>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
 
-
-
-
-
-
-
-
-
-
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="livestream.html">Live</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="paper_vis.html">PapersVis</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="sponsors.html">Sponsors</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        
       </ul>
-</div>
+    </div>
   </div>
 </nav>
 
 
 <div class="container">
-  
+
  <!-- Title -->
 
-<div class="card" >
+<div class="card m-3" style="">
   <div class="card-body">
-    <h3 class="card-title">DDSP: Differentiable Digital Signal Processing</h3>
-    <h6 class="card-subtitle mb-2 text-muted">
+    <h3 class="card-title" style="font-family: 'Cuprum'; font-weight: 700; font-size2.4em; color: #2294e0">DDSP: Differentiable Digital Signal Processing</h3>
+
+    <h5 class="card-subtitle mb-2 text-muted">    <span class="font-weight-bold">Authors:</span> 
       Jesse Engel,
+
       
       Lamtharn (Hanoi) Hantrakul,
+
       
       Chenjie Gu,
+
       
-      Adam Roberts,
+      Adam Roberts
+
       
-    </h6>
-    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> Better audio synthesis by combining interpretable DSP with end-to-end learning.</p>
-    <p class="card-text"><span class="font-weight-bold">Abstract:</span> Most generative models of audio directly generate samples in one of two domains: time or frequency. While sufficient to express any signal, these representations are inefficient, as they do not utilize existing knowledge of how sound is generated and perceived. A third approach (vocoders/synthesizers) successfully incorporates strong domain knowledge of signal processing and perception, but has been less actively researched due to limited expressivity and difficulty integrating with modern auto-differentiation-based machine learning methods. In this paper, we introduce the Differentiable Digital Signal Processing (DDSP) library, which enables direct integration of classic signal processing elements with deep learning methods. Focusing on audio synthesis, we achieve high-fidelity generation without the need for large autoregressive models or adversarial losses, demonstrating that DDSP enables utilizing strong inductive biases without losing the expressive power of neural networks. Further, we show that combining interpretable modules permits manipulation of each separate model component, with applications such as independent control of pitch and loudness, realistic extrapolation to pitches not seen during training, blind dereverberation of room acoustics, transfer of extracted room acoustics to new environments, and transformation of timbre between disparate sources. In short, DDSP enables an interpretable and modular approach to generative modeling, without sacrificing the benefits of deep learning. The library will is available at https://github.com/magenta/ddsp and we encourage further contributions from the community and domain experts.
-</p>
-    
-    <center>
-      <a class="card-link"  href="http://www.openreview.net/pdf/7373c54036f812b939713120fd76d3e220397a72.pdf">Paper</a>
-      <a class="card-link"  href="http://www.openreview.net/forum?id=B1x1ma4tDr">OpenReview</a>
+    </h5>
+
+    <center class="p-3">
+      <a class="card-link" data-toggle="collapse" role="button" href="#details">
+        <button class="btn btn-outline-secondary">
+          Abstract
+        </button>
+      </a>
+
+
+      <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/7373c54036f812b939713120fd76d3e220397a72.pdf">
+        <button class="btn btn-outline-secondary">
+          Paper
+        </button>
+      </a>
+      <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=B1x1ma4tDr">
+        <button class="btn btn-outline-secondary">
+          OpenReview
+        </button>
+      </a>
     <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
 
-      <a href="https://github.com/magenta/ddsp" class="card-link">Code</a>
-      <a href="" class="card-link">Slides</a>
+    <a href="https://github.com/magenta/ddsp" target="_blank"  class="card-link">
+      <button class="btn btn-outline-secondary">
+        Code
+      </button>
+    </a>
+
+    <a href="" target="_blank"  class="card-link">
+      <button class="btn btn-outline-secondary">
+        Slides
+      </button>
+    </a>
     </center>
+
+  </div>
+</div>
+
+<div id="details" class="card m-3 collapse" style="font-family: 'Cuprum'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+  <div class="card-body">
+    <p class="card-text">
+      <div id="abstractExample">
+        <span class="font-weight-bold">Abstract:</span>
+        Most generative models of audio directly generate samples in one of two domains: time or frequency. While sufficient to express any signal, these representations are inefficient, as they do not utilize existing knowledge of how sound is generated and perceived. A third approach (vocoders/synthesizers) successfully incorporates strong domain knowledge of signal processing and perception, but has been less actively researched due to limited expressivity and difficulty integrating with modern auto-differentiation-based machine learning methods. In this paper, we introduce the Differentiable Digital Signal Processing (DDSP) library, which enables direct integration of classic signal processing elements with deep learning methods. Focusing on audio synthesis, we achieve high-fidelity generation without the need for large autoregressive models or adversarial losses, demonstrating that DDSP enables utilizing strong inductive biases without losing the expressive power of neural networks. Further, we show that combining interpretable modules permits manipulation of each separate model component, with applications such as independent control of pitch and loudness, realistic extrapolation to pitches not seen during training, blind dereverberation of room acoustics, transfer of extracted room acoustics to new environments, and transformation of timbre between disparate sources. In short, DDSP enables an interpretable and modular approach to generative modeling, without sacrificing the benefits of deep learning. The library will is available at https://github.com/magenta/ddsp and we encourage further contributions from the community and domain experts.
+
+      </div>
+
+    </p>
+
     <p></p>
     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
       
@@ -117,9 +230,9 @@
       
       <a href="keyword_autoencoder.html" class="text-secondary text-decoration-none">autoencoder</a>,
       
-      <a href="keyword_disentanglement.html" class="text-secondary text-decoration-none">disentanglement</a>,
+      <a href="keyword_disentanglement.html" class="text-secondary text-decoration-none">disentanglement</a>
       
-    </p>    
+    </p>
   </div>
 </div>
 
@@ -138,39 +251,51 @@
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
-  zoomRatio: 0.4,
-  hideTitle: true
+        zoomRatio: 0.4,
+        hideTitle: true
     });
 </script>
 
 
 <!-- Buttons -->
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
-<!--   <center> -->
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
-
-<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
-
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
-<!-- </div> -->
-<!--   <center> -->
-<center>
-    <h2> Paper Discussion       </h2>
-    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterB1x1ma4tDr/">Chat</a></span>
-</center>
-<p></p>
-<!-- Gitter -->
-<div id="gitter" class="gitter container" height="600px">
+<div class="container" style="padding-bottom: 30px; padding-top:30px">
   <center>
-    <div class="border">
-      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterB1x1ma4tDr/~embed" width="900px" height="400px"></iframe> </center>
-    </div>
+    <h2> Paper Discussion       </h2>
+    <!-- <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterB1x1ma4tDr/">Chat</a></span> -->
   </center>
+  <p></p>
+
+  <!-- Gitter -->
+  <div id='discourse-comments'></div>
+
+
+<script type="text/javascript">
+  DiscourseEmbed = { discourseUrl: 'https://iclr.trydiscourse.com/',
+                     discourseEmbedUrl: 'http://iclr.cc/virtual/B1x1ma4tDr'};
+
+  (function() {
+    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  })();
+</script>
+
+
+  <!-- <div id="gitter" class="gitter container" height="600px"> -->
+  <!--   <center> -->
+  <!--     <div class="border"> -->
+  <!--       <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterB1x1ma4tDr/~embed" width="900px" height="400px"></iframe> </center> -->
+  <!--     </div> -->
+  <!--   </center> -->
+  <!-- </div> -->
 </div>
 
-<!-- Recs -->
-<p></p>
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
   <center>
     <h2> Similar Papers </h2>
 </div>
@@ -181,17 +306,17 @@
     <div class="card-deck">
 
       
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_r1gfQgSFDr.html" class="text-dark"><h5 class="card-title">High Fidelity Speech Synthesis with Adversarial Networks</h5></a>      
+        <a href="poster_r1gfQgSFDr.html" class="text-dark"><h5 class="card-title">High Fidelity Speech Synthesis with Adversarial Networks</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> We introduce GAN-TTS, a Generative Adversarial Network for Text-to-Speech, which achieves Mean Opinion Score (MOS) 4.2.</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_r1gfQgSFDr.html" class="btn btn-primary">Visit</a>
@@ -202,17 +327,17 @@
 
   </div>
   
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_rJeqeCEtvH.html" class="text-dark"><h5 class="card-title">Semi-Supervised Generative Modeling for Controllable Speech Synthesis</h5></a>      
+        <a href="poster_rJeqeCEtvH.html" class="text-dark"><h5 class="card-title">Semi-Supervised Generative Modeling for Controllable Speech Synthesis</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> We present a novel generative model that combines state-of-the-art neural text- to-speech (TTS) with semi-supervised probabilistic latent variable models. By providing partial supervision to some of the latent variables, we are able to force them to ...</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_rJeqeCEtvH.html" class="btn btn-primary">Visit</a>
@@ -223,17 +348,17 @@
 
   </div>
   
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_BJe-91BtvH.html" class="text-dark"><h5 class="card-title">Masked Based Unsupervised Content Transfer</h5></a>      
+        <a href="poster_BJe-91BtvH.html" class="text-dark"><h5 class="card-title">Masked Based Unsupervised Content Transfer</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> We consider the problem of translating, in an unsupervised manner, between two domains where one contains some additional information compared to the other. The proposed method  disentangles the common and separate parts of these domains and, through...</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_BJe-91BtvH.html" class="btn btn-primary">Visit</a>
@@ -244,17 +369,17 @@
 
   </div>
   
-      
+
   <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
   <div class="card" >
     <div class="card-header">
-        <a href="poster_HylsTT4FvB.html" class="text-dark"><h5 class="card-title">On the &#34;steerability&#34; of generative adversarial networks</h5></a>      
+        <a href="poster_HylsTT4FvB.html" class="text-dark"><h5 class="card-title">On the &#34;steerability&#34; of generative adversarial networks</h5></a>
 
     </div>
       <div class="card-body">
         <p class="card-text"> Interpolations in the latent space demonstrate generalization capacity of GANs and the effect of dataset biases.</p>
       </div>
-      
+
       <div class="card-footer">
       <center>
         <a href="poster_HylsTT4FvB.html" class="btn btn-primary">Visit</a>
