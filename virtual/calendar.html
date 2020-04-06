@@ -1,14 +1,19 @@
 <!doctype html>
 <html lang="en">
 
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+<!--    <link rel="stylesheet" href="static/typeahead.css">-->
+    <link rel="stylesheet" href="static/schedule.css">
 
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -20,21 +25,14 @@
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
 
     <script src="static/typeahead.bundle.js"></script>
 
-    <link rel="stylesheet" href="static/typeahead.css">
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-
-    <title> ICLR 2020 - Schedule </title>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tgdwyer/WebCola/WebCola/cola.min.js"></script>
+    <title> ICLR 2020: Schedule </title>
 </head>
 
 <body>
@@ -102,7 +100,7 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="paper_vis.html">PapersVis</a>
+          <a class="nav-link" href="paper_vis.html">Vis</a>
         </li>
         
         <li class="nav-item active">
@@ -111,6 +109,10 @@
         
         <li class="nav-item ">
           <a class="nav-link" href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="speakers.html">Speakers</a>
         </li>
         
         <li class="nav-item ">
@@ -129,4 +131,24 @@
     </div>
   </div>
 </nav>
+
+<div class="container" id="container" style="padding-top: 20px;">
+    <div class="row info" style="font-size: x-small;"></div>
+    <div class="row main-table">
+
+
+
+    </div>
+
+
+</div>
+
+<script src="static/schedule.js"></script>
+<script>
+    window.onload = function () {
+        start()
+    }
+</script>
+
+
 </body>
