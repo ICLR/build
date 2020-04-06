@@ -1,151 +1,314 @@
 <!doctype html>
 <html lang="en">
+  
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
     <title> ICLR: Improving Generalization in Meta Reinforcement Learning using Learned Objectives </title>
 </head>
 
+
   <body >
-    
+
 <!-- NAV -->
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
 
 <style>
-    body{font-family: 'Lato', sans-serif;}
+  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
+  .jumbotron{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
+  .btn-group{background-color: white}
+  .btn {background-color: white}
+  #main-nav {padding-top:10px; padding-bottom:10px;}
+  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
+  .header {font: "Montserrat"; }
+  .card-header { border: 4px solid #eee;
+                font-family: "Exo";}
+
+  
+  .main-title {font-weight: 700;  color: #2294e0;}
+
+  .myAccordion {
+
+  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    margin-bottom: 18px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  .sponsorLogo {
+  width: 250px;
+  display: block;
+  margin-left: auto;
+    margin-right: auto;
+  margin-top: auto;
+    margin-bottom: auto;
+
+  }
+  
+  .slp {
+
+  background: #fff
+
+  padding: 10px;
+
+  border: 4px solid #eee;
+
+  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
+  }
+  
+  .border {
+  background: #fff
+  
+  padding: 10px;
+
+  border: 4px solid #eee;
+
+  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
+  }
+  
+  #abstractExample.collapse:not(.show) {
+  display: block;
+  /* height = lineheight * no of lines to display */
+  height: 4.5em;
+  overflow: hidden;
+  }
+
+  #abstractExample.collapsing {
+  height: 4.5em;
+  }
+
+
+#absShow.collapsed:after {
+  content: '+ Show More';
+}
+
+#absShow:not(.collapsed):after {
+  content: '- Show Less';
+}
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
-  <a class="navbar-brand" href="#">
-    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="livestream.html">Live Stream</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="papers.html">Papers</a>
-      </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="paper_vis.html">PaperVis</a>
-      </li>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
 
-
-
-
-
-
-
-
-
-
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="livestream.html">Live</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="paper_vis.html">Vis</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="speakers.html">Speakers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="sponsors.html">Sponsors</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        
       </ul>
-</div>
+    </div>
   </div>
 </nav>
 
 
 <div class="container">
-  
+
  <!-- Title -->
 
-<div class="card" >
-  <div class="card-body">
-    <h3 class="card-title">Improving Generalization in Meta Reinforcement Learning using Learned Objectives</h3>
-    <h6 class="card-subtitle mb-2 text-muted">
-      Louis Kirsch,
-      
-      Sjoerd van Steenkiste,
-      
-      Juergen Schmidhuber,
-      
-    </h6>
-    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> We introduce MetaGenRL, a novel meta reinforcement learning algorithm. Unlike prior work, MetaGenRL can generalize to new environments that are entirely different from those used for meta-training.</p>
-    <p class="card-text"><span class="font-weight-bold">Abstract:</span> Biological evolution has distilled the experiences of many learners into the general learning algorithms of humans. Our novel meta reinforcement learning algorithm MetaGenRL is inspired by this process. MetaGenRL distills the experiences of many complex agents to meta-learn a low-complexity neural objective function that decides how future individuals will learn. Unlike recent meta-RL algorithms, MetaGenRL can generalize to new environments that are entirely different from those used for meta-training. In some cases, it even outperforms human-engineered RL algorithms. MetaGenRL uses off-policy second-order gradients during meta-training that greatly increase its sample efficiency.</p>
-    
-    <center>
-      <a class="card-link"  href="http://www.openreview.net/pdf/45692139056a6ce662ad94fb8ef7e72717b622d0.pdf">Paper</a>
-      <a class="card-link"  href="http://www.openreview.net/forum?id=S1evHerYPr">OpenReview</a>
-    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       Improving Generalization in Meta Reinforcement Learning using Learned Objectives
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       
+       Louis Kirsch,
+       
+       Sjoerd van Steenkiste,
+       
+       Juergen Schmidhuber
+       
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
 
-      <a href="" class="card-link">Code</a>
-      <a href="" class="card-link">Slides</a>
-    </center>
-    <p></p>
-    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-      
-      <a href="keyword_meta reinforcement learning.html" class="text-secondary text-decoration-none">meta reinforcement learning</a>,
-      
-      <a href="keyword_meta learning.html" class="text-secondary text-decoration-none">meta learning</a>,
-      
-      <a href="keyword_reinforcement learning.html" class="text-secondary text-decoration-none">reinforcement learning</a>,
-      
-    </p>    
-  </div>
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/45692139056a6ce662ad94fb8ef7e72717b622d0.pdf">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=S1evHerYPr">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Code
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Slides
+         </button>
+       </a>
+     </center>
+     
+   </div>
+ </div>
+
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         Biological evolution has distilled the experiences of many learners into the general learning algorithms of humans. Our novel meta reinforcement learning algorithm MetaGenRL is inspired by this process. MetaGenRL distills the experiences of many complex agents to meta-learn a low-complexity neural objective function that decides how future individuals will learn. Unlike recent meta-RL algorithms, MetaGenRL can generalize to new environments that are entirely different from those used for meta-training. In some cases, it even outperforms human-engineered RL algorithms. MetaGenRL uses off-policy second-order gradients during meta-training that greatly increase its sample efficiency.
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="keyword_meta reinforcement learning.html" class="text-secondary text-decoration-none">meta reinforcement learning</a>,
+       
+       <a href="keyword_meta learning.html" class="text-secondary text-decoration-none">meta learning</a>,
+       
+       <a href="keyword_reinforcement learning.html" class="text-secondary text-decoration-none">reinforcement learning</a>
+       
+     </p>
+   </div>
+ </div>
+
 </div>
-
-<div>
-</div>
-
-</div>
-
 
 <!-- SlidesLive -->
-<div id="presentation-embed-38915748" class="container container-sm"></div>
-<script src='https://slideslive.com/embed_presentation.js'></script>
-<script>
-  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
-  zoomRatio: 0.4,
-  hideTitle: true
-    });
-</script>
-
-
-<!-- Buttons -->
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
-<!--   <center> -->
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
-
-<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
-
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
-<!-- </div> -->
-<!--   <center> -->
-<center>
-    <h2> Paper Discussion       </h2>
-    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterS1evHerYPr/">Chat</a></span>
-</center>
-<p></p>
-<!-- Gitter -->
-<div id="gitter" class="gitter container" height="600px">
-  <center>
-    <div class="border">
-      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterS1evHerYPr/~embed" width="900px" height="400px"></iframe> </center>
+        zoomRatio: 0.4,
+        hideTitle: true
+        });
+      </script>
     </div>
-  </center>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_S1evHerYPr?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- Recs -->
-<p></p>
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
   <center>
     <h2> Similar Papers </h2>
 </div>
@@ -153,95 +316,58 @@
 
 <div  class="container" >
   <div class="row">
-    <div class="card-deck">
-
-      
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_SJeD3CEFPH.html" class="text-dark"><h5 class="card-title">Meta-Q-Learning</h5></a>      
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> MQL is a simple off-policy meta-RL algorithm that recycles data from the meta-training replay buffer to adapt to new tasks.</p>
-      </div>
-      
-      <div class="card-footer">
-      <center>
-        <a href="poster_SJeD3CEFPH.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
   
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_BklEFpEYwS.html" class="text-dark"><h5 class="card-title">Meta-Learning without Memorization</h5></a>      
 
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We identify and formalize the memorization problem in meta-learning and solve this problem with novel meta-regularization method, which greatly expand the domain that meta-learning can be  applicable to and effective on.</p>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_SJeD3CEFPH.html" class="text-dark"><h5 class="card-title">Meta-Q-Learning</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/SJeD3CEFPH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> MQL is a simple off-policy meta-RL algorithm that recycles data from the meta-training replay buffer to adapt to new tasks.</p>
+            
+          </div>      
+        </div>
       </div>
       
-      <div class="card-footer">
-      <center>
-        <a href="poster_BklEFpEYwS.html" class="btn btn-primary">Visit</a>
-        </center>
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_BklEFpEYwS.html" class="text-dark"><h5 class="card-title">Meta-Learning without Memorization</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/BklEFpEYwS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_HkgB2TNYPS.html" class="text-dark"><h5 class="card-title">A Theoretical Analysis of the Number of Shots in Few-Shot Learning</h5></a>      
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> The paper analyzes the effect of shot number on prototypical networks and proposes a robust method when the shot number differs from meta-training to meta-testing time.</p>
+            <p class="card-text"> We identify and formalize the memorization problem in meta-learning and solve this problem with novel meta-regularization method, which greatly expand the domain that meta-learning can be  applicable to and effective on.</p>
+            
+          </div>      
+        </div>
       </div>
       
-      <div class="card-footer">
-      <center>
-        <a href="poster_HkgB2TNYPS.html" class="btn btn-primary">Visit</a>
-        </center>
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_HkgB2TNYPS.html" class="text-dark"><h5 class="card-title">A Theoretical Analysis of the Number of Shots in Few-Shot Learning</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/HkgB2TNYPS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_rklp93EtwH.html" class="text-dark"><h5 class="card-title">Automated Relational Meta-learning</h5></a>      
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> Addressing task heterogeneity problem in meta-learning by introducing meta-knowledge graph</p>
+            <p class="card-text"> The paper analyzes the effect of shot number on prototypical networks and proposes a robust method when the shot number differs from meta-training to meta-testing time.</p>
+            
+          </div>      
+        </div>
       </div>
       
-      <div class="card-footer">
-      <center>
-        <a href="poster_rklp93EtwH.html" class="btn btn-primary">Visit</a>
-        </center>
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_rklp93EtwH.html" class="text-dark"><h5 class="card-title">Automated Relational Meta-learning</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/rklp93EtwH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
+            <p class="card-text"> Addressing task heterogeneity problem in meta-learning by introducing meta-knowledge graph</p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
-
-  </div>
-  
-    </DIV>
-          </DIV>
-      </DIV>
+      
+  </DIV>
+</DIV>
 
 </body>

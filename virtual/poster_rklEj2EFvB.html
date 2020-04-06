@@ -1,169 +1,332 @@
 <!doctype html>
 <html lang="en">
+  
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
     <title> ICLR: Estimating Gradients for Discrete Random Variables by Sampling without Replacement </title>
 </head>
 
+
   <body >
-    
+
 <!-- NAV -->
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
 
 <style>
-    body{font-family: 'Lato', sans-serif;}
+  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
+  .jumbotron{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
+  .btn-group{background-color: white}
+  .btn {background-color: white}
+  #main-nav {padding-top:10px; padding-bottom:10px;}
+  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
+  .header {font: "Montserrat"; }
+  .card-header { border: 4px solid #eee;
+                font-family: "Exo";}
+
+  
+  .main-title {font-weight: 700;  color: #2294e0;}
+
+  .myAccordion {
+
+  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    margin-bottom: 18px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  .sponsorLogo {
+  width: 250px;
+  display: block;
+  margin-left: auto;
+    margin-right: auto;
+  margin-top: auto;
+    margin-bottom: auto;
+
+  }
+  
+  .slp {
+
+  background: #fff
+
+  padding: 10px;
+
+  border: 4px solid #eee;
+
+  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
+  }
+  
+  .border {
+  background: #fff
+  
+  padding: 10px;
+
+  border: 4px solid #eee;
+
+  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
+  }
+  
+  #abstractExample.collapse:not(.show) {
+  display: block;
+  /* height = lineheight * no of lines to display */
+  height: 4.5em;
+  overflow: hidden;
+  }
+
+  #abstractExample.collapsing {
+  height: 4.5em;
+  }
+
+
+#absShow.collapsed:after {
+  content: '+ Show More';
+}
+
+#absShow:not(.collapsed):after {
+  content: '- Show Less';
+}
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
-  <a class="navbar-brand" href="#">
-    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="livestream.html">Live Stream</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="papers.html">Papers</a>
-      </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="paper_vis.html">PaperVis</a>
-      </li>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
 
-
-
-
-
-
-
-
-
-
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="livestream.html">Live</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="paper_vis.html">Vis</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="speakers.html">Speakers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="sponsors.html">Sponsors</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        
       </ul>
-</div>
+    </div>
   </div>
 </nav>
 
 
 <div class="container">
-  
+
  <!-- Title -->
 
-<div class="card" >
-  <div class="card-body">
-    <h3 class="card-title">Estimating Gradients for Discrete Random Variables by Sampling without Replacement</h3>
-    <h6 class="card-subtitle mb-2 text-muted">
-      Wouter Kool,
-      
-      Herke van Hoof,
-      
-      Max Welling,
-      
-    </h6>
-    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> We derive a low-variance, unbiased gradient estimator for expectations over discrete random variables based on sampling without replacement</p>
-    <p class="card-text"><span class="font-weight-bold">Abstract:</span> We derive an unbiased estimator for expectations over discrete random variables based on sampling without replacement, which reduces variance as it avoids duplicate samples. We show that our estimator can be derived as the Rao-Blackwellization of three different estimators. Combining our estimator with REINFORCE, we obtain a policy gradient estimator and we reduce its variance using a built-in control variate which is obtained without additional model evaluations. The resulting estimator is closely related to other gradient estimators. Experiments with a toy problem, a categorical Variational Auto-Encoder and a structured prediction problem show that our estimator is the only estimator that is consistently among the best estimators in both high and low entropy settings.</p>
-    
-    <center>
-      <a class="card-link"  href="http://www.openreview.net/pdf/8709240cf1c2d139dcfc79ff2508319a444e6c7f.pdf">Paper</a>
-      <a class="card-link"  href="http://www.openreview.net/forum?id=rklEj2EFvB">OpenReview</a>
-    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       Estimating Gradients for Discrete Random Variables by Sampling without Replacement
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       
+       Wouter Kool,
+       
+       Herke van Hoof,
+       
+       Max Welling
+       
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
 
-      <a href="https://github.com/wouterkool/estimating-gradients-without-replacement" class="card-link">Code</a>
-      <a href="" class="card-link">Slides</a>
-    </center>
-    <p></p>
-    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-      
-      <a href="keyword_gradient.html" class="text-secondary text-decoration-none">gradient</a>,
-      
-      <a href="keyword_estimator.html" class="text-secondary text-decoration-none">estimator</a>,
-      
-      <a href="keyword_discrete.html" class="text-secondary text-decoration-none">discrete</a>,
-      
-      <a href="keyword_categorical.html" class="text-secondary text-decoration-none">categorical</a>,
-      
-      <a href="keyword_sampling.html" class="text-secondary text-decoration-none">sampling</a>,
-      
-      <a href="keyword_without replacement.html" class="text-secondary text-decoration-none">without replacement</a>,
-      
-      <a href="keyword_reinforce.html" class="text-secondary text-decoration-none">reinforce</a>,
-      
-      <a href="keyword_baseline.html" class="text-secondary text-decoration-none">baseline</a>,
-      
-      <a href="keyword_variance.html" class="text-secondary text-decoration-none">variance</a>,
-      
-      <a href="keyword_gumbel.html" class="text-secondary text-decoration-none">gumbel</a>,
-      
-      <a href="keyword_vae.html" class="text-secondary text-decoration-none">vae</a>,
-      
-      <a href="keyword_structured prediction.html" class="text-secondary text-decoration-none">structured prediction</a>,
-      
-    </p>    
-  </div>
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/8709240cf1c2d139dcfc79ff2508319a444e6c7f.pdf">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=rklEj2EFvB">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       <a href="https://github.com/wouterkool/estimating-gradients-without-replacement" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Code
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Slides
+         </button>
+       </a>
+     </center>
+     
+   </div>
+ </div>
+
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         We derive an unbiased estimator for expectations over discrete random variables based on sampling without replacement, which reduces variance as it avoids duplicate samples. We show that our estimator can be derived as the Rao-Blackwellization of three different estimators. Combining our estimator with REINFORCE, we obtain a policy gradient estimator and we reduce its variance using a built-in control variate which is obtained without additional model evaluations. The resulting estimator is closely related to other gradient estimators. Experiments with a toy problem, a categorical Variational Auto-Encoder and a structured prediction problem show that our estimator is the only estimator that is consistently among the best estimators in both high and low entropy settings.
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="keyword_gradient.html" class="text-secondary text-decoration-none">gradient</a>,
+       
+       <a href="keyword_estimator.html" class="text-secondary text-decoration-none">estimator</a>,
+       
+       <a href="keyword_discrete.html" class="text-secondary text-decoration-none">discrete</a>,
+       
+       <a href="keyword_categorical.html" class="text-secondary text-decoration-none">categorical</a>,
+       
+       <a href="keyword_sampling.html" class="text-secondary text-decoration-none">sampling</a>,
+       
+       <a href="keyword_without replacement.html" class="text-secondary text-decoration-none">without replacement</a>,
+       
+       <a href="keyword_reinforce.html" class="text-secondary text-decoration-none">reinforce</a>,
+       
+       <a href="keyword_baseline.html" class="text-secondary text-decoration-none">baseline</a>,
+       
+       <a href="keyword_variance.html" class="text-secondary text-decoration-none">variance</a>,
+       
+       <a href="keyword_gumbel.html" class="text-secondary text-decoration-none">gumbel</a>,
+       
+       <a href="keyword_vae.html" class="text-secondary text-decoration-none">vae</a>,
+       
+       <a href="keyword_structured prediction.html" class="text-secondary text-decoration-none">structured prediction</a>
+       
+     </p>
+   </div>
+ </div>
+
 </div>
-
-<div>
-</div>
-
-</div>
-
 
 <!-- SlidesLive -->
-<div id="presentation-embed-38915748" class="container container-sm"></div>
-<script src='https://slideslive.com/embed_presentation.js'></script>
-<script>
-  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
-  zoomRatio: 0.4,
-  hideTitle: true
-    });
-</script>
-
-
-<!-- Buttons -->
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
-<!--   <center> -->
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
-
-<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
-
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
-<!-- </div> -->
-<!--   <center> -->
-<center>
-    <h2> Paper Discussion       </h2>
-    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterrklEj2EFvB/">Chat</a></span>
-</center>
-<p></p>
-<!-- Gitter -->
-<div id="gitter" class="gitter container" height="600px">
-  <center>
-    <div class="border">
-      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterrklEj2EFvB/~embed" width="900px" height="400px"></iframe> </center>
+        zoomRatio: 0.4,
+        hideTitle: true
+        });
+      </script>
     </div>
-  </center>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rklEj2EFvB?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- Recs -->
-<p></p>
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
   <center>
     <h2> Similar Papers </h2>
 </div>
@@ -171,95 +334,58 @@
 
 <div  class="container" >
   <div class="row">
-    <div class="card-deck">
-
-      
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_SylkYeHtwr.html" class="text-dark"><h5 class="card-title">SUMO: Unbiased Estimation of Log Marginal Probability for Latent Variable Models</h5></a>      
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We create an unbiased estimator for the log probability of latent variable models, extending such models to a larger scope of applications.</p>
-      </div>
-      
-      <div class="card-footer">
-      <center>
-        <a href="poster_SylkYeHtwr.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
   
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_B1x62TNtDS.html" class="text-dark"><h5 class="card-title">Understanding the Limitations of Variational Mutual Information Estimators</h5></a>      
 
-    </div>
-      <div class="card-body">
-        <p class="card-text"> Variational approaches based on neural networks are showing promise for estimating mutual information (MI) between high dimensional variables. However, they can be difficult to use in practice due to poorly understood bias/variance tradeoffs. We theo...</p>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_SylkYeHtwr.html" class="text-dark"><h5 class="card-title">SUMO: Unbiased Estimation of Log Marginal Probability for Latent Variable Models</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/SylkYeHtwr.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> We create an unbiased estimator for the log probability of latent variable models, extending such models to a larger scope of applications.</p>
+            
+          </div>      
+        </div>
       </div>
       
-      <div class="card-footer">
-      <center>
-        <a href="poster_B1x62TNtDS.html" class="btn btn-primary">Visit</a>
-        </center>
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_B1x62TNtDS.html" class="text-dark"><h5 class="card-title">Understanding the Limitations of Variational Mutual Information Estimators</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/B1x62TNtDS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_r1lOgyrKDS.html" class="text-dark"><h5 class="card-title">Adaptive Correlated Monte Carlo for Contextual Categorical Sequence Generation</h5></a>      
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> Sequence generation models are commonly refined with reinforcement learning over user-defined metrics. However, high gradient variance hinders the practical use of this method. To stabilize this method, we adapt to contextual generation of categorica...</p>
+            <p class="card-text"> Variational approaches based on neural networks are showing promise for estimating mutual information (MI) between high dimensional variables. However, they can be difficult to use in practice due to poorly understood bias/variance tradeoffs. We theo...</p>
+            
+          </div>      
+        </div>
       </div>
       
-      <div class="card-footer">
-      <center>
-        <a href="poster_r1lOgyrKDS.html" class="btn btn-primary">Visit</a>
-        </center>
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_r1lOgyrKDS.html" class="text-dark"><h5 class="card-title">Adaptive Correlated Monte Carlo for Contextual Categorical Sequence Generation</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/r1lOgyrKDS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_S1glGANtDr.html" class="text-dark"><h5 class="card-title">Doubly Robust Bias Reduction in Infinite Horizon Off-Policy Estimation</h5></a>      
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We develop a new doubly robust estimator based on the infinite horizon density ratio and off policy value estimation.</p>
+            <p class="card-text"> Sequence generation models are commonly refined with reinforcement learning over user-defined metrics. However, high gradient variance hinders the practical use of this method. To stabilize this method, we adapt to contextual generation of categorica...</p>
+            
+          </div>      
+        </div>
       </div>
       
-      <div class="card-footer">
-      <center>
-        <a href="poster_S1glGANtDr.html" class="btn btn-primary">Visit</a>
-        </center>
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_S1glGANtDr.html" class="text-dark"><h5 class="card-title">Doubly Robust Bias Reduction in Infinite Horizon Off-Policy Estimation</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/S1glGANtDr.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
+            <p class="card-text"> We develop a new doubly robust estimator based on the infinite horizon density ratio and off policy value estimation.</p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
-
-  </div>
-  
-    </DIV>
-          </DIV>
-      </DIV>
+      
+  </DIV>
+</DIV>
 
 </body>

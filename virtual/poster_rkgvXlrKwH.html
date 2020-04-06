@@ -1,165 +1,328 @@
 <!doctype html>
 <html lang="en">
+  
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
     <title> ICLR: SEED RL: Scalable and Efficient Deep-RL with Accelerated Central Inference </title>
 </head>
 
+
   <body >
-    
+
 <!-- NAV -->
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
 
 <style>
-    body{font-family: 'Lato', sans-serif;}
+  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
+  .jumbotron{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
+  .btn-group{background-color: white}
+  .btn {background-color: white}
+  #main-nav {padding-top:10px; padding-bottom:10px;}
+  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
+  .header {font: "Montserrat"; }
+  .card-header { border: 4px solid #eee;
+                font-family: "Exo";}
+
+  
+  .main-title {font-weight: 700;  color: #2294e0;}
+
+  .myAccordion {
+
+  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    margin-bottom: 18px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  .sponsorLogo {
+  width: 250px;
+  display: block;
+  margin-left: auto;
+    margin-right: auto;
+  margin-top: auto;
+    margin-bottom: auto;
+
+  }
+  
+  .slp {
+
+  background: #fff
+
+  padding: 10px;
+
+  border: 4px solid #eee;
+
+  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
+  }
+  
+  .border {
+  background: #fff
+  
+  padding: 10px;
+
+  border: 4px solid #eee;
+
+  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
+  }
+  
+  #abstractExample.collapse:not(.show) {
+  display: block;
+  /* height = lineheight * no of lines to display */
+  height: 4.5em;
+  overflow: hidden;
+  }
+
+  #abstractExample.collapsing {
+  height: 4.5em;
+  }
+
+
+#absShow.collapsed:after {
+  content: '+ Show More';
+}
+
+#absShow:not(.collapsed):after {
+  content: '- Show Less';
+}
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
-  <a class="navbar-brand" href="#">
-    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="livestream.html">Live Stream</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="papers.html">Papers</a>
-      </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="paper_vis.html">PaperVis</a>
-      </li>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
 
-
-
-
-
-
-
-
-
-
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="livestream.html">Live</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="paper_vis.html">Vis</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="speakers.html">Speakers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="sponsors.html">Sponsors</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        
       </ul>
-</div>
+    </div>
   </div>
 </nav>
 
 
 <div class="container">
-  
+
  <!-- Title -->
 
-<div class="card" >
-  <div class="card-body">
-    <h3 class="card-title">SEED RL: Scalable and Efficient Deep-RL with Accelerated Central Inference</h3>
-    <h6 class="card-subtitle mb-2 text-muted">
-      Lasse Espeholt,
-      
-      Raphaël Marinier,
-      
-      Piotr Stanczyk,
-      
-      Ke Wang,
-      
-      Marcin Michalski‎,
-      
-    </h6>
-    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> SEED RL, a scalable and efficient deep reinforcement learning agent with accelerated central inference. State of the art results, reduces cost and can process millions of frames per second. </p>
-    <p class="card-text"><span class="font-weight-bold">Abstract:</span> We present a modern scalable reinforcement learning agent called SEED (Scalable, Efficient Deep-RL). By effectively utilizing modern accelerators, we show that it is not only possible to train on millions of frames per second but also to lower the cost. of experiments compared to current methods. We achieve this with a simple architecture that features centralized inference and an optimized communication layer. SEED adopts two state-of-the-art distributed algorithms, IMPALA/V-trace (policy gradients) and R2D2 (Q-learning), and is evaluated on Atari-57, DeepMind Lab and Google Research Football. We improve the state of the art on Football and are able to reach state of the art on Atari-57 twice as fast in wall-time. For the scenarios we consider, a 40% to 80% cost reduction for running experiments is achieved. The implementation along with experiments is open-sourced so results can be reproduced and novel ideas tried out.</p>
-    
-    <center>
-      <a class="card-link"  href="http://www.openreview.net/pdf/bce334f7e39344120d107d0806e64d13b8c8f874.pdf">Paper</a>
-      <a class="card-link"  href="http://www.openreview.net/forum?id=rkgvXlrKwH">OpenReview</a>
-    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       SEED RL: Scalable and Efficient Deep-RL with Accelerated Central Inference
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       
+       Lasse Espeholt,
+       
+       Raphaël Marinier,
+       
+       Piotr Stanczyk,
+       
+       Ke Wang,
+       
+       Marcin Michalski‎
+       
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
 
-      <a href="https://drive.google.com/file/d/144yp7PQf486dmctE2oS2md_qmNBTFbez/view?usp=sharing" class="card-link">Code</a>
-      <a href="" class="card-link">Slides</a>
-    </center>
-    <p></p>
-    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-      
-      <a href="keyword_machine learning.html" class="text-secondary text-decoration-none">machine learning</a>,
-      
-      <a href="keyword_reinforcement learning.html" class="text-secondary text-decoration-none">reinforcement learning</a>,
-      
-      <a href="keyword_scalability.html" class="text-secondary text-decoration-none">scalability</a>,
-      
-      <a href="keyword_distributed.html" class="text-secondary text-decoration-none">distributed</a>,
-      
-      <a href="keyword_DeepMind Lab.html" class="text-secondary text-decoration-none">DeepMind Lab</a>,
-      
-      <a href="keyword_ALE.html" class="text-secondary text-decoration-none">ALE</a>,
-      
-      <a href="keyword_Atari-57.html" class="text-secondary text-decoration-none">Atari-57</a>,
-      
-      <a href="keyword_Google Research Football.html" class="text-secondary text-decoration-none">Google Research Football</a>,
-      
-    </p>    
-  </div>
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/bce334f7e39344120d107d0806e64d13b8c8f874.pdf">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=rkgvXlrKwH">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       <a href="https://drive.google.com/file/d/144yp7PQf486dmctE2oS2md_qmNBTFbez/view?usp=sharing" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Code
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Slides
+         </button>
+       </a>
+     </center>
+     
+   </div>
+ </div>
+
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         We present a modern scalable reinforcement learning agent called SEED (Scalable, Efficient Deep-RL). By effectively utilizing modern accelerators, we show that it is not only possible to train on millions of frames per second but also to lower the cost. of experiments compared to current methods. We achieve this with a simple architecture that features centralized inference and an optimized communication layer. SEED adopts two state-of-the-art distributed algorithms, IMPALA/V-trace (policy gradients) and R2D2 (Q-learning), and is evaluated on Atari-57, DeepMind Lab and Google Research Football. We improve the state of the art on Football and are able to reach state of the art on Atari-57 twice as fast in wall-time. For the scenarios we consider, a 40% to 80% cost reduction for running experiments is achieved. The implementation along with experiments is open-sourced so results can be reproduced and novel ideas tried out.
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="keyword_machine learning.html" class="text-secondary text-decoration-none">machine learning</a>,
+       
+       <a href="keyword_reinforcement learning.html" class="text-secondary text-decoration-none">reinforcement learning</a>,
+       
+       <a href="keyword_scalability.html" class="text-secondary text-decoration-none">scalability</a>,
+       
+       <a href="keyword_distributed.html" class="text-secondary text-decoration-none">distributed</a>,
+       
+       <a href="keyword_DeepMind Lab.html" class="text-secondary text-decoration-none">DeepMind Lab</a>,
+       
+       <a href="keyword_ALE.html" class="text-secondary text-decoration-none">ALE</a>,
+       
+       <a href="keyword_Atari-57.html" class="text-secondary text-decoration-none">Atari-57</a>,
+       
+       <a href="keyword_Google Research Football.html" class="text-secondary text-decoration-none">Google Research Football</a>
+       
+     </p>
+   </div>
+ </div>
+
 </div>
-
-<div>
-</div>
-
-</div>
-
 
 <!-- SlidesLive -->
-<div id="presentation-embed-38915748" class="container container-sm"></div>
-<script src='https://slideslive.com/embed_presentation.js'></script>
-<script>
-  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
-  zoomRatio: 0.4,
-  hideTitle: true
-    });
-</script>
-
-
-<!-- Buttons -->
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
-<!--   <center> -->
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
-
-<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
-
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
-<!-- </div> -->
-<!--   <center> -->
-<center>
-    <h2> Paper Discussion       </h2>
-    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterrkgvXlrKwH/">Chat</a></span>
-</center>
-<p></p>
-<!-- Gitter -->
-<div id="gitter" class="gitter container" height="600px">
-  <center>
-    <div class="border">
-      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterrkgvXlrKwH/~embed" width="900px" height="400px"></iframe> </center>
+        zoomRatio: 0.4,
+        hideTitle: true
+        });
+      </script>
     </div>
-  </center>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rkgvXlrKwH?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- Recs -->
-<p></p>
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
   <center>
     <h2> Similar Papers </h2>
 </div>
@@ -167,95 +330,58 @@
 
 <div  class="container" >
   <div class="row">
-    <div class="card-deck">
-
-      
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_H1gX8C4YPr.html" class="text-dark"><h5 class="card-title">DD-PPO: Learning Near-Perfect PointGoal Navigators from 2.5 Billion Frames</h5></a>      
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We present Decentralized Distributed Proximal Policy Optimization (DD-PPO), a method for distributed reinforcement learning in resource-intensive simulated environments. DD-PPO is distributed (uses multiple machines), decentralized (lacks a centraliz...</p>
-      </div>
-      
-      <div class="card-footer">
-      <center>
-        <a href="poster_H1gX8C4YPr.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
   
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_SJgVU0EKwS.html" class="text-dark"><h5 class="card-title">Precision Gating: Improving Neural Network Efficiency with Dynamic Dual-Precision Activations</h5></a>      
 
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We propose precision gating (PG), an end-to-end trainable dynamic dual-precision quantization technique for deep neural networks.</p>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_H1gX8C4YPr.html" class="text-dark"><h5 class="card-title">DD-PPO: Learning Near-Perfect PointGoal Navigators from 2.5 Billion Frames</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/H1gX8C4YPr.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> We present Decentralized Distributed Proximal Policy Optimization (DD-PPO), a method for distributed reinforcement learning in resource-intensive simulated environments. DD-PPO is distributed (uses multiple machines), decentralized (lacks a centraliz...</p>
+            
+          </div>      
+        </div>
       </div>
       
-      <div class="card-footer">
-      <center>
-        <a href="poster_SJgVU0EKwS.html" class="btn btn-primary">Visit</a>
-        </center>
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_SJgVU0EKwS.html" class="text-dark"><h5 class="card-title">Precision Gating: Improving Neural Network Efficiency with Dynamic Dual-Precision Activations</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/SJgVU0EKwS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_BJeGlJStPr.html" class="text-dark"><h5 class="card-title">IMPACT: Importance Weighted Asynchronous Architectures with Clipped Target Networks</h5></a>      
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> IMPACT helps RL agents train faster by decreasing training wall-clock time and increasing sample efficiency simultaneously.</p>
+            <p class="card-text"> We propose precision gating (PG), an end-to-end trainable dynamic dual-precision quantization technique for deep neural networks.</p>
+            
+          </div>      
+        </div>
       </div>
       
-      <div class="card-footer">
-      <center>
-        <a href="poster_BJeGlJStPr.html" class="btn btn-primary">Visit</a>
-        </center>
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_BJeGlJStPr.html" class="text-dark"><h5 class="card-title">IMPACT: Importance Weighted Asynchronous Architectures with Clipped Target Networks</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/BJeGlJStPr.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_Bke89JBtvB.html" class="text-dark"><h5 class="card-title">Batch-shaping for learning conditional channel gated networks</h5></a>      
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> A method that trains large capacity neural networks with significantly improved accuracy and lower dynamic computational cost</p>
+            <p class="card-text"> IMPACT helps RL agents train faster by decreasing training wall-clock time and increasing sample efficiency simultaneously.</p>
+            
+          </div>      
+        </div>
       </div>
       
-      <div class="card-footer">
-      <center>
-        <a href="poster_Bke89JBtvB.html" class="btn btn-primary">Visit</a>
-        </center>
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_Bke89JBtvB.html" class="text-dark"><h5 class="card-title">Batch-shaping for learning conditional channel gated networks</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/Bke89JBtvB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
+            <p class="card-text"> A method that trains large capacity neural networks with significantly improved accuracy and lower dynamic computational cost</p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
-
-  </div>
-  
-    </DIV>
-          </DIV>
-      </DIV>
+      
+  </DIV>
+</DIV>
 
 </body>

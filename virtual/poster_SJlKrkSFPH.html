@@ -1,161 +1,324 @@
 <!doctype html>
 <html lang="en">
+  
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
     <title> ICLR: A FRAMEWORK  FOR ROBUSTNESS CERTIFICATION  OF SMOOTHED CLASSIFIERS USING  F-DIVERGENCES </title>
 </head>
 
+
   <body >
-    
+
 <!-- NAV -->
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
 
 <style>
-    body{font-family: 'Lato', sans-serif;}
+  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
+  .jumbotron{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
+  .btn-group{background-color: white}
+  .btn {background-color: white}
+  #main-nav {padding-top:10px; padding-bottom:10px;}
+  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
+  .header {font: "Montserrat"; }
+  .card-header { border: 4px solid #eee;
+                font-family: "Exo";}
+
+  
+  .main-title {font-weight: 700;  color: #2294e0;}
+
+  .myAccordion {
+
+  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    margin-bottom: 18px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  .sponsorLogo {
+  width: 250px;
+  display: block;
+  margin-left: auto;
+    margin-right: auto;
+  margin-top: auto;
+    margin-bottom: auto;
+
+  }
+  
+  .slp {
+
+  background: #fff
+
+  padding: 10px;
+
+  border: 4px solid #eee;
+
+  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
+  }
+  
+  .border {
+  background: #fff
+  
+  padding: 10px;
+
+  border: 4px solid #eee;
+
+  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
+  }
+  
+  #abstractExample.collapse:not(.show) {
+  display: block;
+  /* height = lineheight * no of lines to display */
+  height: 4.5em;
+  overflow: hidden;
+  }
+
+  #abstractExample.collapsing {
+  height: 4.5em;
+  }
+
+
+#absShow.collapsed:after {
+  content: '+ Show More';
+}
+
+#absShow:not(.collapsed):after {
+  content: '- Show Less';
+}
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto">
-  <a class="navbar-brand" href="#">
-    <img class="logo" src="https://www.iclr.cc/static/admin/img/ICLR-logo.png"  height="35"/>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="livestream.html">Live Stream</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="papers.html">Papers</a>
-      </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="paper_vis.html">PaperVis</a>
-      </li>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
 
-
-
-
-
-
-
-
-
-
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="livestream.html">Live</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="paper_vis.html">Vis</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="speakers.html">Speakers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="sponsors.html">Sponsors</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        
       </ul>
-</div>
+    </div>
   </div>
 </nav>
 
 
 <div class="container">
-  
+
  <!-- Title -->
 
-<div class="card" >
-  <div class="card-body">
-    <h3 class="card-title">A FRAMEWORK  FOR ROBUSTNESS CERTIFICATION  OF SMOOTHED CLASSIFIERS USING  F-DIVERGENCES</h3>
-    <h6 class="card-subtitle mb-2 text-muted">
-      Krishnamurthy (Dj) Dvijotham,
-      
-      Jamie Hayes,
-      
-      Borja Balle,
-      
-      Zico Kolter,
-      
-      Chongli Qin,
-      
-      Andras Gyorgy,
-      
-      Kai Xiao,
-      
-      Sven Gowal,
-      
-      Pushmeet Kohli,
-      
-    </h6>
-    <p class="card-text"><span class="font-weight-bold">TL;DR:</span> Develop a general framework to establish certified robustness of ML models against various classes of adversarial perturbations</p>
-    <p class="card-text"><span class="font-weight-bold">Abstract:</span> Formal verification techniques that compute provable guarantees on properties of machine learning models, like robustness to norm-bounded adversarial perturbations, have yielded impressive results. Although most techniques developed so far require knowledge of the architecture of the machine learning model and remain hard to scale to complex prediction pipelines, the method of randomized smoothing has been shown to overcome many of these obstacles. By requiring only black-box access to the underlying model, randomized smoothing scales to large architectures and is agnostic to the internals of the network. However, past work on randomized smoothing has focused on restricted classes of smoothing measures or perturbations (like Gaussian or discrete) and has only been able to prove robustness with respect to simple norm bounds. In this paper we introduce a general framework for proving robustness properties of smoothed machine learning models in the black-box setting. Specifically, we extend randomized smoothing procedures to handle arbitrary smoothing measures and prove robustness of the smoothed classifier by using f-divergences. Our methodology improves upon the state of the art in terms of computation time or certified robustness on several image classification tasks and an audio classification task, with respect to several classes of adversarial perturbations. </p>
-    
-    <center>
-      <a class="card-link"  href="http://www.openreview.net/pdf/5c744888eae162e715f7635b283ff4545aee828d.pdf">Paper</a>
-      <a class="card-link"  href="http://www.openreview.net/forum?id=SJlKrkSFPH">OpenReview</a>
-    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       A FRAMEWORK  FOR ROBUSTNESS CERTIFICATION  OF SMOOTHED CLASSIFIERS USING  F-DIVERGENCES
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       
+       Krishnamurthy (Dj) Dvijotham,
+       
+       Jamie Hayes,
+       
+       Borja Balle,
+       
+       Zico Kolter,
+       
+       Chongli Qin,
+       
+       Andras Gyorgy,
+       
+       Kai Xiao,
+       
+       Sven Gowal,
+       
+       Pushmeet Kohli
+       
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
 
-      <a href="" class="card-link">Code</a>
-      <a href="" class="card-link">Slides</a>
-    </center>
-    <p></p>
-    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-      
-      <a href="keyword_verification of machine learning.html" class="text-secondary text-decoration-none">verification of machine learning</a>,
-      
-      <a href="keyword_certified robustness of neural networks.html" class="text-secondary text-decoration-none">certified robustness of neural networks</a>,
-      
-    </p>    
-  </div>
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/5c744888eae162e715f7635b283ff4545aee828d.pdf">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=SJlKrkSFPH">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Code
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Slides
+         </button>
+       </a>
+     </center>
+     
+   </div>
+ </div>
+
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         Formal verification techniques that compute provable guarantees on properties of machine learning models, like robustness to norm-bounded adversarial perturbations, have yielded impressive results. Although most techniques developed so far require knowledge of the architecture of the machine learning model and remain hard to scale to complex prediction pipelines, the method of randomized smoothing has been shown to overcome many of these obstacles. By requiring only black-box access to the underlying model, randomized smoothing scales to large architectures and is agnostic to the internals of the network. However, past work on randomized smoothing has focused on restricted classes of smoothing measures or perturbations (like Gaussian or discrete) and has only been able to prove robustness with respect to simple norm bounds. In this paper we introduce a general framework for proving robustness properties of smoothed machine learning models in the black-box setting. Specifically, we extend randomized smoothing procedures to handle arbitrary smoothing measures and prove robustness of the smoothed classifier by using f-divergences. Our methodology improves upon the state of the art in terms of computation time or certified robustness on several image classification tasks and an audio classification task, with respect to several classes of adversarial perturbations. 
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="keyword_verification of machine learning.html" class="text-secondary text-decoration-none">verification of machine learning</a>,
+       
+       <a href="keyword_certified robustness of neural networks.html" class="text-secondary text-decoration-none">certified robustness of neural networks</a>
+       
+     </p>
+   </div>
+ </div>
+
 </div>
-
-<div>
-</div>
-
-</div>
-
 
 <!-- SlidesLive -->
-<div id="presentation-embed-38915748" class="container container-sm"></div>
-<script src='https://slideslive.com/embed_presentation.js'></script>
-<script>
-  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
-  zoomRatio: 0.4,
-  hideTitle: true
-    });
-</script>
-
-
-<!-- Buttons -->
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
-<!--   <center> -->
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Prev</a></span> -->
-
-<!--     <span><a href="" class="btn btn-secondary">Video Call</a></span> -->
-
-<!--     <span><a href="poster_.html" class="btn btn-secondary">Next</a></span> </center> -->
-<!-- </div> -->
-<!--   <center> -->
-<center>
-    <h2> Paper Discussion       </h2>
-    <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterSJlKrkSFPH/">Chat</a></span>
-</center>
-<p></p>
-<!-- Gitter -->
-<div id="gitter" class="gitter container" height="600px">
-  <center>
-    <div class="border">
-      <center> <iframe frameborder="0" src="https://gitter.im/iclr/posterSJlKrkSFPH/~embed" width="900px" height="400px"></iframe> </center>
+        zoomRatio: 0.4,
+        hideTitle: true
+        });
+      </script>
     </div>
-  </center>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_SJlKrkSFPH?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- Recs -->
-<p></p>
-<div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
   <center>
     <h2> Similar Papers </h2>
 </div>
@@ -163,95 +326,58 @@
 
 <div  class="container" >
   <div class="row">
-    <div class="card-deck">
-
-      
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_BkeWw6VFwr.html" class="text-dark"><h5 class="card-title">Certified Robustness for Top-k Predictions against Adversarial Perturbations via Randomized Smoothing</h5></a>      
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We study the certified robustness for top-k predictions via randomized smoothing under Gaussian noise and derive a tight robustness bound in L_2 norm.</p>
-      </div>
-      
-      <div class="card-footer">
-      <center>
-        <a href="poster_BkeWw6VFwr.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
   
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_H1xscnEKDr.html" class="text-dark"><h5 class="card-title">Defending Against Physically Realizable Attacks on Image Classification</h5></a>      
 
-    </div>
-      <div class="card-body">
-        <p class="card-text"> Defending Against Physically Realizable Attacks on Image Classification</p>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_BkeWw6VFwr.html" class="text-dark"><h5 class="card-title">Certified Robustness for Top-k Predictions against Adversarial Perturbations via Randomized Smoothing</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/BkeWw6VFwr.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> We study the certified robustness for top-k predictions via randomized smoothing under Gaussian noise and derive a tight robustness bound in L_2 norm.</p>
+            
+          </div>      
+        </div>
       </div>
       
-      <div class="card-footer">
-      <center>
-        <a href="poster_H1xscnEKDr.html" class="btn btn-primary">Visit</a>
-        </center>
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_H1xscnEKDr.html" class="text-dark"><h5 class="card-title">Defending Against Physically Realizable Attacks on Image Classification</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/H1xscnEKDr.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_HkgTTh4FDH.html" class="text-dark"><h5 class="card-title">Implicit Bias of Gradient Descent based Adversarial Training on Separable Data</h5></a>      
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> The solution of gradient descent based adversarial training converges in direction to a robust max margin solution that is adapted to adversary geometry, using L2 perturbation also shows significant speed-up in convergence compared to clean training.</p>
+            <p class="card-text"> Defending Against Physically Realizable Attacks on Image Classification</p>
+            
+          </div>      
+        </div>
       </div>
       
-      <div class="card-footer">
-      <center>
-        <a href="poster_HkgTTh4FDH.html" class="btn btn-primary">Visit</a>
-        </center>
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_HkgTTh4FDH.html" class="text-dark"><h5 class="card-title">Implicit Bias of Gradient Descent based Adversarial Training on Separable Data</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/HkgTTh4FDH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-      
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_Sye_OgHFwH.html" class="text-dark"><h5 class="card-title">Unrestricted Adversarial Examples via Semantic Manipulation</h5></a>      
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We introduce unrestricted perturbations that manipulate semantically meaningful image-based visual descriptors - color and texture - in order to generate effective and  photorealistic adversarial examples.</p>
+            <p class="card-text"> The solution of gradient descent based adversarial training converges in direction to a robust max margin solution that is adapted to adversary geometry, using L2 perturbation also shows significant speed-up in convergence compared to clean training.</p>
+            
+          </div>      
+        </div>
       </div>
       
-      <div class="card-footer">
-      <center>
-        <a href="poster_Sye_OgHFwH.html" class="btn btn-primary">Visit</a>
-        </center>
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_Sye_OgHFwH.html" class="text-dark"><h5 class="card-title">Unrestricted Adversarial Examples via Semantic Manipulation</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/Sye_OgHFwH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
+            <p class="card-text"> We introduce unrestricted perturbations that manipulate semantically meaningful image-based visual descriptors - color and texture - in order to generate effective and  photorealistic adversarial examples.</p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
-
-  </div>
-  
-    </DIV>
-          </DIV>
-      </DIV>
+      
+  </DIV>
+</DIV>
 
 </body>
