@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    <link rel="stylesheet" href="static/css/main.css">
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -25,9 +25,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-    <script src="static/typeahead.bundle.js"></script>
+    <script src="static/js/typeahead.bundle.js"></script>
 
-    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet" href="static/css/typeahead.css">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -46,58 +46,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-
-<style>
-  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .btn-group{background-color: white}
-  .btn {background-color: white}
-  #main-nav {padding-top:10px; padding-bottom:10px;}
-  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
-  .header {font: "Montserrat"; }
-  .card-header { border: 4px solid #eee;
-                font-family: "Exo";}
-
-
-  .main-title {font-weight: 700;  color: #2294e0;}
-
-  .myAccordion {
-
-  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
-    margin-bottom: 18px;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-top: 10px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  #abstractExample.collapse:not(.show) {
-  display: block;
-  /* height = lineheight * no of lines to display */
-  height: 4.5em;
-  overflow: hidden;
-  }
-
-  #abstractExample.collapsing {
-  height: 4.5em;
-  }
-
-
-#absShow.collapsed:after {
-  content: '+ Show More';
-}
-
-#absShow:not(.collapsed):after {
-  content: '- Show Less';
-}
-</style>
-
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,136 +108,119 @@
 
  <!-- Title -->
 
-<div class="card m-3" style="">
-  <div class="card-header">
-    <h3 class="card-title main-title text-center" style="">
-      Mutual Mean-Teaching: Pseudo Label Refinery for Unsupervised Domain Adaptation on Person Re-identification
-    </h3>
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       Mutual Mean-Teaching: Pseudo Label Refinery for Unsupervised Domain Adaptation on Person Re-identification
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       
+       Yixiao Ge,
+       
+       Dapeng Chen,
+       
+       Hongsheng Li
+       
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
 
-    <h5 class="card-subtitle mb-2 text-muted text-center">
-      
-      Yixiao Ge,
-      
-      Dapeng Chen,
-      
-      Hongsheng Li
-      
-    </h5>
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/e74af9cf4a4cb3b9e76e7b524c3533ee23441b65.pdf">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=rJlnOhVYPS">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       
+       <a href="https://github.com/yxgeee/MMT" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Code
+         </button>
+       </a>
+       
+       
+       
+     </center>
+     
+   </div>
+ </div>
 
-    <center class="p-3">
-      <a class="card-link" data-toggle="collapse" role="button" href="#details">
-        <button class="btn btn-outline-secondary">
-          Abstract
-        </button>
-      </a>
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         Person re-identification (re-ID) aims at identifying the same persons&#39; images across different cameras. However, domain diversities between different datasets pose an evident challenge for adapting the re-ID model trained on one dataset to another one. State-of-the-art unsupervised domain adaptation methods for person re-ID transferred the learned knowledge from the source domain by optimizing with pseudo labels created by clustering algorithms on the target domain. Although they achieved state-of-the-art performances, the inevitable label noise caused by the clustering procedure was ignored. Such noisy pseudo labels substantially hinders the model&#39;s capability on further improving feature representations on the target domain. In order to mitigate the effects of noisy pseudo labels, we propose to softly refine the pseudo labels in the target domain by proposing an unsupervised framework, Mutual Mean-Teaching (MMT), to learn better features from the target domain via off-line refined hard pseudo labels and on-line refined soft pseudo labels in an alternative training manner.  In addition, the common practice is to adopt both the classification loss and the triplet loss jointly for achieving optimal performances in person re-ID models. However, conventional triplet loss cannot work with softly refined labels. To solve this problem, a novel soft softmax-triplet loss is proposed to support learning with soft pseudo triplet labels for achieving the optimal domain adaptation performance. The proposed MMT framework achieves considerable improvements of 14.4%, 18.2%, 13.1% and 16.4% mAP on Market-to-Duke, Duke-to-Market, Market-to-MSMT and Duke-to-MSMT unsupervised domain adaptation tasks.
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="keyword_Label Refinery.html" class="text-secondary text-decoration-none">Label Refinery</a>,
+       
+       <a href="keyword_Unsupervised Domain Adaptation.html" class="text-secondary text-decoration-none">Unsupervised Domain Adaptation</a>,
+       
+       <a href="keyword_Person Re-identification.html" class="text-secondary text-decoration-none">Person Re-identification</a>
+       
+     </p>
+   </div>
+ </div>
 
-
-      <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/e74af9cf4a4cb3b9e76e7b524c3533ee23441b65.pdf">
-        <button class="btn btn-outline-secondary">
-          Paper
-        </button>
-      </a>
-      <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=rJlnOhVYPS">
-        <button class="btn btn-outline-secondary">
-          OpenReview
-        </button>
-      </a>
-    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
-
-    <a href="https://github.com/yxgeee/MMT" target="_blank"  class="card-link">
-      <button class="btn btn-outline-secondary">
-        Code
-      </button>
-    </a>
-
-    <a href="" target="_blank"  class="card-link">
-      <button class="btn btn-outline-secondary">
-        Slides
-      </button>
-    </a>
-    </center>
-
-  </div>
 </div>
-
-<div id="details" class="card m-3 collapse" style="font-family: 'Cuprum'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
-  <div class="card-body">
-    <p class="card-text">
-      <div id="abstractExample">
-        <span class="font-weight-bold">Abstract:</span>
-        Person re-identification (re-ID) aims at identifying the same persons&#39; images across different cameras. However, domain diversities between different datasets pose an evident challenge for adapting the re-ID model trained on one dataset to another one. State-of-the-art unsupervised domain adaptation methods for person re-ID transferred the learned knowledge from the source domain by optimizing with pseudo labels created by clustering algorithms on the target domain. Although they achieved state-of-the-art performances, the inevitable label noise caused by the clustering procedure was ignored. Such noisy pseudo labels substantially hinders the model&#39;s capability on further improving feature representations on the target domain. In order to mitigate the effects of noisy pseudo labels, we propose to softly refine the pseudo labels in the target domain by proposing an unsupervised framework, Mutual Mean-Teaching (MMT), to learn better features from the target domain via off-line refined hard pseudo labels and on-line refined soft pseudo labels in an alternative training manner.  In addition, the common practice is to adopt both the classification loss and the triplet loss jointly for achieving optimal performances in person re-ID models. However, conventional triplet loss cannot work with softly refined labels. To solve this problem, a novel soft softmax-triplet loss is proposed to support learning with soft pseudo triplet labels for achieving the optimal domain adaptation performance. The proposed MMT framework achieves considerable improvements of 14.4%, 18.2%, 13.1% and 16.4% mAP on Market-to-Duke, Duke-to-Market, Market-to-MSMT and Duke-to-MSMT unsupervised domain adaptation tasks.
-      </div>
-
-    </p>
-
-    <p></p>
-    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-      
-      <a href="keyword_Label Refinery.html" class="text-secondary text-decoration-none">Label Refinery</a>,
-      
-      <a href="keyword_Unsupervised Domain Adaptation.html" class="text-secondary text-decoration-none">Unsupervised Domain Adaptation</a>,
-      
-      <a href="keyword_Person Re-identification.html" class="text-secondary text-decoration-none">Person Re-identification</a>
-      
-    </p>
-  </div>
-</div>
-
-<div>
-</div>
-
-</div>
-
 
 <!-- SlidesLive -->
-<div id="presentation-embed-38915748" class="container container-sm"></div>
-<script src='https://slideslive.com/embed_presentation.js'></script>
-<script>
-  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
         zoomRatio: 0.4,
         hideTitle: true
-    });
-</script>
-
-
-<!-- Buttons -->
-<div class="container" style="padding-bottom: 30px; padding-top:30px">
-  <center>
-    <h2> Paper Discussion       </h2>
-    <!-- <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterrJlnOhVYPS/">Chat</a></span> -->
-  </center>
-  <p></p>
-
-  <!-- Gitter -->
-  <!-- <div id='discourse-comments'></div> -->
-
-
-<!-- <script type="text/javascript"> -->
-<!--   DiscourseEmbed = { discourseUrl: 'https://iclr.trydiscourse.com/', -->
-<!--                      topicId: 20}; -->
-
-<!--   (function() { -->
-<!--     var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true; -->
-<!--     d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js'; -->
-<!--     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d); -->
-<!--   })(); -->
-<!-- </script> -->
-
-
-  <div id="gitter" class="gitter container" height="600px">
-    <center>
-      <div class="border">
-
-        <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rJlnOhVYPS?layout=embedded" width="900px" height="400px"></iframe> </center>
+        });
+      </script>
+    </div>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rJlnOhVYPS?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
       </div>
-    </center>
+    </div>
   </div>
 </div>
-
 
   <!-- Recs -->
   <p></p>
@@ -299,95 +234,58 @@
 
 <div  class="container" >
   <div class="row">
-    <div class="card-deck">
+  
 
       
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_HkgsPhNYPS.html" class="text-dark"><h5 class="card-title">SELF: Learning to Filter Noisy Labels with Self-Ensembling</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/HkgsPhNYPS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_HkgsPhNYPS.html" class="text-dark"><h5 class="card-title">SELF: Learning to Filter Noisy Labels with Self-Ensembling</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We propose a self-ensemble framework to train more robust deep learning models under noisy labeled datasets.</p>
+            <p class="card-text"> We propose a self-ensemble framework to train more robust deep learning models under noisy labeled datasets.</p>
+            
+          </div>      
+        </div>
       </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_rJlnxkSYPS.html" class="text-dark"><h5 class="card-title">Unsupervised Clustering using Pseudo-semi-supervised Learning</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/rJlnxkSYPS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      <div class="card-footer">
-      <center>
-        <a href="poster_HkgsPhNYPS.html" class="btn btn-primary">Visit</a>
-        </center>
-
+            <p class="card-text"> Using ensembles and pseudo labels for unsupervised clustering </p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_HJezF3VYPB.html" class="text-dark"><h5 class="card-title">Federated Adversarial Domain Adaptation</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/HJezF3VYPB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_rJlnxkSYPS.html" class="text-dark"><h5 class="card-title">Unsupervised Clustering using Pseudo-semi-supervised Learning</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> Using ensembles and pseudo labels for unsupervised clustering </p>
+            <p class="card-text"> we present a principled approach to the problem of federated domain adaptation, which aims to align the representations learned among the different nodes with the data distribution of the target node.</p>
+            
+          </div>      
+        </div>
       </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_rkgt0REKwS.html" class="text-dark"><h5 class="card-title">Curriculum Loss: Robust Learning and Generalization  against Label Corruption</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/rkgt0REKwS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      <div class="card-footer">
-      <center>
-        <a href="poster_rJlnxkSYPS.html" class="btn btn-primary">Visit</a>
-        </center>
-
+            <p class="card-text"> A novel loss bridges curriculum learning and robust learning</p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
-
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_HJezF3VYPB.html" class="text-dark"><h5 class="card-title">Federated Adversarial Domain Adaptation</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> we present a principled approach to the problem of federated domain adaptation, which aims to align the representations learned among the different nodes with the data distribution of the target node.</p>
-      </div>
-
-      <div class="card-footer">
-      <center>
-        <a href="poster_HJezF3VYPB.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_rkgt0REKwS.html" class="text-dark"><h5 class="card-title">Curriculum Loss: Robust Learning and Generalization  against Label Corruption</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> A novel loss bridges curriculum learning and robust learning</p>
-      </div>
-
-      <div class="card-footer">
-      <center>
-        <a href="poster_rkgt0REKwS.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-    </DIV>
-          </DIV>
-      </DIV>
+      
+  </DIV>
+</DIV>
 
 </body>

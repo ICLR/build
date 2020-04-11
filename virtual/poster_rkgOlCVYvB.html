@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    <link rel="stylesheet" href="static/css/main.css">
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -25,9 +25,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-    <script src="static/typeahead.bundle.js"></script>
+    <script src="static/js/typeahead.bundle.js"></script>
 
-    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet" href="static/css/typeahead.css">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -46,58 +46,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-
-<style>
-  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .btn-group{background-color: white}
-  .btn {background-color: white}
-  #main-nav {padding-top:10px; padding-bottom:10px;}
-  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
-  .header {font: "Montserrat"; }
-  .card-header { border: 4px solid #eee;
-                font-family: "Exo";}
-
-
-  .main-title {font-weight: 700;  color: #2294e0;}
-
-  .myAccordion {
-
-  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
-    margin-bottom: 18px;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-top: 10px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  #abstractExample.collapse:not(.show) {
-  display: block;
-  /* height = lineheight * no of lines to display */
-  height: 4.5em;
-  overflow: hidden;
-  }
-
-  #abstractExample.collapsing {
-  height: 4.5em;
-  }
-
-
-#absShow.collapsed:after {
-  content: '+ Show More';
-}
-
-#absShow:not(.collapsed):after {
-  content: '- Show Less';
-}
-</style>
-
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,136 +108,119 @@
 
  <!-- Title -->
 
-<div class="card m-3" style="">
-  <div class="card-header">
-    <h3 class="card-title main-title text-center" style="">
-      Pure and Spurious Critical Points: a Geometric Study of Linear Networks
-    </h3>
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       Pure and Spurious Critical Points: a Geometric Study of Linear Networks
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       
+       Matthew Trager,
+       
+       Kathlén Kohn,
+       
+       Joan Bruna
+       
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
 
-    <h5 class="card-subtitle mb-2 text-muted text-center">
-      
-      Matthew Trager,
-      
-      Kathlén Kohn,
-      
-      Joan Bruna
-      
-    </h5>
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/f203c690f327bdbb7ad7f08538a96a545db208e5.pdf">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=rkgOlCVYvB">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       
+       <a href="https://drive.google.com/file/d/1eSU6mwgmowSAyQY3b1jXPzvbymNv338z/view?usp=sharing" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Code
+         </button>
+       </a>
+       
+       
+       
+     </center>
+     
+   </div>
+ </div>
 
-    <center class="p-3">
-      <a class="card-link" data-toggle="collapse" role="button" href="#details">
-        <button class="btn btn-outline-secondary">
-          Abstract
-        </button>
-      </a>
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         The critical locus of the loss function of a neural network is determined by the geometry of the functional space and by the parameterization of this space by the network&#39;s weights. We introduce a natural distinction between pure critical points, which only depend on the functional space, and spurious critical points, which arise from the parameterization. We apply this perspective to revisit and extend the literature on the loss function of linear neural networks. For this type of network, the functional space is either the set of all linear maps from input to output space, or a determinantal variety, i.e., a set of linear maps with bounded rank. We use geometric properties of determinantal varieties to derive new results on the landscape of linear networks with different loss functions and different parameterizations. Our analysis clearly illustrates that the absence of &#34;bad&#34; local minima in the loss landscape of linear networks is due to two distinct phenomena that apply in different settings: it is true for arbitrary smooth convex losses in the case of architectures that can express all linear maps (&#34;filling architectures&#34;) but it holds only for the quadratic loss when the functional space is a determinantal variety (&#34;non-filling architectures&#34;). Without any assumption on the architecture, smooth convex losses may lead to landscapes with many bad minima.
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="keyword_Loss landscape.html" class="text-secondary text-decoration-none">Loss landscape</a>,
+       
+       <a href="keyword_linear networks.html" class="text-secondary text-decoration-none">linear networks</a>,
+       
+       <a href="keyword_algebraic geometry.html" class="text-secondary text-decoration-none">algebraic geometry</a>
+       
+     </p>
+   </div>
+ </div>
 
-
-      <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/f203c690f327bdbb7ad7f08538a96a545db208e5.pdf">
-        <button class="btn btn-outline-secondary">
-          Paper
-        </button>
-      </a>
-      <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=rkgOlCVYvB">
-        <button class="btn btn-outline-secondary">
-          OpenReview
-        </button>
-      </a>
-    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
-
-    <a href="https://drive.google.com/file/d/1eSU6mwgmowSAyQY3b1jXPzvbymNv338z/view?usp=sharing" target="_blank"  class="card-link">
-      <button class="btn btn-outline-secondary">
-        Code
-      </button>
-    </a>
-
-    <a href="" target="_blank"  class="card-link">
-      <button class="btn btn-outline-secondary">
-        Slides
-      </button>
-    </a>
-    </center>
-
-  </div>
 </div>
-
-<div id="details" class="card m-3 collapse" style="font-family: 'Cuprum'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
-  <div class="card-body">
-    <p class="card-text">
-      <div id="abstractExample">
-        <span class="font-weight-bold">Abstract:</span>
-        The critical locus of the loss function of a neural network is determined by the geometry of the functional space and by the parameterization of this space by the network&#39;s weights. We introduce a natural distinction between pure critical points, which only depend on the functional space, and spurious critical points, which arise from the parameterization. We apply this perspective to revisit and extend the literature on the loss function of linear neural networks. For this type of network, the functional space is either the set of all linear maps from input to output space, or a determinantal variety, i.e., a set of linear maps with bounded rank. We use geometric properties of determinantal varieties to derive new results on the landscape of linear networks with different loss functions and different parameterizations. Our analysis clearly illustrates that the absence of &#34;bad&#34; local minima in the loss landscape of linear networks is due to two distinct phenomena that apply in different settings: it is true for arbitrary smooth convex losses in the case of architectures that can express all linear maps (&#34;filling architectures&#34;) but it holds only for the quadratic loss when the functional space is a determinantal variety (&#34;non-filling architectures&#34;). Without any assumption on the architecture, smooth convex losses may lead to landscapes with many bad minima.
-      </div>
-
-    </p>
-
-    <p></p>
-    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-      
-      <a href="keyword_Loss landscape.html" class="text-secondary text-decoration-none">Loss landscape</a>,
-      
-      <a href="keyword_linear networks.html" class="text-secondary text-decoration-none">linear networks</a>,
-      
-      <a href="keyword_algebraic geometry.html" class="text-secondary text-decoration-none">algebraic geometry</a>
-      
-    </p>
-  </div>
-</div>
-
-<div>
-</div>
-
-</div>
-
 
 <!-- SlidesLive -->
-<div id="presentation-embed-38915748" class="container container-sm"></div>
-<script src='https://slideslive.com/embed_presentation.js'></script>
-<script>
-  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
         zoomRatio: 0.4,
         hideTitle: true
-    });
-</script>
-
-
-<!-- Buttons -->
-<div class="container" style="padding-bottom: 30px; padding-top:30px">
-  <center>
-    <h2> Paper Discussion       </h2>
-    <!-- <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterrkgOlCVYvB/">Chat</a></span> -->
-  </center>
-  <p></p>
-
-  <!-- Gitter -->
-  <!-- <div id='discourse-comments'></div> -->
-
-
-<!-- <script type="text/javascript"> -->
-<!--   DiscourseEmbed = { discourseUrl: 'https://iclr.trydiscourse.com/', -->
-<!--                      topicId: 20}; -->
-
-<!--   (function() { -->
-<!--     var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true; -->
-<!--     d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js'; -->
-<!--     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d); -->
-<!--   })(); -->
-<!-- </script> -->
-
-
-  <div id="gitter" class="gitter container" height="600px">
-    <center>
-      <div class="border">
-
-        <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rkgOlCVYvB?layout=embedded" width="900px" height="400px"></iframe> </center>
+        });
+      </script>
+    </div>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rkgOlCVYvB?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
       </div>
-    </center>
+    </div>
   </div>
 </div>
-
 
   <!-- Recs -->
   <p></p>
@@ -299,95 +234,58 @@
 
 <div  class="container" >
   <div class="row">
-    <div class="card-deck">
+  
 
       
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_B1x6BTEKwr.html" class="text-dark"><h5 class="card-title">Piecewise linear activations substantially shape the loss surfaces of neural networks</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/B1x6BTEKwr.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_B1x6BTEKwr.html" class="text-dark"><h5 class="card-title">Piecewise linear activations substantially shape the loss surfaces of neural networks</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> This paper presents how the loss surfaces of nonlinear neural networks are substantially shaped by the nonlinearities in activations.</p>
+            <p class="card-text"> This paper presents how the loss surfaces of nonlinear neural networks are substantially shaped by the nonlinearities in activations.</p>
+            
+          </div>      
+        </div>
       </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_SJeLIgBKPS.html" class="text-dark"><h5 class="card-title">Gradient Descent Maximizes the Margin of Homogeneous Neural Networks</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/SJeLIgBKPS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      <div class="card-footer">
-      <center>
-        <a href="poster_B1x6BTEKwr.html" class="btn btn-primary">Visit</a>
-        </center>
-
+            <p class="card-text"> We study the implicit bias of gradient descent and prove under a minimal set of assumptions that the parameter direction of homogeneous models converges to KKT points of a natural margin maximization problem.</p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_BkgXHTNtvS.html" class="text-dark"><h5 class="card-title">Bounds on Over-Parameterization for Guaranteed Existence of Descent Paths in Shallow ReLU Networks</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/BkgXHTNtvS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_SJeLIgBKPS.html" class="text-dark"><h5 class="card-title">Gradient Descent Maximizes the Margin of Homogeneous Neural Networks</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We study the implicit bias of gradient descent and prove under a minimal set of assumptions that the parameter direction of homogeneous models converges to KKT points of a natural margin maximization problem.</p>
+            <p class="card-text"> We study the landscape of squared loss in neural networks with one-hidden layer and ReLU activation functions.  Let $m$ and $d$ be the widths of hidden and input layers, respectively. We show that there exist poor local minima with positive curvature...</p>
+            
+          </div>      
+        </div>
       </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_Bylx-TNKvH.html" class="text-dark"><h5 class="card-title">Functional vs. parametric equivalence of ReLU networks</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/Bylx-TNKvH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      <div class="card-footer">
-      <center>
-        <a href="poster_SJeLIgBKPS.html" class="btn btn-primary">Visit</a>
-        </center>
-
+            <p class="card-text"> We prove that there exist ReLU networks whose parameters are almost uniquely determined by the function they implement.</p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
-
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_BkgXHTNtvS.html" class="text-dark"><h5 class="card-title">Bounds on Over-Parameterization for Guaranteed Existence of Descent Paths in Shallow ReLU Networks</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We study the landscape of squared loss in neural networks with one-hidden layer and ReLU activation functions.  Let $m$ and $d$ be the widths of hidden and input layers, respectively. We show that there exist poor local minima with positive curvature...</p>
-      </div>
-
-      <div class="card-footer">
-      <center>
-        <a href="poster_BkgXHTNtvS.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_Bylx-TNKvH.html" class="text-dark"><h5 class="card-title">Functional vs. parametric equivalence of ReLU networks</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We prove that there exist ReLU networks whose parameters are almost uniquely determined by the function they implement.</p>
-      </div>
-
-      <div class="card-footer">
-      <center>
-        <a href="poster_Bylx-TNKvH.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-    </DIV>
-          </DIV>
-      </DIV>
+      
+  </DIV>
+</DIV>
 
 </body>

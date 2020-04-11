@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    <link rel="stylesheet" href="static/css/main.css">
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -25,9 +25,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-    <script src="static/typeahead.bundle.js"></script>
+    <script src="static/js/typeahead.bundle.js"></script>
 
-    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet" href="static/css/typeahead.css">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -46,58 +46,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-
-<style>
-  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .btn-group{background-color: white}
-  .btn {background-color: white}
-  #main-nav {padding-top:10px; padding-bottom:10px;}
-  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
-  .header {font: "Montserrat"; }
-  .card-header { border: 4px solid #eee;
-                font-family: "Exo";}
-
-
-  .main-title {font-weight: 700;  color: #2294e0;}
-
-  .myAccordion {
-
-  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
-    margin-bottom: 18px;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-top: 10px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  #abstractExample.collapse:not(.show) {
-  display: block;
-  /* height = lineheight * no of lines to display */
-  height: 4.5em;
-  overflow: hidden;
-  }
-
-  #abstractExample.collapsing {
-  height: 4.5em;
-  }
-
-
-#absShow.collapsed:after {
-  content: '+ Show More';
-}
-
-#absShow:not(.collapsed):after {
-  content: '- Show Less';
-}
-</style>
-
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,142 +108,125 @@
 
  <!-- Title -->
 
-<div class="card m-3" style="">
-  <div class="card-header">
-    <h3 class="card-title main-title text-center" style="">
-      Dynamically Pruned Message Passing Networks for Large-scale Knowledge Graph Reasoning
-    </h3>
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       Dynamically Pruned Message Passing Networks for Large-scale Knowledge Graph Reasoning
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       
+       Xiaoran Xu,
+       
+       Wei Feng,
+       
+       Yunsheng Jiang,
+       
+       Xiaohui Xie,
+       
+       Zhiqing Sun,
+       
+       Zhi-Hong Deng
+       
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
 
-    <h5 class="card-subtitle mb-2 text-muted text-center">
-      
-      Xiaoran Xu,
-      
-      Wei Feng,
-      
-      Yunsheng Jiang,
-      
-      Xiaohui Xie,
-      
-      Zhiqing Sun,
-      
-      Zhi-Hong Deng
-      
-    </h5>
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/c7e1f6ead2ddbbcc00f2599075e5b8bce5aa77f2.pdf">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=rkeuAhVKvB">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       
+       <a href="https://github.com/netpaladinx/DPMPN" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Code
+         </button>
+       </a>
+       
+       
+       
+     </center>
+     
+   </div>
+ </div>
 
-    <center class="p-3">
-      <a class="card-link" data-toggle="collapse" role="button" href="#details">
-        <button class="btn btn-outline-secondary">
-          Abstract
-        </button>
-      </a>
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         We propose Dynamically Pruned Message Passing Networks (DPMPN) for large-scale knowledge graph reasoning. In contrast to existing models, embedding-based or path-based, we learn an input-dependent subgraph to explicitly model a sequential reasoning process. Each subgraph is dynamically constructed, expanding itself selectively under a flow-style attention mechanism. In this way, we can not only construct graphical explanations to interpret prediction, but also prune message passing in Graph Neural Networks (GNNs) to scale with the size of graphs. We take the inspiration from the consciousness prior proposed by Bengio to design a two-GNN framework to encode global input-invariant graph-structured representation and learn local input-dependent one coordinated by an attention module. Experiments show the reasoning capability in our model that is providing a clear graphical explanation as well as predicting results accurately, outperforming most state-of-the-art methods in knowledge base completion tasks.
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="keyword_knowledge graph reasoning.html" class="text-secondary text-decoration-none">knowledge graph reasoning</a>,
+       
+       <a href="keyword_graph neural networks.html" class="text-secondary text-decoration-none">graph neural networks</a>,
+       
+       <a href="keyword_attention mechanism.html" class="text-secondary text-decoration-none">attention mechanism</a>
+       
+     </p>
+   </div>
+ </div>
 
-
-      <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/c7e1f6ead2ddbbcc00f2599075e5b8bce5aa77f2.pdf">
-        <button class="btn btn-outline-secondary">
-          Paper
-        </button>
-      </a>
-      <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=rkeuAhVKvB">
-        <button class="btn btn-outline-secondary">
-          OpenReview
-        </button>
-      </a>
-    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
-
-    <a href="https://github.com/netpaladinx/DPMPN" target="_blank"  class="card-link">
-      <button class="btn btn-outline-secondary">
-        Code
-      </button>
-    </a>
-
-    <a href="" target="_blank"  class="card-link">
-      <button class="btn btn-outline-secondary">
-        Slides
-      </button>
-    </a>
-    </center>
-
-  </div>
 </div>
-
-<div id="details" class="card m-3 collapse" style="font-family: 'Cuprum'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
-  <div class="card-body">
-    <p class="card-text">
-      <div id="abstractExample">
-        <span class="font-weight-bold">Abstract:</span>
-        We propose Dynamically Pruned Message Passing Networks (DPMPN) for large-scale knowledge graph reasoning. In contrast to existing models, embedding-based or path-based, we learn an input-dependent subgraph to explicitly model a sequential reasoning process. Each subgraph is dynamically constructed, expanding itself selectively under a flow-style attention mechanism. In this way, we can not only construct graphical explanations to interpret prediction, but also prune message passing in Graph Neural Networks (GNNs) to scale with the size of graphs. We take the inspiration from the consciousness prior proposed by Bengio to design a two-GNN framework to encode global input-invariant graph-structured representation and learn local input-dependent one coordinated by an attention module. Experiments show the reasoning capability in our model that is providing a clear graphical explanation as well as predicting results accurately, outperforming most state-of-the-art methods in knowledge base completion tasks.
-      </div>
-
-    </p>
-
-    <p></p>
-    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-      
-      <a href="keyword_knowledge graph reasoning.html" class="text-secondary text-decoration-none">knowledge graph reasoning</a>,
-      
-      <a href="keyword_graph neural networks.html" class="text-secondary text-decoration-none">graph neural networks</a>,
-      
-      <a href="keyword_attention mechanism.html" class="text-secondary text-decoration-none">attention mechanism</a>
-      
-    </p>
-  </div>
-</div>
-
-<div>
-</div>
-
-</div>
-
 
 <!-- SlidesLive -->
-<div id="presentation-embed-38915748" class="container container-sm"></div>
-<script src='https://slideslive.com/embed_presentation.js'></script>
-<script>
-  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
         zoomRatio: 0.4,
         hideTitle: true
-    });
-</script>
-
-
-<!-- Buttons -->
-<div class="container" style="padding-bottom: 30px; padding-top:30px">
-  <center>
-    <h2> Paper Discussion       </h2>
-    <!-- <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterrkeuAhVKvB/">Chat</a></span> -->
-  </center>
-  <p></p>
-
-  <!-- Gitter -->
-  <!-- <div id='discourse-comments'></div> -->
-
-
-<!-- <script type="text/javascript"> -->
-<!--   DiscourseEmbed = { discourseUrl: 'https://iclr.trydiscourse.com/', -->
-<!--                      topicId: 20}; -->
-
-<!--   (function() { -->
-<!--     var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true; -->
-<!--     d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js'; -->
-<!--     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d); -->
-<!--   })(); -->
-<!-- </script> -->
-
-
-  <div id="gitter" class="gitter container" height="600px">
-    <center>
-      <div class="border">
-
-        <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rkeuAhVKvB?layout=embedded" width="900px" height="400px"></iframe> </center>
+        });
+      </script>
+    </div>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rkeuAhVKvB?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
       </div>
-    </center>
+    </div>
   </div>
 </div>
-
 
   <!-- Recs -->
   <p></p>
@@ -305,95 +240,58 @@
 
 <div  class="container" >
   <div class="row">
-    <div class="card-deck">
+  
 
       
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_r1laNeBYPB.html" class="text-dark"><h5 class="card-title">Memory-Based Graph Networks</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/r1laNeBYPB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_r1laNeBYPB.html" class="text-dark"><h5 class="card-title">Memory-Based Graph Networks</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We introduce an efficient memory layer to jointly learn representations and coarsen the input graphs.</p>
+            <p class="card-text"> We introduce an efficient memory layer to jointly learn representations and coarsen the input graphs.</p>
+            
+          </div>      
+        </div>
       </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_B1lnbRNtwr.html" class="text-dark"><h5 class="card-title">Global Relational Models of Source Code</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/B1lnbRNtwr.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      <div class="card-footer">
-      <center>
-        <a href="poster_r1laNeBYPB.html" class="btn btn-primary">Visit</a>
-        </center>
-
+            <p class="card-text"> Models of source code that combine global and structural features learn more powerful representations of programs.</p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_r1lGO0EKDH.html" class="text-dark"><h5 class="card-title">GraphZoom: A Multi-level Spectral Approach for Accurate and Scalable Graph Embedding</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/r1lGO0EKDH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_B1lnbRNtwr.html" class="text-dark"><h5 class="card-title">Global Relational Models of Source Code</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> Models of source code that combine global and structural features learn more powerful representations of programs.</p>
+            <p class="card-text"> A multi-level spectral approach to improving the quality and scalability of unsupervised graph embedding.</p>
+            
+          </div>      
+        </div>
       </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_rkeIIkHKvS.html" class="text-dark"><h5 class="card-title">Measuring and Improving the Use of Graph Information in Graph Neural Networks</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/rkeIIkHKvS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      <div class="card-footer">
-      <center>
-        <a href="poster_B1lnbRNtwr.html" class="btn btn-primary">Visit</a>
-        </center>
-
+            <p class="card-text"> Graph neural networks (GNNs) have been widely used for representation learning on graph data. However, there is limited understanding on how much performance GNNs actually gain from graph data. This paper introduces a context-surrounding GNN framewor...</p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
-
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_r1lGO0EKDH.html" class="text-dark"><h5 class="card-title">GraphZoom: A Multi-level Spectral Approach for Accurate and Scalable Graph Embedding</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> A multi-level spectral approach to improving the quality and scalability of unsupervised graph embedding.</p>
-      </div>
-
-      <div class="card-footer">
-      <center>
-        <a href="poster_r1lGO0EKDH.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_rkeIIkHKvS.html" class="text-dark"><h5 class="card-title">Measuring and Improving the Use of Graph Information in Graph Neural Networks</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> Graph neural networks (GNNs) have been widely used for representation learning on graph data. However, there is limited understanding on how much performance GNNs actually gain from graph data. This paper introduces a context-surrounding GNN framewor...</p>
-      </div>
-
-      <div class="card-footer">
-      <center>
-        <a href="poster_rkeIIkHKvS.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-    </DIV>
-          </DIV>
-      </DIV>
+      
+  </DIV>
+</DIV>
 
 </body>

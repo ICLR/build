@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    <link rel="stylesheet" href="static/css/main.css">
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -25,9 +25,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-    <script src="static/typeahead.bundle.js"></script>
+    <script src="static/js/typeahead.bundle.js"></script>
 
-    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet" href="static/css/typeahead.css">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -46,58 +46,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-
-<style>
-  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .btn-group{background-color: white}
-  .btn {background-color: white}
-  #main-nav {padding-top:10px; padding-bottom:10px;}
-  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
-  .header {font: "Montserrat"; }
-  .card-header { border: 4px solid #eee;
-                font-family: "Exo";}
-
-
-  .main-title {font-weight: 700;  color: #2294e0;}
-
-  .myAccordion {
-
-  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
-    margin-bottom: 18px;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-top: 10px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  #abstractExample.collapse:not(.show) {
-  display: block;
-  /* height = lineheight * no of lines to display */
-  height: 4.5em;
-  overflow: hidden;
-  }
-
-  #abstractExample.collapsing {
-  height: 4.5em;
-  }
-
-
-#absShow.collapsed:after {
-  content: '+ Show More';
-}
-
-#absShow:not(.collapsed):after {
-  content: '- Show Less';
-}
-</style>
-
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,148 +108,125 @@
 
  <!-- Title -->
 
-<div class="card m-3" style="">
-  <div class="card-header">
-    <h3 class="card-title main-title text-center" style="">
-      SPACE: Unsupervised Object-Oriented Scene Representation via Spatial Attention and Decomposition
-    </h3>
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       SPACE: Unsupervised Object-Oriented Scene Representation via Spatial Attention and Decomposition
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       
+       Zhixuan Lin,
+       
+       Yi-Fu Wu,
+       
+       Skand Vishwanath Peri,
+       
+       Weihao Sun,
+       
+       Gautam Singh,
+       
+       Fei Deng,
+       
+       Jindong Jiang,
+       
+       Sungjin Ahn
+       
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
 
-    <h5 class="card-subtitle mb-2 text-muted text-center">
-      
-      Zhixuan Lin,
-      
-      Yi-Fu Wu,
-      
-      Skand Vishwanath Peri,
-      
-      Weihao Sun,
-      
-      Gautam Singh,
-      
-      Fei Deng,
-      
-      Jindong Jiang,
-      
-      Sungjin Ahn
-      
-    </h5>
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/e27953c0d5c7355fbf82dfcfc0e4205fae7db01f.pdf">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=rkl03ySYDH">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       
+       
+       
+     </center>
+     
+   </div>
+ </div>
 
-    <center class="p-3">
-      <a class="card-link" data-toggle="collapse" role="button" href="#details">
-        <button class="btn btn-outline-secondary">
-          Abstract
-        </button>
-      </a>
-
-
-      <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/e27953c0d5c7355fbf82dfcfc0e4205fae7db01f.pdf">
-        <button class="btn btn-outline-secondary">
-          Paper
-        </button>
-      </a>
-      <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=rkl03ySYDH">
-        <button class="btn btn-outline-secondary">
-          OpenReview
-        </button>
-      </a>
-    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
-
-    <a href="" target="_blank"  class="card-link">
-      <button class="btn btn-outline-secondary">
-        Code
-      </button>
-    </a>
-
-    <a href="" target="_blank"  class="card-link">
-      <button class="btn btn-outline-secondary">
-        Slides
-      </button>
-    </a>
-    </center>
-
-  </div>
-</div>
-
-<div id="details" class="card m-3 collapse" style="font-family: 'Cuprum'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
-  <div class="card-body">
-    <p class="card-text">
-      <div id="abstractExample">
-        <span class="font-weight-bold">Abstract:</span>
-        The ability to decompose complex multi-object scenes into meaningful abstractions like objects is fundamental to achieve higher-level cognition. Previous approaches for unsupervised object-oriented scene representation learning are either based on spatial-attention or scene-mixture approaches and limited in scalability which is a main obstacle towards modeling real-world scenes. In this paper, we propose a generative latent variable model, called SPACE, that provides a uniﬁed probabilistic modeling framework that combines the best of spatial-attention and scene-mixture approaches. SPACE can explicitly provide factorized object representations for foreground objects while also decomposing background segments of complex morphology. Previous models are good at either of these, but not both. SPACE also resolves the scalability problems of previous methods by incorporating parallel spatial-attention and thus is applicable to scenes with a large number of objects without performance degradations. We show through experiments on Atari and 3D-Rooms that SPACE achieves the above properties consistently in comparison to SPAIR, IODINE, and GENESIS. Results of our experiments can be found on our project website: https://sites.google.com/view/space-project-page
-      </div>
-
-    </p>
-
-    <p></p>
-    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-      
-      <a href="keyword_Generative models.html" class="text-secondary text-decoration-none">Generative models</a>,
-      
-      <a href="keyword_Unsupervised scene representation.html" class="text-secondary text-decoration-none">Unsupervised scene representation</a>,
-      
-      <a href="keyword_Object-oriented representation.html" class="text-secondary text-decoration-none">Object-oriented representation</a>,
-      
-      <a href="keyword_spatial attention.html" class="text-secondary text-decoration-none">spatial attention</a>
-      
-    </p>
-  </div>
-</div>
-
-<div>
-</div>
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         The ability to decompose complex multi-object scenes into meaningful abstractions like objects is fundamental to achieve higher-level cognition. Previous approaches for unsupervised object-oriented scene representation learning are either based on spatial-attention or scene-mixture approaches and limited in scalability which is a main obstacle towards modeling real-world scenes. In this paper, we propose a generative latent variable model, called SPACE, that provides a uniﬁed probabilistic modeling framework that combines the best of spatial-attention and scene-mixture approaches. SPACE can explicitly provide factorized object representations for foreground objects while also decomposing background segments of complex morphology. Previous models are good at either of these, but not both. SPACE also resolves the scalability problems of previous methods by incorporating parallel spatial-attention and thus is applicable to scenes with a large number of objects without performance degradations. We show through experiments on Atari and 3D-Rooms that SPACE achieves the above properties consistently in comparison to SPAIR, IODINE, and GENESIS. Results of our experiments can be found on our project website: https://sites.google.com/view/space-project-page
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="keyword_Generative models.html" class="text-secondary text-decoration-none">Generative models</a>,
+       
+       <a href="keyword_Unsupervised scene representation.html" class="text-secondary text-decoration-none">Unsupervised scene representation</a>,
+       
+       <a href="keyword_Object-oriented representation.html" class="text-secondary text-decoration-none">Object-oriented representation</a>,
+       
+       <a href="keyword_spatial attention.html" class="text-secondary text-decoration-none">spatial attention</a>
+       
+     </p>
+   </div>
+ </div>
 
 </div>
-
 
 <!-- SlidesLive -->
-<div id="presentation-embed-38915748" class="container container-sm"></div>
-<script src='https://slideslive.com/embed_presentation.js'></script>
-<script>
-  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
         zoomRatio: 0.4,
         hideTitle: true
-    });
-</script>
-
-
-<!-- Buttons -->
-<div class="container" style="padding-bottom: 30px; padding-top:30px">
-  <center>
-    <h2> Paper Discussion       </h2>
-    <!-- <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterrkl03ySYDH/">Chat</a></span> -->
-  </center>
-  <p></p>
-
-  <!-- Gitter -->
-  <!-- <div id='discourse-comments'></div> -->
-
-
-<!-- <script type="text/javascript"> -->
-<!--   DiscourseEmbed = { discourseUrl: 'https://iclr.trydiscourse.com/', -->
-<!--                      topicId: 20}; -->
-
-<!--   (function() { -->
-<!--     var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true; -->
-<!--     d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js'; -->
-<!--     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d); -->
-<!--   })(); -->
-<!-- </script> -->
-
-
-  <div id="gitter" class="gitter container" height="600px">
-    <center>
-      <div class="border">
-
-        <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rkl03ySYDH?layout=embedded" width="900px" height="400px"></iframe> </center>
+        });
+      </script>
+    </div>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rkl03ySYDH?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
       </div>
-    </center>
+    </div>
   </div>
 </div>
-
 
   <!-- Recs -->
   <p></p>
@@ -311,95 +240,58 @@
 
 <div  class="container" >
   <div class="row">
-    <div class="card-deck">
+  
 
       
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_BkxfaTVFwH.html" class="text-dark"><h5 class="card-title">GENESIS: Generative Scene Inference and Sampling with Object-Centric Latent Representations</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/BkxfaTVFwH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_BkxfaTVFwH.html" class="text-dark"><h5 class="card-title">GENESIS: Generative Scene Inference and Sampling with Object-Centric Latent Representations</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We present the first object-centric generative model of 3D visual scenes capable of both decomposing and generating scenes.</p>
+            <p class="card-text"> We present the first object-centric generative model of 3D visual scenes capable of both decomposing and generating scenes.</p>
+            
+          </div>      
+        </div>
       </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_SJxrKgStDH.html" class="text-dark"><h5 class="card-title">SCALOR: Generative World Models with Scalable Object Representations</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/SJxrKgStDH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      <div class="card-footer">
-      <center>
-        <a href="poster_BkxfaTVFwH.html" class="btn btn-primary">Visit</a>
-        </center>
-
+            <p class="card-text"> Scalability in terms of object density in a scene is a primary challenge in unsupervised sequential object-oriented representation learning. Most of the previous models have been shown to work only on scenes with a few objects. In this paper, we prop...</p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_SklD9yrFPS.html" class="text-dark"><h5 class="card-title">Neural Tangents: Fast and Easy Infinite Neural Networks in Python</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/SklD9yrFPS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_SJxrKgStDH.html" class="text-dark"><h5 class="card-title">SCALOR: Generative World Models with Scalable Object Representations</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> Scalability in terms of object density in a scene is a primary challenge in unsupervised sequential object-oriented representation learning. Most of the previous models have been shown to work only on scenes with a few objects. In this paper, we prop...</p>
+            <p class="card-text"> Keras for infinite neural networks.</p>
+            
+          </div>      
+        </div>
       </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_BJgMFxrYPB.html" class="text-dark"><h5 class="card-title">Learning to Move with Affordance Maps</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/BJgMFxrYPB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      <div class="card-footer">
-      <center>
-        <a href="poster_SJxrKgStDH.html" class="btn btn-primary">Visit</a>
-        </center>
-
+            <p class="card-text"> We address the task of autonomous exploration and navigation using spatial affordance maps that can be learned in a self-supervised manner, these outperform classic geometric baselines while being more sample efficient than contemporary RL algorithms</p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
-
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_SklD9yrFPS.html" class="text-dark"><h5 class="card-title">Neural Tangents: Fast and Easy Infinite Neural Networks in Python</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> Keras for infinite neural networks.</p>
-      </div>
-
-      <div class="card-footer">
-      <center>
-        <a href="poster_SklD9yrFPS.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_BJgMFxrYPB.html" class="text-dark"><h5 class="card-title">Learning to Move with Affordance Maps</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We address the task of autonomous exploration and navigation using spatial affordance maps that can be learned in a self-supervised manner, these outperform classic geometric baselines while being more sample efficient than contemporary RL algorithms</p>
-      </div>
-
-      <div class="card-footer">
-      <center>
-        <a href="poster_BJgMFxrYPB.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-    </DIV>
-          </DIV>
-      </DIV>
+      
+  </DIV>
+</DIV>
 
 </body>

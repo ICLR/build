@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    <link rel="stylesheet" href="static/css/main.css">
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -25,9 +25,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-    <script src="static/typeahead.bundle.js"></script>
+    <script src="static/js/typeahead.bundle.js"></script>
 
-    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet" href="static/css/typeahead.css">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -46,58 +46,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-
-<style>
-  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .btn-group{background-color: white}
-  .btn {background-color: white}
-  #main-nav {padding-top:10px; padding-bottom:10px;}
-  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
-  .header {font: "Montserrat"; }
-  .card-header { border: 4px solid #eee;
-                font-family: "Exo";}
-
-
-  .main-title {font-weight: 700;  color: #2294e0;}
-
-  .myAccordion {
-
-  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
-    margin-bottom: 18px;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-top: 10px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  #abstractExample.collapse:not(.show) {
-  display: block;
-  /* height = lineheight * no of lines to display */
-  height: 4.5em;
-  overflow: hidden;
-  }
-
-  #abstractExample.collapsing {
-  height: 4.5em;
-  }
-
-
-#absShow.collapsed:after {
-  content: '+ Show More';
-}
-
-#absShow:not(.collapsed):after {
-  content: '- Show Less';
-}
-</style>
-
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,134 +108,111 @@
 
  <!-- Title -->
 
-<div class="card m-3" style="">
-  <div class="card-header">
-    <h3 class="card-title main-title text-center" style="">
-      Diverse Trajectory Forecasting with Determinantal Point Processes
-    </h3>
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       Diverse Trajectory Forecasting with Determinantal Point Processes
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       
+       Ye Yuan,
+       
+       Kris M. Kitani
+       
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
 
-    <h5 class="card-subtitle mb-2 text-muted text-center">
-      
-      Ye Yuan,
-      
-      Kris M. Kitani
-      
-    </h5>
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/dbe4a1eab1eabba68d5e92b6ae29819c3f7f7999.pdf">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=ryxnY3NYPS">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       
+       
+       
+     </center>
+     
+   </div>
+ </div>
 
-    <center class="p-3">
-      <a class="card-link" data-toggle="collapse" role="button" href="#details">
-        <button class="btn btn-outline-secondary">
-          Abstract
-        </button>
-      </a>
-
-
-      <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/dbe4a1eab1eabba68d5e92b6ae29819c3f7f7999.pdf">
-        <button class="btn btn-outline-secondary">
-          Paper
-        </button>
-      </a>
-      <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=ryxnY3NYPS">
-        <button class="btn btn-outline-secondary">
-          OpenReview
-        </button>
-      </a>
-    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
-
-    <a href="" target="_blank"  class="card-link">
-      <button class="btn btn-outline-secondary">
-        Code
-      </button>
-    </a>
-
-    <a href="" target="_blank"  class="card-link">
-      <button class="btn btn-outline-secondary">
-        Slides
-      </button>
-    </a>
-    </center>
-
-  </div>
-</div>
-
-<div id="details" class="card m-3 collapse" style="font-family: 'Cuprum'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
-  <div class="card-body">
-    <p class="card-text">
-      <div id="abstractExample">
-        <span class="font-weight-bold">Abstract:</span>
-        The ability to forecast a set of likely yet diverse possible future behaviors of an agent (e.g., future trajectories of a pedestrian) is essential for safety-critical perception systems (e.g., autonomous vehicles). In particular, a set of possible future behaviors generated by the system must be diverse to account for all possible outcomes in order to take necessary safety precautions. It is not sufficient to maintain a set of the most likely future outcomes because the set may only contain perturbations of a dominating single outcome (major mode). While generative models such as variational autoencoders (VAEs) have been shown to be a powerful tool for learning a distribution over future trajectories, randomly drawn samples from the learned implicit likelihood model may not be diverse -- the likelihood model is derived from the training data distribution and the samples will concentrate around the major mode of the data. In this work, we propose to learn a diversity sampling function (DSF) that generates a diverse yet likely set of future trajectories. The DSF maps forecasting context features to a set of latent codes which can be decoded by a generative model (e.g., VAE) into a set of diverse trajectory samples. Concretely, the process of identifying the diverse set of samples is posed as DSF parameter estimation. To learn the parameters of the DSF, the diversity of the trajectory samples is evaluated by a diversity loss based on a determinantal point process (DPP). Gradient descent is performed over the DSF parameters, which in turn moves the latent codes of the sample set to find an optimal set of diverse yet likely trajectories. Our method is a novel application of DPPs to optimize a set of items (forecasted trajectories) in continuous space. We demonstrate the diversity of the trajectories produced by our approach on both low-dimensional 2D trajectory data and high-dimensional human motion data.
-      </div>
-
-    </p>
-
-    <p></p>
-    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-      
-      <a href="keyword_Diverse Inference.html" class="text-secondary text-decoration-none">Diverse Inference</a>,
-      
-      <a href="keyword_Generative Models.html" class="text-secondary text-decoration-none">Generative Models</a>,
-      
-      <a href="keyword_Trajectory Forecasting.html" class="text-secondary text-decoration-none">Trajectory Forecasting</a>
-      
-    </p>
-  </div>
-</div>
-
-<div>
-</div>
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         The ability to forecast a set of likely yet diverse possible future behaviors of an agent (e.g., future trajectories of a pedestrian) is essential for safety-critical perception systems (e.g., autonomous vehicles). In particular, a set of possible future behaviors generated by the system must be diverse to account for all possible outcomes in order to take necessary safety precautions. It is not sufficient to maintain a set of the most likely future outcomes because the set may only contain perturbations of a dominating single outcome (major mode). While generative models such as variational autoencoders (VAEs) have been shown to be a powerful tool for learning a distribution over future trajectories, randomly drawn samples from the learned implicit likelihood model may not be diverse -- the likelihood model is derived from the training data distribution and the samples will concentrate around the major mode of the data. In this work, we propose to learn a diversity sampling function (DSF) that generates a diverse yet likely set of future trajectories. The DSF maps forecasting context features to a set of latent codes which can be decoded by a generative model (e.g., VAE) into a set of diverse trajectory samples. Concretely, the process of identifying the diverse set of samples is posed as DSF parameter estimation. To learn the parameters of the DSF, the diversity of the trajectory samples is evaluated by a diversity loss based on a determinantal point process (DPP). Gradient descent is performed over the DSF parameters, which in turn moves the latent codes of the sample set to find an optimal set of diverse yet likely trajectories. Our method is a novel application of DPPs to optimize a set of items (forecasted trajectories) in continuous space. We demonstrate the diversity of the trajectories produced by our approach on both low-dimensional 2D trajectory data and high-dimensional human motion data.
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="keyword_Diverse Inference.html" class="text-secondary text-decoration-none">Diverse Inference</a>,
+       
+       <a href="keyword_Generative Models.html" class="text-secondary text-decoration-none">Generative Models</a>,
+       
+       <a href="keyword_Trajectory Forecasting.html" class="text-secondary text-decoration-none">Trajectory Forecasting</a>
+       
+     </p>
+   </div>
+ </div>
 
 </div>
-
 
 <!-- SlidesLive -->
-<div id="presentation-embed-38915748" class="container container-sm"></div>
-<script src='https://slideslive.com/embed_presentation.js'></script>
-<script>
-  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
         zoomRatio: 0.4,
         hideTitle: true
-    });
-</script>
-
-
-<!-- Buttons -->
-<div class="container" style="padding-bottom: 30px; padding-top:30px">
-  <center>
-    <h2> Paper Discussion       </h2>
-    <!-- <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterryxnY3NYPS/">Chat</a></span> -->
-  </center>
-  <p></p>
-
-  <!-- Gitter -->
-  <!-- <div id='discourse-comments'></div> -->
-
-
-<!-- <script type="text/javascript"> -->
-<!--   DiscourseEmbed = { discourseUrl: 'https://iclr.trydiscourse.com/', -->
-<!--                      topicId: 20}; -->
-
-<!--   (function() { -->
-<!--     var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true; -->
-<!--     d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js'; -->
-<!--     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d); -->
-<!--   })(); -->
-<!-- </script> -->
-
-
-  <div id="gitter" class="gitter container" height="600px">
-    <center>
-      <div class="border">
-
-        <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_ryxnY3NYPS?layout=embedded" width="900px" height="400px"></iframe> </center>
+        });
+      </script>
+    </div>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_ryxnY3NYPS?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
       </div>
-    </center>
+    </div>
   </div>
 </div>
-
 
   <!-- Recs -->
   <p></p>
@@ -297,95 +226,58 @@
 
 <div  class="container" >
   <div class="row">
-    <div class="card-deck">
+  
 
       
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_rJgUfTEYvH.html" class="text-dark"><h5 class="card-title">VideoFlow: A Conditional Flow-Based Model for Stochastic Video Generation</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/rJgUfTEYvH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_rJgUfTEYvH.html" class="text-dark"><h5 class="card-title">VideoFlow: A Conditional Flow-Based Model for Stochastic Video Generation</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We demonstrate that flow-based generative models offer a viable and competitive approach to generative modeling of video.</p>
+            <p class="card-text"> We demonstrate that flow-based generative models offer a viable and competitive approach to generative modeling of video.</p>
+            
+          </div>      
+        </div>
       </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_B1l8L6EtDS.html" class="text-dark"><h5 class="card-title">Self-Adversarial Learning with Comparative Discrimination for Text Generation</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/B1l8L6EtDS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      <div class="card-footer">
-      <center>
-        <a href="poster_rJgUfTEYvH.html" class="btn btn-primary">Visit</a>
-        </center>
-
+            <p class="card-text"> We propose a self-adversarial learning (SAL) paradigm which improves the generator in a self-play fashion for improving GANs&#39; performance in text generation.</p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_S1g7tpEYDS.html" class="text-dark"><h5 class="card-title">From Variational to Deterministic Autoencoders</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/S1g7tpEYDS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_B1l8L6EtDS.html" class="text-dark"><h5 class="card-title">Self-Adversarial Learning with Comparative Discrimination for Text Generation</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We propose a self-adversarial learning (SAL) paradigm which improves the generator in a self-play fashion for improving GANs&#39; performance in text generation.</p>
+            <p class="card-text"> Deterministic regularized autoencoders can learn a smooth, meaningful latent space as VAEs without having to force some arbitrarily chosen prior (i.e., Gaussian).</p>
+            
+          </div>      
+        </div>
       </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_H1laeJrKDB.html" class="text-dark"><h5 class="card-title">Controlling generative models with continuous factors of variations</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/H1laeJrKDB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      <div class="card-footer">
-      <center>
-        <a href="poster_B1l8L6EtDS.html" class="btn btn-primary">Visit</a>
-        </center>
-
+            <p class="card-text"> A model to control the generation of images with GAN and beta-VAE with regard to scale and position of the objects</p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
-
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_S1g7tpEYDS.html" class="text-dark"><h5 class="card-title">From Variational to Deterministic Autoencoders</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> Deterministic regularized autoencoders can learn a smooth, meaningful latent space as VAEs without having to force some arbitrarily chosen prior (i.e., Gaussian).</p>
-      </div>
-
-      <div class="card-footer">
-      <center>
-        <a href="poster_S1g7tpEYDS.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_H1laeJrKDB.html" class="text-dark"><h5 class="card-title">Controlling generative models with continuous factors of variations</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> A model to control the generation of images with GAN and beta-VAE with regard to scale and position of the objects</p>
-      </div>
-
-      <div class="card-footer">
-      <center>
-        <a href="poster_H1laeJrKDB.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-    </DIV>
-          </DIV>
-      </DIV>
+      
+  </DIV>
+</DIV>
 
 </body>

@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    <link rel="stylesheet" href="static/css/main.css">
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -25,9 +25,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-    <script src="static/typeahead.bundle.js"></script>
+    <script src="static/js/typeahead.bundle.js"></script>
 
-    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet" href="static/css/typeahead.css">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -46,58 +46,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-
-<style>
-  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .btn-group{background-color: white}
-  .btn {background-color: white}
-  #main-nav {padding-top:10px; padding-bottom:10px;}
-  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
-  .header {font: "Montserrat"; }
-  .card-header { border: 4px solid #eee;
-                font-family: "Exo";}
-
-
-  .main-title {font-weight: 700;  color: #2294e0;}
-
-  .myAccordion {
-
-  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
-    margin-bottom: 18px;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-top: 10px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  #abstractExample.collapse:not(.show) {
-  display: block;
-  /* height = lineheight * no of lines to display */
-  height: 4.5em;
-  overflow: hidden;
-  }
-
-  #abstractExample.collapsing {
-  height: 4.5em;
-  }
-
-
-#absShow.collapsed:after {
-  content: '+ Show More';
-}
-
-#absShow:not(.collapsed):after {
-  content: '- Show Less';
-}
-</style>
-
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,177 +108,160 @@
 
  <!-- Title -->
 
-<div class="card m-3" style="">
-  <div class="card-header">
-    <h3 class="card-title main-title text-center" style="">
-      Structured Object-Aware Physics Prediction for Video Modeling and Planning
-    </h3>
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       Structured Object-Aware Physics Prediction for Video Modeling and Planning
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       
+       Jannik Kossen,
+       
+       Karl Stelzner,
+       
+       Marcel Hussing,
+       
+       Claas Voelcker,
+       
+       Kristian Kersting
+       
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
 
-    <h5 class="card-subtitle mb-2 text-muted text-center">
-      
-      Jannik Kossen,
-      
-      Karl Stelzner,
-      
-      Marcel Hussing,
-      
-      Claas Voelcker,
-      
-      Kristian Kersting
-      
-    </h5>
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/76907f6dbb663f21a53e495b4d4d46aa1cb59af6.pdf">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=B1e-kxSKDH">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       
+       <a href="https://github.com/ICLR20/STOVE" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Code
+         </button>
+       </a>
+       
+       
+       
+     </center>
+     
+   </div>
+ </div>
 
-    <center class="p-3">
-      <a class="card-link" data-toggle="collapse" role="button" href="#details">
-        <button class="btn btn-outline-secondary">
-          Abstract
-        </button>
-      </a>
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         When humans observe a physical system, they can easily locate components, understand their interactions, and anticipate future behavior, even in settings with complicated and previously unseen interactions. For computers, however, learning such models from videos in an unsupervised fashion is an unsolved research problem.  In this paper, we present STOVE, a novel state-space model for  videos, which explicitly reasons about objects and their positions, velocities, and interactions. It is constructed by combining an image model and a dynamics model in compositional manner and improves on previous work by reusing the dynamics model for inference, accelerating and regularizing training. STOVE predicts videos with convincing physical behavior over hundreds of timesteps, outperforms previous unsupervised models, and even approaches the performance of supervised baselines. We further demonstrate the strength of our model as a simulator for sample efficient model-based control, in a task with heavily interacting objects.
 
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="keyword_self-supervised learning.html" class="text-secondary text-decoration-none">self-supervised learning</a>,
+       
+       <a href="keyword_probabilistic deep learning.html" class="text-secondary text-decoration-none">probabilistic deep learning</a>,
+       
+       <a href="keyword_structured models.html" class="text-secondary text-decoration-none">structured models</a>,
+       
+       <a href="keyword_video prediction.html" class="text-secondary text-decoration-none">video prediction</a>,
+       
+       <a href="keyword_physics prediction.html" class="text-secondary text-decoration-none">physics prediction</a>,
+       
+       <a href="keyword_planning.html" class="text-secondary text-decoration-none">planning</a>,
+       
+       <a href="keyword_variational auteoncoders.html" class="text-secondary text-decoration-none">variational auteoncoders</a>,
+       
+       <a href="keyword_model-based reinforcement learning.html" class="text-secondary text-decoration-none">model-based reinforcement learning</a>,
+       
+       <a href="keyword_VAEs.html" class="text-secondary text-decoration-none">VAEs</a>,
+       
+       <a href="keyword_unsupervised.html" class="text-secondary text-decoration-none">unsupervised</a>,
+       
+       <a href="keyword_variational.html" class="text-secondary text-decoration-none">variational</a>,
+       
+       <a href="keyword_graph neural networks.html" class="text-secondary text-decoration-none">graph neural networks</a>,
+       
+       <a href="keyword_tractable probabilistic models.html" class="text-secondary text-decoration-none">tractable probabilistic models</a>,
+       
+       <a href="keyword_attend-infer-repeat.html" class="text-secondary text-decoration-none">attend-infer-repeat</a>,
+       
+       <a href="keyword_relational learning.html" class="text-secondary text-decoration-none">relational learning</a>,
+       
+       <a href="keyword_AIR.html" class="text-secondary text-decoration-none">AIR</a>,
+       
+       <a href="keyword_sum-product networks.html" class="text-secondary text-decoration-none">sum-product networks</a>,
+       
+       <a href="keyword_object-oriented.html" class="text-secondary text-decoration-none">object-oriented</a>,
+       
+       <a href="keyword_object-centric.html" class="text-secondary text-decoration-none">object-centric</a>,
+       
+       <a href="keyword_object-aware.html" class="text-secondary text-decoration-none">object-aware</a>,
+       
+       <a href="keyword_MCTS.html" class="text-secondary text-decoration-none">MCTS</a>
+       
+     </p>
+   </div>
+ </div>
 
-      <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/76907f6dbb663f21a53e495b4d4d46aa1cb59af6.pdf">
-        <button class="btn btn-outline-secondary">
-          Paper
-        </button>
-      </a>
-      <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=B1e-kxSKDH">
-        <button class="btn btn-outline-secondary">
-          OpenReview
-        </button>
-      </a>
-    <!-- <span><a href="" class="btn btn-secondary">OpenReview</a></span> -->
-
-    <a href="https://github.com/ICLR20/STOVE" target="_blank"  class="card-link">
-      <button class="btn btn-outline-secondary">
-        Code
-      </button>
-    </a>
-
-    <a href="" target="_blank"  class="card-link">
-      <button class="btn btn-outline-secondary">
-        Slides
-      </button>
-    </a>
-    </center>
-
-  </div>
 </div>
-
-<div id="details" class="card m-3 collapse" style="font-family: 'Cuprum'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
-  <div class="card-body">
-    <p class="card-text">
-      <div id="abstractExample">
-        <span class="font-weight-bold">Abstract:</span>
-        When humans observe a physical system, they can easily locate components, understand their interactions, and anticipate future behavior, even in settings with complicated and previously unseen interactions. For computers, however, learning such models from videos in an unsupervised fashion is an unsolved research problem.  In this paper, we present STOVE, a novel state-space model for  videos, which explicitly reasons about objects and their positions, velocities, and interactions. It is constructed by combining an image model and a dynamics model in compositional manner and improves on previous work by reusing the dynamics model for inference, accelerating and regularizing training. STOVE predicts videos with convincing physical behavior over hundreds of timesteps, outperforms previous unsupervised models, and even approaches the performance of supervised baselines. We further demonstrate the strength of our model as a simulator for sample efficient model-based control, in a task with heavily interacting objects.
-
-      </div>
-
-    </p>
-
-    <p></p>
-    <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-      
-      <a href="keyword_self-supervised learning.html" class="text-secondary text-decoration-none">self-supervised learning</a>,
-      
-      <a href="keyword_probabilistic deep learning.html" class="text-secondary text-decoration-none">probabilistic deep learning</a>,
-      
-      <a href="keyword_structured models.html" class="text-secondary text-decoration-none">structured models</a>,
-      
-      <a href="keyword_video prediction.html" class="text-secondary text-decoration-none">video prediction</a>,
-      
-      <a href="keyword_physics prediction.html" class="text-secondary text-decoration-none">physics prediction</a>,
-      
-      <a href="keyword_planning.html" class="text-secondary text-decoration-none">planning</a>,
-      
-      <a href="keyword_variational auteoncoders.html" class="text-secondary text-decoration-none">variational auteoncoders</a>,
-      
-      <a href="keyword_model-based reinforcement learning.html" class="text-secondary text-decoration-none">model-based reinforcement learning</a>,
-      
-      <a href="keyword_VAEs.html" class="text-secondary text-decoration-none">VAEs</a>,
-      
-      <a href="keyword_unsupervised.html" class="text-secondary text-decoration-none">unsupervised</a>,
-      
-      <a href="keyword_variational.html" class="text-secondary text-decoration-none">variational</a>,
-      
-      <a href="keyword_graph neural networks.html" class="text-secondary text-decoration-none">graph neural networks</a>,
-      
-      <a href="keyword_tractable probabilistic models.html" class="text-secondary text-decoration-none">tractable probabilistic models</a>,
-      
-      <a href="keyword_attend-infer-repeat.html" class="text-secondary text-decoration-none">attend-infer-repeat</a>,
-      
-      <a href="keyword_relational learning.html" class="text-secondary text-decoration-none">relational learning</a>,
-      
-      <a href="keyword_AIR.html" class="text-secondary text-decoration-none">AIR</a>,
-      
-      <a href="keyword_sum-product networks.html" class="text-secondary text-decoration-none">sum-product networks</a>,
-      
-      <a href="keyword_object-oriented.html" class="text-secondary text-decoration-none">object-oriented</a>,
-      
-      <a href="keyword_object-centric.html" class="text-secondary text-decoration-none">object-centric</a>,
-      
-      <a href="keyword_object-aware.html" class="text-secondary text-decoration-none">object-aware</a>,
-      
-      <a href="keyword_MCTS.html" class="text-secondary text-decoration-none">MCTS</a>
-      
-    </p>
-  </div>
-</div>
-
-<div>
-</div>
-
-</div>
-
 
 <!-- SlidesLive -->
-<div id="presentation-embed-38915748" class="container container-sm"></div>
-<script src='https://slideslive.com/embed_presentation.js'></script>
-<script>
-  embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         allowHiddenControlsWhenPaused: true,
         zoomRatio: 0.4,
         hideTitle: true
-    });
-</script>
-
-
-<!-- Buttons -->
-<div class="container" style="padding-bottom: 30px; padding-top:30px">
-  <center>
-    <h2> Paper Discussion       </h2>
-    <!-- <span><a class="btn btn-secondary" href="https://gitter.im/iclr/posterB1e-kxSKDH/">Chat</a></span> -->
-  </center>
-  <p></p>
-
-  <!-- Gitter -->
-  <!-- <div id='discourse-comments'></div> -->
-
-
-<!-- <script type="text/javascript"> -->
-<!--   DiscourseEmbed = { discourseUrl: 'https://iclr.trydiscourse.com/', -->
-<!--                      topicId: 20}; -->
-
-<!--   (function() { -->
-<!--     var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true; -->
-<!--     d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js'; -->
-<!--     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d); -->
-<!--   })(); -->
-<!-- </script> -->
-
-
-  <div id="gitter" class="gitter container" height="600px">
-    <center>
-      <div class="border">
-
-        <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_B1e-kxSKDH?layout=embedded" width="900px" height="400px"></iframe> </center>
+        });
+      </script>
+    </div>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_B1e-kxSKDH?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
       </div>
-    </center>
+    </div>
   </div>
 </div>
-
 
   <!-- Recs -->
   <p></p>
@@ -340,95 +275,58 @@
 
 <div  class="container" >
   <div class="row">
-    <div class="card-deck">
+  
 
       
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_SkeyppEFvS.html" class="text-dark"><h5 class="card-title">CoPhy: Counterfactual Learning of Physical Dynamics</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/SkeyppEFvS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_SkeyppEFvS.html" class="text-dark"><h5 class="card-title">CoPhy: Counterfactual Learning of Physical Dynamics</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> Understanding causes and effects in mechanical systems is an essential component of reasoning in the physical world. This work poses a new problem of counterfactual learning of object mechanics from visual input.  We develop the CoPhy benchmark to as...</p>
+            <p class="card-text"> Understanding causes and effects in mechanical systems is an essential component of reasoning in the physical world. This work poses a new problem of counterfactual learning of object mechanics from visual input.  We develop the CoPhy benchmark to as...</p>
+            
+          </div>      
+        </div>
       </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_BJeKwTNFvB.html" class="text-dark"><h5 class="card-title">Physics-as-Inverse-Graphics: Unsupervised Physical Parameter Estimation from Video</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/BJeKwTNFvB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      <div class="card-footer">
-      <center>
-        <a href="poster_SkeyppEFvS.html" class="btn btn-primary">Visit</a>
-        </center>
-
+            <p class="card-text"> We propose a model that is able to perform physical parameter estimation of systems from video, where the differential equations governing the scene dynamics are known, but labeled states or objects are not available.</p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_HyeSin4FPB.html" class="text-dark"><h5 class="card-title">Learning to Control PDEs with Differentiable Physics</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/HyeSin4FPB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_BJeKwTNFvB.html" class="text-dark"><h5 class="card-title">Physics-as-Inverse-Graphics: Unsupervised Physical Parameter Estimation from Video</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We propose a model that is able to perform physical parameter estimation of systems from video, where the differential equations governing the scene dynamics are known, but labeled states or objects are not available.</p>
+            <p class="card-text"> We train a combination of neural networks to predict optimal trajectories for complex physical systems.</p>
+            
+          </div>      
+        </div>
       </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_HJgLZR4KvH.html" class="text-dark"><h5 class="card-title">Dynamics-Aware Unsupervised Skill Discovery</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/HJgLZR4KvH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
 
-      <div class="card-footer">
-      <center>
-        <a href="poster_BJeKwTNFvB.html" class="btn btn-primary">Visit</a>
-        </center>
-
+            <p class="card-text"> We propose an unsupervised skill discovery which enables model-based planning for hierarchical reinforcement learning.</p>
+            
+          </div>      
+        </div>
       </div>
-      <!-- </div> -->
-
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_HyeSin4FPB.html" class="text-dark"><h5 class="card-title">Learning to Control PDEs with Differentiable Physics</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We train a combination of neural networks to predict optimal trajectories for complex physical systems.</p>
-      </div>
-
-      <div class="card-footer">
-      <center>
-        <a href="poster_HyeSin4FPB.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-
-  <!-- <div class="col-sm-4" style="padding-bottom: 10px"> -->
-  <div class="card" >
-    <div class="card-header">
-        <a href="poster_HJgLZR4KvH.html" class="text-dark"><h5 class="card-title">Dynamics-Aware Unsupervised Skill Discovery</h5></a>
-
-    </div>
-      <div class="card-body">
-        <p class="card-text"> We propose an unsupervised skill discovery which enables model-based planning for hierarchical reinforcement learning.</p>
-      </div>
-
-      <div class="card-footer">
-      <center>
-        <a href="poster_HJgLZR4KvH.html" class="btn btn-primary">Visit</a>
-        </center>
-
-      </div>
-      <!-- </div> -->
-
-  </div>
-  
-    </DIV>
-          </DIV>
-      </DIV>
+      
+  </DIV>
+</DIV>
 
 </body>

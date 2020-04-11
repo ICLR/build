@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    <link rel="stylesheet" href="static/css/main.css">
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -26,9 +26,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-    <script src="static/typeahead.bundle.js"></script>
+    <script src="static/js/typeahead.bundle.js"></script>
 
-    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet" href="static/css/typeahead.css">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -46,58 +46,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-
-<style>
-  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .btn-group{background-color: white}
-  .btn {background-color: white}
-  #main-nav {padding-top:10px; padding-bottom:10px;}
-  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
-  .header {font: "Montserrat"; }
-  .card-header { border: 4px solid #eee;
-                font-family: "Exo";}
-
-
-  .main-title {font-weight: 700;  color: #2294e0;}
-
-  .myAccordion {
-
-  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
-    margin-bottom: 18px;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-top: 10px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  #abstractExample.collapse:not(.show) {
-  display: block;
-  /* height = lineheight * no of lines to display */
-  height: 4.5em;
-  overflow: hidden;
-  }
-
-  #abstractExample.collapsing {
-  height: 4.5em;
-  }
-
-
-#absShow.collapsed:after {
-  content: '+ Show More';
-}
-
-#absShow:not(.collapsed):after {
-  content: '- Show Less';
-}
-</style>
-
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -151,6 +103,13 @@
   </div>
 </nav>
 
+  <div class="row p-4">
+    <div class="col-12 bd-content ">
+      <h2 class="text-center"> Speakers </h2>
+    </div>
+  </div>
+
+  
   <div class ="container">
     
     <div class="row">
@@ -159,18 +118,25 @@
           <div class="card-header">
             <div class="row">
               <div class="col-2">
-                <img src="static/aisha.jpg" width="100%">
+                <img src="static/images/aisha.jpg" width="100%">
               </div>
 
               <div class="col-10 ">
-                <h3 class="card-title">
+
+                <div class="m-3">
+                <span class="card-title h3" >
                   Dr. Aisha Walcott-Bryant
-                </h3>
-                IBM Research Africa, Nairobi
-
-                <h4>
+                </span> 
+                <span>
+                  IBM Research Africa, Nairobi
+                </span>
+                </div>
+                
+                <div class="m-3">
+                <h3>
                   AI + Africa = Global Innovation
-                </h4>
+                </h3>
+                </div>
               </div>
             </div>
           </div>
@@ -184,18 +150,25 @@
           <div class="card-header">
             <div class="row">
               <div class="col-2">
-                <img src="static/Kaelbling-1.jpg" width="100%">
+                <img src="static/images/Kaelbling-1.jpg" width="100%">
               </div>
 
               <div class="col-10 ">
-                <h3 class="card-title">
+
+                <div class="m-3">
+                <span class="card-title h3" >
                   Prof. Leslie Kaebling
-                </h3>
-                MIT
-
-                <h4>
+                </span> 
+                <span>
+                  MIT
+                </span>
+                </div>
+                
+                <div class="m-3">
+                <h3>
                   Doing for Our Robots What Nature Did For Us
-                </h4>
+                </h3>
+                </div>
               </div>
             </div>
           </div>
@@ -209,18 +182,25 @@
           <div class="card-header">
             <div class="row">
               <div class="col-2">
-                <img src="static/ruha.jpeg" width="100%">
+                <img src="static/images/ruha.jpeg" width="100%">
               </div>
 
               <div class="col-10 ">
-                <h3 class="card-title">
+
+                <div class="m-3">
+                <span class="card-title h3" >
                   Prof. Ruha Benjamin
-                </h3>
-                Princeton
-
-                <h4>
+                </span> 
+                <span>
+                  Princeton
+                </span>
+                </div>
+                
+                <div class="m-3">
+                <h3>
                   2020 Vision: Reimagining the Default Settings of Technology &amp; Society
-                </h4>
+                </h3>
+                </div>
               </div>
             </div>
           </div>
@@ -234,18 +214,25 @@
           <div class="card-header">
             <div class="row">
               <div class="col-2">
-                <img src="static/laurent.jpg" width="100%">
+                <img src="static/images/laurent.jpg" width="100%">
               </div>
 
               <div class="col-10 ">
-                <h3 class="card-title">
-                  Laurent Dinh
-                </h3>
-                Google AI
 
-                <h4>
+                <div class="m-3">
+                <span class="card-title h3" >
+                  Dr. Laurent Dinh
+                </span> 
+                <span>
+                  Google AI
+                </span>
+                </div>
+                
+                <div class="m-3">
+                <h3>
                   Invertible Models and Normalizing Flows
-                </h4>
+                </h3>
+                </div>
               </div>
             </div>
           </div>
@@ -259,18 +246,25 @@
           <div class="card-header">
             <div class="row">
               <div class="col-2">
-                <img src="static/Mihaela_photo_new.jpg" width="100%">
+                <img src="static/images/Mihaela_photo_new.jpg" width="100%">
               </div>
 
               <div class="col-10 ">
-                <h3 class="card-title">
+
+                <div class="m-3">
+                <span class="card-title h3" >
                   Prof. Mihaela van der Schaar
-                </h3>
-                University of Cambridge, The Alan Turing Institute, University of California Los Angeles
-
-                <h4>
+                </span> 
+                <span>
+                  University of Cambridge, The Alan Turing Institute, UCLA
+                </span>
+                </div>
+                
+                <div class="m-3">
+                <h3>
                   Machine Learning: Changing the future of healthcare
-                </h4>
+                </h3>
+                </div>
               </div>
             </div>
           </div>
@@ -284,18 +278,25 @@
           <div class="card-header">
             <div class="row">
               <div class="col-2">
-                <img src="static/devi.png" width="100%">
+                <img src="static/images/devi.png" width="100%">
               </div>
 
               <div class="col-10 ">
-                <h3 class="card-title">
+
+                <div class="m-3">
+                <span class="card-title h3" >
                   Prof. Devi Parikh
-                </h3>
-                Georgia Tech and Facebook AI Research
-
-                <h4>
+                </span> 
+                <span>
+                  Georgia Tech and Facebook AI Research
+                </span>
+                </div>
+                
+                <div class="m-3">
+                <h3>
                   AI Systems That Can See And Talk
-                </h4>
+                </h3>
+                </div>
               </div>
             </div>
           </div>
@@ -309,18 +310,25 @@
           <div class="card-header">
             <div class="row">
               <div class="col-2">
-                <img src="static/" width="100%">
+                <img src="static/images/lecun+bengio.png" width="100%">
               </div>
 
               <div class="col-10 ">
-                <h3 class="card-title">
-                  Profs. Yoshua Benjio and Yann LeCun
-                </h3>
-                Facebook AI Research and New York University / Montreal Institute for Learning Algorithms
 
-                <h4>
+                <div class="m-3">
+                <span class="card-title h3" >
+                  Profs. Yann LeCun and Yoshua Bengio
+                </span> 
+                <span>
+                  Facebook AI + NYU / MILA
+                </span>
+                </div>
+                
+                <div class="m-3">
+                <h3>
                   Reflections from the Turing Award Winners
-                </h4>
+                </h3>
+                </div>
               </div>
             </div>
           </div>
@@ -334,18 +342,25 @@
           <div class="card-header">
             <div class="row">
               <div class="col-2">
-                <img src="static/jordan.jpg" width="100%">
+                <img src="static/images/jordan.jpg" width="100%">
               </div>
 
               <div class="col-10 ">
-                <h3 class="card-title">
-                  Prof. Michael I. Jordan
-                </h3>
-                University of California, Berkeley
 
-                <h4>
+                <div class="m-3">
+                <span class="card-title h3" >
+                  Prof. Michael I. Jordan
+                </span> 
+                <span>
+                  University of California, Berkeley
+                </span>
+                </div>
+                
+                <div class="m-3">
+                <h3>
                   The Decision-Making Side of Machine Learning: Dynamical, Statistical and Economic Perspectives
-                </h4>
+                </h3>
+                </div>
               </div>
             </div>
           </div>
