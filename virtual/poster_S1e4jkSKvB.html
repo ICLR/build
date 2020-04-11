@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="static/css/main.css">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/css/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <title> ICLR: The intriguing role of module criticality in the generalization of deep networks </title>
+</head>
+
+
+  <body >
+
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="livestream.html">Live</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="paper_vis.html">Vis</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="speakers.html">Speakers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="sponsors.html">Sponsors</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+
+ <!-- Title -->
+
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       The intriguing role of module criticality in the generalization of deep networks
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       
+       Niladri Chatterji,
+       
+       Behnam Neyshabur,
+       
+       Hanie Sedghi
+       
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
+
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/33967785f99d434685df6d4f8d33364d59b8d62c.pdf">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=S1e4jkSKvB">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       
+       
+       
+     </center>
+     
+   </div>
+ </div>
+
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         We study the phenomenon that some modules of deep neural networks (DNNs) are more critical than others. Meaning that rewinding their parameter values back to initialization, while keeping other modules fixed at the trained parameters, results in a large drop in the network&#39;s performance. Our analysis reveals interesting properties of the loss landscape which leads us to propose a complexity measure, called module criticality, based on the shape of the valleys that connect the initial and final values of the module parameters. We formulate how generalization relates to the module criticality, and show that this measure is able to explain the superior generalization performance of some architectures over others, whereas, earlier measures fail to do so.
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="keyword_Module Criticality Phenomenon.html" class="text-secondary text-decoration-none">Module Criticality Phenomenon</a>,
+       
+       <a href="keyword_Complexity Measure.html" class="text-secondary text-decoration-none">Complexity Measure</a>,
+       
+       <a href="keyword_Deep Learning.html" class="text-secondary text-decoration-none">Deep Learning</a>
+       
+     </p>
+   </div>
+ </div>
+
+</div>
+
+<!-- SlidesLive -->
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true,
+        allowHiddenControlsWhenPaused: true,
+        zoomRatio: 0.4,
+        hideTitle: true
+        });
+      </script>
+    </div>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_S1e4jkSKvB?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+  
+
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_S1gSj0NKvB.html" class="text-dark"><h5 class="card-title">Comparing Rewinding and Fine-tuning in Neural Network Pruning</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/S1gSj0NKvB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> Instead of fine-tuning after pruning, rewind weights or learning rate schedule to their values earlier in training and retrain from there to achieve higher accuracy when pruning neural networks.</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_SJgIPJBFvH.html" class="text-dark"><h5 class="card-title">Fantastic Generalization Measures and Where to Find Them</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/SJgIPJBFvH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> We empirically study generalization measures over more than 2000 models, identify common pitfall in existing practice of studying generalization measures and provide some new bounds based on measures in our study.</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_HyevIJStwH.html" class="text-dark"><h5 class="card-title">Understanding Why Neural Networks Generalize Well Through GSNR of Parameters</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/HyevIJStwH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> As deep neural networks (DNNs) achieve tremendous success across many application domains, researchers tried to explore in many aspects on why they generalize well. In this paper, we provide a novel perspective on these issues using the gradient sign...</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_r1e_FpNFDr.html" class="text-dark"><h5 class="card-title">Generalization bounds for deep convolutional neural networks</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/r1e_FpNFDr.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> We prove generalization bounds for convolutional neural networks that take account of weight-tying</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+  </DIV>
+</DIV>
+
+</body>

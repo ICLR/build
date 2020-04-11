@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="static/css/main.css">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/css/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <title> ICLR: What graph neural networks cannot learn: depth vs width </title>
+</head>
+
+
+  <body >
+
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="livestream.html">Live</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="paper_vis.html">Vis</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="speakers.html">Speakers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="sponsors.html">Sponsors</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+
+ <!-- Title -->
+
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       What graph neural networks cannot learn: depth vs width
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       
+       Andreas Loukas
+       
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
+
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/1deea7b0fa3c20f142b229f06af2471086407471.pdf">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=B1l2bp4YwS">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       
+       
+       
+     </center>
+     
+   </div>
+ </div>
+
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         This paper studies the expressive power of graph neural networks falling within the message-passing framework (GNNmp). Two results are presented. First, GNNmp are shown to be Turing universal under sufficient conditions on their depth, width, node attributes, and layer expressiveness. Second, it is discovered that GNNmp can lose a significant portion of their power when their depth and width is restricted. The proposed impossibility statements stem from a new technique that enables the repurposing of seminal results from distributed computing and leads to lower bounds for an array of decision, optimization, and estimation problems involving graphs. Strikingly, several of these problems are deemed impossible unless the product of a GNNmp&#39;s depth and width exceeds a polynomial of the graph size; this dependence remains significant even for tasks that appear simple or when considering approximation.
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="keyword_graph neural networks.html" class="text-secondary text-decoration-none">graph neural networks</a>,
+       
+       <a href="keyword_capacity.html" class="text-secondary text-decoration-none">capacity</a>,
+       
+       <a href="keyword_impossibility results.html" class="text-secondary text-decoration-none">impossibility results</a>,
+       
+       <a href="keyword_lower bounds.html" class="text-secondary text-decoration-none">lower bounds</a>,
+       
+       <a href="keyword_expressive power.html" class="text-secondary text-decoration-none">expressive power</a>
+       
+     </p>
+   </div>
+ </div>
+
+</div>
+
+<!-- SlidesLive -->
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true,
+        allowHiddenControlsWhenPaused: true,
+        zoomRatio: 0.4,
+        hideTitle: true
+        });
+      </script>
+    </div>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_B1l2bp4YwS?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+  
+
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_SJgndT4KwB.html" class="text-dark"><h5 class="card-title">Finite Depth and Width Corrections to the Neural Tangent Kernel</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/SJgndT4KwB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> The neural tangent kernel in a randomly initialized ReLU net is non-trivial fluctuations as long as the depth and width are comparable. </p>
+            
+          </div>      
+        </div>
+      </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_rkeIIkHKvS.html" class="text-dark"><h5 class="card-title">Measuring and Improving the Use of Graph Information in Graph Neural Networks</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/rkeIIkHKvS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> Graph neural networks (GNNs) have been widely used for representation learning on graph data. However, there is limited understanding on how much performance GNNs actually gain from graph data. This paper introduces a context-surrounding GNN framewor...</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_r1laNeBYPB.html" class="text-dark"><h5 class="card-title">Memory-Based Graph Networks</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/r1laNeBYPB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> We introduce an efficient memory layer to jointly learn representations and coarsen the input graphs.</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_r1lZ7AEKvB.html" class="text-dark"><h5 class="card-title">The Logical Expressiveness of Graph Neural Networks</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/r1lZ7AEKvB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> We characterize the expressive power of GNNs in terms of classical logical languages, separating different GNNs and showing connections with standard notions in Knowledge Representation.</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+  </DIV>
+</DIV>
+
+</body>

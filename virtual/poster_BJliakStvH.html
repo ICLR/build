@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="static/css/main.css">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/css/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <title> ICLR: Maximum Likelihood Constraint Inference for Inverse Reinforcement Learning </title>
+</head>
+
+
+  <body >
+
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="livestream.html">Live</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="paper_vis.html">Vis</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="speakers.html">Speakers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="sponsors.html">Sponsors</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+
+ <!-- Title -->
+
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       Maximum Likelihood Constraint Inference for Inverse Reinforcement Learning
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       
+       Dexter R.R. Scobee,
+       
+       S. Shankar Sastry
+       
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
+
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/f0b5f65775099dec7c004e553ad1b8d364e6a226.pdf">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=BJliakStvH">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       
+       <a href="https://drive.google.com/drive/folders/1h2J7o4w4J0_dpldTRpFu_jWQR8CkBbXw" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Code
+         </button>
+       </a>
+       
+       
+       
+     </center>
+     
+   </div>
+ </div>
+
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         While most approaches to the problem of Inverse Reinforcement Learning (IRL) focus on estimating a reward function that best explains an expert agent’s policy or demonstrated behavior on a control task, it is often the case that such behavior is more succinctly represented by a simple reward combined with a set of hard constraints. In this setting, the agent is attempting to maximize cumulative rewards subject to these given constraints on their behavior. We reformulate the problem of IRL on Markov Decision Processes (MDPs) such that, given a nominal model of the environment and a nominal reward function, we seek to estimate state, action, and feature constraints in the environment that motivate an agent’s behavior. Our approach is based on the Maximum Entropy IRL framework, which allows us to reason about the likelihood of an expert agent’s demonstrations given our knowledge of an MDP. Using our method, we can infer which constraints can be added to the MDP to most increase the likelihood of observing these demonstrations. We present an algorithm which iteratively infers the Maximum Likelihood Constraint to best explain observed behavior, and we evaluate its efficacy using both simulated behavior and recorded data of humans navigating around an obstacle.
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="keyword_learning from demonstration.html" class="text-secondary text-decoration-none">learning from demonstration</a>,
+       
+       <a href="keyword_inverse reinforcement learning.html" class="text-secondary text-decoration-none">inverse reinforcement learning</a>,
+       
+       <a href="keyword_constraint inference.html" class="text-secondary text-decoration-none">constraint inference</a>
+       
+     </p>
+   </div>
+ </div>
+
+</div>
+
+<!-- SlidesLive -->
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true,
+        allowHiddenControlsWhenPaused: true,
+        zoomRatio: 0.4,
+        hideTitle: true
+        });
+      </script>
+    </div>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_BJliakStvH?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+  
+
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_S1xKd24twB.html" class="text-dark"><h5 class="card-title">SQIL: Imitation Learning via Reinforcement Learning with Sparse Rewards</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/S1xKd24twB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> A simple and effective alternative to adversarial imitation learning: initialize experience replay buffer with demonstrations, set their reward to +1, set reward for all other data to 0, run Q-learning or soft actor-critic to train.</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_HJgLLyrYwB.html" class="text-dark"><h5 class="card-title">State-only Imitation with Transition Dynamics Mismatch</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/HJgLLyrYwB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> Algorithm for imitation with state-only expert demonstrations; builds on adversarial-IRL; experiments with transition dynamics mismatch b/w expert and imitator</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_rkg-TJBFPB.html" class="text-dark"><h5 class="card-title">RIDE: Rewarding Impact-Driven Exploration for Procedurally-Generated Environments</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/rkg-TJBFPB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> Reward agents for taking actions that lead to changes in the environment state.</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_HJli2hNKDH.html" class="text-dark"><h5 class="card-title">Observational Overfitting in Reinforcement Learning</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/HJli2hNKDH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> We isolate one factor of RL generalization by analyzing the case when the agent only overfits to the observations. We show that architectural implicit regularizations occur in this regime.</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+  </DIV>
+</DIV>
+
+</body>

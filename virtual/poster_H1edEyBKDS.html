@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="static/css/main.css">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/css/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <title> ICLR: Plug and Play Language Models: A Simple Approach to Controlled Text Generation </title>
+</head>
+
+
+  <body >
+
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="livestream.html">Live</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="paper_vis.html">Vis</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="speakers.html">Speakers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="sponsors.html">Sponsors</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+
+ <!-- Title -->
+
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       Plug and Play Language Models: A Simple Approach to Controlled Text Generation
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       
+       Sumanth Dathathri,
+       
+       Andrea Madotto,
+       
+       Janice Lan,
+       
+       Jane Hung,
+       
+       Eric Frank,
+       
+       Piero Molino,
+       
+       Jason Yosinski,
+       
+       Rosanne Liu
+       
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
+
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/27af65ff70219ce9a5c6dfdfbc006a6aaf902b3a.pdf">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=H1edEyBKDS">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       
+       <a href="https://github.com/uber-research/PPLM" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Code
+         </button>
+       </a>
+       
+       
+       
+     </center>
+     
+   </div>
+ </div>
+
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         Large transformer-based language models (LMs) trained on huge text corpora have shown unparalleled generation capabilities. However, controlling attributes of the generated language (e.g. switching topic or sentiment) is difficult without modifying the model architecture or fine-tuning on attribute-specific data and entailing the significant cost of retraining. We propose a simple alternative: the Plug and Play Language Model (PPLM) for controllable language generation, which combines a pretrained LM with one or more simple attribute classifiers that guide text generation without any further training of the LM. In the canonical scenario we present, the attribute models are simple classifiers consisting of a user-specified bag of words or a single learned layer with 100,000 times fewer parameters than the LM. Sampling entails a forward and backward pass in which gradients from the attribute model push the LM&#39;s hidden activations and thus guide the generation. Model samples demonstrate control over a range of topics and sentiment styles, and extensive automated and human annotated evaluations show attribute alignment and fluency. PPLMs are flexible in that any combination of differentiable attribute models may be used to steer text generation, which will allow for diverse and creative applications beyond the examples given in this paper.
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="keyword_controlled text generation.html" class="text-secondary text-decoration-none">controlled text generation</a>,
+       
+       <a href="keyword_generative models.html" class="text-secondary text-decoration-none">generative models</a>,
+       
+       <a href="keyword_conditional generative models.html" class="text-secondary text-decoration-none">conditional generative models</a>,
+       
+       <a href="keyword_language modeling.html" class="text-secondary text-decoration-none">language modeling</a>,
+       
+       <a href="keyword_transformer.html" class="text-secondary text-decoration-none">transformer</a>
+       
+     </p>
+   </div>
+ </div>
+
+</div>
+
+<!-- SlidesLive -->
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true,
+        allowHiddenControlsWhenPaused: true,
+        zoomRatio: 0.4,
+        hideTitle: true
+        });
+      </script>
+    </div>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_H1edEyBKDS?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+  
+
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_HklBjCEKvH.html" class="text-dark"><h5 class="card-title">Generalization through Memorization: Nearest Neighbor Language Models</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/HklBjCEKvH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> We extend a pre-trained neural language model by linearly interpolating it with a k-nearest neighbors model, achieving new state-of-the-art results on Wikitext-103 with no additional training.</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_SJem8lSFwB.html" class="text-dark"><h5 class="card-title">Dynamic Model Pruning with Feedback</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/SJem8lSFwB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> Deep neural networks often have millions of parameters. This can hinder their deployment to low-end devices, not only due to high memory requirements but also because of increased latency at inference. We propose a novel model compression method that...</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_rylXBkrYDS.html" class="text-dark"><h5 class="card-title">A Baseline for Few-Shot Image Classification</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/rylXBkrYDS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> Transductive fine-tuning of a deep network is a strong baseline for few-shot image classification and outperforms the state-of-the-art on all standard benchmarks.</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_ByxdUySKvS.html" class="text-dark"><h5 class="card-title">Adversarial AutoAugment</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/ByxdUySKvS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> We introduce the idea of adversarial learning into automatic data augmentation to improve the generalization  of a targe network.</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+  </DIV>
+</DIV>
+
+</body>

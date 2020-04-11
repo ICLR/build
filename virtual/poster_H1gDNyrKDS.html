@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="static/css/main.css">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/css/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <title> ICLR: Understanding and Robustifying Differentiable Architecture Search </title>
+</head>
+
+
+  <body >
+
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="livestream.html">Live</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="paper_vis.html">Vis</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="speakers.html">Speakers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="sponsors.html">Sponsors</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+
+ <!-- Title -->
+
+ <div class="card m-3" style="">
+   <div class="card-header">
+     <h3 class="card-title main-title text-center" style="">
+       Understanding and Robustifying Differentiable Architecture Search
+     </h3>
+     
+     <h5 class="card-subtitle mb-2 text-muted text-center">
+       
+       Arber Zela,
+       
+       Thomas Elsken,
+       
+       Tonmoy Saikia,
+       
+       Yassine Marrakchi,
+       
+       Thomas Brox,
+       
+       Frank Hutter
+       
+     </h5>
+     
+     <center class="p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+         <button class="btn btn-outline-secondary">
+           Abstract
+         </button>
+       </a>
+       
+
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/33427b6cc256082512aff09e18b11986a4412a43.pdf">
+         <button class="btn btn-outline-secondary">
+           Paper
+         </button>
+       </a>
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=H1gDNyrKDS">
+         <button class="btn btn-outline-secondary">
+           OpenReview
+         </button>
+       </a>
+       
+       <a href="" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Zoom
+         </button>
+       </a>
+       
+       
+       <a href="https://github.com/automl/RobustDARTS" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Code
+         </button>
+       </a>
+       
+       
+       
+     </center>
+     
+   </div>
+ </div>
+
+ <div id="details" class="card m-3 collapse" style=" box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         Differentiable Architecture Search (DARTS) has attracted a lot of attention due to its simplicity and small search costs achieved by a continuous relaxation and an approximation of the resulting bi-level optimization problem.  However, DARTS does not work robustly for new problems: we identify a wide range of search spaces for which DARTS yields degenerate architectures with very poor test performance. We study this failure mode and show that, while DARTS successfully minimizes validation loss, the found solutions generalize poorly when they coincide with high validation loss curvature in the  architecture space. We show that by adding one of various types of regularization we can robustify DARTS to find solutions with less curvature and better generalization properties. Based on these observations, we propose several simple variations of DARTS that perform substantially more robustly in practice.  Our observations are robust across five search spaces on three image classification tasks and also hold for the very different domains of disparity estimation (a dense regression task) and language modelling.
+       </div>
+       
+     </p>
+     
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="keyword_Neural Architecture Search.html" class="text-secondary text-decoration-none">Neural Architecture Search</a>,
+       
+       <a href="keyword_AutoML.html" class="text-secondary text-decoration-none">AutoML</a>,
+       
+       <a href="keyword_AutoDL.html" class="text-secondary text-decoration-none">AutoDL</a>,
+       
+       <a href="keyword_Deep Learning.html" class="text-secondary text-decoration-none">Deep Learning</a>,
+       
+       <a href="keyword_Computer Vision.html" class="text-secondary text-decoration-none">Computer Vision</a>
+       
+     </p>
+   </div>
+ </div>
+
+</div>
+
+<!-- SlidesLive -->
+
+
+
+<div class="container ">
+  <div class="row m-2">
+    <div class="col-7">
+      <div id="presentation-embed-38915748" class="slp"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true,
+        allowHiddenControlsWhenPaused: true,
+        zoomRatio: 0.4,
+        hideTitle: true
+        });
+      </script>
+    </div>
+    
+    <div class="col-5 p-1 my-auto">        
+        <div id="gitter" class="gitter container " >
+          <center>
+            <div class="border">
+              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_H1gDNyrKDS?layout=embedded" width="100%" height="680px"></iframe> </center>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+  
+
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_ryxGuJrFvS.html" class="text-dark"><h5 class="card-title">Distributionally Robust Neural Networks</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/ryxGuJrFvS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> Overparameterized neural networks can be distributionally robust, but only when you account for generalization. </p>
+            
+          </div>      
+        </div>
+      </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_BJxH22EKPS.html" class="text-dark"><h5 class="card-title">Understanding Architectures Learnt by Cell-based Neural Architecture Search</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/BJxH22EKPS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> Neural architecture search (NAS) searches architectures automatically for given tasks, e.g., image classification and language modeling. Improving the search efficiency and effectiveness has attracted increasing attention in recent years. However, fe...</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_BJeB5hVtvB.html" class="text-dark"><h5 class="card-title">Distance-Based Learning from Errors for Confidence Calibration</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/BJeB5hVtvB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> Deep neural networks (DNNs) are poorly calibrated when trained in conventional ways. To improve confidence calibration of DNNs, we propose a novel training method, distance-based learning from errors (DBLE). DBLE bases its confidence estimation on di...</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+      <div class="col-3">
+        <div class="card" >
+          <div class="card-header text-center">
+            <a href="poster_BkxSmlBFvr.html" class="text-dark"><h5 class="card-title">You CAN Teach an Old Dog New Tricks! On Training Knowledge Graph Embeddings</h5></a>
+            <center><img src="https://iclr.github.io/iclr-images/BkxSmlBFvr.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+
+            <p class="card-text"> We study the impact of training strategies on the performance of knowledge graph embeddings.</p>
+            
+          </div>      
+        </div>
+      </div>
+      
+  </DIV>
+</DIV>
+
+</body>
