@@ -1,14 +1,34 @@
+
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
+function setQueryStringParameter(name, value) {
+    console.log("name", name, "value", value);
+    const params = new URLSearchParams(window.location.search);
+    params.set(name, value);
+    window.history.replaceState({}, "", decodeURIComponent(`${window.location.pathname}?${params}`));
+}
+
 let allPapers = [];
 const allKeys = {
     authors: [],
     keywords: [],
-    titles: []
+    session: [],
+    titles: [],
+    recs: [],
 }
 const filters = {
     authors: null,
     keywords: null,
-    title: null
+    session: null,
+    title: null,
+    recs: null,
 };
+
 let render_mode = 'compact';
 
 
@@ -17,7 +37,6 @@ const updateCards = (papers) => {
       .data(papers, d => d.number)
       .join('div')
       .attr('class', 'myCard col-xs-6 col-md-4')
-      .attr('style', 'display: flex;flex-flow: wrap;margin-left: 0;box-sizing: border-box;')
       .html(card_html)
 }
 
@@ -70,10 +89,15 @@ const start = () => {
 
         allPapers = papers;
         calcAllKeys(allPapers, allKeys);
-
-        setTypeAhead('authors', allKeys, filters, render);
-
+        console.log(getUrlParameter("filter") || 'authors');
+        setTypeAhead(getUrlParameter("filter") || 'authors',
+                     allKeys, filters, render);
         updateCards(allPapers)
+        if (getUrlParameter("search") != null) {
+            filters[getUrlParameter("filter")] = getUrlParameter("search");
+            $('.typeahead_all').val(getUrlParameter("search"));
+            render();
+        }
 
     }).catch(e => console.error(e))
 }
@@ -84,8 +108,11 @@ const start = () => {
  * **/
 
 d3.selectAll('.filter_option input').on('click', function () {
-    const me = d3.select(this);
+    const me = d3.select(this)
+
     const filter_mode = me.property('value');
+    setQueryStringParameter("filter", me.property('value'));
+
     setTypeAhead(filter_mode, allKeys, filters, render);
 })
 
@@ -104,23 +131,23 @@ d3.select('.reshuffle').on('click', () => {
  * CARDS
  */
 
-const keyword = kw => `<a href="keyword_${kw}.html"
+const keyword = kw => `<a href="papers.html?filter=keywords&search=${kw}"
                        class="text-secondary text-decoration-none">${kw.toLowerCase()}</a>`
 //language=HTML
 const card_html = openreview => `
-        <div class="card" style="margin-bottom: 1em;display: block; overflow: hidden;">
-            <div class="card-header" style="height: 300px">
+        <div class="pp-card">
+            <div class="pp-card-header">
                 <a href="poster_${openreview.content.iclr_id}.html"
                    class="text-muted">
-                   <h5 class="card-title" align="center" style="font-family: font-size: 20px;"> ${openreview.content.title} </h5></a>
-                <h6 class="card-subtitle text-muted" align="center" style="font-size: 13px; ">
+                   <h5 class="card-title" align="center"> ${openreview.content.title} </h5></a>
+                <h6 class="card-subtitle text-muted" align="center">
                         ${openreview.content.authors.join(', ')}
 </h6>
-    <center><img src="https://iclr.github.io/iclr-images/${openreview.content.iclr_id}.png" width="75%"  style="margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+    <center><img class="cards_img" src="https://iclr.github.io/iclr-images/${openreview.content.iclr_id}.png" width="80%"/></center>
 
             </div>`
   + ((render_mode === 'detail') ? `
-            <div class="card-body">
+            <div class="pp-card-header">
                 <p class="card-text"> ${openreview.content.TLDR}</p>
                 <p class="card-text"><span class="font-weight-bold">Keywords:</span>
                     ${openreview.content.keywords.map(keyword).join(', ')}

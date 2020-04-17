@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    <link rel="stylesheet" href="static/css/main.css">
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -25,9 +25,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-    <script src="static/typeahead.bundle.js"></script>
+    <script src="static/js/typeahead.bundle.js"></script>
 
-    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet" href="static/css/typeahead.css">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -46,90 +46,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-
-<style>
-  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .jumbotron{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .btn-group{background-color: white}
-  .btn {background-color: white}
-  #main-nav {padding-top:10px; padding-bottom:10px;}
-  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
-  .header {font: "Montserrat"; }
-  .card-header { border: 4px solid #eee;
-                font-family: "Exo";}
-
-  
-  .main-title {font-weight: 700;  color: #2294e0;}
-
-  .myAccordion {
-
-  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
-    margin-bottom: 18px;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-top: 10px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  .sponsorLogo {
-  width: 250px;
-  display: block;
-  margin-left: auto;
-    margin-right: auto;
-  margin-top: auto;
-    margin-bottom: auto;
-
-  }
-  
-  .slp {
-
-  background: #fff
-
-  padding: 10px;
-
-  border: 4px solid #eee;
-
-  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
-  }
-  
-  .border {
-  background: #fff
-  
-  padding: 10px;
-
-  border: 4px solid #eee;
-
-  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
-  }
-  
-  #abstractExample.collapse:not(.show) {
-  display: block;
-  /* height = lineheight * no of lines to display */
-  height: 4.5em;
-  overflow: hidden;
-  }
-
-  #abstractExample.collapsing {
-  height: 4.5em;
-  }
-
-
-#absShow.collapsed:after {
-  content: '+ Show More';
-}
-
-#absShow:not(.collapsed):after {
-  content: '- Show Less';
-}
-</style>
-
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -143,15 +63,7 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="livestream.html">Live</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="papers.html">Papers</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="paper_vis.html">Vis</a>
+          <a class="nav-link" href="papers.html">Browse</a>
         </li>
         
         <li class="nav-item ">
@@ -159,11 +71,7 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="socials.html">Socials</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="speakers.html">Speakers</a>
+          <a class="nav-link" href="events.html">Events</a>
         </li>
         
         <li class="nav-item ">
@@ -171,11 +79,19 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="workshops.html">Workshops</a>
+          <a class="nav-link" href="paper_vis.html">Extras</a>
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="faq.html">FAQ</a>
+          <a class="nav-link" href="chat.html">Chat</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">Help</a>
         </li>
         
       </ul>
@@ -193,7 +109,7 @@
      <h3 class="card-title main-title text-center" style="">
        Data-dependent Gaussian Prior Objective for Language Generation
      </h3>
-     
+
      <h5 class="card-subtitle mb-2 text-muted text-center">
        
        Zuchao Li,
@@ -211,14 +127,14 @@
        Hai Zhao
        
      </h5>
-     
+
      <center class="p-3">
        <a class="card-link" data-toggle="collapse" role="button" href="#details">
          <button class="btn btn-outline-secondary">
            Abstract
          </button>
        </a>
-       
+
 
        <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/415754fab241d91cf9f51f235afc8ac851f4bed8.pdf">
          <button class="btn btn-outline-secondary">
@@ -230,12 +146,19 @@
            OpenReview
          </button>
        </a>
-       
+
        <a href="" target="_blank"  class="card-link">
          <button class="btn btn-outline-secondary">
            Zoom
          </button>
        </a>
+
+       <a href="https://iclr.rocket.chat/channel/paper_channel_S1efxTVYDr" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Chat
+         </button>
+       </a>
+
        
        <a href="https://drive.google.com/file/d/1q8PqhF9eOLOHOcOCGVKXtA_OlP6qq2mn" target="_blank"  class="card-link">
          <button class="btn btn-outline-secondary">
@@ -243,13 +166,10 @@
          </button>
        </a>
        
-       <a href="" target="_blank"  class="card-link">
-         <button class="btn btn-outline-secondary">
-           Slides
-         </button>
-       </a>
+
+       
      </center>
-     
+
    </div>
  </div>
 
@@ -261,9 +181,9 @@
          For typical sequence prediction problems such as language generation, maximum likelihood estimation (MLE) has commonly been adopted as it encourages the predicted sequence most consistent with the ground-truth sequence to have the highest probability of occurring. However, MLE focuses on once-to-all matching between the predicted sequence and gold-standard, consequently treating all incorrect predictions as being equally incorrect. We refer to this drawback as {\it negative diversity ignorance} in this paper. Treating all incorrect predictions as equal unfairly downplays the nuance of these sequences&#39; detailed token-wise structure. To counteract this, we augment the MLE loss by introducing an extra Kullback--Leibler divergence term derived by comparing a data-dependent Gaussian prior and the detailed training prediction. The proposed data-dependent Gaussian prior objective (D2GPo) is defined over a prior topological order of tokens and is poles apart from the data-independent Gaussian prior (L2 regularization) commonly adopted in smoothing the training of MLE. Experimental results show that the proposed method makes effective use of a more detailed prior in the data and has improved performance in typical language generation tasks, including supervised and unsupervised machine translation, text summarization, storytelling, and image captioning.
 
        </div>
-       
+
      </p>
-     
+
      <p></p>
      <p class="card-text"><span class="font-weight-bold">Keywords:</span>
        
@@ -281,29 +201,27 @@
 
 
 
-<div class="container ">
+ <div class="jumbotron" style="background-color:white; padding: 0px;">
   <div class="row m-2">
-    <div class="col-7">
-      <div id="presentation-embed-38915748" class="slp"></div>
+    <div class="col-md-7 col-xs-12 my-auto p-2" >
+      <div id="presentation-embed-38915748" class="slp my-auto"></div>
       <script src='https://slideslive.com/embed_presentation.js'></script>
       <script>
         embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
+        verticalWhenWidthLte: 2000,
         allowHiddenControlsWhenPaused: true,
-        zoomRatio: 0.4,
         hideTitle: true
         });
       </script>
     </div>
-    
-    <div class="col-5 p-1 my-auto">        
-        <div id="gitter" class="gitter container " >
+
+    <div class="col-md-5 col-xs-12 p-2">
+        <div id="gitter" class="slp">
           <center>
-            <div class="border">
-              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_S1efxTVYDr?layout=embedded" width="100%" height="680px"></iframe> </center>
-            </div>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_S1efxTVYDr?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -323,54 +241,111 @@
 
 <div  class="container" >
   <div class="row">
-  
 
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_SJeYe0NtvH.html" class="text-dark"><h5 class="card-title">Neural Text Generation With Unlikelihood Training</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/SJeYe0NtvH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_SJeYe0NtvH.html" class="text-muted">
+              <h5 class="card-title" align="center">Neural Text Generation With Unlikelihood Training</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Sean Welleck,
+              
+              Ilia Kulikov,
+              
+              Stephen Roller,
+              
+              Emily Dinan,
+              
+              Kyunghyun Cho,
+              
+              Jason Weston,
+              
+            </h6>
 
-            <p class="card-text"> Neural text generation is a key tool in natural language applications, but it is well known there are major problems at its core. In particular, standard likelihood training and decoding leads to dull and repetitive outputs. While some post-hoc fixes...</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJeYe0NtvH.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> Neural text generation is a key tool in natural language applications, but it is well known there are major problems at its core. In particular, standard likelihood training and decoding leads to dull and repetitive outputs. While some post-hoc fixes...</p> -->
+
+          </div>
         </div>
       </div>
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_BJgza6VtPB.html" class="text-dark"><h5 class="card-title">Language GANs Falling Short</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/BJgza6VtPB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_BJgza6VtPB.html" class="text-muted">
+              <h5 class="card-title" align="center">Language GANs Falling Short</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Massimo Caccia,
+              
+              Lucas Caccia,
+              
+              William Fedus,
+              
+              Hugo Larochelle,
+              
+              Joelle Pineau,
+              
+              Laurent Charlin,
+              
+            </h6>
 
-            <p class="card-text"> GANs have been applied to text generation and are believed SOTA. However, we propose a new evaluation protocol demonstrating that maximum-likelihood trained models are still better.</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgza6VtPB.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> GANs have been applied to text generation and are believed SOTA. However, we propose a new evaluation protocol demonstrating that maximum-likelihood trained models are still better.</p> -->
+
+          </div>
         </div>
       </div>
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_HJlA0C4tPS.html" class="text-dark"><h5 class="card-title">A Probabilistic Formulation of Unsupervised Text Style Transfer</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/HJlA0C4tPS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_HJlA0C4tPS.html" class="text-muted">
+              <h5 class="card-title" align="center">A Probabilistic Formulation of Unsupervised Text Style Transfer</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Junxian He,
+              
+              Xinyi Wang,
+              
+              Graham Neubig,
+              
+              Taylor Berg-Kirkpatrick,
+              
+            </h6>
 
-            <p class="card-text"> We formulate a probabilistic latent sequence model to tackle unsupervised text style transfer, and show its effectiveness across a suite of unsupervised text style transfer tasks. </p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJlA0C4tPS.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> We formulate a probabilistic latent sequence model to tackle unsupervised text style transfer, and show its effectiveness across a suite of unsupervised text style transfer tasks. </p> -->
+
+          </div>
         </div>
       </div>
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_SJxE8erKDH.html" class="text-dark"><h5 class="card-title">Latent Normalizing Flows for Many-to-Many Cross-Domain Mappings</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/SJxE8erKDH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_SJxE8erKDH.html" class="text-muted">
+              <h5 class="card-title" align="center">Latent Normalizing Flows for Many-to-Many Cross-Domain Mappings</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Shweta Mahajan,
+              
+              Iryna Gurevych,
+              
+              Stefan Roth,
+              
+            </h6>
 
-            <p class="card-text"> Learned joint representations of images and text form the backbone of several important cross-domain tasks such as image captioning. Prior work mostly maps both domains into a common latent representation in a purely supervised fashion. This is rathe...</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJxE8erKDH.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> Learned joint representations of images and text form the backbone of several important cross-domain tasks such as image captioning. Prior work mostly maps both domains into a common latent representation in a purely supervised fashion. This is rathe...</p> -->
+
+          </div>
         </div>
       </div>
       

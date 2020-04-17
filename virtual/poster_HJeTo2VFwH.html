@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    <link rel="stylesheet" href="static/css/main.css">
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -25,9 +25,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-    <script src="static/typeahead.bundle.js"></script>
+    <script src="static/js/typeahead.bundle.js"></script>
 
-    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet" href="static/css/typeahead.css">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -46,90 +46,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-
-<style>
-  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .jumbotron{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .btn-group{background-color: white}
-  .btn {background-color: white}
-  #main-nav {padding-top:10px; padding-bottom:10px;}
-  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
-  .header {font: "Montserrat"; }
-  .card-header { border: 4px solid #eee;
-                font-family: "Exo";}
-
-  
-  .main-title {font-weight: 700;  color: #2294e0;}
-
-  .myAccordion {
-
-  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
-    margin-bottom: 18px;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-top: 10px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  .sponsorLogo {
-  width: 250px;
-  display: block;
-  margin-left: auto;
-    margin-right: auto;
-  margin-top: auto;
-    margin-bottom: auto;
-
-  }
-  
-  .slp {
-
-  background: #fff
-
-  padding: 10px;
-
-  border: 4px solid #eee;
-
-  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
-  }
-  
-  .border {
-  background: #fff
-  
-  padding: 10px;
-
-  border: 4px solid #eee;
-
-  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
-  }
-  
-  #abstractExample.collapse:not(.show) {
-  display: block;
-  /* height = lineheight * no of lines to display */
-  height: 4.5em;
-  overflow: hidden;
-  }
-
-  #abstractExample.collapsing {
-  height: 4.5em;
-  }
-
-
-#absShow.collapsed:after {
-  content: '+ Show More';
-}
-
-#absShow:not(.collapsed):after {
-  content: '- Show Less';
-}
-</style>
-
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -143,15 +63,7 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="livestream.html">Live</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="papers.html">Papers</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="paper_vis.html">Vis</a>
+          <a class="nav-link" href="papers.html">Browse</a>
         </li>
         
         <li class="nav-item ">
@@ -159,11 +71,7 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="socials.html">Socials</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="speakers.html">Speakers</a>
+          <a class="nav-link" href="events.html">Events</a>
         </li>
         
         <li class="nav-item ">
@@ -171,11 +79,19 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="workshops.html">Workshops</a>
+          <a class="nav-link" href="paper_vis.html">Extras</a>
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="faq.html">FAQ</a>
+          <a class="nav-link" href="chat.html">Chat</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">Help</a>
         </li>
         
       </ul>
@@ -193,7 +109,7 @@
      <h3 class="card-title main-title text-center" style="">
        A Signal Propagation Perspective for Pruning Neural Networks at Initialization
      </h3>
-     
+
      <h5 class="card-subtitle mb-2 text-muted text-center">
        
        Namhoon Lee,
@@ -205,14 +121,14 @@
        Philip H. S. Torr
        
      </h5>
-     
+
      <center class="p-3">
        <a class="card-link" data-toggle="collapse" role="button" href="#details">
          <button class="btn btn-outline-secondary">
            Abstract
          </button>
        </a>
-       
+
 
        <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/0337afac0712aa60d2998f4a056e13ebdf41232d.pdf">
          <button class="btn btn-outline-secondary">
@@ -224,26 +140,24 @@
            OpenReview
          </button>
        </a>
-       
+
        <a href="" target="_blank"  class="card-link">
          <button class="btn btn-outline-secondary">
            Zoom
          </button>
        </a>
-       
-       <a href="" target="_blank"  class="card-link">
+
+       <a href="https://iclr.rocket.chat/channel/paper_channel_HJeTo2VFwH" target="_blank"  class="card-link">
          <button class="btn btn-outline-secondary">
-           Code
+           Chat
          </button>
        </a>
+
        
-       <a href="" target="_blank"  class="card-link">
-         <button class="btn btn-outline-secondary">
-           Slides
-         </button>
-       </a>
+
+       
      </center>
-     
+
    </div>
  </div>
 
@@ -254,9 +168,9 @@
          <span class="font-weight-bold">Abstract:</span>
          Network pruning is a promising avenue for compressing deep neural networks. A typical approach to pruning starts by training a model and then removing redundant parameters while minimizing the impact on what is learned. Alternatively, a recent approach shows that pruning can be done at initialization prior to training, based on a saliency criterion called connection sensitivity. However, it remains unclear exactly why pruning an untrained, randomly initialized neural network is effective. In this work, by noting connection sensitivity as a form of gradient, we formally characterize initialization conditions to ensure reliable connection sensitivity measurements, which in turn yields effective pruning results. Moreover, we analyze the signal propagation properties of the resulting pruned networks and introduce a simple, data-free method to improve their trainability. Our modifications to the existing pruning at initialization method lead to improved results on all tested network models for image classification tasks. Furthermore, we empirically study the effect of supervision for pruning and demonstrate that our signal propagation perspective, combined with unsupervised pruning, can be useful in various scenarios where pruning is applied to non-standard arbitrarily-designed architectures.
        </div>
-       
+
      </p>
-     
+
      <p></p>
      <p class="card-text"><span class="font-weight-bold">Keywords:</span>
        
@@ -276,29 +190,27 @@
 
 
 
-<div class="container ">
+ <div class="jumbotron" style="background-color:white; padding: 0px;">
   <div class="row m-2">
-    <div class="col-7">
-      <div id="presentation-embed-38915748" class="slp"></div>
+    <div class="col-md-7 col-xs-12 my-auto p-2" >
+      <div id="presentation-embed-38915748" class="slp my-auto"></div>
       <script src='https://slideslive.com/embed_presentation.js'></script>
       <script>
         embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
+        verticalWhenWidthLte: 2000,
         allowHiddenControlsWhenPaused: true,
-        zoomRatio: 0.4,
         hideTitle: true
         });
       </script>
     </div>
-    
-    <div class="col-5 p-1 my-auto">        
-        <div id="gitter" class="gitter container " >
+
+    <div class="col-md-5 col-xs-12 p-2">
+        <div id="gitter" class="slp">
           <center>
-            <div class="border">
-              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_HJeTo2VFwH?layout=embedded" width="100%" height="680px"></iframe> </center>
-            </div>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_HJeTo2VFwH?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -318,54 +230,107 @@
 
 <div  class="container" >
   <div class="row">
-  
 
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_ryl3ygHYDB.html" class="text-dark"><h5 class="card-title">Lookahead: A Far-sighted Alternative of Magnitude-based Pruning</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/ryl3ygHYDB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_ryl3ygHYDB.html" class="text-muted">
+              <h5 class="card-title" align="center">Lookahead: A Far-sighted Alternative of Magnitude-based Pruning</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Sejun Park*,
+              
+              Jaeho Lee*,
+              
+              Sangwoo Mo,
+              
+              Jinwoo Shin,
+              
+            </h6>
 
-            <p class="card-text"> We study a multi-layer generalization of the magnitude-based pruning.</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ryl3ygHYDB.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> We study a multi-layer generalization of the magnitude-based pruning.</p> -->
+
+          </div>
         </div>
       </div>
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_SkgsACVKPH.html" class="text-dark"><h5 class="card-title">Picking Winning Tickets Before Training by Preserving Gradient Flow</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/SkgsACVKPH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_SkgsACVKPH.html" class="text-muted">
+              <h5 class="card-title" align="center">Picking Winning Tickets Before Training by Preserving Gradient Flow</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Chaoqi Wang,
+              
+              Guodong Zhang,
+              
+              Roger Grosse,
+              
+            </h6>
 
-            <p class="card-text"> We introduced a pruning criterion for pruning networks before training by preserving gradient flow.</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SkgsACVKPH.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> We introduced a pruning criterion for pruning networks before training by preserving gradient flow.</p> -->
+
+          </div>
         </div>
       </div>
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_BJxkOlSYDH.html" class="text-dark"><h5 class="card-title">Provable Filter Pruning for Efficient Neural Networks</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/BJxkOlSYDH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_BJxkOlSYDH.html" class="text-muted">
+              <h5 class="card-title" align="center">Provable Filter Pruning for Efficient Neural Networks</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Lucas Liebenwein,
+              
+              Cenk Baykal,
+              
+              Harry Lang,
+              
+              Dan Feldman,
+              
+              Daniela Rus,
+              
+            </h6>
 
-            <p class="card-text"> A sampling-based filter pruning approach for convolutional neural networks exhibiting provable guarantees on the size and performance of the pruned network.</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJxkOlSYDH.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> A sampling-based filter pruning approach for convolutional neural networks exhibiting provable guarantees on the size and performance of the pruned network.</p> -->
+
+          </div>
         </div>
       </div>
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_SJlbGJrtDB.html" class="text-dark"><h5 class="card-title">Dynamic Sparse Training: Find Efficient Sparse Network From Scratch With Trainable Masked Layers</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/SJlbGJrtDB.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_SJlbGJrtDB.html" class="text-muted">
+              <h5 class="card-title" align="center">Dynamic Sparse Training: Find Efficient Sparse Network From Scratch With Trainable Masked Layers</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Junjie LIU,
+              
+              Zhe XU,
+              
+              Runbin SHI,
+              
+              Ray C. C. Cheung,
+              
+              Hayden K.H. So,
+              
+            </h6>
 
-            <p class="card-text"> We present a novel network pruning method that can find the optimal sparse structure during the training process with trainable pruning threshold</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJlbGJrtDB.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> We present a novel network pruning method that can find the optimal sparse structure during the training process with trainable pruning threshold</p> -->
+
+          </div>
         </div>
       </div>
       

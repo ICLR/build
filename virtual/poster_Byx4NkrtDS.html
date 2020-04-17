@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    <link rel="stylesheet" href="static/css/main.css">
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -25,9 +25,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-    <script src="static/typeahead.bundle.js"></script>
+    <script src="static/js/typeahead.bundle.js"></script>
 
-    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet" href="static/css/typeahead.css">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -46,90 +46,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-
-<style>
-  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .jumbotron{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .btn-group{background-color: white}
-  .btn {background-color: white}
-  #main-nav {padding-top:10px; padding-bottom:10px;}
-  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
-  .header {font: "Montserrat"; }
-  .card-header { border: 4px solid #eee;
-                font-family: "Exo";}
-
-  
-  .main-title {font-weight: 700;  color: #2294e0;}
-
-  .myAccordion {
-
-  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
-    margin-bottom: 18px;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-top: 10px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  .sponsorLogo {
-  width: 250px;
-  display: block;
-  margin-left: auto;
-    margin-right: auto;
-  margin-top: auto;
-    margin-bottom: auto;
-
-  }
-  
-  .slp {
-
-  background: #fff
-
-  padding: 10px;
-
-  border: 4px solid #eee;
-
-  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
-  }
-  
-  .border {
-  background: #fff
-  
-  padding: 10px;
-
-  border: 4px solid #eee;
-
-  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
-  }
-  
-  #abstractExample.collapse:not(.show) {
-  display: block;
-  /* height = lineheight * no of lines to display */
-  height: 4.5em;
-  overflow: hidden;
-  }
-
-  #abstractExample.collapsing {
-  height: 4.5em;
-  }
-
-
-#absShow.collapsed:after {
-  content: '+ Show More';
-}
-
-#absShow:not(.collapsed):after {
-  content: '- Show Less';
-}
-</style>
-
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -143,15 +63,7 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="livestream.html">Live</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="papers.html">Papers</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="paper_vis.html">Vis</a>
+          <a class="nav-link" href="papers.html">Browse</a>
         </li>
         
         <li class="nav-item ">
@@ -159,11 +71,7 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="socials.html">Socials</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="speakers.html">Speakers</a>
+          <a class="nav-link" href="events.html">Events</a>
         </li>
         
         <li class="nav-item ">
@@ -171,11 +79,19 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="workshops.html">Workshops</a>
+          <a class="nav-link" href="paper_vis.html">Extras</a>
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="faq.html">FAQ</a>
+          <a class="nav-link" href="chat.html">Chat</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">Help</a>
         </li>
         
       </ul>
@@ -193,7 +109,7 @@
      <h3 class="card-title main-title text-center" style="">
        Implementing Inductive bias for different navigation tasks through diverse RNN attrractors
      </h3>
-     
+
      <h5 class="card-subtitle mb-2 text-muted text-center">
        
        Tie XU,
@@ -201,14 +117,14 @@
        Omri Barak
        
      </h5>
-     
+
      <center class="p-3">
        <a class="card-link" data-toggle="collapse" role="button" href="#details">
          <button class="btn btn-outline-secondary">
            Abstract
          </button>
        </a>
-       
+
 
        <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/2b8a8ec45a40a84d5b5653027d320986ea8a67ec.pdf">
          <button class="btn btn-outline-secondary">
@@ -220,12 +136,19 @@
            OpenReview
          </button>
        </a>
-       
+
        <a href="" target="_blank"  class="card-link">
          <button class="btn btn-outline-secondary">
            Zoom
          </button>
        </a>
+
+       <a href="https://iclr.rocket.chat/channel/paper_channel_Byx4NkrtDS" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Chat
+         </button>
+       </a>
+
        
        <a href="https://anonymous.4open.science/r/539372c8-c17b-4b48-a7da-56392ed685c4/" target="_blank"  class="card-link">
          <button class="btn btn-outline-secondary">
@@ -233,13 +156,10 @@
          </button>
        </a>
        
-       <a href="" target="_blank"  class="card-link">
-         <button class="btn btn-outline-secondary">
-           Slides
-         </button>
-       </a>
+
+       
      </center>
-     
+
    </div>
  </div>
 
@@ -250,9 +170,9 @@
          <span class="font-weight-bold">Abstract:</span>
          Navigation is crucial for animal behavior and is assumed to require an internal representation of the external environment, termed a cognitive map. The precise form of this representation is often considered to be a metric representation of space. An internal representation, however, is judged by its contribution to performance on a given task, and may thus vary between different types of navigation tasks. Here we train a recurrent neural network that controls an agent performing several navigation tasks in a simple environment. To focus on internal representations, we split learning into a task-agnostic pre-training stage that modifies internal connectivity and a task-specific Q learning stage that controls the network&#39;s output. We show that pre-training shapes the attractor landscape of the networks, leading to either a continuous attractor, discrete attractors or a disordered state. These structures induce bias onto the Q-Learning phase, leading to a performance pattern across the tasks corresponding to metric and topological regularities. Our results show that, in recurrent networks, inductive bias takes the form of attractor landscapes -- which can be shaped by pre-training and analyzed using dynamical systems methods. Furthermore, we demonstrate that non-metric representations are useful for navigation tasks.  
        </div>
-       
+
      </p>
-     
+
      <p></p>
      <p class="card-text"><span class="font-weight-bold">Keywords:</span>
        
@@ -278,29 +198,27 @@
 
 
 
-<div class="container ">
+ <div class="jumbotron" style="background-color:white; padding: 0px;">
   <div class="row m-2">
-    <div class="col-7">
-      <div id="presentation-embed-38915748" class="slp"></div>
+    <div class="col-md-7 col-xs-12 my-auto p-2" >
+      <div id="presentation-embed-38915748" class="slp my-auto"></div>
       <script src='https://slideslive.com/embed_presentation.js'></script>
       <script>
         embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
+        verticalWhenWidthLte: 2000,
         allowHiddenControlsWhenPaused: true,
-        zoomRatio: 0.4,
         hideTitle: true
         });
       </script>
     </div>
-    
-    <div class="col-5 p-1 my-auto">        
-        <div id="gitter" class="gitter container " >
+
+    <div class="col-md-5 col-xs-12 p-2">
+        <div id="gitter" class="slp">
           <center>
-            <div class="border">
-              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_Byx4NkrtDS?layout=embedded" width="100%" height="680px"></iframe> </center>
-            </div>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_Byx4NkrtDS?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -320,54 +238,119 @@
 
 <div  class="container" >
   <div class="row">
-  
 
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_ByexElSYDr.html" class="text-dark"><h5 class="card-title">Fair Resource Allocation in Federated Learning</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/ByexElSYDr.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_ByexElSYDr.html" class="text-muted">
+              <h5 class="card-title" align="center">Fair Resource Allocation in Federated Learning</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Tian Li,
+              
+              Maziar Sanjabi,
+              
+              Ahmad Beirami,
+              
+              Virginia Smith,
+              
+            </h6>
 
-            <p class="card-text"> We propose a novel optimization objective that encourages fairness in heterogeneous federated networks, and develop a scalable method to solve it.</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ByexElSYDr.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> We propose a novel optimization objective that encourages fairness in heterogeneous federated networks, and develop a scalable method to solve it.</p> -->
+
+          </div>
         </div>
       </div>
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_HJlWWJSFDH.html" class="text-dark"><h5 class="card-title">Strategies for Pre-training Graph Neural Networks</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/HJlWWJSFDH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_HJlWWJSFDH.html" class="text-muted">
+              <h5 class="card-title" align="center">Strategies for Pre-training Graph Neural Networks</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Weihua Hu*,
+              
+              Bowen Liu*,
+              
+              Joseph Gomes,
+              
+              Marinka Zitnik,
+              
+              Percy Liang,
+              
+              Vijay Pande,
+              
+              Jure Leskovec,
+              
+            </h6>
 
-            <p class="card-text"> We develop a strategy for pre-training Graph Neural Networks (GNNs) and systematically study its effectiveness on multiple datasets, GNN architectures, and diverse downstream tasks.</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJlWWJSFDH.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> We develop a strategy for pre-training Graph Neural Networks (GNNs) and systematically study its effectiveness on multiple datasets, GNN architectures, and diverse downstream tasks.</p> -->
+
+          </div>
         </div>
       </div>
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_BJgQ4lSFPH.html" class="text-dark"><h5 class="card-title">StructBERT: Incorporating Language Structures into Pre-training for Deep Language Understanding</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/BJgQ4lSFPH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_BJgQ4lSFPH.html" class="text-muted">
+              <h5 class="card-title" align="center">StructBERT: Incorporating Language Structures into Pre-training for Deep Language Understanding</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Wei Wang,
+              
+              Bin Bi,
+              
+              Ming Yan,
+              
+              Chen Wu,
+              
+              Jiangnan Xia,
+              
+              Zuyi Bao,
+              
+              Liwei Peng,
+              
+              Luo Si,
+              
+            </h6>
 
-            <p class="card-text"> Recently, the pre-trained language model, BERT (and its robustly optimized version RoBERTa), has attracted a lot of attention in natural language understanding (NLU), and achieved state-of-the-art accuracy in various NLU tasks, such as sentiment clas...</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgQ4lSFPH.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> Recently, the pre-trained language model, BERT (and its robustly optimized version RoBERTa), has attracted a lot of attention in natural language understanding (NLU), and achieved state-of-the-art accuracy in various NLU tasks, such as sentiment clas...</p> -->
+
+          </div>
         </div>
       </div>
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_Bkg0u3Etwr.html" class="text-dark"><h5 class="card-title">Maxmin Q-learning: Controlling the Estimation Bias of Q-learning</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/Bkg0u3Etwr.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_Bkg0u3Etwr.html" class="text-muted">
+              <h5 class="card-title" align="center">Maxmin Q-learning: Controlling the Estimation Bias of Q-learning</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Qingfeng Lan,
+              
+              Yangchen Pan,
+              
+              Alona Fyshe,
+              
+              Martha White,
+              
+            </h6>
 
-            <p class="card-text"> We propose a new variant of Q-learning algorithm called Maxmin Q-learning which provides a parameter-tuning mechanism to flexibly control bias.</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Bkg0u3Etwr.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> We propose a new variant of Q-learning algorithm called Maxmin Q-learning which provides a parameter-tuning mechanism to flexibly control bias.</p> -->
+
+          </div>
         </div>
       </div>
       

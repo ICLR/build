@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    <link rel="stylesheet" href="static/css/main.css">
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -25,9 +25,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-    <script src="static/typeahead.bundle.js"></script>
+    <script src="static/js/typeahead.bundle.js"></script>
 
-    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet" href="static/css/typeahead.css">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -46,90 +46,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-
-<style>
-  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .jumbotron{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .btn-group{background-color: white}
-  .btn {background-color: white}
-  #main-nav {padding-top:10px; padding-bottom:10px;}
-  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
-  .header {font: "Montserrat"; }
-  .card-header { border: 4px solid #eee;
-                font-family: "Exo";}
-
-  
-  .main-title {font-weight: 700;  color: #2294e0;}
-
-  .myAccordion {
-
-  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
-    margin-bottom: 18px;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-top: 10px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  .sponsorLogo {
-  width: 250px;
-  display: block;
-  margin-left: auto;
-    margin-right: auto;
-  margin-top: auto;
-    margin-bottom: auto;
-
-  }
-  
-  .slp {
-
-  background: #fff
-
-  padding: 10px;
-
-  border: 4px solid #eee;
-
-  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
-  }
-  
-  .border {
-  background: #fff
-  
-  padding: 10px;
-
-  border: 4px solid #eee;
-
-  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
-  }
-  
-  #abstractExample.collapse:not(.show) {
-  display: block;
-  /* height = lineheight * no of lines to display */
-  height: 4.5em;
-  overflow: hidden;
-  }
-
-  #abstractExample.collapsing {
-  height: 4.5em;
-  }
-
-
-#absShow.collapsed:after {
-  content: '+ Show More';
-}
-
-#absShow:not(.collapsed):after {
-  content: '- Show Less';
-}
-</style>
-
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -143,15 +63,7 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="livestream.html">Live</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="papers.html">Papers</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="paper_vis.html">Vis</a>
+          <a class="nav-link" href="papers.html">Browse</a>
         </li>
         
         <li class="nav-item ">
@@ -159,11 +71,7 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="socials.html">Socials</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="speakers.html">Speakers</a>
+          <a class="nav-link" href="events.html">Events</a>
         </li>
         
         <li class="nav-item ">
@@ -171,11 +79,19 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="workshops.html">Workshops</a>
+          <a class="nav-link" href="paper_vis.html">Extras</a>
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="faq.html">FAQ</a>
+          <a class="nav-link" href="chat.html">Chat</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">Help</a>
         </li>
         
       </ul>
@@ -193,7 +109,7 @@
      <h3 class="card-title main-title text-center" style="">
        Implementation Matters in Deep RL: A Case Study on PPO and TRPO
      </h3>
-     
+
      <h5 class="card-subtitle mb-2 text-muted text-center">
        
        Logan Engstrom,
@@ -211,14 +127,14 @@
        Aleksander Madry
        
      </h5>
-     
+
      <center class="p-3">
        <a class="card-link" data-toggle="collapse" role="button" href="#details">
          <button class="btn btn-outline-secondary">
            Abstract
          </button>
        </a>
-       
+
 
        <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/12c45b71cea96c4c121b54eabc16dc73c5397387.pdf">
          <button class="btn btn-outline-secondary">
@@ -230,12 +146,19 @@
            OpenReview
          </button>
        </a>
-       
+
        <a href="" target="_blank"  class="card-link">
          <button class="btn btn-outline-secondary">
            Zoom
          </button>
        </a>
+
+       <a href="https://iclr.rocket.chat/channel/paper_channel_r1etN1rtPB" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Chat
+         </button>
+       </a>
+
        
        <a href="https://github.com/implementation-matters/code-for-paper" target="_blank"  class="card-link">
          <button class="btn btn-outline-secondary">
@@ -243,13 +166,10 @@
          </button>
        </a>
        
-       <a href="" target="_blank"  class="card-link">
-         <button class="btn btn-outline-secondary">
-           Slides
-         </button>
-       </a>
+
+       
      </center>
-     
+
    </div>
  </div>
 
@@ -260,9 +180,9 @@
          <span class="font-weight-bold">Abstract:</span>
          We study the roots of algorithmic progress in deep policy gradient algorithms through a case study on two popular algorithms, Proximal Policy Optimization and Trust Region Policy Optimization. We investigate the consequences of &#34;code-level optimizations:&#34; algorithm augmentations found only in implementations or described as auxiliary details to the core algorithm. Seemingly of secondary importance, such optimizations have a major impact on agent behavior. Our results show that they (a) are responsible for most of PPO&#39;s gain in cumulative reward over TRPO, and (b) fundamentally change how RL methods function. These insights show the difficulty, and importance, of attributing performance gains in deep reinforcement learning.
        </div>
-       
+
      </p>
-     
+
      <p></p>
      <p class="card-text"><span class="font-weight-bold">Keywords:</span>
        
@@ -284,29 +204,27 @@
 
 
 
-<div class="container ">
+ <div class="jumbotron" style="background-color:white; padding: 0px;">
   <div class="row m-2">
-    <div class="col-7">
-      <div id="presentation-embed-38915748" class="slp"></div>
+    <div class="col-md-7 col-xs-12 my-auto p-2" >
+      <div id="presentation-embed-38915748" class="slp my-auto"></div>
       <script src='https://slideslive.com/embed_presentation.js'></script>
       <script>
         embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
+        verticalWhenWidthLte: 2000,
         allowHiddenControlsWhenPaused: true,
-        zoomRatio: 0.4,
         hideTitle: true
         });
       </script>
     </div>
-    
-    <div class="col-5 p-1 my-auto">        
-        <div id="gitter" class="gitter container " >
+
+    <div class="col-md-5 col-xs-12 p-2">
+        <div id="gitter" class="slp">
           <center>
-            <div class="border">
-              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_r1etN1rtPB?layout=embedded" width="100%" height="680px"></iframe> </center>
-            </div>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_r1etN1rtPB?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -326,54 +244,125 @@
 
 <div  class="container" >
   <div class="row">
-  
 
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_ryxdEkHtPS.html" class="text-dark"><h5 class="card-title">A Closer Look at Deep Policy Gradients</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/ryxdEkHtPS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_ryxdEkHtPS.html" class="text-muted">
+              <h5 class="card-title" align="center">A Closer Look at Deep Policy Gradients</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Andrew Ilyas,
+              
+              Logan Engstrom,
+              
+              Shibani Santurkar,
+              
+              Dimitris Tsipras,
+              
+              Firdaus Janoos,
+              
+              Larry Rudolph,
+              
+              Aleksander Madry,
+              
+            </h6>
 
-            <p class="card-text">     We study how the behavior of deep policy gradient algorithms reflects the conceptual framework motivating their development. To this end, we propose a fine-grained analysis of state-of-the-art methods based on key elements of this framework: grad...</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ryxdEkHtPS.png" width="80%"/></center>
+
+            <!-- <p class="card-text">     We study how the behavior of deep policy gradient algorithms reflects the conceptual framework motivating their development. To this end, we propose a fine-grained analysis of state-of-the-art methods based on key elements of this framework: grad...</p> -->
+
+          </div>
         </div>
       </div>
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_SylOlp4FvH.html" class="text-dark"><h5 class="card-title">V-MPO: On-Policy Maximum a Posteriori Policy Optimization for Discrete and Continuous Control</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/SylOlp4FvH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_SylOlp4FvH.html" class="text-muted">
+              <h5 class="card-title" align="center">V-MPO: On-Policy Maximum a Posteriori Policy Optimization for Discrete and Continuous Control</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              H. Francis Song,
+              
+              Abbas Abdolmaleki,
+              
+              Jost Tobias Springenberg,
+              
+              Aidan Clark,
+              
+              Hubert Soyer,
+              
+              Jack W. Rae,
+              
+              Seb Noury,
+              
+              Arun Ahuja,
+              
+              Siqi Liu,
+              
+              Dhruva Tirumala,
+              
+              Nicolas Heess,
+              
+              Dan Belov,
+              
+              Martin Riedmiller,
+              
+              Matthew M. Botvinick,
+              
+            </h6>
 
-            <p class="card-text"> A state-value function-based version of MPO that achieves good results in a wide range of tasks in discrete and continuous control.</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SylOlp4FvH.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> A state-value function-based version of MPO that achieves good results in a wide range of tasks in discrete and continuous control.</p> -->
+
+          </div>
         </div>
       </div>
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_rJeINp4KwH.html" class="text-dark"><h5 class="card-title">Population-Guided Parallel Policy Search for Reinforcement Learning</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/rJeINp4KwH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_rJeINp4KwH.html" class="text-muted">
+              <h5 class="card-title" align="center">Population-Guided Parallel Policy Search for Reinforcement Learning</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Whiyoung Jung,
+              
+              Giseung Park,
+              
+              Youngchul Sung,
+              
+            </h6>
 
-            <p class="card-text"> In this paper, a new population-guided parallel learning scheme is proposed to enhance the performance of off-policy reinforcement learning (RL). In the proposed scheme, multiple identical learners with their own value-functions and policies share a ...</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rJeINp4KwH.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> In this paper, a new population-guided parallel learning scheme is proposed to enhance the performance of off-policy reinforcement learning (RL). In the proposed scheme, multiple identical learners with their own value-functions and policies share a ...</p> -->
+
+          </div>
         </div>
       </div>
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_rJld3hEYvS.html" class="text-dark"><h5 class="card-title">Ranking Policy Gradient</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/rJld3hEYvS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_rJld3hEYvS.html" class="text-muted">
+              <h5 class="card-title" align="center">Ranking Policy Gradient</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Kaixiang Lin,
+              
+              Jiayu Zhou,
+              
+            </h6>
 
-            <p class="card-text"> We propose ranking policy gradient that learns the optimal rank of actions to maximize return. We propose a general off-policy learning framework with the properties of optimality preserving, variance reduction, and sample-efficiency.</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rJld3hEYvS.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> We propose ranking policy gradient that learns the optimal rank of actions to maximize return. We propose a general off-policy learning framework with the properties of optimality preserving, variance reduction, and sample-efficiency.</p> -->
+
+          </div>
         </div>
       </div>
       

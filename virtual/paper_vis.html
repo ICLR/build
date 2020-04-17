@@ -1,3 +1,4 @@
+<!--language=FLASK-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,8 +7,8 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="static/typeahead.css">
-    <link rel="stylesheet" href="static/paper_vis.css">
+    <link rel="stylesheet" href="static/css/typeahead.css">
+    <link rel="stylesheet" href="static/css/paper_vis.css">
 
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -27,7 +28,7 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
 
-    <script src="static/typeahead.bundle.js"></script>
+    <script src="static/js/typeahead.bundle.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/tgdwyer/WebCola/WebCola/cola.min.js"></script>
@@ -44,90 +45,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-
-<style>
-  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .jumbotron{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .btn-group{background-color: white}
-  .btn {background-color: white}
-  #main-nav {padding-top:10px; padding-bottom:10px;}
-  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
-  .header {font: "Montserrat"; }
-  .card-header { border: 4px solid #eee;
-                font-family: "Exo";}
-
-  
-  .main-title {font-weight: 700;  color: #2294e0;}
-
-  .myAccordion {
-
-  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
-    margin-bottom: 18px;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-top: 10px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  .sponsorLogo {
-  width: 250px;
-  display: block;
-  margin-left: auto;
-    margin-right: auto;
-  margin-top: auto;
-    margin-bottom: auto;
-
-  }
-  
-  .slp {
-
-  background: #fff
-
-  padding: 10px;
-
-  border: 4px solid #eee;
-
-  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
-  }
-  
-  .border {
-  background: #fff
-  
-  padding: 10px;
-
-  border: 4px solid #eee;
-
-  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
-  }
-  
-  #abstractExample.collapse:not(.show) {
-  display: block;
-  /* height = lineheight * no of lines to display */
-  height: 4.5em;
-  overflow: hidden;
-  }
-
-  #abstractExample.collapsing {
-  height: 4.5em;
-  }
-
-
-#absShow.collapsed:after {
-  content: '+ Show More';
-}
-
-#absShow:not(.collapsed):after {
-  content: '- Show Less';
-}
-</style>
-
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -141,15 +62,7 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="livestream.html">Live</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="papers.html">Papers</a>
-        </li>
-        
-        <li class="nav-item active">
-          <a class="nav-link" href="paper_vis.html">Vis</a>
+          <a class="nav-link" href="papers.html">Browse</a>
         </li>
         
         <li class="nav-item ">
@@ -157,11 +70,7 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="socials.html">Socials</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="speakers.html">Speakers</a>
+          <a class="nav-link" href="events.html">Events</a>
         </li>
         
         <li class="nav-item ">
@@ -169,17 +78,31 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="workshops.html">Workshops</a>
+          <a class="nav-link" href="paper_vis.html">Extras</a>
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="faq.html">FAQ</a>
+          <a class="nav-link" href="chat.html">Chat</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">Help</a>
         </li>
         
       </ul>
     </div>
   </div>
 </nav>
+
+<ul class="nav justify-content-center">
+  <li class="nav-item"><a class="nav-link" href="#vis">Visualization</a></li>
+  <li class="nav-item"><a class="nav-link" href="#recs">Recommendations</a></li>
+</ul>
+
 
 <div class="container" id="container" style="padding-top: 20px;">
 
@@ -199,64 +122,95 @@
         </div>
         <div class="col-12 col-sm-6 col-lg-4" style="margin-bottom: 10px;">
             
-            <div class="btn-group btn-group-toggle filter_option"
-                 data-toggle="buttons">
-                <label class="btn btn-outline-secondary active">
-                    <input type="radio" name="options" value="authors"
-                           autocomplete="off" checked> author
-                </label>
-                <label class="btn btn-outline-secondary">
-                    <input type="radio" name="options" value="keywords"
-                           autocomplete="off"> keyword
-                </label>
-                <label class="btn btn-outline-secondary">
-                    <input type="radio" name="options" value="titles"
-                           autocomplete="off"> title
-                </label>
-                
+                <div class="btn-group btn-group-toggle filter_option"
+                     data-toggle="buttons">
+                    <label class="btn btn-outline-secondary active">
+                        <input type="radio" name="options" value="authors"
+                               autocomplete="off" checked> author
+                    </label>
+                    <label class="btn btn-outline-secondary">
+                        <input type="radio" name="options" value="keywords"
+                               autocomplete="off"> keyword
+                    </label>
+                    <label class="btn btn-outline-secondary">
+                        <input type="radio" name="options" value="titles"
+                               autocomplete="off"> title
+                    </label>
+                    
             </div>
 
         </div>
 
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+            
+            
+                
+            
+            
+                
+                     
+                    
+                        
+                                  
+                        
+                    
+                        
+                                  
+                        
+                    
+                
+            
 
         
-        
-        
-        
+            
+                        
+            
 
     </div>
 
     <div class="row " style="margin-top: 10px; text-align: center;">
-      <div class="card" style="margin-right: -40px">
-        <div class="card-header">
-          <svg class="plot" style="display: block; margin: auto;"></svg>
+        <div class="card" style="margin-right: -40px">
+            <div class="card-header">
+
+                <div id='outer_svg'
+                     style="display: inline-block; vertical-align: top;">
+                    <svg class="plot"
+                         style="display: block; "></svg>
+                </div>
+                <div class="results"
+                     style="display: inline-block; width:200px;vertical-align: top; text-align: left;">
+                    <div style="display: block; overflow-y: auto;"
+                         id="table_info">
+                        <div id="explain_text_plot">
+                            <p>If you <b>hover</b> over a dot, you see the
+                                related
+                                paper.</p>
+                            <p>If you <b>click</b> on a dot, you go to the
+                                related paper page.</p>
+                            <p>You can <b>search</b> for papers by author,
+                                keyword, or title </p>
+                            <p><b>Drag a rectangle </b> to summarize an area
+                                of the plot.</p>
+                        </div>
+                        <div id="summary_selection" style="">
+
+                        </div>
+                        <div style="overflow-y: auto; bottom: 0;margin-top:5pt;">
+                            <div id="sel_papers">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
     </div>
 
 </div>
 
-<script src="static/typeahead_tools.js"></script>
-<script src="static/paper_vis.js"></script>
+<script src="static/js/typeahead_tools.js"></script>
+<script src="static/js/paper_vis.js"></script>
 
 <script>
     window.onload = function () {

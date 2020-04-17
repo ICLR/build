@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    <link rel="stylesheet" href="static/css/main.css">
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
@@ -25,9 +25,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-    <script src="static/typeahead.bundle.js"></script>
+    <script src="static/js/typeahead.bundle.js"></script>
 
-    <link rel="stylesheet" href="static/typeahead.css">
+    <link rel="stylesheet" href="static/css/typeahead.css">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -46,90 +46,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-
-<style>
-  body{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .jumbotron{font-family: 'Lato', sans-serif; background-color: rgba(236, 241, 246, 1)}
-  .btn-group{background-color: white}
-  .btn {background-color: white}
-  #main-nav {padding-top:10px; padding-bottom:10px;}
-  .card {font-family: 'Exo'; box-shadow: 2px 2px 14px 0px rgba(204, 204, 204, 1);}
-  .header {font: "Montserrat"; }
-  .card-header { border: 4px solid #eee;
-                font-family: "Exo";}
-
-  
-  .main-title {font-weight: 700;  color: #2294e0;}
-
-  .myAccordion {
-
-  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
-    margin-bottom: 18px;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-top: 10px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  .sponsorLogo {
-  width: 250px;
-  display: block;
-  margin-left: auto;
-    margin-right: auto;
-  margin-top: auto;
-    margin-bottom: auto;
-
-  }
-  
-  .slp {
-
-  background: #fff
-
-  padding: 10px;
-
-  border: 4px solid #eee;
-
-  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
-  }
-  
-  .border {
-  background: #fff
-  
-  padding: 10px;
-
-  border: 4px solid #eee;
-
-  box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
-  }
-  
-  #abstractExample.collapse:not(.show) {
-  display: block;
-  /* height = lineheight * no of lines to display */
-  height: 4.5em;
-  overflow: hidden;
-  }
-
-  #abstractExample.collapsing {
-  height: 4.5em;
-  }
-
-
-#absShow.collapsed:after {
-  content: '+ Show More';
-}
-
-#absShow:not(.collapsed):after {
-  content: '- Show Less';
-}
-</style>
-
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img class="logo" style='visibility: ' src="static/ICLR-logo.png"  width="180px" />
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -143,15 +63,7 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="livestream.html">Live</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="papers.html">Papers</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="paper_vis.html">Vis</a>
+          <a class="nav-link" href="papers.html">Browse</a>
         </li>
         
         <li class="nav-item ">
@@ -159,11 +71,7 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="socials.html">Socials</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="speakers.html">Speakers</a>
+          <a class="nav-link" href="events.html">Events</a>
         </li>
         
         <li class="nav-item ">
@@ -171,11 +79,19 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="workshops.html">Workshops</a>
+          <a class="nav-link" href="paper_vis.html">Extras</a>
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="faq.html">FAQ</a>
+          <a class="nav-link" href="chat.html">Chat</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="faq.html">Help</a>
         </li>
         
       </ul>
@@ -193,7 +109,7 @@
      <h3 class="card-title main-title text-center" style="">
        U-GAT-IT: Unsupervised Generative Attentional Networks with Adaptive Layer-Instance Normalization for Image-to-Image Translation
      </h3>
-     
+
      <h5 class="card-subtitle mb-2 text-muted text-center">
        
        Junho Kim,
@@ -205,14 +121,14 @@
        Kwang Hee Lee
        
      </h5>
-     
+
      <center class="p-3">
        <a class="card-link" data-toggle="collapse" role="button" href="#details">
          <button class="btn btn-outline-secondary">
            Abstract
          </button>
        </a>
-       
+
 
        <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/65dec7deec5fb3a5b6c95d3e737070a669ca3033.pdf">
          <button class="btn btn-outline-secondary">
@@ -224,12 +140,19 @@
            OpenReview
          </button>
        </a>
-       
+
        <a href="" target="_blank"  class="card-link">
          <button class="btn btn-outline-secondary">
            Zoom
          </button>
        </a>
+
+       <a href="https://iclr.rocket.chat/channel/paper_channel_BJlZ5ySKPH" target="_blank"  class="card-link">
+         <button class="btn btn-outline-secondary">
+           Chat
+         </button>
+       </a>
+
        
        <a href="https://github.com/taki0112/UGATIT" target="_blank"  class="card-link">
          <button class="btn btn-outline-secondary">
@@ -237,13 +160,10 @@
          </button>
        </a>
        
-       <a href="" target="_blank"  class="card-link">
-         <button class="btn btn-outline-secondary">
-           Slides
-         </button>
-       </a>
+
+       
      </center>
-     
+
    </div>
  </div>
 
@@ -254,9 +174,9 @@
          <span class="font-weight-bold">Abstract:</span>
          We propose a novel method for unsupervised image-to-image translation, which incorporates a new attention module and a new learnable normalization function in an end-to-end manner. The attention module guides our model to focus on more important regions distinguishing between source and target domains based on the attention map obtained by the auxiliary classifier. Unlike previous attention-based method which cannot handle the geometric changes between domains, our model can translate both images requiring holistic changes and images requiring large shape changes. Moreover, our new AdaLIN (Adaptive Layer-Instance Normalization) function helps our attention-guided model to flexibly control the amount of change in shape and texture by learned parameters depending on datasets. Experimental results show the superiority of the proposed method compared to the existing state-of-the-art models with a fixed network architecture and hyper-parameters. 
        </div>
-       
+
      </p>
-     
+
      <p></p>
      <p class="card-text"><span class="font-weight-bold">Keywords:</span>
        
@@ -276,29 +196,27 @@
 
 
 
-<div class="container ">
+ <div class="jumbotron" style="background-color:white; padding: 0px;">
   <div class="row m-2">
-    <div class="col-7">
-      <div id="presentation-embed-38915748" class="slp"></div>
+    <div class="col-md-7 col-xs-12 my-auto p-2" >
+      <div id="presentation-embed-38915748" class="slp my-auto"></div>
       <script src='https://slideslive.com/embed_presentation.js'></script>
       <script>
         embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
+        verticalWhenWidthLte: 2000,
         allowHiddenControlsWhenPaused: true,
-        zoomRatio: 0.4,
         hideTitle: true
         });
       </script>
     </div>
-    
-    <div class="col-5 p-1 my-auto">        
-        <div id="gitter" class="gitter container " >
+
+    <div class="col-md-5 col-xs-12 p-2">
+        <div id="gitter" class="slp">
           <center>
-            <div class="border">
-              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_BJlZ5ySKPH?layout=embedded" width="100%" height="680px"></iframe> </center>
-            </div>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_BJlZ5ySKPH?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -318,54 +236,103 @@
 
 <div  class="container" >
   <div class="row">
-  
 
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_Hyg96gBKPS.html" class="text-dark"><h5 class="card-title">Monotonic Multihead Attention</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/Hyg96gBKPS.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_Hyg96gBKPS.html" class="text-muted">
+              <h5 class="card-title" align="center">Monotonic Multihead Attention</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Xutai Ma,
+              
+              Juan Miguel Pino,
+              
+              James Cross,
+              
+              Liezl Puzon,
+              
+              Jiatao Gu,
+              
+            </h6>
 
-            <p class="card-text"> Make the transformer streamable with monotonic attention.</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Hyg96gBKPS.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> Make the transformer streamable with monotonic attention.</p> -->
+
+          </div>
         </div>
       </div>
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_SJl5Np4tPr.html" class="text-dark"><h5 class="card-title">Cross-Domain Few-Shot Classification via Learned Feature-Wise Transformation</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/SJl5Np4tPr.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_SJl5Np4tPr.html" class="text-muted">
+              <h5 class="card-title" align="center">Cross-Domain Few-Shot Classification via Learned Feature-Wise Transformation</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Hung-Yu Tseng,
+              
+              Hsin-Ying Lee,
+              
+              Jia-Bin Huang,
+              
+              Ming-Hsuan Yang,
+              
+            </h6>
 
-            <p class="card-text"> Few-shot classification aims to recognize novel categories with only few labeled images in each class. Existing metric-based few-shot classification algorithms predict categories by comparing the feature embeddings of query images with those from a f...</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJl5Np4tPr.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> Few-shot classification aims to recognize novel categories with only few labeled images in each class. Existing metric-based few-shot classification algorithms predict categories by comparing the feature embeddings of query images with those from a f...</p> -->
+
+          </div>
         </div>
       </div>
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_BJe-91BtvH.html" class="text-dark"><h5 class="card-title">Masked Based Unsupervised Content Transfer</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/BJe-91BtvH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_BJe-91BtvH.html" class="text-muted">
+              <h5 class="card-title" align="center">Masked Based Unsupervised Content Transfer</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Ron Mokady,
+              
+              Sagie Benaim,
+              
+              Lior Wolf,
+              
+              Amit Bermano,
+              
+            </h6>
 
-            <p class="card-text"> We consider the problem of translating, in an unsupervised manner, between two domains where one contains some additional information compared to the other. The proposed method  disentangles the common and separate parts of these domains and, through...</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJe-91BtvH.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> We consider the problem of translating, in an unsupervised manner, between two domains where one contains some additional information compared to the other. The proposed method  disentangles the common and separate parts of these domains and, through...</p> -->
+
+          </div>
         </div>
       </div>
       
-      <div class="col-3">
-        <div class="card" >
-          <div class="card-header text-center">
-            <a href="poster_B1gF56VYPH.html" class="text-dark"><h5 class="card-title">Deep 3D Pan via Local adaptive &#34;t-shaped&#34; convolutions with global and local adaptive dilations</h5></a>
-            <center><img src="https://iclr.github.io/iclr-images/B1gF56VYPH.png" width="75%"  style="margin-bottom: 20px; margin-top: 20px; border-radius: 0; border: 4px solid #eee;box-shadow: 2px 2px 8px 0 #ccc;"/></center>
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_B1gF56VYPH.html" class="text-muted">
+              <h5 class="card-title" align="center">Deep 3D Pan via Local adaptive &#34;t-shaped&#34; convolutions with global and local adaptive dilations</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Juan Luis Gonzalez Bello,
+              
+              Munchurl Kim,
+              
+            </h6>
 
-            <p class="card-text"> Novel architecture for stereoscopic view synthesis at arbitrary camera shifts utilizing adaptive t-shaped kernels with adaptive dilations.</p>
-            
-          </div>      
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/B1gF56VYPH.png" width="80%"/></center>
+
+            <!-- <p class="card-text"> Novel architecture for stereoscopic view synthesis at arbitrary camera shifts utilizing adaptive t-shaped kernels with adaptive dilations.</p> -->
+
+          </div>
         </div>
       </div>
       
