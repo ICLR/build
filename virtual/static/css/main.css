@@ -120,6 +120,9 @@ div.anchor {
 
   box-shadow: rgb(204, 204, 204) 2px 2px 14px 0px;
   }
+.details {
+    font-family: 'Lato', sans-serif;
+}
 
   #abstractExample.collapse:not(.show) {
   display: block;
