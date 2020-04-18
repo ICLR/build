@@ -149,7 +149,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_ryxjnREFwH" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_683" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -187,9 +187,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -210,7 +207,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_ryxjnREFwH?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_683?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -252,9 +249,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SygWvAVFPr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> This paper extends neural module networks to answer compositional questions against text by introducing differentiable modules that perform reasoning over text and symbols in a probabilistic manner.</p> -->
-
           </div>
         </div>
       </div>
@@ -277,9 +271,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJgJtT4tvB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We introduce ReClor, a reading comprehension dataset requiring logical reasoning, and find that current state-of-the-art models struggle with real logical reasoning with poor performance near that of random guess.</p> -->
-
           </div>
         </div>
       </div>
@@ -302,9 +293,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJlzm64tDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text">  Recent breakthroughs of pretrained language models have shown the effectiveness of self-supervised learning for a wide range of natural language processing (NLP) tasks. In addition to standard syntactic and semantic NLP tasks, pretrained models achi...</p> -->
-
           </div>
         </div>
       </div>
@@ -329,14 +317,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJgVHkrYDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Graph-based recurrent retriever that learns to retrieve reasoning paths over Wikipedia Graph outperforms the most recent state of the art on HotpotQA by more than 14 points.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

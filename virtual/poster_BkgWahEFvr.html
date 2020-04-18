@@ -145,7 +145,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_BkgWahEFvr" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_108" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -183,9 +183,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -206,7 +203,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_BkgWahEFvr?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_108?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -242,9 +239,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HyxJhCEFDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> The first rigor diagnose of large-scale adversarial training on ImageNet</p> -->
-
           </div>
         </div>
       </div>
@@ -265,9 +259,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJeQEp4YDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Generative adversarial training a new generative modeling technique and its applications to adversarial example detection and robust classification.</p> -->
-
           </div>
         </div>
       </div>
@@ -294,9 +285,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HyeaSkrYPH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Adversarial patch attacks are among one of the most practical threat models against real-world computer vision systems. This paper studies certified and empirical defenses against patch attacks. We begin with a set of experiments showing that most ex...</p> -->
-
           </div>
         </div>
       </div>
@@ -317,14 +305,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1xscnEKDr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Defending Against Physically Realizable Attacks on Image Classification</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

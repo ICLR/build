@@ -151,7 +151,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_B1lPaCNtPB" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_30" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -191,9 +191,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -214,7 +211,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_B1lPaCNtPB?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_30?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -252,9 +249,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJeOekHKwr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We develop a principled theoretical framework for understanding and enforcing the stability of various types of GANs</p> -->
-
           </div>
         </div>
       </div>
@@ -277,9 +271,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/S1lxKlSKPH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Generative Adversarial Networks (GANs) are known to be difficult to train, despite considerable research effort. Several regularization techniques for stabilizing training have been proposed, but they introduce non-trivial computational overheads and...</p> -->
-
           </div>
         </div>
       </div>
@@ -300,9 +291,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Hye1RJHKwB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We decompose the discriminator in a GAN in a principled way so that each component can be independently trained on different parts of the input. The resulting &#34;FactorGAN&#34; can be used for semi-supervised learning and in missing data scenarios.</p> -->
-
           </div>
         </div>
       </div>
@@ -327,14 +315,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1x5wRVtvS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A novel Bayesian deep learning framework that captures and relates hierarchical semantic and visual concepts, performing well on a variety of image and text modeling and generation tasks.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

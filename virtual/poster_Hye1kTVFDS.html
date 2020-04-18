@@ -145,7 +145,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_Hye1kTVFDS" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_306" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -182,9 +182,6 @@ The information bottleneck method formalizes this as an information-theoretic op
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -205,7 +202,7 @@ The information bottleneck method formalizes this as an information-theoretic op
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_Hye1kTVFDS?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_306?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -249,9 +246,6 @@ The information bottleneck method formalizes this as an information-theoretic op
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/S1xFl64tDr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Previous studies have found that an adversary attacker can often infer unintended input information from intermediate-layer features. We study the possibility of preventing such adversarial inference, yet without too much accuracy degradation. We pro...</p> -->
-
           </div>
         </div>
       </div>
@@ -274,9 +268,6 @@ The information bottleneck method formalizes this as an information-theoretic op
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/r1lZgyBYwS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We scale up lossless compression with latent variables, achieving state of the art on full-size ImageNet images.</p> -->
-
           </div>
         </div>
       </div>
@@ -301,9 +292,6 @@ The information bottleneck method formalizes this as an information-theoretic op
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1gmHaEKwB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose an efficient, provable and data independent method for network compression via neural pruning using coresets of neurons -- a novel construction proposed in this paper.</p> -->
-
           </div>
         </div>
       </div>
@@ -330,14 +318,40 @@ The information bottleneck method formalizes this as an information-theoretic op
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Syx79eBKwr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We show state-of-the-art word representation learning methods maximize an objective function that is a lower bound on the mutual information between different parts of a word sequence (i.e., a sentence). Our formulation provides an alternative perspe...</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

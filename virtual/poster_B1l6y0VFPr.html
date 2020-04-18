@@ -147,7 +147,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_B1l6y0VFPr" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_24" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -193,9 +193,6 @@ from a single example, whereas FCNs cannot learn the identity function reliably 
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -216,7 +213,7 @@ from a single example, whereas FCNs cannot learn the identity function reliably 
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_B1l6y0VFPr?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_24?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -262,9 +259,6 @@ from a single example, whereas FCNs cannot learn the identity function reliably 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rygjHxrYDB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A new operation called Harmonic Convolution makes deep network model audio priors without training.</p> -->
-
           </div>
         </div>
       </div>
@@ -285,9 +279,6 @@ from a single example, whereas FCNs cannot learn the identity function reliably 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJlnC1rKPB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A self-attention layer can perform convolution and often learns to do so in practice.</p> -->
-
           </div>
         </div>
       </div>
@@ -308,9 +299,6 @@ from a single example, whereas FCNs cannot learn the identity function reliably 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1lj0nNFwB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We study the sparsity-inducing bias of deep models, caused by their learning dynamics.</p> -->
-
           </div>
         </div>
       </div>
@@ -331,14 +319,40 @@ from a single example, whereas FCNs cannot learn the identity function reliably 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/B1esx6EYvr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We evaluate self-supervised feature learning methods and find that with sufficient data augmentation early layers can be learned using just one image.  This is informative about self-supervision and the role of augmentations.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

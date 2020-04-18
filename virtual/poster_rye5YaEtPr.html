@@ -151,7 +151,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_rye5YaEtPr" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_639" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -189,9 +189,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -212,7 +209,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rye5YaEtPr?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_639?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -252,9 +249,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJxZnR4YvB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We study the problem of regret minimization for distributed bandits learning, in which $M$ agents work collaboratively to minimize their total regret under the coordination of a central server. Our goal is to design communication protocols with near-...</p> -->
-
           </div>
         </div>
       </div>
@@ -277,9 +271,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BkglSTNFDB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We adapt Q-learning with UCB-exploration bonus to infinite-horizon MDP with discounted rewards without accessing a generative model, and improves the previously best known result.</p> -->
-
           </div>
         </div>
       </div>
@@ -304,9 +295,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJxNAnVtDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Federated learning enables a large amount of edge computing devices to jointly learn a model without data sharing. As a leading algorithm in this setting, Federated Averaging (\texttt{FedAvg}) runs Stochastic Gradient Descent (SGD) in parallel on a s...</p> -->
-
           </div>
         </div>
       </div>
@@ -333,14 +321,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Skep6TVYDB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Gradientless Descent is a provably efficient gradient-free algorithm that is monotone-invariant and fast for high-dimensional zero-th order optimization.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

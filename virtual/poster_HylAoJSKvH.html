@@ -147,7 +147,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_HylAoJSKvH" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_327" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -188,9 +188,6 @@ function in $\mathbb{R}^d$ in setting where only function evaluations are possib
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -211,7 +208,7 @@ function in $\mathbb{R}^d$ in setting where only function evaluations are possib
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_HylAoJSKvH?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_327?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -253,9 +250,6 @@ function in $\mathbb{R}^d$ in setting where only function evaluations are possib
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rye5YaEtPr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A variant of Adam for strongly convex functions</p> -->
-
           </div>
         </div>
       </div>
@@ -276,9 +270,6 @@ function in $\mathbb{R}^d$ in setting where only function evaluations are possib
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rkeNfp4tPr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Higher momentum parameter $\beta$ helps for escaping saddle points faster</p> -->
-
           </div>
         </div>
       </div>
@@ -307,9 +298,6 @@ function in $\mathbb{R}^d$ in setting where only function evaluations are possib
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJxIm0VtwH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> This paper provides novel analysis of adaptive gradient algorithms for solving non-convex non-concave min-max problems as GANs, and explains the reason why adaptive gradient methods outperform its non-adaptive counterparts by empirical studies.</p> -->
-
           </div>
         </div>
       </div>
@@ -336,14 +324,40 @@ function in $\mathbb{R}^d$ in setting where only function evaluations are possib
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Byg5ZANtvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Short-and-sparse deconvolution (SaSD) is the problem of extracting localized, recurring motifs in signals with spatial or temporal structure. Variants of this problem arise in applications such as image deblurring, microscopy, neural spike sorting, a...</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

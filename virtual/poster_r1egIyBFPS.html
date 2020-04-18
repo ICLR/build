@@ -147,7 +147,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_r1egIyBFPS" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_511" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -179,9 +179,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -202,7 +199,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_r1egIyBFPS?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_511?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -238,9 +235,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/S1eZYeHFDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We train a neural network to compute function integrals, and to solve complex differential equations.</p> -->
-
           </div>
         </div>
       </div>
@@ -265,9 +259,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJgLZR4KvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose an unsupervised skill discovery which enables model-based planning for hierarchical reinforcement learning.</p> -->
-
           </div>
         </div>
       </div>
@@ -290,9 +281,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SkeuexBtDr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Coupled rule-exemplar supervision and a implication loss helps to jointly learn to denoise rules and imply labels.</p> -->
-
           </div>
         </div>
       </div>
@@ -321,14 +309,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SylL0krYPS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We study the problem of continuous control agents in deep RL with adversarial attacks and proposed a two-step algorithm based on learned model dynamics. </p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

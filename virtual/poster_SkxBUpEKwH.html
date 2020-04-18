@@ -143,7 +143,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_SkxBUpEKwH" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_465" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -177,9 +177,6 @@ The method is based on two networks. The first  maps a current pose, and a singl
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -200,7 +197,7 @@ The method is based on two networks. The first  maps a current pose, and a singl
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_SkxBUpEKwH?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_465?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -238,9 +235,6 @@ The method is based on two networks. The first  maps a current pose, and a singl
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJx1URNKwH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Video retargeting typically requires large amount of target data to be effective, which may not always be available; we propose a metalearning approach that improves over popular baselines while producing temporally coherent frames.</p> -->
-
           </div>
         </div>
       </div>
@@ -267,9 +261,6 @@ The method is based on two networks. The first  maps a current pose, and a singl
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ryloogSKDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A method for learning to predict uncertainties over orientations using the Bingham Distribution</p> -->
-
           </div>
         </div>
       </div>
@@ -290,9 +281,6 @@ The method is based on two networks. The first  maps a current pose, and a singl
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rJgsskrFwH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We present a novel autoregressive video generation that achieves strong results on popular datasets and produces encouraging continuations of real world videos.</p> -->
-
           </div>
         </div>
       </div>
@@ -313,14 +301,40 @@ The method is based on two networks. The first  maps a current pose, and a singl
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rJlnOhVYPS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A framework that conducts online refinement of pseudo labels with a novel soft softmax-triplet loss for unsupervised domain adaptation on person re-identification.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

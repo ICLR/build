@@ -149,7 +149,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_BJgd81SYwr" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_63" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -181,9 +181,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -204,7 +201,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_BJgd81SYwr?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_63?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -258,9 +255,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rkgAGAVKPr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a new large-scale diverse environment for few-shot learning, and evaluate popular models&#39; performance on it, revealing important research challenges.</p> -->
-
           </div>
         </div>
       </div>
@@ -289,9 +283,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rkeZIJBYvr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A novel meta-learning model that adaptively balances the effect of the meta-learning and task-specific learning, and also class-specific learning within each task.</p> -->
-
           </div>
         </div>
       </div>
@@ -312,9 +303,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HkgB2TNYPS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> The paper analyzes the effect of shot number on prototypical networks and proposes a robust method when the shot number differs from meta-training to meta-testing time.</p> -->
-
           </div>
         </div>
       </div>
@@ -339,14 +327,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BklEFpEYwS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We identify and formalize the memorization problem in meta-learning and solve this problem with novel meta-regularization method, which greatly expand the domain that meta-learning can be  applicable to and effective on.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

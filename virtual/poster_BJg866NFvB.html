@@ -145,7 +145,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_BJg866NFvB" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_56" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -183,9 +183,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -206,7 +203,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_BJg866NFvB?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_56?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -242,9 +239,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HkxBJT4YvB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We consider the challenge of estimating treatment effects from observational data; and point out that, in general, only some factors based on the observed covariates X contribute to selection of the treatment T, and only some to determining the outco...</p> -->
-
           </div>
         </div>
       </div>
@@ -269,9 +263,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SkeyppEFvS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Understanding causes and effects in mechanical systems is an essential component of reasoning in the physical world. This work poses a new problem of counterfactual learning of object mechanics from visual input.  We develop the CoPhy benchmark to as...</p> -->
-
           </div>
         </div>
       </div>
@@ -292,9 +283,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/r1gelyrtwH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose physics-aware difference graph networks designed to effectively learn spatial differences to modeling sparsely-observed dynamics.</p> -->
-
           </div>
         </div>
       </div>
@@ -319,14 +307,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rkgU1gHtvr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A new partially policy-agnostic method for infinite-horizon off-policy policy evalution with multiple known or unknown behavior policies.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

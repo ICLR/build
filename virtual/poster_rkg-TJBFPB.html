@@ -145,7 +145,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_rkg-TJBFPB" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_597" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -183,9 +183,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -206,7 +203,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rkg-TJBFPB?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_597?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -246,9 +243,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgy96EYvr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Intrinsically motivated reinforcement learning aims to address the exploration challenge for sparse-reward tasks. However, the study of exploration methods in transition-dependent multi-agent settings is largely absent from the literature. We aim to ...</p> -->
-
           </div>
         </div>
       </div>
@@ -285,9 +279,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Sye57xStvB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a reinforcement learning agent to solve hard exploration games by learning a range of directed exploratory policies. </p> -->
-
           </div>
         </div>
       </div>
@@ -308,9 +299,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/S1xKd24twB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A simple and effective alternative to adversarial imitation learning: initialize experience replay buffer with demonstrations, set their reward to +1, set reward for all other data to 0, run Q-learning or soft actor-critic to train.</p> -->
-
           </div>
         </div>
       </div>
@@ -333,14 +321,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJleNCNtDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a formulation of intrinsic motivation that is suitable as an exploration bias in synergistic multi-agent tasks, by encouraging agents to affect the world in ways that would not be achieved if they were acting individually.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

@@ -149,7 +149,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_S1exA2NtDB" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_352" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -203,9 +203,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -226,7 +223,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_S1exA2NtDB?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_352?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -266,9 +263,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rkgMkCEtPB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> The success of MAML relies on feature reuse from the meta-initialization, which also yields a natural simplification of the algorithm, with the inner loop removed for the network body, as well as other insights on the head and body.</p> -->
-
           </div>
         </div>
       </div>
@@ -295,9 +289,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rkeiQlBFPB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a novel framework for meta-learning a gradient-based update rule that scales to beyond few-shot learning and is applicable to any form of learning, including continual learning.</p> -->
-
           </div>
         </div>
       </div>
@@ -320,9 +311,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJeD3CEFPH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> MQL is a simple off-policy meta-RL algorithm that recycles data from the meta-training replay buffer to adapt to new tasks.</p> -->
-
           </div>
         </div>
       </div>
@@ -345,14 +333,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SkxSv6VFvS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Don&#39;t deform your convolutions -- deform your kernels.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

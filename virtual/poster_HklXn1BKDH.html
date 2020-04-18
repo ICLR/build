@@ -151,7 +151,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_HklXn1BKDH" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_284" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -188,9 +188,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -211,7 +208,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_HklXn1BKDH?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_284?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -251,9 +248,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/S1l8oANFDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> An approach to learn program policies for control tasks that inductively generalize. </p> -->
-
           </div>
         </div>
       </div>
@@ -278,9 +272,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rJxX8T4Kvr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We apply a reinforcement learning based approach to learning optimal synchronization policies used for Parameter Server-based distributed training  of SGD.</p> -->
-
           </div>
         </div>
       </div>
@@ -317,9 +308,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Sye57xStvB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a reinforcement learning agent to solve hard exploration games by learning a range of directed exploratory policies. </p> -->
-
           </div>
         </div>
       </div>
@@ -342,14 +330,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgMFxrYPB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We address the task of autonomous exploration and navigation using spatial affordance maps that can be learned in a self-supervised manner, these outperform classic geometric baselines while being more sample efficient than contemporary RL algorithms</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

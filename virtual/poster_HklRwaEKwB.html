@@ -145,7 +145,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_HklRwaEKwB" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_281" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -188,9 +188,6 @@ We study the bias of $K$-fold cross-validation for choosing the regularization p
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -211,7 +208,7 @@ We study the bias of $K$-fold cross-validation for choosing the regularization p
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_HklRwaEKwB?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_281?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -249,9 +246,6 @@ We study the bias of $K$-fold cross-validation for choosing the regularization p
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rklEj2EFvB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We derive a low-variance, unbiased gradient estimator for expectations over discrete random variables based on sampling without replacement</p> -->
-
           </div>
         </div>
       </div>
@@ -270,9 +264,6 @@ We study the bias of $K$-fold cross-validation for choosing the regularization p
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/B1x62TNtDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Variational approaches based on neural networks are showing promise for estimating mutual information (MI) between high dimensional variables. However, they can be difficult to use in practice due to poorly understood bias/variance tradeoffs. We theo...</p> -->
-
           </div>
         </div>
       </div>
@@ -293,9 +284,6 @@ We study the bias of $K$-fold cross-validation for choosing the regularization p
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Hke3gyHYwH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Over-parameterized deep neural networks trained by simple first-order methods are known to be able to fit any labeling of data. Such over-fitting ability hinders generalization when mislabeled training examples are present. On the other hand, simple ...</p> -->
-
           </div>
         </div>
       </div>
@@ -314,14 +302,40 @@ We study the bias of $K$-fold cross-validation for choosing the regularization p
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1l_0JBYwS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Graph regularization forces spectral embedding to focus on the largest clusters, making the representation less sensitive to noise. </p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

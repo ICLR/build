@@ -145,7 +145,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_rklB76EKPr" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_621" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -177,9 +177,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -200,7 +197,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rklB76EKPr?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_621?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -240,9 +237,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgnXpVYwS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Gradient clipping provably accelerates gradient descent for non-smooth non-convex functions.</p> -->
-
           </div>
         </div>
       </div>
@@ -261,9 +255,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJeLIgBKPS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We study the implicit bias of gradient descent and prove under a minimal set of assumptions that the parameter direction of homogeneous models converges to KKT points of a natural margin maximization problem.</p> -->
-
           </div>
         </div>
       </div>
@@ -280,9 +271,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ryeFY0EFwS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a hypothesis for why gradient descent generalizes based on how per-example gradients interact with each other.</p> -->
-
           </div>
         </div>
       </div>
@@ -305,14 +293,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Hklz71rYvS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Estimator for the Wasserstein natural gradient</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

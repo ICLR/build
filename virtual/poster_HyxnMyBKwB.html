@@ -145,7 +145,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_HyxnMyBKwB" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_340" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -187,9 +187,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -210,7 +207,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_HyxnMyBKwB?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_340?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -250,9 +247,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rklHqRVKvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a generic framework that allows for exploiting the low-rank structure in both planning and deep reinforcement learning.</p> -->
-
           </div>
         </div>
       </div>
@@ -275,9 +269,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/r1genAVKPB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Exponential lower bounds for value-based and policy-based reinforcement learning with function approximation.</p> -->
-
           </div>
         </div>
       </div>
@@ -302,9 +293,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BkxXe0Etwr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A general framework of value-based reinforcement learning for continuous control</p> -->
-
           </div>
         </div>
       </div>
@@ -323,14 +311,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJezGp4YPr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> While there are convergence guarantees for temporal difference (TD) learning when using linear function approximators, the situation for nonlinear models is far less understood, and divergent examples are known. Here we take a first step towards exte...</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

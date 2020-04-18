@@ -147,7 +147,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_BkxRRkSKwr" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_120" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -183,9 +183,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -206,7 +203,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_BkxRRkSKwr?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_120?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -254,9 +251,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rJlUt0EYwS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> While deep neural networks have achieved impressive performance on a range of NLP tasks, these data-hungry models heavily rely on labeled data, which restricts their applications in scenarios where data annotation is expensive. Natural language (NL) ...</p> -->
-
           </div>
         </div>
       </div>
@@ -279,9 +273,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJxK5pEYvr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Incorporating hierarchical structures like constituency trees has been shown to be effective for various natural language processing (NLP) tasks. However, it is evident that state-of-the-art (SOTA) sequence-based models like the Transformer struggle ...</p> -->
-
           </div>
         </div>
       </div>
@@ -306,9 +297,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/B1lGU64tDr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A deep hierarchical state-space model in which the state transitions of correlated objects are coordinated by graph neural networks.</p> -->
-
           </div>
         </div>
       </div>
@@ -333,14 +321,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJxwPJHFwS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose the first algorithm for verifying the robustness of Transformers.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

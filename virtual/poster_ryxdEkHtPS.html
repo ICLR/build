@@ -151,7 +151,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_ryxdEkHtPS" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_680" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -191,9 +191,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -214,7 +211,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_ryxdEkHtPS?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_680?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -254,9 +251,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgnXpVYwS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Gradient clipping provably accelerates gradient descent for non-smooth non-convex functions.</p> -->
-
           </div>
         </div>
       </div>
@@ -285,9 +279,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/r1etN1rtPB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We study the roots of algorithmic progress in deep policy gradient algorithms through a case study on two popular algorithms, Proximal Policy Optimization and Trust Region Policy Optimization. We investigate the consequences of &#34;code-level optimizati...</p> -->
-
           </div>
         </div>
       </div>
@@ -310,9 +301,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgQfkSYDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Policy gradient methods with actor-critic schemes demonstrate tremendous empirical successes, especially when the actors and critics are parameterized by neural networks. However, it remains less clear whether such &#34;neural&#34; policy gradient methods co...</p> -->
-
           </div>
         </div>
       </div>
@@ -333,14 +321,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Skln2A4YDB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Policy gradient through backpropagation through time using learned models and Q-functions. SOTA results in reinforcement learning benchmark environments.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

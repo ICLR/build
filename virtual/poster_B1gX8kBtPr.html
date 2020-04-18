@@ -147,7 +147,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_B1gX8kBtPr" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_16" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -188,9 +188,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -211,7 +208,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_B1gX8kBtPr?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_16?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -255,9 +252,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Skep6TVYDB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Gradientless Descent is a provably efficient gradient-free algorithm that is monotone-invariant and fast for high-dimensional zero-th order optimization.</p> -->
-
           </div>
         </div>
       </div>
@@ -278,9 +272,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/B1guLAVFDB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We provably recover the span of a deep multi-layered neural network with latent structure and empirically apply efficient span recovery algorithms to attack networks by obfuscating inputs.</p> -->
-
           </div>
         </div>
       </div>
@@ -299,9 +290,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rklk_ySYPB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We introduce a method to train models with provable robustness wrt all the $l_p$-norms for $p\geq 1$ simultaneously.</p> -->
-
           </div>
         </div>
       </div>
@@ -322,14 +310,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgr4kSFDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Answering a wide class of logical queries over knowledge graphs with box embeddings in vector space</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

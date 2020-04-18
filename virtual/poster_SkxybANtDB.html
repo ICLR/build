@@ -151,7 +151,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_SkxybANtDB" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_475" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -195,9 +195,6 @@ A Bayesian approach is presented to tackle the specifics of the DTLR problem, wi
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -218,7 +215,7 @@ A Bayesian approach is presented to tackle the specifics of the DTLR problem, wi
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_SkxybANtDB?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_475?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -256,9 +253,6 @@ A Bayesian approach is presented to tackle the specifics of the DTLR problem, wi
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Sklgs0NFvr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Humans in the loop revise documents to accord with counterfactual labels, resulting resource helps to reduce reliance on spurious associations.</p> -->
-
           </div>
         </div>
       </div>
@@ -281,9 +275,6 @@ A Bayesian approach is presented to tackle the specifics of the DTLR problem, wi
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJxUjlBtwB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a deep generative model of volumes for 3D cryo-EM reconstruction from unlabelled 2D images and show that it can learn can learn continuous deformations in protein structure.</p> -->
-
           </div>
         </div>
       </div>
@@ -308,9 +299,6 @@ A Bayesian approach is presented to tackle the specifics of the DTLR problem, wi
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJlahxHYDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We provide theoretical support to uncertainty estimates for deep learning obtained fitting random priors.</p> -->
-
           </div>
         </div>
       </div>
@@ -329,14 +317,40 @@ A Bayesian approach is presented to tackle the specifics of the DTLR problem, wi
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SyxV9ANFDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A new recurrent neural network architecture for detecting pairwise Granger causality between nonlinearly interacting time series. </p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

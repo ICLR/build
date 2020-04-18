@@ -145,7 +145,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_rJxe3xSYDS" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_575" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -182,9 +182,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -205,7 +202,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rJxe3xSYDS?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_575?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -245,9 +242,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/r1lOgyrKDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Sequence generation models are commonly refined with reinforcement learning over user-defined metrics. However, high gradient variance hinders the practical use of this method. To stabilize this method, we adapt to contextual generation of categorica...</p> -->
-
           </div>
         </div>
       </div>
@@ -268,9 +262,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJx040EFvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> FGSM-based adversarial training, with randomization, works just as well as PGD-based adversarial training: we can use this to train a robust classifier in 6 minutes on CIFAR10, and 12 hours on ImageNet, on a single machine.</p> -->
-
           </div>
         </div>
       </div>
@@ -293,9 +284,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Hkem-lrtvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a query-efficient black-box attack which uses Bayesian optimisation in combination with Bayesian model selection to optimise over the adversarial perturbation and the optimal degree of search space dimension reduction. </p> -->
-
           </div>
         </div>
       </div>
@@ -320,14 +308,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJlHwkBYDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We proposed a Nesterov Iterative Fast Gradient Sign Method (NI-FGSM) and a Scale-Invariant attack Method (SIM) that can boost the transferability of adversarial examples for image classification.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

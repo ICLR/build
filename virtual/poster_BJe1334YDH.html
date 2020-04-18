@@ -143,7 +143,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_BJe1334YDH" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_43" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -183,9 +183,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -206,7 +203,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_BJe1334YDH?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_43?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -252,9 +249,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJlS634tPr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Allowing partial channel connection in super-networks to regularize and accelerate differentiable architecture search</p> -->
-
           </div>
         </div>
       </div>
@@ -273,9 +267,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rkecl1rtwB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We proposed a normalization layer for GNN models to solve the oversmoothing problem.</p> -->
-
           </div>
         </div>
       </div>
@@ -298,9 +289,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJe6uANtwH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We present a new routing method for Capsule networks, and it performs at-par with ResNet-18 on CIFAR-10/ CIFAR-100.</p> -->
-
           </div>
         </div>
       </div>
@@ -325,14 +313,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1lBj2VFPS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We introduce an efficient quantization process that allows for performance acceleration on specialized integer-only neural network accelerator.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

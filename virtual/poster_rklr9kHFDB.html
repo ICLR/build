@@ -159,7 +159,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_rklr9kHFDB" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_631" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -201,9 +201,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -224,7 +221,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rklr9kHFDB?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_631?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -264,9 +261,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HklSeREtPB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Artificial neural networks trained with gradient descent are capable of recapitulating both realistic neural activity and the anatomical organization of a biological circuit.</p> -->
-
           </div>
         </div>
       </div>
@@ -293,9 +287,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Skey4eBYPS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We extend deep sets to functional embeddings and Neural Processes to include translation equivariant members</p> -->
-
           </div>
         </div>
       </div>
@@ -318,9 +309,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1gB4RVKvB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Contextual illusions are a feature, not a bug, of neural routines optimized for contour detection.</p> -->
-
           </div>
         </div>
       </div>
@@ -341,14 +329,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgNJgSFPS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A new scalable, group-equivariant model for capsule networks that preserves compositionality under transformations, and is empirically more transformation-robust to older capsule network models.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

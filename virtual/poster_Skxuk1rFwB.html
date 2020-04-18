@@ -157,7 +157,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_Skxuk1rFwB" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_473" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -196,9 +196,6 @@ Notably, we achieve 7.02% verified test error on MNIST at epsilon=0.3, and 66.94
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -219,7 +216,7 @@ Notably, we achieve 7.02% verified test error on MNIST at epsilon=0.3, and 66.94
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_Skxuk1rFwB?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_473?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -255,9 +252,6 @@ Notably, we achieve 7.02% verified test error on MNIST at epsilon=0.3, and 66.94
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJxSDxrKDr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a novel combination of adversarial training and provable defenses which produces a model with state-of-the-art accuracy and certified robustness on CIFAR-10. </p> -->
-
           </div>
         </div>
       </div>
@@ -280,9 +274,6 @@ Notably, we achieve 7.02% verified test error on MNIST at epsilon=0.3, and 66.94
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Hke0V1rKPS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We show that training classifiers to produce salient input Jacobian matrices with a GAN-like regularization can boost adversarial robustness.</p> -->
-
           </div>
         </div>
       </div>
@@ -303,9 +294,6 @@ Notably, we achieve 7.02% verified test error on MNIST at epsilon=0.3, and 66.94
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJx040EFvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> FGSM-based adversarial training, with randomization, works just as well as PGD-based adversarial training: we can use this to train a robust classifier in 6 minutes on CIFAR10, and 12 hours on ImageNet, on a single machine.</p> -->
-
           </div>
         </div>
       </div>
@@ -336,14 +324,40 @@ Notably, we achieve 7.02% verified test error on MNIST at epsilon=0.3, and 66.94
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rJx1Na4Fwr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose MACER: a provable defense algorithm that trains robust models by maximizing the certified radius. It does not use adversarial training but performs better than all existing provable l2-defenses.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

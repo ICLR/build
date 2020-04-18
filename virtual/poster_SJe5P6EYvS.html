@@ -143,7 +143,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_SJe5P6EYvS" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_378" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -180,9 +180,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -203,7 +200,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_SJe5P6EYvS?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_378?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -245,9 +242,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SylKikSYDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Long-range transformer using a compressive memory, achieves sota in wikitext-103 and enwik8 LM benchmarks, release a new book-level LM benchmark PG-19.</p> -->
-
           </div>
         </div>
       </div>
@@ -270,9 +264,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rJeXS04FPH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> DeFINE uses a deep, hierarchical, sparse network with new skip connections to learn better word embeddings efficiently. </p> -->
-
           </div>
         </div>
       </div>
@@ -299,9 +290,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Bkl7bREtDr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> In Deep RL, order-invariant functions can be used in conjunction with standard memory modules to improve gradient decay and resilience to noise.</p> -->
-
           </div>
         </div>
       </div>
@@ -334,14 +322,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rylnK6VtDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We explore the role of multiplicative interaction as a unifying framework to describe a range of classical and modern neural network architectural motifs, such as gating, attention layers, hypernetworks, and dynamic convolutions amongst others.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

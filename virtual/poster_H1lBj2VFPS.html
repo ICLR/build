@@ -151,7 +151,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_H1lBj2VFPS" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_187" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -189,9 +189,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -212,7 +209,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_H1lBj2VFPS?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_187?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -250,9 +247,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BkgXT24tDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose Additive Powers-of-Two~(APoT) quantization, an efficient non-uniform quantization scheme for the bell-shaped and long-tailed distribution of weights and activations in neural networks. By constraining all quantization levels as the sum of ...</p> -->
-
           </div>
         </div>
       </div>
@@ -277,9 +271,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rkgO66VKDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A method for learning quantization configuration for low precision networks that achieves state of the art performance for quantized networks.</p> -->
-
           </div>
         </div>
       </div>
@@ -310,9 +301,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Hyx0slrFvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Efficient deep neural network (DNN) inference on mobile or embedded devices typically involves quantization of the network parameters and activations. In particular, mixed precision networks achieve better performance than networks with homogeneous b...</p> -->
-
           </div>
         </div>
       </div>
@@ -339,14 +327,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ryxK0JBtPr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We show that regularizing the $\ell_1$-norm of gradients improves robustness to post-training quantization in neural networks.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

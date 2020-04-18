@@ -151,7 +151,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_H1lZJpVFvr" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_190" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -191,9 +191,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -214,7 +211,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_H1lZJpVFvr?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_190?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -254,9 +251,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Hke0V1rKPS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We show that training classifiers to produce salient input Jacobian matrices with a GAN-like regularization can boost adversarial robustness.</p> -->
-
           </div>
         </div>
       </div>
@@ -277,9 +271,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJx040EFvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> FGSM-based adversarial training, with randomization, works just as well as PGD-based adversarial training: we can use this to train a robust classifier in 6 minutes on CIFAR10, and 12 hours on ImageNet, on a single machine.</p> -->
-
           </div>
         </div>
       </div>
@@ -300,9 +291,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJeQEp4YDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Generative adversarial training a new generative modeling technique and its applications to adversarial example detection and robust classification.</p> -->
-
           </div>
         </div>
       </div>
@@ -323,14 +311,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ByxtC2VtPB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We exploit the global linearity of the mixup-trained models in inference to break the locality of the adversarial perturbations.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

@@ -145,7 +145,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_SJg7KhVKPH" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_393" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -183,9 +183,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -206,7 +203,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_SJg7KhVKPH?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_393?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -248,9 +245,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ByxRM0Ntvr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We prove that Transformer networks are universal approximators of sequence-to-sequence functions.</p> -->
-
           </div>
         </div>
       </div>
@@ -275,9 +269,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ByeMPlHKPH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Transformer has become ubiquitous in natural language processing (e.g., machine translation, question answering); however, it requires enormous amount of computations to achieve high performance, which makes it not suitable for mobile applications si...</p> -->
-
           </div>
         </div>
       </div>
@@ -298,9 +289,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rkgNKkHtvB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Efficient Transformer with locality-sensitive hashing and reversible layers</p> -->
-
           </div>
         </div>
       </div>
@@ -327,14 +315,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/r1eIiCNYwS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We present Transformer-XH, which upgrades Transformer with eXtra Hop attentions to intrinsically model structured texts in a data driven way. </p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

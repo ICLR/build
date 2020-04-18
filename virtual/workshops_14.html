@@ -94,50 +94,50 @@
     </div>
   </div>
 </nav>
-
-<!-- Title -->
 <div class="container">
+<!-- Title -->
+
  <div class="pp-card m-3" style="">
    <div class="card-header">
-     <h3 class="card-title main-title text-center" style="">
+     <h2 class="card-title main-title text-center" style="">
        Workshop on Causal Learning For Decision Making
-     </h3>
-     
-     <h5 class="card-subtitle mb-2 text-muted text-center">
+     </h2>
+
+     <h3 class="card-subtitle mb-2 text-muted text-center">
        Nan Rosemary Ke · Anirudh Goyal Alias Parth Goyal · Jane Wang · Silvia Chiappa · Jovana Mitrovic · Theophane Weber · Danilo Jimenez Rezende · Stefan Bauer
-     </h5>
-     
-     <center class="p-3">
+     </h3>
+
+     <div class="text-center p-3">
        <a class="card-link" data-toggle="collapse" role="button" href="#details">
            Description
        </a>
-              
+       <a href="https://sites.google.com/view/causal-learning-icrl2020/home" target="_blank"  class="card-link">
+         Site
+       </a>   
        <a href="" target="_blank"  class="card-link">
-           Zoom
+           Video
        </a>
+       <a href="chat.html?room=channel/workshop_causallearning" target="_blank"  class="card-link">
+           Chat
+       </a>
+
        
-       <a href="https://sites.google.com/view/causal-learning-icrl2020/home" target="_blank"  class="card-link">
-           Site
-       </a>
-
-       <a href="https://sites.google.com/view/causal-learning-icrl2020/home" target="_blank"  class="card-link">
-           Schedule
-       </a>
-
-     </center>
-     
+     </div>
    </div>
- </div>
 
- <div id="details" class="pp-card m-3 collapse" >
+   </div>
+
+ <div id="details" class="pp-card m-3 collapse">
    <div class="card-body">
      <p class="card-text">
        <div id="abstractExample">
-         <span class="font-weight-bold">Abstract:</span>
+         <span class="font-weight-bold">Description:</span>
          
        </div>
-       
-     </p>     
+
+     </p>
+
+     <p></p>
    </div>
  </div>
 
@@ -146,35 +146,63 @@
 <!-- SlidesLive -->
 
 
-
-<div class="container ">
+ <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
-      <div id="presentation-embed-38915748" class="slp"></div>
+      <div id="presentation-embed-38915748" class="slp my-auto"></div>
       <script src='https://slideslive.com/embed_presentation.js'></script>
       <script>
         embed = new SlidesLiveEmbed('presentation-embed-38915748', {
         presentationId: '38915748',
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
+        verticalWhenWidthLte: 2000,
         allowHiddenControlsWhenPaused: true,
-        zoomRatio: 0.4,
         hideTitle: true
         });
       </script>
     </div>
-    <div class="col-md-5 col-xs-12 p-2"> 
-        <div id="gitter" class="slp " >
+
+    <div class="col-md-5 col-xs-12 p-2">
+        <div id="gitter" class="slp">
           <center>
-            <div class="border">
-              <center> <iframe frameborder="0" src="https://iclr.rocket.chat/channel/workshop_causallearning?layout=embedded" width="100%" height="700px"></iframe> </center>
-            </div>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/workshop_causallearning?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
     </div>
   </div>
 </div>
-    
+
+    <script type="text/javascript">
+
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>    
   </body>
 </html>

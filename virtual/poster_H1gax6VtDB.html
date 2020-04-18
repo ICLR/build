@@ -147,7 +147,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_H1gax6VtDB" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_182" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -189,9 +189,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -212,7 +209,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_H1gax6VtDB?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_182?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -250,9 +247,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJeKwTNFvB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a model that is able to perform physical parameter estimation of systems from video, where the differential equations governing the scene dynamics are known, but labeled states or objects are not available.</p> -->
-
           </div>
         </div>
       </div>
@@ -275,9 +269,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJxrKgStDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Scalability in terms of object density in a scene is a primary challenge in unsupervised sequential object-oriented representation learning. Most of the previous models have been shown to work only on scenes with a few objects. In this paper, we prop...</p> -->
-
           </div>
         </div>
       </div>
@@ -302,9 +293,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SkeyppEFvS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Understanding causes and effects in mechanical systems is an essential component of reasoning in the physical world. This work poses a new problem of counterfactual learning of object mechanics from visual input.  We develop the CoPhy benchmark to as...</p> -->
-
           </div>
         </div>
       </div>
@@ -329,14 +317,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HklXn1BKDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A modular and hierarchical approach to learn policies for exploring 3D environments.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

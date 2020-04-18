@@ -149,7 +149,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_HJe6uANtwH" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_205" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -190,9 +190,6 @@ On a different task of recognizing digits from overlayed digit images, the propo
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -213,7 +210,7 @@ On a different task of recognizing digits from overlayed digit images, the propo
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_HJe6uANtwH?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_205?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -251,9 +248,6 @@ On a different task of recognizing digits from overlayed digit images, the propo
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgNJgSFPS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A new scalable, group-equivariant model for capsule networks that preserves compositionality under transformations, and is empirically more transformation-robust to older capsule network models.</p> -->
-
           </div>
         </div>
       </div>
@@ -284,9 +278,6 @@ On a different task of recognizing digits from overlayed digit images, the propo
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rkeu30EtvS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a method called network deconvolution that resembles animal vision system to train convolution networks better.</p> -->
-
           </div>
         </div>
       </div>
@@ -305,9 +296,6 @@ On a different task of recognizing digits from overlayed digit images, the propo
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJx8HANFDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Four things that improve batch normalization across all batch sizes</p> -->
-
           </div>
         </div>
       </div>
@@ -330,14 +318,40 @@ On a different task of recognizing digits from overlayed digit images, the propo
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ByxdUySKvS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We introduce the idea of adversarial learning into automatic data augmentation to improve the generalization  of a targe network.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

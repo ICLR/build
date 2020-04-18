@@ -151,7 +151,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_SJxIm0VtwH" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_423" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -187,9 +187,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -210,7 +207,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_SJxIm0VtwH?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_423?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -248,9 +245,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJlxIJBFDr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Improving the sample efficiency in reinforcement learning has been a long-standing research problem. In this work, we aim to reduce the sample complexity of existing policy gradient methods. We propose a novel policy gradient algorithm called SRVR-PG...</p> -->
-
           </div>
         </div>
       </div>
@@ -273,9 +267,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BkglSTNFDB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We adapt Q-learning with UCB-exploration bonus to infinite-horizon MDP with discounted rewards without accessing a generative model, and improves the previously best known result.</p> -->
-
           </div>
         </div>
       </div>
@@ -294,10 +285,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HygegyrYwH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Recent theoretical work has guaranteed that overparameterized networks trained by gradient descent achieve arbitrarily low training error, and sometimes even low test error.
-The required width, however, is always polynomial in at least one of the sam...</p> -->
-
           </div>
         </div>
       </div>
@@ -322,14 +309,40 @@ The required width, however, is always polynomial in at least one of the sam...<
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJxNAnVtDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Federated learning enables a large amount of edge computing devices to jointly learn a model without data sharing. As a leading algorithm in this setting, Federated Averaging (\texttt{FedAvg}) runs Stochastic Gradient Descent (SGD) in parallel on a s...</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

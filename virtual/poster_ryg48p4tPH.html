@@ -159,7 +159,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_ryg48p4tPH" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_646" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -195,9 +195,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -218,7 +215,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_ryg48p4tPH?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_646?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -264,9 +261,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJgzLkBKPB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a model-agnostic approach to explain the behaviour of black-box deep RL agents, trained to play Atari and board games, by highlighting relevant features of an input state.</p> -->
-
           </div>
         </div>
       </div>
@@ -295,9 +289,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SylL0krYPS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We study the problem of continuous control agents in deep RL with adversarial attacks and proposed a two-step algorithm based on learned model dynamics. </p> -->
-
           </div>
         </div>
       </div>
@@ -316,9 +307,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/B1x6w0EtwH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We present KG-A2C, a reinforcement learning agent that builds a dynamic knowledge graph while exploring and generates natural language using a template-based action space - outperforming all current agents on a wide set of text-based games.</p> -->
-
           </div>
         </div>
       </div>
@@ -341,14 +329,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgy96EYvr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Intrinsically motivated reinforcement learning aims to address the exploration challenge for sparse-reward tasks. However, the study of exploration methods in transition-dependent multi-agent settings is largely absent from the literature. We aim to ...</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

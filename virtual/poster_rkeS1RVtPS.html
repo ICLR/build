@@ -147,7 +147,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_rkeS1RVtPS" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_587" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -179,9 +179,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -202,7 +199,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rkeS1RVtPS?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_587?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -242,9 +239,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgnXpVYwS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Gradient clipping provably accelerates gradient descent for non-smooth non-convex functions.</p> -->
-
           </div>
         </div>
       </div>
@@ -267,9 +261,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJepXaVYDr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> The paper designs two algorithms for the stochastic AUC maximization problem with state-of-the-art complexities when using deep neural network as predictive model, which are also verified by empirical studies.</p> -->
-
           </div>
         </div>
       </div>
@@ -294,9 +285,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/S1gEIerYwH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a new homotopy-based method to transfer &#34;optimality knowledge&#34; across different data distributions in order to speed up training of deep models.  </p> -->
-
           </div>
         </div>
       </div>
@@ -317,14 +305,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BkeoaeHKDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Given a pre-trained model, we explored the per-sample gradients of the model parameters relative to a task-specific loss, and constructed a linear model that combines gradients of model parameters and the activation of the model.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

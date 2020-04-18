@@ -157,7 +157,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_Hyl7ygStwB" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_325" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -193,9 +193,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -216,7 +213,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_Hyl7ygStwB?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_325?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -260,9 +257,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1eA7AEtvS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A new pretraining method that establishes new state-of-the-art results on the GLUE, RACE, and SQuAD benchmarks while having fewer parameters compared to BERT-large. </p> -->
-
           </div>
         </div>
       </div>
@@ -285,9 +279,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJlzm64tDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text">  Recent breakthroughs of pretrained language models have shown the effectiveness of self-supervised learning for a wide range of natural language processing (NLP) tasks. In addition to standard syntactic and semantic NLP tasks, pretrained models achi...</p> -->
-
           </div>
         </div>
       </div>
@@ -318,9 +309,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgQ4lSFPH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Recently, the pre-trained language model, BERT (and its robustly optimized version RoBERTa), has attracted a lot of attention in natural language understanding (NLU), and achieved state-of-the-art accuracy in various NLU tasks, such as sentiment clas...</p> -->
-
           </div>
         </div>
       </div>
@@ -345,14 +333,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SkeHuCVFDr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose BERTScore, an automatic evaluation metric for text generation, which correlates better with human judgments and provides stronger model selection performance than existing metrics.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

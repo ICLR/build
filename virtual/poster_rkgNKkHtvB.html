@@ -147,7 +147,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_rkgNKkHtvB" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_604" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -195,9 +195,6 @@ while being much more memory-efficient and much faster on long sequences.
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -218,7 +215,7 @@ while being much more memory-efficient and much faster on long sequences.
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rkgNKkHtvB?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_604?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -262,9 +259,6 @@ while being much more memory-efficient and much faster on long sequences.
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Skep6TVYDB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Gradientless Descent is a provably efficient gradient-free algorithm that is monotone-invariant and fast for high-dimensional zero-th order optimization.</p> -->
-
           </div>
         </div>
       </div>
@@ -283,9 +277,6 @@ while being much more memory-efficient and much faster on long sequences.
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SygW0TEFwH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We present a sign-based, rather than magnitude-based, gradient estimation approach that shifts gradient estimation from continuous to binary black-box optimization.</p> -->
-
           </div>
         </div>
       </div>
@@ -306,9 +297,6 @@ while being much more memory-efficient and much faster on long sequences.
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJxEhREKDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Under certain condition on the input and output linear transformations, both GD and SGD can achieve global convergence for training deep linear ResNets.</p> -->
-
           </div>
         </div>
       </div>
@@ -327,14 +315,40 @@ while being much more memory-efficient and much faster on long sequences.
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rklk_ySYPB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We introduce a method to train models with provable robustness wrt all the $l_p$-norms for $p\geq 1$ simultaneously.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

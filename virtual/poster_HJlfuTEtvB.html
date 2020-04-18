@@ -147,7 +147,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_HJlfuTEtvB" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_239" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -185,9 +185,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -208,7 +205,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_HJlfuTEtvB?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_239?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -250,12 +247,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJetQpEYvB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> As the performance of computer systems stagnates due to the end of Moore’s Law,
-there is a need for new models that can understand and optimize the execution
-of general purpose code. While there is a growing body of work on using Graph
-Neural Network...</p> -->
-
           </div>
         </div>
       </div>
@@ -276,9 +267,6 @@ Neural Network...</p> -->
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rylwJxrYDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Learn how to quantize speech signal and apply algorithms requiring discrete inputs to audio data such as BERT.</p> -->
-
           </div>
         </div>
       </div>
@@ -297,9 +285,6 @@ Neural Network...</p> -->
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJeO7RNKPr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> DeepV2D predicts depth from a video clip by composing elements of classical SfM into a fully differentiable network.</p> -->
-
           </div>
         </div>
       </div>
@@ -320,14 +305,40 @@ Neural Network...</p> -->
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJl07ySKvS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A key challenge of existing program synthesizers is ensuring that the synthesized program generalizes well. This can be difficult to achieve as the specification provided by the end user is often limited, containing as few as one or two input-output ...</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

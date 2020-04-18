@@ -141,7 +141,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_HJeO7RNKPr" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_206" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -179,9 +179,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -202,7 +199,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_HJeO7RNKPr?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_206?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -250,9 +247,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJedHRVtPB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Detecting objects such as cars and pedestrians in 3D plays an indispensable role in autonomous driving. Existing approaches largely rely on expensive LiDAR sensors for accurate depth information. While recently pseudo-LiDAR has been introduced as a p...</p> -->
-
           </div>
         </div>
       </div>
@@ -277,9 +271,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ByxT7TNFvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a novel semantically-guided architecture for self-supervised monocular depth estimation</p> -->
-
           </div>
         </div>
       </div>
@@ -298,9 +289,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJgndT4KwB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> The neural tangent kernel in a randomly initialized ReLU net is non-trivial fluctuations as long as the depth and width are comparable. </p> -->
-
           </div>
         </div>
       </div>
@@ -325,14 +313,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/S1eALyrYDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> A DL model for RNA secondary structure prediction, which uses an unrolled algorithm in the architecture to enforce constraints.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

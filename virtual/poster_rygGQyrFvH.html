@@ -151,7 +151,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_rygGQyrFvH" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_649" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -205,9 +205,6 @@ To properly examine current maximization-based and stochastic decoding methods, 
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -228,7 +225,7 @@ To properly examine current maximization-based and stochastic decoding methods, 
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rygGQyrFvH?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_649?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -272,9 +269,6 @@ To properly examine current maximization-based and stochastic decoding methods, 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJeYe0NtvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Neural text generation is a key tool in natural language applications, but it is well known there are major problems at its core. In particular, standard likelihood training and decoding leads to dull and repetitive outputs. While some post-hoc fixes...</p> -->
-
           </div>
         </div>
       </div>
@@ -295,9 +289,6 @@ To properly examine current maximization-based and stochastic decoding methods, 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HklOo0VFDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Approximate inference using dynamic programming for Autoregressive models.</p> -->
-
           </div>
         </div>
       </div>
@@ -322,9 +313,6 @@ To properly examine current maximization-based and stochastic decoding methods, 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/B1l8L6EtDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a self-adversarial learning (SAL) paradigm which improves the generator in a self-play fashion for improving GANs&#39; performance in text generation.</p> -->
-
           </div>
         </div>
       </div>
@@ -351,14 +339,40 @@ To properly examine current maximization-based and stochastic decoding methods, 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgza6VtPB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> GANs have been applied to text generation and are believed SOTA. However, we propose a new evaluation protocol demonstrating that maximum-likelihood trained models are still better.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

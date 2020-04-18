@@ -149,7 +149,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_SyxIWpVYvr" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_501" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -187,9 +187,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -210,7 +207,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_SyxIWpVYvr?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_501?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -250,9 +247,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/r1lPleBFvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Class-conditional generative models hold promise to overcome the shortcomings of their discriminative counterparts. They are a natural choice to solve discriminative tasks in a robust manner as they jointly optimize for predictive performance and acc...</p> -->
-
           </div>
         </div>
       </div>
@@ -271,11 +265,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ByxGkySKwH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> It has recently been shown that ReLU networks produce arbitrarily over-confident predictions far away from the 
-training data. Thus, ReLU networks do not know when they don&#39;t know. However, this is a highly important property in safety
-critical appli...</p> -->
-
           </div>
         </div>
       </div>
@@ -294,9 +283,6 @@ critical appli...</p> -->
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ByeNra4FDB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a novel OOD detector that employ blurred images as adversarial examples . Our model achieve significant OOD detection performance in various domains.</p> -->
-
           </div>
         </div>
       </div>
@@ -325,14 +311,40 @@ critical appli...</p> -->
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SylkYeHtwr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We create an unbiased estimator for the log probability of latent variable models, extending such models to a larger scope of applications.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

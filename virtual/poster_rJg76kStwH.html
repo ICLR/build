@@ -155,7 +155,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_rJg76kStwH" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_552" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -193,9 +193,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -216,7 +213,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rJg76kStwH?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_552?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -262,9 +259,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rkeIIkHKvS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Graph neural networks (GNNs) have been widely used for representation learning on graph data. However, there is limited understanding on how much performance GNNs actually gain from graph data. This paper introduces a context-surrounding GNN framewor...</p> -->
-
           </div>
         </div>
       </div>
@@ -289,9 +283,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/r1laNeBYPB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We introduce an efficient memory layer to jointly learn representations and coarsen the input graphs.</p> -->
-
           </div>
         </div>
       </div>
@@ -312,9 +303,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Bkeeca4Kvr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose to study the problem of few-shot graph classification in graph neural networks (GNNs) to recognize unseen classes, given limited labeled graph examples. Despite several interesting GNN variants being proposed recently for node and graph cl...</p> -->
-
           </div>
         </div>
       </div>
@@ -341,14 +329,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/r1lZ7AEKvB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We characterize the expressive power of GNNs in terms of classical logical languages, separating different GNNs and showing connections with standard notions in Knowledge Representation.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

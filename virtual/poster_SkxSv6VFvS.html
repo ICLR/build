@@ -149,7 +149,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_SkxSv6VFvS" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_469" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -187,9 +187,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -210,7 +207,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_SkxSv6VFvS?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_469?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -254,9 +251,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/S1exA2NtDB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We provide a new framework for MAML in the ES/blackbox setting, and show that it allows deterministic and linear policies, better exploration, and non-differentiable adaptation operators.</p> -->
-
           </div>
         </div>
       </div>
@@ -273,9 +267,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1gBhkBFDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> The paper describes a flexible framework for building CNNs that are equivariant to a large class of transformations groups.</p> -->
-
           </div>
         </div>
       </div>
@@ -296,9 +287,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Hygab1rKDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We provide the first algorithm for quantum computers implementing universal convolutional neural network with a speedup</p> -->
-
           </div>
         </div>
       </div>
@@ -319,14 +307,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJgpugrKPS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> The effectiveness of Convolutional Neural Networks (CNNs) has been substantially attributed to their built-in property of translation equivariance. However, CNNs do not have embedded mechanisms to handle other types of transformations. In this work, ...</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

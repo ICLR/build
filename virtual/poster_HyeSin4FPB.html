@@ -143,7 +143,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_HyeSin4FPB" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_308" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -181,9 +181,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -204,7 +201,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_HyeSin4FPB?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_308?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -242,9 +239,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJeKwTNFvB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a model that is able to perform physical parameter estimation of systems from video, where the differential equations governing the scene dynamics are known, but labeled states or objects are not available.</p> -->
-
           </div>
         </div>
       </div>
@@ -265,9 +259,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ryxmb1rKDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> This work enforces Hamiltonian dynamics with control to learn system models from embedded position and velocity data, and exploits this physically-consistent dynamics to synthesize model-based control via energy shaping.</p> -->
-
           </div>
         </div>
       </div>
@@ -292,9 +283,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1ldzA4tPr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Learning compositional Koopman operators for efficient system identification and model-based control.</p> -->
-
           </div>
         </div>
       </div>
@@ -319,14 +307,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/B1e-kxSKDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a structured object-aware video prediction model, which explicitly reasons about objects and demonstrate that it provides high-quality long term video predictions for planning.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

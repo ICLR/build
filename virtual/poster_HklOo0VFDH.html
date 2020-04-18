@@ -143,7 +143,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_HklOo0VFDH" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_279" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -177,9 +177,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -200,7 +197,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_HklOo0VFDH?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_279?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -242,9 +239,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rygGQyrFvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Current language generation systems either aim for high likelihood and devolve into generic repetition or miscalibrate their stochasticity—we provide evidence of both and propose a solution: Nucleus Sampling.</p> -->
-
           </div>
         </div>
       </div>
@@ -271,9 +265,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJeYe0NtvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Neural text generation is a key tool in natural language applications, but it is well known there are major problems at its core. In particular, standard likelihood training and decoding leads to dull and repetitive outputs. While some post-hoc fixes...</p> -->
-
           </div>
         </div>
       </div>
@@ -294,9 +285,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BygFVAEKDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We systematically examine why knowledge distillation is crucial to the training of non-autoregressive translation (NAT) models, and propose methods to further improve the distilled data to best match the capacity of an NAT model.</p> -->
-
           </div>
         </div>
       </div>
@@ -321,14 +309,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HkxCzeHFDB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Using inducing point sparse Gaussian process methods to overcome catastrophic forgetting in neural networks.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

@@ -141,7 +141,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_rkllGyBFPH" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_628" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -181,9 +181,6 @@ Towards closing this gap, we investigate the training of over-parametrized neura
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -204,7 +201,7 @@ Towards closing this gap, we investigate the training of over-parametrized neura
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_rkllGyBFPH?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_628?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -248,9 +245,6 @@ Towards closing this gap, we investigate the training of over-parametrized neura
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rkl8sJBYvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We verify neural tangent kernel is powerful on small data via experiments on UCI datasets, small CIFAR 10 and low-shot learning on VOC07.</p> -->
-
           </div>
         </div>
       </div>
@@ -269,9 +263,6 @@ Towards closing this gap, we investigate the training of over-parametrized neura
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJgndT4KwB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> The neural tangent kernel in a randomly initialized ReLU net is non-trivial fluctuations as long as the depth and width are comparable. </p> -->
-
           </div>
         </div>
       </div>
@@ -292,9 +283,6 @@ Towards closing this gap, we investigate the training of over-parametrized neura
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rkgfdeBYvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We provide theoretical results about the effect of activation function on the training of highly overparametrized 2-layer neural networks</p> -->
-
           </div>
         </div>
       </div>
@@ -319,14 +307,40 @@ Towards closing this gap, we investigate the training of over-parametrized neura
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HyxyIgHFvr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We call into question commonly held beliefs regarding the loss landscape, optimization, network width, and rank.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

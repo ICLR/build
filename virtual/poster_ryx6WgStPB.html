@@ -149,7 +149,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_ryx6WgStPB" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_672" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -190,9 +190,6 @@ We prove that, with neural network base models, a linear hypermodel can represen
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -213,7 +210,7 @@ We prove that, with neural network base models, a linear hypermodel can represen
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_ryx6WgStPB?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_672?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -251,9 +248,6 @@ We prove that, with neural network base models, a linear hypermodel can represen
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BygSP6Vtvr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We distill an ensemble of models into a single model, capturing both the improved classification performance and information about the diversity of the ensemble, which is useful for uncertainty estimation.</p> -->
-
           </div>
         </div>
       </div>
@@ -274,9 +268,6 @@ We prove that, with neural network base models, a linear hypermodel can represen
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Sklf1yrYDr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We introduced BatchEnsemble, an efficient method for ensembling and lifelong learning which can be used to improve the accuracy and uncertainty of any neural network like typical ensemble methods.</p> -->
-
           </div>
         </div>
       </div>
@@ -301,9 +292,6 @@ We prove that, with neural network base models, a linear hypermodel can represen
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJlahxHYDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We provide theoretical support to uncertainty estimates for deep learning obtained fitting random priors.</p> -->
-
           </div>
         </div>
       </div>
@@ -326,14 +314,40 @@ We prove that, with neural network base models, a linear hypermodel can represen
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJxI5gHKDr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We highlight the problems with common metrics of in-domain uncertainty and perform a broad study of modern ensembling techniques.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

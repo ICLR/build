@@ -141,7 +141,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_HygegyrYwH" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_320" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -187,9 +187,6 @@ The analysis relies upon the separation margin of the limiting kernel, which is 
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -210,7 +207,7 @@ The analysis relies upon the separation margin of the limiting kernel, which is 
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_HygegyrYwH?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_320?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -248,9 +245,6 @@ The analysis relies upon the separation margin of the limiting kernel, which is 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJlxIJBFDr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Improving the sample efficiency in reinforcement learning has been a long-standing research problem. In this work, we aim to reduce the sample complexity of existing policy gradient methods. We propose a novel policy gradient algorithm called SRVR-PG...</p> -->
-
           </div>
         </div>
       </div>
@@ -279,9 +273,6 @@ The analysis relies upon the separation margin of the limiting kernel, which is 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJxIm0VtwH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> This paper provides novel analysis of adaptive gradient algorithms for solving non-convex non-concave min-max problems as GANs, and explains the reason why adaptive gradient methods outperform its non-adaptive counterparts by empirical studies.</p> -->
-
           </div>
         </div>
       </div>
@@ -302,9 +293,6 @@ The analysis relies upon the separation margin of the limiting kernel, which is 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/B1guLAVFDB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We provably recover the span of a deep multi-layered neural network with latent structure and empirically apply efficient span recovery algorithms to attack networks by obfuscating inputs.</p> -->
-
           </div>
         </div>
       </div>
@@ -327,14 +315,40 @@ The analysis relies upon the separation margin of the limiting kernel, which is 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BkglSTNFDB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We adapt Q-learning with UCB-exploration bonus to infinite-horizon MDP with discounted rewards without accessing a generative model, and improves the previously best known result.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

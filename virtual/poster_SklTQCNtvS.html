@@ -153,7 +153,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_SklTQCNtvS" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_459" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -187,9 +187,6 @@ We find that Sign-OPT attack consistently requires 5X to 10X fewer queries when 
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -210,7 +207,7 @@ We find that Sign-OPT attack consistently requires 5X to 10X fewer queries when 
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_SklTQCNtvS?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_459?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -246,9 +243,6 @@ We find that Sign-OPT attack consistently requires 5X to 10X fewer queries when 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJxhNTNYwB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We present a new method that combines transfer-based and scored black-box adversarial attack, improving the success rate and query efficiency of black-box adversarial attack across different network architectures.</p> -->
-
           </div>
         </div>
       </div>
@@ -271,9 +265,6 @@ We find that Sign-OPT attack consistently requires 5X to 10X fewer queries when 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Hkem-lrtvH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We propose a query-efficient black-box attack which uses Bayesian optimisation in combination with Bayesian model selection to optimise over the adversarial perturbation and the optimal degree of search space dimension reduction. </p> -->
-
           </div>
         </div>
       </div>
@@ -298,9 +289,6 @@ We find that Sign-OPT attack consistently requires 5X to 10X fewer queries when 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJlHwkBYDH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We proposed a Nesterov Iterative Fast Gradient Sign Method (NI-FGSM) and a Scale-Invariant attack Method (SIM) that can boost the transferability of adversarial examples for image classification.</p> -->
-
           </div>
         </div>
       </div>
@@ -325,14 +313,40 @@ We find that Sign-OPT attack consistently requires 5X to 10X fewer queries when 
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Skxd6gSYDS.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Black-box attack methods aim to infer suitable attack patterns to targeted DNN models by only using output feedback of the models and the corresponding input queries. However, due to lack of prior and inefficiency in leveraging the query and feedback...</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>

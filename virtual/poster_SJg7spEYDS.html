@@ -149,7 +149,7 @@
            Video
        </a>
 
-       <a href="chat.html?room=channel/paper_channel_SJg7spEYDS" target="_blank"  class="card-link">
+       <a href="chat.html?room=channel/poster_394" target="_blank"  class="card-link">
            Chat
        </a>
 
@@ -189,9 +189,6 @@
 </div>
 
 <!-- SlidesLive -->
-
-
-
  <div class="container" style="background-color:white; padding: 0px;">
   <div class="row m-2">
     <div class="col-md-7 col-xs-12 my-auto p-2" >
@@ -212,7 +209,7 @@
     <div class="col-md-5 col-xs-12 p-2">
         <div id="gitter" class="slp">
           <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/paper_channel_SJg7spEYDS?layout=embedded" height="700px" width="100%" ></iframe>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_394?layout=embedded" height="700px" width="100%" ></iframe>
           </center>
         </div>
       </div>
@@ -254,9 +251,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJeVnCEKwH.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> By proposing new visualization techniques we give better insights on GANs optimization in practical settings, we show that GANs on challenging datasets exhibit rotational behavior and do not converge to Nash-Equilibria</p> -->
-
           </div>
         </div>
       </div>
@@ -287,9 +281,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/r1gfQgSFDr.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> We introduce GAN-TTS, a Generative Adversarial Network for Text-to-Speech, which achieves Mean Opinion Score (MOS) 4.2.</p> -->
-
           </div>
         </div>
       </div>
@@ -306,9 +297,6 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Bke_DertPB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> alternative to gradient penalty</p> -->
-
           </div>
         </div>
       </div>
@@ -329,14 +317,40 @@
             </h6>
 
             <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HylsTT4FvB.png" width="80%"/></center>
-
-            <!-- <p class="card-text"> Interpolations in the latent space demonstrate generalization capacity of GANs and the effect of dataset biases.</p> -->
-
           </div>
         </div>
       </div>
       
   </DIV>
 </DIV>
+    <script type="text/javascript">
 
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
 </body>
