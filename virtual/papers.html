@@ -60,45 +60,59 @@
       <ul class="navbar-nav ml-auto">
         
         <li class="nav-item ">
-          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link"    href="index.html">Home</a>
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="papers.html">Browse</a>
+          <a class="nav-link"    href="calendar.html">Schedule</a>
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="calendar.html">Schedule</a>
+          <a class="nav-link"    href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item active">
+          <a class="nav-link"    href="papers.html">Papers</a>
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="events.html">Events</a>
+          <a class="nav-link" target="_blank"   href="https://iclr.6connex.com/event/VirtualEvent/">Sponsor Hall</a>
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="sponsors.html">Booths</a>
+          <a class="nav-link"    href="socials.html">Socials</a>
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="paper_vis.html">Vis</a>
+          <a class="nav-link"    href="chat.html">Chat</a>
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link" href="chat.html">Chat</a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link"    href="about.html">Help</a>
         </li>
         
       </ul>
     </div>
   </div>
 </nav>
-
-
   <div class="container">
 
+      <!-- Header -->
+      <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active text-muted " data-toggle="tab" href="#tab-calendar" role="tab" aria-controls="nav-home" aria-selected="true">Browse
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-muted " data-toggle="tab" href="#tab-Monday" role="tab" aria-controls="nav-home" aria-selected="true">Visualization
+          </a>
+        </li>
+      </ul>
+      <div >
+  <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+    <div class="tab-pane active" id="tab-browse" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+        
     <div class="row">
       <div class="col-12 col-sm-12 col-lg-4">
         <div class="input-group mb-3">
@@ -147,6 +161,11 @@
           <div class="btn-group btn-group-toggle render_option"
                data-toggle="buttons">
             <label class="btn btn-outline-secondary active">
+              <input type="radio" name="options" value="list"
+                     autocomplete="off"> list
+            </label>
+
+            <label class="btn btn-outline-secondary active">
               <input type="radio" name="options" value="compact"
                      autocomplete="off" checked> compact
             </label>
@@ -164,7 +183,8 @@
     </div>
 
   </div>
-
+  </div>
+  </div>
   <script src="static/js/typeahead_tools.js"></script>
   <script src="static/js/papers.js"></script>
 
