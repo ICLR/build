@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="static/css/main.css">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/css/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <title> ICLR: Towards Better Understanding of Adaptive Gradient Algorithms in Generative Adversarial Nets </title>
+</head>
+
+
+  <body >
+
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" target="_blank"   href="https://iclr.6connex.com/event/VirtualEvent/">Sponsor Hall</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="chat.html">Chat</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="about.html">Help</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+
+ <!-- Title -->
+
+ <div class="pp-card m-3" style="">
+   <div class="card-header">
+     <h2 class="card-title main-title text-center" style="">
+       Towards Better Understanding of Adaptive Gradient Algorithms in Generative Adversarial Nets
+     </h2>
+
+     <h3 class="card-subtitle mb-2 text-muted text-center">
+       
+       Mingrui Liu,
+       
+       Youssef Mroueh,
+       
+       Jerret Ross,
+       
+       Wei Zhang,
+       
+       Xiaodong Cui,
+       
+       Payel Das,
+       
+       Tianbao Yang
+       
+     </h3>
+
+     <div class="text-center p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+           Abstract
+       </a>
+
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/0b7e14a04cf246e137c1d50f65a5cb3155c95602.pdf">
+           Paper
+       </a>
+       
+       
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=SJxIm0VtwH">
+           Reviews
+       </a>
+
+       <!--  -->
+       <!-- <a href="" target="_blank"  class="card-link"> -->
+       <!--   Slides -->
+       <!-- </a> -->
+       <!--  -->
+
+       <!-- </div> -->
+     
+     <!-- <div class="text-center "> -->
+       <a href="" target="_blank"  class="card-link">
+           Video
+       </a>
+
+       <a href="chat.html?room=channel/poster_423" target="_blank"  class="card-link">
+           Chat
+       </a>
+
+       
+
+
+     </div>
+   </div>
+
+   </div>
+
+ <div id="details" class="pp-card m-3 collapse">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         Adaptive gradient algorithms perform gradient-based updates using the history of gradients and are ubiquitous in training deep neural networks. While adaptive gradient methods theory is well understood for minimization problems, the underlying factors driving their empirical success in min-max problems such as GANs remain unclear. In this paper, we aim at bridging  this gap from both theoretical and empirical perspectives. First, we analyze a variant of Optimistic Stochastic Gradient (OSG) proposed in~\citep{daskalakis2017training} for solving a class of non-convex non-concave min-max problem and establish $O(\epsilon^{-4})$ complexity for finding $\epsilon$-first-order stationary point, in which the algorithm only requires invoking one stochastic first-order oracle while enjoying state-of-the-art iteration complexity achieved by stochastic extragradient method by~\citep{iusem2017extragradient}. Then we propose an adaptive variant of OSG named Optimistic Adagrad (OAdagrad) and reveal an \emph{improved} adaptive complexity $\widetilde{O}\left(\epsilon^{-\frac{2}{1-\alpha}}\right)$~\footnote{Here $\widetilde{O}(\cdot)$ compresses a logarithmic factor of $\epsilon$.}, where $\alpha$ characterizes the growth rate of the cumulative stochastic gradient and $0\leq \alpha\leq 1/2$. To the best of our knowledge, this is the first work for establishing adaptive complexity in non-convex non-concave min-max optimization. Empirically, our experiments show that indeed adaptive gradient algorithms outperform their non-adaptive counterparts in GAN training. Moreover, this observation can be explained by the slow growth rate of the cumulative stochastic gradient, as observed empirically.
+       </div>
+
+     </p>
+
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="papers.html?filter=keywords&search=Generative Adversarial Nets" class="text-secondary text-decoration-none">Generative Adversarial Nets</a>,
+       
+       <a href="papers.html?filter=keywords&search=Adaptive Gradient Algorithms" class="text-secondary text-decoration-none">Adaptive Gradient Algorithms</a>
+       
+     </p>
+   </div>
+ </div>
+
+</div>
+
+<!-- SlidesLive -->
+ <div class="container" style="background-color:white; padding: 0px;">
+  <div class="row m-2">
+    <div class="col-md-7 col-xs-12 my-auto p-2" >
+      <div id="presentation-embed-38915748" class="slp my-auto"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true,
+        verticalWhenWidthLte: 2000,
+        allowHiddenControlsWhenPaused: true,
+        hideTitle: true
+        });
+      </script>
+    </div>
+
+    <div class="col-md-5 col-xs-12 p-2">
+        <div id="gitter" class="slp">
+          <center>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_423?layout=embedded" height="700px" width="100%" ></iframe>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_HJlxIJBFDr.html" class="text-muted">
+              <h5 class="card-title" align="center">Sample Efficient Policy Gradient Methods with Recursive Variance Reduction</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Pan Xu,
+              
+              Felicia Gao,
+              
+              Quanquan Gu,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJlxIJBFDr.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_BkglSTNFDB.html" class="text-muted">
+              <h5 class="card-title" align="center">Q-learning with UCB Exploration is Sample Efficient for Infinite-Horizon MDP</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Yuanhao Wang,
+              
+              Kefan Dong,
+              
+              Xiaoyu Chen,
+              
+              Liwei Wang,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BkglSTNFDB.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_HygegyrYwH.html" class="text-muted">
+              <h5 class="card-title" align="center">Polylogarithmic width suffices for gradient descent to achieve arbitrarily small test error with shallow ReLU networks</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Ziwei Ji,
+              
+              Matus Telgarsky,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HygegyrYwH.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_HJxNAnVtDS.html" class="text-muted">
+              <h5 class="card-title" align="center">On the Convergence of FedAvg on Non-IID Data</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Xiang Li,
+              
+              Kaixuan Huang,
+              
+              Wenhao Yang,
+              
+              Shusen Wang,
+              
+              Zhihua Zhang,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJxNAnVtDS.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+  </DIV>
+</DIV>
+    <script type="text/javascript">
+
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
+</body>

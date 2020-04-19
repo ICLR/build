@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="static/css/main.css">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/css/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <title> ICLR: NAS-Bench-201: Extending the Scope of Reproducible Neural Architecture Search </title>
+</head>
+
+
+  <body >
+
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" target="_blank"   href="https://iclr.6connex.com/event/VirtualEvent/">Sponsor Hall</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="chat.html">Chat</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="about.html">Help</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+
+ <!-- Title -->
+
+ <div class="pp-card m-3" style="">
+   <div class="card-header">
+     <h2 class="card-title main-title text-center" style="">
+       NAS-Bench-201: Extending the Scope of Reproducible Neural Architecture Search
+     </h2>
+
+     <h3 class="card-subtitle mb-2 text-muted text-center">
+       
+       Xuanyi Dong,
+       
+       Yi Yang
+       
+     </h3>
+
+     <div class="text-center p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+           Abstract
+       </a>
+
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/73272ec47892eefdbb8e7caf4780b7d0a2d6ef71.pdf">
+           Paper
+       </a>
+       
+       <a href="https://github.com/D-X-Y/NAS-Bench-201" target="_blank"  class="card-link">
+           Code
+       </a>
+       
+       
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=HJxyZkBKDr">
+           Reviews
+       </a>
+
+       <!--  -->
+       <!-- <a href="" target="_blank"  class="card-link"> -->
+       <!--   Slides -->
+       <!-- </a> -->
+       <!--  -->
+
+       <!-- </div> -->
+     
+     <!-- <div class="text-center "> -->
+       <a href="" target="_blank"  class="card-link">
+           Video
+       </a>
+
+       <a href="chat.html?room=channel/poster_255" target="_blank"  class="card-link">
+           Chat
+       </a>
+
+       
+
+
+     </div>
+   </div>
+
+   </div>
+
+ <div id="details" class="pp-card m-3 collapse">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         Neural architecture search (NAS) has achieved breakthrough success in a great number of applications in the past few years.
+It could be time to take a step back and analyze the good and bad aspects in the field of NAS. A variety of algorithms search architectures under different search space. These searched architectures are trained using different setups, e.g., hyper-parameters, data augmentation, regularization. This raises a comparability problem when comparing the performance of various NAS algorithms. NAS-Bench-101 has shown success to alleviate this problem. In this work, we propose an extension to NAS-Bench-101: NAS-Bench-201 with a different search space, results on multiple datasets, and more diagnostic information. NAS-Bench-201 has a fixed search space and provides a unified benchmark for almost any up-to-date NAS algorithms. The design of our search space is inspired by the one used in the most popular cell-based searching algorithms, where a cell is represented as a directed acyclic graph. Each edge here is associated with an operation selected from a predefined operation set. For it to be applicable for all NAS algorithms, the search space defined in NAS-Bench-201 includes all possible architectures generated by 4 nodes and 5 associated operation options, which results in 15,625 neural cell candidates in total. The training log using the same setup and the performance for each architecture candidate are provided for three datasets. This allows researchers to avoid unnecessary repetitive training for selected architecture and focus solely on the search algorithm itself. The training time saved for every architecture also largely improves the efficiency of most NAS algorithms and presents a more computational cost friendly NAS community for a broader range of researchers. We provide additional diagnostic information such as fine-grained loss and accuracy, which can give inspirations to new designs of NAS algorithms. In further support of the proposed NAS-Bench-102, we have analyzed it from many aspects and benchmarked 10 recent NAS algorithms, which verify its applicability.
+       </div>
+
+     </p>
+
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="papers.html?filter=keywords&search=Neural Architecture Search" class="text-secondary text-decoration-none">Neural Architecture Search</a>,
+       
+       <a href="papers.html?filter=keywords&search=AutoML" class="text-secondary text-decoration-none">AutoML</a>,
+       
+       <a href="papers.html?filter=keywords&search=Benchmark" class="text-secondary text-decoration-none">Benchmark</a>
+       
+     </p>
+   </div>
+ </div>
+
+</div>
+
+<!-- SlidesLive -->
+ <div class="container" style="background-color:white; padding: 0px;">
+  <div class="row m-2">
+    <div class="col-md-7 col-xs-12 my-auto p-2" >
+      <div id="presentation-embed-38915748" class="slp my-auto"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true,
+        verticalWhenWidthLte: 2000,
+        allowHiddenControlsWhenPaused: true,
+        hideTitle: true
+        });
+      </script>
+    </div>
+
+    <div class="col-md-5 col-xs-12 p-2">
+        <div id="gitter" class="slp">
+          <center>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_255?layout=embedded" height="700px" width="100%" ></iframe>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_H1loF2NFwr.html" class="text-muted">
+              <h5 class="card-title" align="center">Evaluating The Search Phase of Neural Architecture Search</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Kaicheng Yu,
+              
+              Christian Sciuto,
+              
+              Martin Jaggi,
+              
+              Claudiu Musat,
+              
+              Mathieu Salzmann,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1loF2NFwr.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_SJx9ngStPH.html" class="text-muted">
+              <h5 class="card-title" align="center">NAS-Bench-1Shot1: Benchmarking and Dissecting One-shot Neural Architecture Search</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Arber Zela,
+              
+              Julien Siems,
+              
+              Frank Hutter,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SJx9ngStPH.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_BJxH22EKPS.html" class="text-muted">
+              <h5 class="card-title" align="center">Understanding Architectures Learnt by Cell-based Neural Architecture Search</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Yao Shu,
+              
+              Wei Wang,
+              
+              Shaofeng Cai,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJxH22EKPS.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_HygrdpVKvr.html" class="text-muted">
+              <h5 class="card-title" align="center">NAS evaluation is frustratingly hard</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Antoine Yang,
+              
+              Pedro M. Esperança,
+              
+              Fabio M. Carlucci,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HygrdpVKvr.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+  </DIV>
+</DIV>
+    <script type="text/javascript">
+
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
+</body>

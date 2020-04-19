@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="static/css/main.css">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/css/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <title> ICLR: Contrastive Representation Distillation </title>
+</head>
+
+
+  <body >
+
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" target="_blank"   href="https://iclr.6connex.com/event/VirtualEvent/">Sponsor Hall</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="chat.html">Chat</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="about.html">Help</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+
+ <!-- Title -->
+
+ <div class="pp-card m-3" style="">
+   <div class="card-header">
+     <h2 class="card-title main-title text-center" style="">
+       Contrastive Representation Distillation
+     </h2>
+
+     <h3 class="card-subtitle mb-2 text-muted text-center">
+       
+       Yonglong Tian,
+       
+       Dilip Krishnan,
+       
+       Phillip Isola
+       
+     </h3>
+
+     <div class="text-center p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+           Abstract
+       </a>
+
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/7c944bf8a4951d953b5c3fe5cc92bddf3eb4e40f.pdf">
+           Paper
+       </a>
+       
+       <a href="https://github.com/HobbitLong/RepDistiller" target="_blank"  class="card-link">
+           Code
+       </a>
+       
+       
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=SkgpBJrtvS">
+           Reviews
+       </a>
+
+       <!--  -->
+       <!-- <a href="" target="_blank"  class="card-link"> -->
+       <!--   Slides -->
+       <!-- </a> -->
+       <!--  -->
+
+       <!-- </div> -->
+     
+     <!-- <div class="text-center "> -->
+       <a href="" target="_blank"  class="card-link">
+           Video
+       </a>
+
+       <a href="chat.html?room=channel/poster_448" target="_blank"  class="card-link">
+           Chat
+       </a>
+
+       
+
+
+     </div>
+   </div>
+
+   </div>
+
+ <div id="details" class="pp-card m-3 collapse">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+           Often we wish to transfer representational knowledge from one neural network to another. Examples include distilling a large network into a smaller one, transferring knowledge from one sensory modality to a second, or ensembling a collection of models into a single estimator. Knowledge distillation, the standard approach to these problems, minimizes the KL divergence between the probabilistic outputs of a teacher and student network. We demonstrate that this objective ignores important structural knowledge of the teacher network. This motivates an alternative objective by which we train a student to capture significantly more information in the teacher&#39;s representation of the data. We formulate this objective as contrastive learning. Experiments demonstrate that our resulting new objective outperforms knowledge distillation on a variety of knowledge transfer tasks, including single model compression, ensemble distillation, and cross-modal transfer. When combined with knowledge distillation, our method sets a state of the art in many transfer tasks, sometimes even outperforming the teacher network.
+       </div>
+
+     </p>
+
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="papers.html?filter=keywords&search=Knowledge Distillation" class="text-secondary text-decoration-none">Knowledge Distillation</a>,
+       
+       <a href="papers.html?filter=keywords&search=Representation Learning" class="text-secondary text-decoration-none">Representation Learning</a>,
+       
+       <a href="papers.html?filter=keywords&search=Contrastive Learning" class="text-secondary text-decoration-none">Contrastive Learning</a>,
+       
+       <a href="papers.html?filter=keywords&search=Mutual Information" class="text-secondary text-decoration-none">Mutual Information</a>
+       
+     </p>
+   </div>
+ </div>
+
+</div>
+
+<!-- SlidesLive -->
+ <div class="container" style="background-color:white; padding: 0px;">
+  <div class="row m-2">
+    <div class="col-md-7 col-xs-12 my-auto p-2" >
+      <div id="presentation-embed-38915748" class="slp my-auto"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true,
+        verticalWhenWidthLte: 2000,
+        allowHiddenControlsWhenPaused: true,
+        hideTitle: true
+        });
+      </script>
+    </div>
+
+    <div class="col-md-5 col-xs-12 p-2">
+        <div id="gitter" class="slp">
+          <center>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_448?layout=embedded" height="700px" width="100%" ></iframe>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_ryxyCeHtPB.html" class="text-muted">
+              <h5 class="card-title" align="center">Pay Attention to Features, Transfer Learn Faster CNNs</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Kafeng Wang,
+              
+              Xitong Gao,
+              
+              Yiren Zhao,
+              
+              Xingjian Li,
+              
+              Dejing Dou,
+              
+              Cheng-Zhong Xu,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ryxyCeHtPB.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_HJlA0C4tPS.html" class="text-muted">
+              <h5 class="card-title" align="center">A Probabilistic Formulation of Unsupervised Text Style Transfer</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Junxian He,
+              
+              Xinyi Wang,
+              
+              Graham Neubig,
+              
+              Taylor Berg-Kirkpatrick,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJlA0C4tPS.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_BJgqQ6NYvB.html" class="text-muted">
+              <h5 class="card-title" align="center">FasterSeg: Searching for Faster Real-time Semantic Segmentation</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Wuyang Chen,
+              
+              Xinyu Gong,
+              
+              Xianming Liu,
+              
+              Qian Zhang,
+              
+              Yuan Li,
+              
+              Zhangyang Wang,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgqQ6NYvB.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_BygSP6Vtvr.html" class="text-muted">
+              <h5 class="card-title" align="center">Ensemble Distribution Distillation</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Andrey Malinin,
+              
+              Bruno Mlodozeniec,
+              
+              Mark Gales,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BygSP6Vtvr.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+  </DIV>
+</DIV>
+    <script type="text/javascript">
+
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
+</body>

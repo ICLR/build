@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="static/css/main.css">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/css/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <title> ICLR: Projection-Based Constrained Policy Optimization </title>
+</head>
+
+
+  <body >
+
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" target="_blank"   href="https://iclr.6connex.com/event/VirtualEvent/">Sponsor Hall</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="chat.html">Chat</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="about.html">Help</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+
+ <!-- Title -->
+
+ <div class="pp-card m-3" style="">
+   <div class="card-header">
+     <h2 class="card-title main-title text-center" style="">
+       Projection-Based Constrained Policy Optimization
+     </h2>
+
+     <h3 class="card-subtitle mb-2 text-muted text-center">
+       
+       Tsung-Yen Yang,
+       
+       Justinian Rosca,
+       
+       Karthik Narasimhan,
+       
+       Peter J. Ramadge
+       
+     </h3>
+
+     <div class="text-center p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+           Abstract
+       </a>
+
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/02b7eaafb9b63b62aa428d07c9053b52134fff5e.pdf">
+           Paper
+       </a>
+       
+       <a href="https://sites.google.com/view/iclr2020-pcpo" target="_blank"  class="card-link">
+           Code
+       </a>
+       
+       
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=rke3TJrtPS">
+           Reviews
+       </a>
+
+       <!--  -->
+       <!-- <a href="" target="_blank"  class="card-link"> -->
+       <!--   Slides -->
+       <!-- </a> -->
+       <!--  -->
+
+       <!-- </div> -->
+     
+     <!-- <div class="text-center "> -->
+       <a href="" target="_blank"  class="card-link">
+           Video
+       </a>
+
+       <a href="chat.html?room=channel/poster_581" target="_blank"  class="card-link">
+           Chat
+       </a>
+
+       
+
+
+     </div>
+   </div>
+
+   </div>
+
+ <div id="details" class="pp-card m-3 collapse">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         We consider the problem of learning control policies that optimize a reward function while satisfying constraints due to considerations of safety, fairness, or other costs. We propose a new algorithm - Projection-Based Constrained Policy Optimization (PCPO), an iterative method for optimizing policies in a two-step process - the first step performs an unconstrained update while the second step reconciles the constraint violation by projecting the policy back onto the constraint set. We theoretically analyze PCPO and provide a lower bound on reward improvement, as well as an upper bound on constraint violation for each policy update. We further characterize the convergence of PCPO with projection based on two different metrics - L2 norm and Kullback-Leibler divergence. Our empirical results over several control tasks demonstrate that our algorithm achieves superior performance, averaging more than 3.5 times less constraint violation and around 15% higher reward compared to state-of-the-art methods.
+       </div>
+
+     </p>
+
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="papers.html?filter=keywords&search=Reinforcement learning with constraints" class="text-secondary text-decoration-none">Reinforcement learning with constraints</a>,
+       
+       <a href="papers.html?filter=keywords&search=Safe reinforcement learning" class="text-secondary text-decoration-none">Safe reinforcement learning</a>
+       
+     </p>
+   </div>
+ </div>
+
+</div>
+
+<!-- SlidesLive -->
+ <div class="container" style="background-color:white; padding: 0px;">
+  <div class="row m-2">
+    <div class="col-md-7 col-xs-12 my-auto p-2" >
+      <div id="presentation-embed-38915748" class="slp my-auto"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true,
+        verticalWhenWidthLte: 2000,
+        allowHiddenControlsWhenPaused: true,
+        hideTitle: true
+        });
+      </script>
+    </div>
+
+    <div class="col-md-5 col-xs-12 p-2">
+        <div id="gitter" class="slp">
+          <center>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_581?layout=embedded" height="700px" width="100%" ></iframe>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_rJeINp4KwH.html" class="text-muted">
+              <h5 class="card-title" align="center">Population-Guided Parallel Policy Search for Reinforcement Learning</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Whiyoung Jung,
+              
+              Giseung Park,
+              
+              Youngchul Sung,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rJeINp4KwH.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_SylOlp4FvH.html" class="text-muted">
+              <h5 class="card-title" align="center">V-MPO: On-Policy Maximum a Posteriori Policy Optimization for Discrete and Continuous Control</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              H. Francis Song,
+              
+              Abbas Abdolmaleki,
+              
+              Jost Tobias Springenberg,
+              
+              Aidan Clark,
+              
+              Hubert Soyer,
+              
+              Jack W. Rae,
+              
+              Seb Noury,
+              
+              Arun Ahuja,
+              
+              Siqi Liu,
+              
+              Dhruva Tirumala,
+              
+              Nicolas Heess,
+              
+              Dan Belov,
+              
+              Martin Riedmiller,
+              
+              Matthew M. Botvinick,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SylOlp4FvH.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_BJliakStvH.html" class="text-muted">
+              <h5 class="card-title" align="center">Maximum Likelihood Constraint Inference for Inverse Reinforcement Learning</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Dexter R.R. Scobee,
+              
+              S. Shankar Sastry,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJliakStvH.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_r1etN1rtPB.html" class="text-muted">
+              <h5 class="card-title" align="center">Implementation Matters in Deep RL: A Case Study on PPO and TRPO</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Logan Engstrom,
+              
+              Andrew Ilyas,
+              
+              Shibani Santurkar,
+              
+              Dimitris Tsipras,
+              
+              Firdaus Janoos,
+              
+              Larry Rudolph,
+              
+              Aleksander Madry,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/r1etN1rtPB.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+  </DIV>
+</DIV>
+    <script type="text/javascript">
+
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
+</body>
