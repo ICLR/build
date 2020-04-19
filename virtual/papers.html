@@ -95,24 +95,37 @@
     </div>
   </div>
 </nav>
+
   <div class="container">
 
       <!-- Header -->
       <ul class="nav nav-pills justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active text-muted " data-toggle="tab" href="#tab-browse" role="tab" aria-controls="nav-home" aria-selected="true">Browse
+        <li class="nav-item active">
+          <a class="nav-link text-muted active " data-toggle="tab" href="#tab-browse" role="tab" aria-controls="nav-home" aria-selected="true">Browse
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-muted " data-toggle="tab" href="#tab-vis" role="tab" aria-controls="nav-home" aria-selected="true">Visualization
+          <a class="nav-link text-muted" href="paper_vis.html" >Visualization
           </a>
         </li>
       </ul>
-      <div >
+            
+      <div class="row"></div>
+      
   <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
     <div class="tab-pane active" id="tab-browse" role="tabpanel" aria-labelledby="nav-profile-tab">
 
-        
+    <div class="row d-none session_notice" >
+        <div class="alert alert-warning alert-dismissible fade show col-12"
+             role="alert">
+            Showing papers for <span id="session_name" style="font-weight: bold;"></span>.
+            <!-- To navigate all papers close this message. -->
+            <button type="button" class="close remove_session" data-dismiss="alert"
+                    aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
     <div class="row">
       <div class="col-12 col-sm-12 col-lg-4">
         <div class="input-group mb-3">
@@ -126,8 +139,7 @@
         </div>
       </div>
       <div class="col-12 col-sm-6 col-lg-4 text-center" style="margin-bottom: 10px;">
-          <div class="btn-group btn-group-toggle filter_option"
-               data-toggle="buttons">
+          <div class="btn-group btn-group-toggle filter_option">
             <label class="btn btn-outline-secondary active">
               <input type="radio" name="options" value="authors"
                      autocomplete="off"> author
@@ -135,10 +147,6 @@
             <label class="btn btn-outline-secondary">
               <input type="radio" name="options" value="keywords"
                      autocomplete="off"> keyword
-            </label>
-            <label class="btn btn-outline-secondary">
-              <input type="radio" name="options" value="session"
-                     autocomplete="off"> session
             </label>
 
             <label class="btn btn-outline-secondary">
@@ -173,6 +181,7 @@
               <input type="radio" name="options" value="detail"
                      autocomplete="off"> detail
             </label>
+
           </div>
         </div>
       </div>
@@ -199,8 +208,7 @@
         </div>
         <div class="col-12 col-sm-6 col-lg-4" style="margin-bottom: 10px;">
             
-                <div class="btn-group btn-group-toggle filter_option"
-                     data-toggle="buttons">
+                <div class="btn-group btn-group-toggle filter_option">
                     <label class="btn btn-outline-secondary active">
                         <input type="radio" name="options" value="authors"
                                autocomplete="off" checked> author
@@ -213,6 +221,10 @@
                         <input type="radio" name="options" value="titles"
                                autocomplete="off"> title
                     </label>
+                                <label class="btn btn-outline-secondary">
+              <input type="radio" name="options" value="recs"
+                     autocomplete="off"> similar
+            </label>
                     
             </div>
 
@@ -282,19 +294,20 @@
 
             </div>
         </div>
-      
+
     </div>
 
 
+  </div>
   </div>
   </div>
   <script src="static/js/typeahead_tools.js"></script>
   <script src="static/js/papers.js"></script>
 
   <script>
-    window.onload = function () {
-    start()
-    }
+    $(document).ready(function(){
+        start()
+    })
 
   </script>
   <script type="text/javascript">

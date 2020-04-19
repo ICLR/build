@@ -13,7 +13,7 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous" />
-    
+
     <script src="https://d3js.org/d3.v5.min.js">
     </script>
 
@@ -138,7 +138,6 @@
       </ul>
 
 
-      
       <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
 
         <!-- Calender Tab -->
@@ -147,7 +146,7 @@
           <div class="card">
             <div class="card-header">
               <div class="row">
-                
+
                 <div class="form-group">
                   <label for="tzOptions">Select timezone:</label>
                   <select id="tzOptions" class="selectpicker"
@@ -159,7 +158,7 @@
                   </span>
                 </div>
 
-                
+
               </div>
               <div class="row main-table">
               </div>
@@ -168,26 +167,28 @@
         </div>
         <script src="static/js/schedule.js"></script>
         <script>
-          window.onload = function () {
-          start()
-          }
+            $(document).ready(function(){
+                start()
+            })
         </script>
-        
 
-        
+
+
         <!-- Daily  -->
         
         <div class="tab-pane fade" id="tab-Monday" role="tabpanel" aria-labelledby="nav-profile-tab">
           <div class="border-top my-4" id="Monday"></div>
           
           
+
+
           <div class="row p-4">
             <div class="col-12 bd-content ">
               <h2 class="text-center"> Monday</h2>
             </div>
           </div>
-          
-          <!-- Speakers -->          
+
+          <!-- Speakers -->
           <div class="speakers">
             
             <div class="row p-4">
@@ -198,25 +199,22 @@
                     <div class="col-md-2 col-sm-5">
                       <img src="static/images/aisha.jpg" width="100%" class="img-thumbnail">
                       </div>
-                      
+
                       <div class="col-md-10 col-sm-6">
-                        
-                        <div class="m-3 text-muted ">
-                          <span class="card-title h3 " >
-                            Dr. Aisha Walcott-Bryant
-                          </span> 
-                          <span>
-                            IBM Research Africa, Nairobi
-                          </span>
-                        </div>
-                        
                         <div class="m-3 text-muted ">
                           <h3>
-                            <a href="speaker_1.html" class="text-muted">
+                            <a href="speaker_1.html" class="main-title">
                               AI + Africa = Global Innovation
                             </a>
                           </h3>
                         </div>
+
+                        <div class="m-3 text-muted ">
+                          <span class="card-title h3 " >
+                            Dr. Aisha Walcott-Bryant  /  IBM Research Africa, Nairobi
+                          </span>
+                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -232,25 +230,22 @@
                     <div class="col-md-2 col-sm-5">
                       <img src="static/images/Kaelbling-1.jpg" width="100%" class="img-thumbnail">
                       </div>
-                      
+
                       <div class="col-md-10 col-sm-6">
-                        
-                        <div class="m-3 text-muted ">
-                          <span class="card-title h3 " >
-                            Prof. Leslie Kaebling
-                          </span> 
-                          <span>
-                            MIT
-                          </span>
-                        </div>
-                        
                         <div class="m-3 text-muted ">
                           <h3>
-                            <a href="speaker_2.html" class="text-muted">
+                            <a href="speaker_2.html" class="main-title">
                               Doing for Our Robots What Nature Did For Us
                             </a>
                           </h3>
                         </div>
+
+                        <div class="m-3 text-muted ">
+                          <span class="card-title h3 " >
+                            Prof. Leslie Kaebling  /  MIT
+                          </span>
+                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -260,13 +255,13 @@
               
             </div>
 
-            
+
             <!-- Session -->
             <div class="sessions">
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Monday: Reliable RL">Orals/Spotlights: Reliable RL</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Monday: Reliable RL">Orals/Spotlights: Reliable RL</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleMonday1" class="carousel slide d-none d-md-block" data-interval="false">
@@ -525,13 +520,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Monday: Robustness and Verification">Orals/Spotlights: Robustness and Verification</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Monday: Robustness and Verification">Orals/Spotlights: Robustness and Verification</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleMonday2" class="carousel slide d-none d-md-block" data-interval="false">
@@ -740,13 +735,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Monday: Optimisation Theory">Orals/Spotlights: Optimisation Theory</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Monday: Optimisation Theory">Orals/Spotlights: Optimisation Theory</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleMonday3" class="carousel slide d-none d-md-block" data-interval="false">
@@ -967,13 +962,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Monday: Multiagent Systems">Orals/Spotlights: Multiagent Systems</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Monday: Multiagent Systems">Orals/Spotlights: Multiagent Systems</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleMonday4" class="carousel slide d-none d-md-block" data-interval="false">
@@ -1138,13 +1133,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Monday: Meta-learning">Orals/Spotlights: Meta-learning</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Monday: Meta-learning">Orals/Spotlights: Meta-learning</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleMonday5" class="carousel slide d-none d-md-block" data-interval="false">
@@ -1297,13 +1292,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Monday: Generative models">Orals/Spotlights: Generative models</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Monday: Generative models">Orals/Spotlights: Generative models</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleMonday6" class="carousel slide d-none d-md-block" data-interval="false">
@@ -1454,13 +1449,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Monday: Signals and Systems">Orals/Spotlights: Signals and Systems</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Monday: Signals and Systems">Orals/Spotlights: Signals and Systems</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleMonday7" class="carousel slide d-none d-md-block" data-interval="false">
@@ -1603,13 +1598,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Monday: Sequence Representations">Orals/Spotlights: Sequence Representations</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Monday: Sequence Representations">Orals/Spotlights: Sequence Representations</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleMonday8" class="carousel slide d-none d-md-block" data-interval="false">
@@ -1674,7 +1669,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
@@ -1685,12 +1680,12 @@
               <div class="row p-3">
                 <h3> Poster Sessions</h3>
               </div>
-              
+
               
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Mon+Session+1">Session 1 - (05:00-07:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Mon+Session+1">Session 1 - (05:00-07:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -1698,7 +1693,7 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Mon+Session+2">Session 2 - (08:00-10:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Mon+Session+2">Session 2 - (08:00-10:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -1706,7 +1701,7 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Mon+Session+3">Session 3 - (12:00-14:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Mon+Session+3">Session 3 - (12:00-14:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -1714,7 +1709,7 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Mon+Session+4">Session 4 - (17:00-19:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Mon+Session+4">Session 4 - (17:00-19:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -1722,27 +1717,29 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Mon+Session+5">Session 5 - (20:00-22:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Mon+Session+5">Session 5 - (20:00-22:00 GMT)</a>
                   </h3>
                 </div>
               </div>
               
             </div>
 
-            
+
           </div>
           
         <div class="tab-pane fade" id="tab-Tuesday" role="tabpanel" aria-labelledby="nav-profile-tab">
           <div class="border-top my-4" id="Tuesday"></div>
           
           
+
+
           <div class="row p-4">
             <div class="col-12 bd-content ">
               <h2 class="text-center"> Tuesday</h2>
             </div>
           </div>
-          
-          <!-- Speakers -->          
+
+          <!-- Speakers -->
           <div class="speakers">
             
             <div class="row p-4">
@@ -1753,25 +1750,22 @@
                     <div class="col-md-2 col-sm-5">
                       <img src="static/images/ruha.jpeg" width="100%" class="img-thumbnail">
                       </div>
-                      
+
                       <div class="col-md-10 col-sm-6">
-                        
-                        <div class="m-3 text-muted ">
-                          <span class="card-title h3 " >
-                            Prof. Ruha Benjamin
-                          </span> 
-                          <span>
-                            Princeton
-                          </span>
-                        </div>
-                        
                         <div class="m-3 text-muted ">
                           <h3>
-                            <a href="speaker_3.html" class="text-muted">
+                            <a href="speaker_3.html" class="main-title">
                               2020 Vision: Reimagining the Default Settings of Technology &amp; Society
                             </a>
                           </h3>
                         </div>
+
+                        <div class="m-3 text-muted ">
+                          <span class="card-title h3 " >
+                            Prof. Ruha Benjamin  /  Princeton
+                          </span>
+                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -1787,25 +1781,22 @@
                     <div class="col-md-2 col-sm-5">
                       <img src="static/images/laurent.jpg" width="100%" class="img-thumbnail">
                       </div>
-                      
+
                       <div class="col-md-10 col-sm-6">
-                        
-                        <div class="m-3 text-muted ">
-                          <span class="card-title h3 " >
-                            Dr. Laurent Dinh
-                          </span> 
-                          <span>
-                            Google AI
-                          </span>
-                        </div>
-                        
                         <div class="m-3 text-muted ">
                           <h3>
-                            <a href="speaker_4.html" class="text-muted">
+                            <a href="speaker_4.html" class="main-title">
                               Invertible Models and Normalizing Flows
                             </a>
                           </h3>
                         </div>
+
+                        <div class="m-3 text-muted ">
+                          <span class="card-title h3 " >
+                            Dr. Laurent Dinh  /  Google AI
+                          </span>
+                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -1815,13 +1806,13 @@
               
             </div>
 
-            
+
             <!-- Session -->
             <div class="sessions">
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Tuesday: Probabilistic Approaches">Orals/Spotlights: Probabilistic Approaches</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Tuesday: Probabilistic Approaches">Orals/Spotlights: Probabilistic Approaches</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleTuesday1" class="carousel slide d-none d-md-block" data-interval="false">
@@ -2054,13 +2045,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Tuesday: Biology and ML">Orals/Spotlights: Biology and ML</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Tuesday: Biology and ML">Orals/Spotlights: Biology and ML</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleTuesday2" class="carousel slide d-none d-md-block" data-interval="false">
@@ -2277,13 +2268,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Tuesday: Representation Learning">Orals/Spotlights: Representation Learning</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Tuesday: Representation Learning">Orals/Spotlights: Representation Learning</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleTuesday3" class="carousel slide d-none d-md-block" data-interval="false">
@@ -2504,13 +2495,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Tuesday: Feature Discovery for Structured Data">Orals/Spotlights: Feature Discovery for Structured Data</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Tuesday: Feature Discovery for Structured Data">Orals/Spotlights: Feature Discovery for Structured Data</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleTuesday4" class="carousel slide d-none d-md-block" data-interval="false">
@@ -2657,13 +2648,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Tuesday: RL and Estimation">Orals/Spotlights: RL and Estimation</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Tuesday: RL and Estimation">Orals/Spotlights: RL and Estimation</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleTuesday5" class="carousel slide d-none d-md-block" data-interval="false">
@@ -2802,7 +2793,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
@@ -2813,12 +2804,12 @@
               <div class="row p-3">
                 <h3> Poster Sessions</h3>
               </div>
-              
+
               
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Tues+Session+1">Session 1 - (05:00-07:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Tues+Session+1">Session 1 - (05:00-07:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -2826,7 +2817,7 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Tues+Session+2">Session 2 - (08:00-10:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Tues+Session+2">Session 2 - (08:00-10:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -2834,7 +2825,7 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Tues+Session+3">Session 3 - (12:00-14:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Tues+Session+3">Session 3 - (12:00-14:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -2842,7 +2833,7 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Tues+Session+4">Session 4 - (17:00-19:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Tues+Session+4">Session 4 - (17:00-19:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -2850,27 +2841,29 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Tues+Session+5">Session 5 - (20:00-22:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Tues+Session+5">Session 5 - (20:00-22:00 GMT)</a>
                   </h3>
                 </div>
               </div>
               
             </div>
 
-            
+
           </div>
           
         <div class="tab-pane fade" id="tab-Wednesday" role="tabpanel" aria-labelledby="nav-profile-tab">
           <div class="border-top my-4" id="Wednesday"></div>
           
           
+
+
           <div class="row p-4">
             <div class="col-12 bd-content ">
               <h2 class="text-center"> Wednesday</h2>
             </div>
           </div>
-          
-          <!-- Speakers -->          
+
+          <!-- Speakers -->
           <div class="speakers">
             
             <div class="row p-4">
@@ -2881,25 +2874,22 @@
                     <div class="col-md-2 col-sm-5">
                       <img src="static/images/Mihaela_photo_new.jpg" width="100%" class="img-thumbnail">
                       </div>
-                      
+
                       <div class="col-md-10 col-sm-6">
-                        
-                        <div class="m-3 text-muted ">
-                          <span class="card-title h3 " >
-                            Prof. Mihaela van der Schaar
-                          </span> 
-                          <span>
-                            University of Cambridge, The Alan Turing Institute, UCLA
-                          </span>
-                        </div>
-                        
                         <div class="m-3 text-muted ">
                           <h3>
-                            <a href="speaker_5.html" class="text-muted">
+                            <a href="speaker_5.html" class="main-title">
                               Machine Learning: Changing the future of healthcare
                             </a>
                           </h3>
                         </div>
+
+                        <div class="m-3 text-muted ">
+                          <span class="card-title h3 " >
+                            Prof. Mihaela van der Schaar  /  University of Cambridge, The Alan Turing Institute, UCLA
+                          </span>
+                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -2915,25 +2905,22 @@
                     <div class="col-md-2 col-sm-5">
                       <img src="static/images/devi.png" width="100%" class="img-thumbnail">
                       </div>
-                      
+
                       <div class="col-md-10 col-sm-6">
-                        
-                        <div class="m-3 text-muted ">
-                          <span class="card-title h3 " >
-                            Prof. Devi Parikh
-                          </span> 
-                          <span>
-                            Georgia Tech and Facebook AI Research
-                          </span>
-                        </div>
-                        
                         <div class="m-3 text-muted ">
                           <h3>
-                            <a href="speaker_6.html" class="text-muted">
+                            <a href="speaker_6.html" class="main-title">
                               AI Systems That Can See And Talk
                             </a>
                           </h3>
                         </div>
+
+                        <div class="m-3 text-muted ">
+                          <span class="card-title h3 " >
+                            Prof. Devi Parikh  /  Georgia Tech and Facebook AI Research
+                          </span>
+                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -2943,13 +2930,13 @@
               
             </div>
 
-            
+
             <!-- Session -->
             <div class="sessions">
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Wednesday: RL and Planning">Orals/Spotlights: RL and Planning</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Wednesday: RL and Planning">Orals/Spotlights: RL and Planning</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleWednesday1" class="carousel slide d-none d-md-block" data-interval="false">
@@ -3172,13 +3159,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Wednesday: Theory">Orals/Spotlights: Theory</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Wednesday: Theory">Orals/Spotlights: Theory</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleWednesday2" class="carousel slide d-none d-md-block" data-interval="false">
@@ -3389,13 +3376,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Wednesday: Sequence Representations">Orals/Spotlights: Sequence Representations</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Wednesday: Sequence Representations">Orals/Spotlights: Sequence Representations</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleWednesday3" class="carousel slide d-none d-md-block" data-interval="false">
@@ -3564,13 +3551,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Wednesday: Actions and Counterfactuals">Orals/Spotlights: Actions and Counterfactuals</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Wednesday: Actions and Counterfactuals">Orals/Spotlights: Actions and Counterfactuals</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleWednesday4" class="carousel slide d-none d-md-block" data-interval="false">
@@ -3715,13 +3702,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Wednesday: Symbols and Discovery">Orals/Spotlights: Symbols and Discovery</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Wednesday: Symbols and Discovery">Orals/Spotlights: Symbols and Discovery</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleWednesday5" class="carousel slide d-none d-md-block" data-interval="false">
@@ -3864,13 +3851,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Wednesday: Optimisation I">Orals/Spotlights: Optimisation I</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Wednesday: Optimisation I">Orals/Spotlights: Optimisation I</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleWednesday6" class="carousel slide d-none d-md-block" data-interval="false">
@@ -4045,7 +4032,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
@@ -4056,12 +4043,12 @@
               <div class="row p-3">
                 <h3> Poster Sessions</h3>
               </div>
-              
+
               
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Wed+Session+1">Session 1 - (05:00-07:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Wed+Session+1">Session 1 - (05:00-07:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -4069,7 +4056,7 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Wed+Session+2">Session 2 - (08:00-10:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Wed+Session+2">Session 2 - (08:00-10:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -4077,7 +4064,7 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Wed+Session+3">Session 3 - (12:00-14:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Wed+Session+3">Session 3 - (12:00-14:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -4085,7 +4072,7 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Wed+Session+4">Session 4 - (17:00-19:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Wed+Session+4">Session 4 - (17:00-19:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -4093,27 +4080,29 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Wed+Session+5">Session 5 - (20:00-22:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Wed+Session+5">Session 5 - (20:00-22:00 GMT)</a>
                   </h3>
                 </div>
               </div>
               
             </div>
 
-            
+
           </div>
           
         <div class="tab-pane fade" id="tab-Thursday" role="tabpanel" aria-labelledby="nav-profile-tab">
           <div class="border-top my-4" id="Thursday"></div>
           
           
+
+
           <div class="row p-4">
             <div class="col-12 bd-content ">
               <h2 class="text-center"> Thursday</h2>
             </div>
           </div>
-          
-          <!-- Speakers -->          
+
+          <!-- Speakers -->
           <div class="speakers">
             
             <div class="row p-4">
@@ -4124,25 +4113,22 @@
                     <div class="col-md-2 col-sm-5">
                       <img src="static/images/lecun+bengio.png" width="100%" class="img-thumbnail">
                       </div>
-                      
+
                       <div class="col-md-10 col-sm-6">
-                        
-                        <div class="m-3 text-muted ">
-                          <span class="card-title h3 " >
-                            Profs. Yann LeCun and Yoshua Bengio
-                          </span> 
-                          <span>
-                            Facebook AI + NYU / MILA
-                          </span>
-                        </div>
-                        
                         <div class="m-3 text-muted ">
                           <h3>
-                            <a href="speaker_7.html" class="text-muted">
+                            <a href="speaker_7.html" class="main-title">
                               Reflections from the Turing Award Winners
                             </a>
                           </h3>
                         </div>
+
+                        <div class="m-3 text-muted ">
+                          <span class="card-title h3 " >
+                            Profs. Yann LeCun and Yoshua Bengio  /  Facebook AI + NYU / MILA
+                          </span>
+                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -4158,25 +4144,22 @@
                     <div class="col-md-2 col-sm-5">
                       <img src="static/images/jordan.jpg" width="100%" class="img-thumbnail">
                       </div>
-                      
+
                       <div class="col-md-10 col-sm-6">
-                        
-                        <div class="m-3 text-muted ">
-                          <span class="card-title h3 " >
-                            Prof. Michael I. Jordan
-                          </span> 
-                          <span>
-                            University of California, Berkeley
-                          </span>
-                        </div>
-                        
                         <div class="m-3 text-muted ">
                           <h3>
-                            <a href="speaker_8.html" class="text-muted">
+                            <a href="speaker_8.html" class="main-title">
                               The Decision-Making Side of Machine Learning: Dynamical, Statistical and Economic Perspectives
                             </a>
                           </h3>
                         </div>
+
+                        <div class="m-3 text-muted ">
+                          <span class="card-title h3 " >
+                            Prof. Michael I. Jordan  /  University of California, Berkeley
+                          </span>
+                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -4186,13 +4169,13 @@
               
             </div>
 
-            
+
             <!-- Session -->
             <div class="sessions">
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Thursday: Natural Language">Orals/Spotlights: Natural Language</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Thursday: Natural Language">Orals/Spotlights: Natural Language</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleThursday1" class="carousel slide d-none d-md-block" data-interval="false">
@@ -4433,13 +4416,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Thursday: Network Architectures">Orals/Spotlights: Network Architectures</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Thursday: Network Architectures">Orals/Spotlights: Network Architectures</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleThursday2" class="carousel slide d-none d-md-block" data-interval="false">
@@ -4668,13 +4651,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Thursday: Graphs and Representations">Orals/Spotlights: Graphs and Representations</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Thursday: Graphs and Representations">Orals/Spotlights: Graphs and Representations</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleThursday3" class="carousel slide d-none d-md-block" data-interval="false">
@@ -4901,13 +4884,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Thursday: Continual Learning and Few Shot Learning">Orals/Spotlights: Continual Learning and Few Shot Learning</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Thursday: Continual Learning and Few Shot Learning">Orals/Spotlights: Continual Learning and Few Shot Learning</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleThursday4" class="carousel slide d-none d-md-block" data-interval="false">
@@ -5080,13 +5063,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Thursday: Optimisation II">Orals/Spotlights: Optimisation II</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Thursday: Optimisation II">Orals/Spotlights: Optimisation II</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleThursday5" class="carousel slide d-none d-md-block" data-interval="false">
@@ -5239,13 +5222,13 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
               <div class="row p-3">
-                
-                <h3><a class="text-muted" href="papers.html?filter=session&search=Thursday: Fairness, Interpretabiity and Deployment">Orals/Spotlights: Fairness, Interpretabiity and Deployment</a></h3>
+
+                <h3><a class="text-muted" href="papers.html?session=Thursday: Fairness, Interpretabiity and Deployment">Orals/Spotlights: Fairness, Interpretabiity and Deployment</a></h3>
               </div>
               <div class ="row my-auto mx-auto">
                 <div id="carouselExampleThursday6" class="carousel slide d-none d-md-block" data-interval="false">
@@ -5386,7 +5369,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  
+
                 </div>
               </div>
               
@@ -5397,12 +5380,12 @@
               <div class="row p-3">
                 <h3> Poster Sessions</h3>
               </div>
-              
+
               
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Thurs+Session+1">Session 1 - (05:00-07:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Thurs+Session+1">Session 1 - (05:00-07:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -5410,7 +5393,7 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Thurs+Session+2">Session 2 - (08:00-10:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Thurs+Session+2">Session 2 - (08:00-10:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -5418,7 +5401,7 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Thurs+Session+3">Session 3 - (12:00-14:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Thurs+Session+3">Session 3 - (12:00-14:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -5426,7 +5409,7 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Thurs+Session+4">Session 4 - (17:00-19:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Thurs+Session+4">Session 4 - (17:00-19:00 GMT)</a>
                   </h3>
                 </div>
               </div>
@@ -5434,14 +5417,14 @@
               <div class="row">
                 <div class="col-12">
                   <h3 class="">
-                    <a class ="text-muted" href="papers.html?filter=session&search=Thurs+Session+5">Session 5 - (20:00-22:00 GMT)</a>
+                    <a class ="text-muted" href="papers.html?session=Thurs+Session+5">Session 5 - (20:00-22:00 GMT)</a>
                   </h3>
                 </div>
               </div>
               
             </div>
 
-            
+
           </div>
           
         </div>
