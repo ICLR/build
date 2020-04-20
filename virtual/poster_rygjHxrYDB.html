@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="static/css/main.css">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/css/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <title> ICLR: Deep Audio Priors Emerge From Harmonic Convolutional Networks </title>
+</head>
+
+
+  <body >
+
+<!-- NAV -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+            integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
+            crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
+            integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
+            crossorigin="anonymous">
+    </script>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="index.html">Home</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="calendar.html">Schedule</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="workshops.html">Workshops</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="papers.html">Papers</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" target="_blank"   href="https://iclr.6connex.com/event/VirtualEvent/">Sponsor Hall</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="socials.html">Socials</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="chat.html">Chat</a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link"    href="about.html">Help</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+
+ <!-- Title -->
+
+ <div class="pp-card m-3" style="">
+   <div class="card-header">
+     <h2 class="card-title main-title text-center" style="">
+       Deep Audio Priors Emerge From Harmonic Convolutional Networks
+     </h2>
+
+     <h3 class="card-subtitle mb-2 text-muted text-center">
+       
+       Zhoutong Zhang,
+       
+       Yunyun Wang,
+       
+       Chuang Gan,
+       
+       Jiajun Wu,
+       
+       Joshua B. Tenenbaum,
+       
+       Antonio Torralba,
+       
+       William T. Freeman
+       
+     </h3>
+
+
+     
+     <div class="text-center p-3">
+       <a class="card-link" data-toggle="collapse" role="button" href="#details">
+           Abstract
+       </a>
+
+       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/8fae0e808bc1d485cd3873754cb7b197795ec16b.pdf">
+           Paper
+       </a>
+       
+       <a href="http://dap.csail.mit.edu/" target="_blank"  class="card-link">
+           Code
+       </a>
+       
+       
+       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=rygjHxrYDB">
+           Reviews
+       </a>
+
+       <!--  -->
+       <!-- <a href="" target="_blank"  class="card-link"> -->
+       <!--   Slides -->
+       <!-- </a> -->
+       <!--  -->
+
+       <!-- </div> -->
+     
+     <!-- <div class="text-center "> -->
+
+       <a href="chat.html?room=channel/poster_655" target="_blank"  class="card-link">
+           Chat
+       </a>
+
+       
+
+
+     </div>
+
+     <div class=" text-center text-muted text-monospace">
+       
+       <div> Tues Session 1  (05:00-07:00 GMT) [<a href="" target="_blank"  class="card-link">Video Chat</a>] 
+       </div>
+       
+       <div> Tues Session 3  (12:00-14:00 GMT) [<a href="" target="_blank"  class="card-link">Video Chat</a>] 
+       </div>
+       
+     </div>
+
+   </div>
+
+   </div>
+
+ <div id="details" class="pp-card m-3 collapse">
+   <div class="card-body">
+     <p class="card-text">
+       <div id="abstractExample">
+         <span class="font-weight-bold">Abstract:</span>
+         Convolutional neural networks (CNNs) excel in image recognition and generation. Among many efforts to explain their effectiveness, experiments show that CNNs carry strong inductive biases that capture natural image priors. Do deep networks also have inductive biases for audio signals? In this paper, we empirically show that current network architectures for audio processing do not show strong evidence in capturing such priors. We propose Harmonic Convolution, an operation that helps deep networks distill priors in audio signals by explicitly utilizing the harmonic structure within. This is done by engineering the kernel to be supported by sets of harmonic series, instead of local neighborhoods for convolutional kernels. We show that networks using Harmonic Convolution can reliably model audio priors and achieve high performance in unsupervised audio restoration tasks. With Harmonic Convolution, they also achieve better generalization performance for sound source separation.
+       </div>
+
+     </p>
+
+     <p></p>
+     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
+       
+       <a href="papers.html?filter=keywords&search=Audio" class="text-secondary text-decoration-none">Audio</a>,
+       
+       <a href="papers.html?filter=keywords&search=Deep Prior" class="text-secondary text-decoration-none">Deep Prior</a>
+       
+     </p>
+   </div>
+ </div>
+
+</div>
+
+<!-- SlidesLive -->
+ <div class="container" style="background-color:white; padding: 0px;">
+  <div class="row m-2">
+    <div class="col-md-7 col-xs-12 my-auto p-2" >
+      <div id="presentation-embed-38915748" class="slp my-auto"></div>
+      <script src='https://slideslive.com/embed_presentation.js'></script>
+      <script>
+        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+        presentationId: '38915748',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true,
+        verticalWhenWidthLte: 2000,
+        allowHiddenControlsWhenPaused: true,
+        hideTitle: true
+        });
+      </script>
+    </div>
+
+    <div class="col-md-5 col-xs-12 p-2">
+        <div id="gitter" class="slp">
+          <center>
+             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_655?layout=embedded" height="700px" width="100%" ></iframe>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Recs -->
+  <p></p>
+
+
+  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
+  <center>
+    <h2> Similar Papers </h2>
+</div>
+<p></p>
+
+<div  class="container" >
+  <div class="row">
+
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_rkeu30EtvS.html" class="text-muted">
+              <h5 class="card-title" align="center">Network Deconvolution</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Chengxi Ye,
+              
+              Matthew Evanusa,
+              
+              Hua He,
+              
+              Anton Mitrokhin,
+              
+              Tom Goldstein,
+              
+              James A. Yorke,
+              
+              Cornelia Fermuller,
+              
+              Yiannis Aloimonos,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rkeu30EtvS.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_B1x1ma4tDr.html" class="text-muted">
+              <h5 class="card-title" align="center">DDSP: Differentiable Digital Signal Processing</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Jesse Engel,
+              
+              Lamtharn (Hanoi) Hantrakul,
+              
+              Chenjie Gu,
+              
+              Adam Roberts,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/B1x1ma4tDr.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_B1l6y0VFPr.html" class="text-muted">
+              <h5 class="card-title" align="center">Identity Crisis: Memorization and Generalization Under Extreme Overparameterization</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Chiyuan Zhang,
+              
+              Samy Bengio,
+              
+              Moritz Hardt,
+              
+              Michael C. Mozer,
+              
+              Yoram Singer,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/B1l6y0VFPr.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-xs-6">
+        <div class="pp-card" >
+          <div class="pp-card-header" class="text-muted">
+            <a href="poster_HJlSmC4FPS.html" class="text-muted">
+              <h5 class="card-title" align="center">Robust And Interpretable Blind Image Denoising Via Bias-Free Convolutional Neural Networks</h5></a>
+            <h6 class="card-subtitle text-muted" align="center">
+              
+              Sreyas Mohan,
+              
+              Zahra Kadkhodaie,
+              
+              Eero P. Simoncelli,
+              
+              Carlos Fernandez-Granda,
+              
+            </h6>
+
+            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJlSmC4FPS.png" width="80%"/></center>
+          </div>
+        </div>
+      </div>
+      
+  </DIV>
+</DIV>
+    <script type="text/javascript">
+
+  $(document).ready(function () {
+
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+
+  });
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
+</body>
