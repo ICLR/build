@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="static/css/main.css">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    <link rel="stylesheet" href="static/css/typeahead.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="static/css/lazy_load.css">
+    <script src="static/js/lazy_load.js"></script>
+
+    <title> ICLR 2020 - Socials </title>
+</head>
+
+<body>
+<!-- NAV -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+            integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
+            crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
+            integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
+            crossorigin="anonymous">
+    </script>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          
+          <a class="nav-link" href="index.html">Home</a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          
+          <a class="nav-link" href="calendar.html">Schedule</a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          
+          <a class="nav-link" href="workshops.html">Workshops</a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          
+          <a class="nav-link" href="papers.html">Papers</a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          
+          <a class="nav-link" target="_blank" href="https://iclr.6connex.com/event/VirtualEvent/"><nobr><svg class="bi bi-box-arrow-up-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 003 14.5h8a1.5 1.5 0 001.5-1.5V9a.5.5 0 00-1 0v4a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V5a.5.5 0 01.5-.5h4a.5.5 0 000-1H3A1.5 1.5 0 001.5 5v8zm7-11a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V2.5H9a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
+    <path fill-rule="evenodd" d="M14.354 1.646a.5.5 0 010 .708l-8 8a.5.5 0 01-.708-.708l8-8a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+</svg> Sponsor Hall</nobr></a>
+          
+        </li>
+        
+        <li class="nav-item active">
+          
+          <a class="nav-link" href="socials.html">Socials</a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          
+          <a class="nav-link" href="chat.html">Chat</a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          
+          <a class="nav-link" href="about.html">Help</a>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+    <div class="row p-4">
+        <div class="col-12 bd-content ">
+            <h2 class="text-center"> Socials </h2>
+        </div>
+    </div>
+    <div class="cards row">
+
+        
+        <div class="col-md-6 col-sm-12 p-3"
+             style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+            <div class="card"
+                 style="display:block; overflow:hidden; width:100%;">
+                <div class="card-header text-center"
+                     style="min-height: 400px; width:100%;">
+                    <a class="text-muted" href="#">
+                        <h3 class="card-title main-title">
+                            Open source tools and practices in state-of-the-art DL research
+                        </h3>
+                    </a>
+                    <div class="card-subtitle text-muted">
+                        Kamil A. Kaczmarek &amp; Patryk Miziula
+                    </div>
+
+                    <!-- <div class="m-4"> -->
+                    <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/Open-source-tools.png" /> -->
+                    <!-- </div> -->
+                    <div class="p-3 text-left card-subtitle text-muted">
+                        Appropriate tooling is an inevitable part of the SOTA deep learning research. Recent advancements in the field resulted in the proliferation of large frameworks’ ecosystems (TensorFlow, PyTorch, MXNet) as well as smaller targeted tools that serve specific needs. This social event is centered around all the tools and practices, big and small, that are relevant to the ICLR community. Participants are encouraged to show their own open source tools that they build, regardless of their size and proliferation level. It can be a single CLI command that you find useful or an entire framework. Main goal for the participants is to introduce them to the wide range of tools and practices that may result in faster research progression and standardization.
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 p-3"
+             style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+            <div class="card"
+                 style="display:block; overflow:hidden; width:100%;">
+                <div class="card-header text-center"
+                     style="min-height: 400px; width:100%;">
+                    <a class="text-muted" href="#">
+                        <h3 class="card-title main-title">
+                            Generative ML for Generalization
+                        </h3>
+                    </a>
+                    <div class="card-subtitle text-muted">
+                        Prabhu Pradhan &amp; Mehdi S. M. Sajjadi
+                    </div>
+
+                    <!-- <div class="m-4"> -->
+                    <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/Generative-Generalization.jpg" /> -->
+                    <!-- </div> -->
+                    <div class="p-3 text-left card-subtitle text-muted">
+                        Deep Generative Models (DGM) have become spectacularly popular even outside the research circles. Despite their success, we do not see deeper insights on their usage as a tool for generalization (i.e. better representations via data enhancement, augmentation etc). Since ICLR does not have a workshop on DGM, this event will provide a platform for the enthusiast community.
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 p-3"
+             style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+            <div class="card"
+                 style="display:block; overflow:hidden; width:100%;">
+                <div class="card-header text-center"
+                     style="min-height: 400px; width:100%;">
+                    <a class="text-muted" href="#">
+                        <h3 class="card-title main-title">
+                            Anticipating Risky Research
+                        </h3>
+                    </a>
+                    <div class="card-subtitle text-muted">
+                        Rosie Campbell &amp; B Cavello
+                    </div>
+
+                    <!-- <div class="m-4"> -->
+                    <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/arr.jpg" /> -->
+                    <!-- </div> -->
+                    <div class="p-3 text-left card-subtitle text-muted">
+                        In 2019, OpenAI adopted a staged release approach for their advanced language model GPT-2, citing concerns around potential misuses of the model. Earlier this year, NeurIPS announced a submission requirement for authors to include a broader impact statement about possible consequences of their research. As ML becomes increasingly advanced and ubiquitous, we are challenged with anticipating the consequences of our research and mitigating risks of malicious use, harmful applications, unintended consequences, and accidents. But while ML researchers may experts in their own domain, how can they accurately predict the economic, political, and sociological impacts of their work, especially when they might be second or third order effects? Should risk screening be the researcher's responsibility? If not theirs, whose? What structural incentives are at play that affect our ability to publish responsibly? How can we improve publication practices in the field to maximize the benefits of research while mitigating risks? Join us for a discussion on these questions and more, hosted by the Partnership on AI. All levels of familiarity/experience welcome! To read more on this topic, see <a href='https://www.partnershiponai.org/publication-norms'>www.partnershiponai.org/publication-norms</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 p-3"
+             style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+            <div class="card"
+                 style="display:block; overflow:hidden; width:100%;">
+                <div class="card-header text-center"
+                     style="min-height: 400px; width:100%;">
+                    <a class="text-muted" href="#">
+                        <h3 class="card-title main-title">
+                            Learning Representation for Cybersecurity
+                        </h3>
+                    </a>
+                    <div class="card-subtitle text-muted">
+                        Abhishek Sharma
+                    </div>
+
+                    <!-- <div class="m-4"> -->
+                    <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/" /> -->
+                    <!-- </div> -->
+                    <div class="p-3 text-left card-subtitle text-muted">
+                        Four broad applications of ML in Cybersecurity are related to Malware Detection, Anomaly Detection, User Behavior Modeling, and Adversarial ML. The ICLR research community continues to produce exciting work that can be of relevance to both researchers and practitioners in Cybersecurity. E.g., ideas from Network Representation Learning can be applied to Cyber Terrain graphs, that capture complex relationship between connected devices, to develop robust approaches for detecting insider threat and compromised assets. Similarly, learning low dimensional representations of the large volume and variety of data generated by executing different types of malware in a sandbox experiment can lead to better malware detection algorithms. It is also worth probing how to adapt the Adversarial ML work done in the domain of Computer Vision for Cybersecurity problems. 
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 p-3"
+             style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+            <div class="card"
+                 style="display:block; overflow:hidden; width:100%;">
+                <div class="card-header text-center"
+                     style="min-height: 400px; width:100%;">
+                    <a class="text-muted" href="#">
+                        <h3 class="card-title main-title">
+                            Internships and opportunities for students at Amazon
+                        </h3>
+                    </a>
+                    <div class="card-subtitle text-muted">
+                        Tanisha McOmber
+                    </div>
+
+                    <!-- <div class="m-4"> -->
+                    <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/" /> -->
+                    <!-- </div> -->
+                    <div class="p-3 text-left card-subtitle text-muted">
+                        This hall provides students, professors and anyone interested to learn more about internships and opportunities for students at Amazon. Learn how to build our your research skill set through internships and engagements with Amazon.
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 p-3"
+             style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+            <div class="card"
+                 style="display:block; overflow:hidden; width:100%;">
+                <div class="card-header text-center"
+                     style="min-height: 400px; width:100%;">
+                    <a class="text-muted" href="#">
+                        <h3 class="card-title main-title">
+                            WiML Virtual Panel and Mentoring Session
+                        </h3>
+                    </a>
+                    <div class="card-subtitle text-muted">
+                        Ovo Ojameruaye &amp; Sinead Williamson
+                    </div>
+
+                    <!-- <div class="m-4"> -->
+                    <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/WiML.png" /> -->
+                    <!-- </div> -->
+                    <div class="p-3 text-left card-subtitle text-muted">
+                        The WiML Virtual Social will be a session on Navigating Covid-19 (Our New Realities). The novel COVID-19 virus has impacted our lives in several ways: from how we work, what we do, how we live, to how we communicate with friends and family. This interactive session will look at the ways in which we have adapted and how we carry out our work in the face of this new reality. It will also showcase some of the research and innovations being developed around the coronavirus.
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 p-3"
+             style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+            <div class="card"
+                 style="display:block; overflow:hidden; width:100%;">
+                <div class="card-header text-center"
+                     style="min-height: 400px; width:100%;">
+                    <a class="text-muted" href="#">
+                        <h3 class="card-title main-title">
+                            LatinX in AI Social
+                        </h3>
+                    </a>
+                    <div class="card-subtitle text-muted">
+                        Laura Montoya &amp; Javier Turek
+                    </div>
+
+                    <!-- <div class="m-4"> -->
+                    <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/" /> -->
+                    <!-- </div> -->
+                    <div class="p-3 text-left card-subtitle text-muted">
+                        Virtual gathering of LatinX in AI Members with an hour of invited talks from members of our community whom we are recognizing for their efforts in response to the COVID-19 Pandemic. See our webpage: <a href='http://www.latinxinai.org/iclr-2020'>www.latinxinai.org/iclr-2020</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 p-3"
+             style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+            <div class="card"
+                 style="display:block; overflow:hidden; width:100%;">
+                <div class="card-header text-center"
+                     style="min-height: 400px; width:100%;">
+                    <a class="text-muted" href="#">
+                        <h3 class="card-title main-title">
+                            What can AI Researchers do to fight against COVID-19?
+                        </h3>
+                    </a>
+                    <div class="card-subtitle text-muted">
+                        Elisabeta Gace &amp; Pin-Yu Chen
+                    </div>
+
+                    <!-- <div class="m-4"> -->
+                    <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/" /> -->
+                    <!-- </div> -->
+                    <div class="p-3 text-left card-subtitle text-muted">
+                        The COVID-19 coronavirus presents an unprecedented, global challenge. When citizens are doing their part by social distancing, healthcare workers and first responders are taking care of many of us, and our governments are mobilizing resources to respond to this crisis, we’ve asked ourselves what can we do at IBM, and more generally, what can the AI community contribute? In this social event, we will provide an overview of the AI tools IBM offered to help the research community fight against COVID-19 (see our response at <a href='https://www.ibm.com/thought-leadership/covid19/'>https://www.ibm.com/thought-leadership/covid19/</a>). We will open the floor and use this opportunity to brainstorm novel together with ICLR participants
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 p-3"
+             style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+            <div class="card"
+                 style="display:block; overflow:hidden; width:100%;">
+                <div class="card-header text-center"
+                     style="min-height: 400px; width:100%;">
+                    <a class="text-muted" href="#">
+                        <h3 class="card-title main-title">
+                            Climate and Sustainability Startups
+                        </h3>
+                    </a>
+                    <div class="card-subtitle text-muted">
+                        Eddie Obropta &amp; Hassan Kane
+                    </div>
+
+                    <!-- <div class="m-4"> -->
+                    <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/" /> -->
+                    <!-- </div> -->
+                    <div class="p-3 text-left card-subtitle text-muted">
+                        An informal and fun discussion about climate/sustainability startups using ML. Join in to bounce around new ideas, discuss initiatives that are getting traction in the world, or even chat about your favorite climate podcast (like My Climate Journey!).
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 p-3"
+             style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+            <div class="card"
+                 style="display:block; overflow:hidden; width:100%;">
+                <div class="card-header text-center"
+                     style="min-height: 400px; width:100%;">
+                    <a class="text-muted" href="#">
+                        <h3 class="card-title main-title">
+                            Lapsed Physicists Wine and Cheese
+                        </h3>
+                    </a>
+                    <div class="card-subtitle text-muted">
+                        Jennifer Hobbs &amp; Sujoy Ganguly
+                    </div>
+
+                    <!-- <div class="m-4"> -->
+                    <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/LPWnC.png" /> -->
+                    <!-- </div> -->
+                    <div class="p-3 text-left card-subtitle text-muted">
+                        'Lapsed' (aka. Former) Physicists are plentiful in the machine learning community.  Inspired by Wine and Cheese seminars at many institutions, this BYOWC (Bring Your Own Wine and Cheese) event is an informal opportunity to connect with members of the community.  Hear how others made the transition between fields. Discuss how your physics training prepared you to switch fields, what synergies between physics and machine learning excite you the most. Share your favorite physics jokes your computer science colleagues don't get, and just meet other cool people. Open to everyone, not only physicists; you'll just have to tolerate our humor.  Wine and Cheese encouraged, but not required.
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 p-3"
+             style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+            <div class="card"
+                 style="display:block; overflow:hidden; width:100%;">
+                <div class="card-header text-center"
+                     style="min-height: 400px; width:100%;">
+                    <a class="text-muted" href="#">
+                        <h3 class="card-title main-title">
+                            QueerInAI Social
+                        </h3>
+                    </a>
+                    <div class="card-subtitle text-muted">
+                        C Voelcker &amp; William Agnew
+                    </div>
+
+                    <!-- <div class="m-4"> -->
+                    <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/qai.png" /> -->
+                    <!-- </div> -->
+                    <div class="p-3 text-left card-subtitle text-muted">
+                        Relaxed virtual social to meet new people, exchange experiences and research concerning queer scientists in AI/ML, and to promote the visibility and perspective of queer people in the context of AI/ML research and applications. queerinai.org
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 p-3"
+             style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+            <div class="card"
+                 style="display:block; overflow:hidden; width:100%;">
+                <div class="card-header text-center"
+                     style="min-height: 400px; width:100%;">
+                    <a class="text-muted" href="#">
+                        <h3 class="card-title main-title">
+                            BlackInAI Meet-Up
+                        </h3>
+                    </a>
+                    <div class="card-subtitle text-muted">
+                        Ignatius Ezeani &amp; Timnit Gebru
+                    </div>
+
+                    <!-- <div class="m-4"> -->
+                    <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/bai.jpg" /> -->
+                    <!-- </div> -->
+                    <div class="p-3 text-left card-subtitle text-muted">
+                        Black in AI is a place for sharing ideas, fostering collaborations and discussing initiatives to increase the presence of Black people in the field of Artificial Intelligence. If you are in AI and either self-identify as Black or an ally, let's meet-up at the ICLR'20 and discuss interests, challenges, opportunities, collaborations and other related issues.
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 p-3"
+             style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+            <div class="card"
+                 style="display:block; overflow:hidden; width:100%;">
+                <div class="card-header text-center"
+                     style="min-height: 400px; width:100%;">
+                    <a class="text-muted" href="#">
+                        <h3 class="card-title main-title">
+                            ML Researchers in/interested in Korea
+                        </h3>
+                    </a>
+                    <div class="card-subtitle text-muted">
+                        Alice Oh &amp; Jungwoo Ha
+                    </div>
+
+                    <!-- <div class="m-4"> -->
+                    <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/MLiK.jpg" /> -->
+                    <!-- </div> -->
+                    <div class="p-3 text-left card-subtitle text-muted">
+                        We invite everyone who is part of and/or interested in the ML research scene in Korea. Participants can introduce their own ML research, especially if it's part of ICLR 2020. They can also introduce ICLR 2020 papers that they find interesting and discuss them with other participants. Other possible discussion topics include (but are not limited to): Korean NLP, computer vision and datasets, ML research for COVID-19 and other healthcare problems, and career options in academia/industry in Korea. We welcome everyone from anywhere in the world, as long as you can keep awake if our event falls in the middle of the night for you.
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 p-3"
+             style="display: flex;flex-flow:wrap; margin-left:0; box-sizing: border-box;">
+            <div class="card"
+                 style="display:block; overflow:hidden; width:100%;">
+                <div class="card-header text-center"
+                     style="min-height: 400px; width:100%;">
+                    <a class="text-muted" href="#">
+                        <h3 class="card-title main-title">
+                            State of the Art Language Research
+                        </h3>
+                    </a>
+                    <div class="card-subtitle text-muted">
+                        Angeliki Lazaridou &amp; Amy Wu
+                    </div>
+
+                    <!-- <div class="m-4"> -->
+                    <!--   <img height="100"  src="https://iclr.github.io/iclr-images/workshops/SOTAlr.png" /> -->
+                    <!-- </div> -->
+                    <div class="p-3 text-left card-subtitle text-muted">
+                        Language is very important for human-centric machine learning applications. We want to bring researchers together to share views on what the state-of-the-art and next frontier will look like.
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+</body>
