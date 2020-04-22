@@ -2,71 +2,51 @@
 <html lang="en">
   
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="static/css/main.css">
-
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
-            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
-            crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
-    <script src="static/js/typeahead.bundle.js"></script>
-
-    <link rel="stylesheet" href="static/css/typeahead.css">
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-
-
-    <link rel="stylesheet" href="static/css/lazy_load.css">
-    <script src="static/js/lazy_load.js"></script>
-
-    <title> ICLR: Watch the Unobserved: A Simple Approach to Parallelizing Monte Carlo Tree Search </title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="static/css/main.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+    integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="static/js/typeahead.bundle.js"></script>
+  <link rel="stylesheet" href="static/css/typeahead.css">
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/lazy_load.css">
+  <script src="static/js/lazy_load.js"></script>
+  <title> ICLR: Watch the Unobserved: A Simple Approach to Parallelizing Monte Carlo Tree Search </title>
 </head>
-
-
   <body >
-
-<!-- NAV -->
-
+    <!-- NAV -->
+    
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
-            integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
-            crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
-            integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
-            crossorigin="anonymous">
-    </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+  integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
+  integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
+  crossorigin="anonymous"></script>
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="index.html">
-      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
-
+    <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
       <ul class="navbar-nav ml-auto">
@@ -97,10 +77,12 @@
         
         <li class="nav-item ">
           
-          <a class="nav-link" target="_blank" href="https://iclr.6connex.com/event/VirtualEvent/"><nobr>Sponsor Hall <svg class="bi bi-box-arrow-up-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <a class="nav-link" target="_blank" href="https://iclr.6connex.com/event/VirtualEvent/">
+            <nobr>Sponsor Hall <svg class="bi bi-box-arrow-up-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 003 14.5h8a1.5 1.5 0 001.5-1.5V9a.5.5 0 00-1 0v4a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V5a.5.5 0 01.5-.5h4a.5.5 0 000-1H3A1.5 1.5 0 001.5 5v8zm7-11a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V2.5H9a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
     <path fill-rule="evenodd" d="M14.354 1.646a.5.5 0 010 .708l-8 8a.5.5 0 01-.708-.708l8-8a.5.5 0 01.708 0z" clip-rule="evenodd"/>
-</svg></nobr></a>
+</svg></nobr>
+          </a>
           
         </li>
         
@@ -126,262 +108,247 @@
     </div>
   </div>
 </nav>
-
-
-<div class="container">
-
- <!-- Title -->
-
- <div class="pp-card m-3" style="">
-   <div class="card-header">
-     <h2 class="card-title main-title text-center" style="">
-       Watch the Unobserved: A Simple Approach to Parallelizing Monte Carlo Tree Search
-     </h2>
-
-     <h3 class="card-subtitle mb-2 text-muted text-center">
-       
-       Anji Liu,
-       
-       Jianshu Chen,
-       
-       Mingze Yu,
-       
-       Yu Zhai,
-       
-       Xuewen Zhou,
-       
-       Ji Liu
-       
-     </h3>
-
-
-
-     <div class="text-center p-3">
-       <a class="card-link" data-toggle="collapse" role="button" href="#details">
-           Abstract
-       </a>
-
-       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/a348732b5ca8e27b8fe0b211c92ec4d1b6defbae.pdf">
-           Paper
-       </a>
-       
-
-       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=BJlQtJSKDB">
-           Reviews
-       </a>
-
-       <!--  -->
-       <!-- <a href="" target="_blank"  class="card-link"> -->
-       <!--   Slides -->
-       <!-- </a> -->
-       <!--  -->
-
-       <!-- </div> -->
-
-     <!-- <div class="text-center "> -->
-
-       <a href="chat.html?room=channel/poster_75" target="_blank"  class="card-link">
-           Chat
-       </a>
-
-
-
-
-     </div>
-
-     <div class=" text-center text-muted text-monospace">
-       
-       <div> Wed Session 4  (17:00-19:00 GMT) 
-[<a href="https://us02web.zoom.us/j/82728346091?pwd=Z1lkb3UzVmhQM3Blck1aM0V3M21VQT09" target="_blank"  class="card-link">Live</a>] 
-       </div>
-       
-       <div> Wed Session 5  (20:00-22:00 GMT) 
-[<a href="https://us02web.zoom.us/j/87658336515?pwd=dTdiVkUvbGlCMkNGZ0lVaE5QUlFPUT09" target="_blank"  class="card-link">Live</a>] 
-       </div>
-       
-       <div> Wednesday: RL and Planning 
-       </div>
-       
-     </div>
-
-   </div>
-
-   </div>
-
- <div id="details" class="pp-card m-3 collapse">
-   <div class="card-body">
-     <p class="card-text">
-       <div id="abstractExample">
-         <span class="font-weight-bold">Abstract:</span>
-         Monte Carlo Tree Search (MCTS) algorithms have achieved great success on many challenging benchmarks (e.g., Computer Go). However, they generally require a large number of rollouts, making their applications costly. Furthermore, it is also extremely challenging to parallelize MCTS due to its inherent sequential nature: each rollout heavily relies on the statistics (e.g., node visitation counts) estimated from previous simulations to achieve an effective exploration-exploitation tradeoff. In spite of these difficulties, we develop an algorithm, WU-UCT, to effectively parallelize MCTS, which achieves linear speedup and exhibits only limited performance loss with an increasing number of workers. The key idea in WU-UCT is a set of statistics that we introduce to track the number of on-going yet incomplete simulation queries (named as unobserved samples). These statistics are used to modify the UCT tree policy in the selection steps in a principled manner to retain effective exploration-exploitation tradeoff when we parallelize the most time-consuming expansion and simulation steps. Experiments on a proprietary benchmark and the Atari Game benchmark demonstrate the linear speedup and the superior performance of WU-UCT comparing to existing techniques.
-       </div>
-
-     </p>
-
-     <p></p>
-     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-       
-       <a href="papers.html?filter=keywords&search=exploration" class="text-secondary text-decoration-none">exploration</a>,
-       
-       <a href="papers.html?filter=keywords&search=reinforcement learning (rl)" class="text-secondary text-decoration-none">reinforcement learning (rl)</a>
-       
-     </p>
-   </div>
- </div>
-
-</div>
-
-<!-- SlidesLive -->
- <div class="container" style="background-color:white; padding: 0px;">
-  <div class="row m-2">
-    <div class="col-md-7 col-xs-12 my-auto p-2" >
-      <div id="presentation-embed-38915748" class="slp my-auto"></div>
-      <script src='https://slideslive.com/embed_presentation.js'></script>
-      <script>
-        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
-        presentationId: '38915748',
-        autoPlay: false, // change to true to autoplay the embedded presentation
-        verticalEnabled: true,
-        verticalWhenWidthLte: 2000,
-        allowHiddenControlsWhenPaused: true,
-        hideTitle: true
-        });
-      </script>
-    </div>
-
-    <div class="col-md-5 col-xs-12 p-2">
-        <div id="gitter" class="slp">
-          <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_75?layout=embedded" height="700px" width="100%" ></iframe>
-          </center>
+    <div class="container">
+      <!-- Title -->
+      <div class="pp-card m-3" style="">
+        <div class="card-header">
+          <h2 class="card-title main-title text-center" style="">
+            Watch the Unobserved: A Simple Approach to Parallelizing Monte Carlo Tree Search
+          </h2>
+          <h3 class="card-subtitle mb-2 text-muted text-center">
+            
+            <a href="papers.html?filter=authors&search=Anji Liu" class="text-muted">Anji Liu</a>,
+            
+            <a href="papers.html?filter=authors&search=Jianshu Chen" class="text-muted">Jianshu Chen</a>,
+            
+            <a href="papers.html?filter=authors&search=Mingze Yu" class="text-muted">Mingze Yu</a>,
+            
+            <a href="papers.html?filter=authors&search=Yu Zhai" class="text-muted">Yu Zhai</a>,
+            
+            <a href="papers.html?filter=authors&search=Xuewen Zhou" class="text-muted">Xuewen Zhou</a>,
+            
+            <a href="papers.html?filter=authors&search=Ji Liu" class="text-muted">Ji Liu</a>
+            
+          </h3>
+          <p class="card-text text-center"><span class="">Keywords:</span>
+            
+            <a href="papers.html?filter=keywords&search=exploration" class="text-secondary text-decoration-none">exploration</a>,
+            
+            <a href="papers.html?filter=keywords&search=reinforcement learning (rl)" class="text-secondary text-decoration-none">reinforcement learning (rl)</a>
+            
+          </p>
+          <div class="text-center p-3">
+            <a class="card-link" data-toggle="collapse" role="button" href="#details">
+            Abstract
+            </a>
+            <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/a348732b5ca8e27b8fe0b211c92ec4d1b6defbae.pdf">
+            Paper
+            </a>
+            
+            <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=BJlQtJSKDB">
+            Reviews
+            </a>
+            <!--  -->
+            <!-- <a href="" target="_blank"  class="card-link"> -->
+            <!--   Slides -->
+            <!-- </a> -->
+            <!--  -->
+            <!-- </div> -->
+            <!-- <div class="text-center "> -->
+            <a href="chat.html?room=channel/poster_75" target="_blank"  class="card-link">
+            Chat
+            </a>
+          </div>
+          <div class=" text-center text-muted text-monospace">
+            
+            <div> Wed Session 4  (17:00-19:00 GMT) 
+              [<a href="https://us02web.zoom.us/j/82728346091?pwd=Z1lkb3UzVmhQM3Blck1aM0V3M21VQT09" target="_blank"  class="card-link">Live</a>] 
+            </div>
+            
+            <div> Wed Session 5  (20:00-22:00 GMT) 
+              [<a href="https://us02web.zoom.us/j/87658336515?pwd=dTdiVkUvbGlCMkNGZ0lVaE5QUlFPUT09" target="_blank"  class="card-link">Live</a>] 
+            </div>
+            
+            <div> Wednesday: RL and Planning 
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div id="details" class="pp-card m-3 collapse">
+        <div class="card-body">
+          <p class="card-text">
+          <div id="abstractExample">
+            <span class="font-weight-bold">Abstract:</span>
+            Monte Carlo Tree Search (MCTS) algorithms have achieved great success on many challenging benchmarks (e.g., Computer Go). However, they generally require a large number of rollouts, making their applications costly. Furthermore, it is also extremely challenging to parallelize MCTS due to its inherent sequential nature: each rollout heavily relies on the statistics (e.g., node visitation counts) estimated from previous simulations to achieve an effective exploration-exploitation tradeoff. In spite of these difficulties, we develop an algorithm, WU-UCT, to effectively parallelize MCTS, which achieves linear speedup and exhibits only limited performance loss with an increasing number of workers. The key idea in WU-UCT is a set of statistics that we introduce to track the number of on-going yet incomplete simulation queries (named as unobserved samples). These statistics are used to modify the UCT tree policy in the selection steps in a principled manner to retain effective exploration-exploitation tradeoff when we parallelize the most time-consuming expansion and simulation steps. Experiments on a proprietary benchmark and the Atari Game benchmark demonstrate the linear speedup and the superior performance of WU-UCT comparing to existing techniques.
+          </div>
+          </p>
+          <p></p>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-  <!-- Recs -->
-  <p></p>
-
-
-  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
-  <center>
-    <h2> Similar Papers </h2>
-</div>
-<p></p>
-
-<div  class="container" >
-  <div class="row">
-
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_SkeAaJrKDS.html" class="text-muted">
-              <h5 class="card-title" align="center">Combining Q-Learning and Search with Amortized Value Estimates</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Jessica B. Hamrick,
-              
-              Victor Bapst,
-              
-              Alvaro Sanchez-Gonzalez,
-              
-              Tobias Pfaff,
-              
-              Theophane Weber,
-              
-              Lars Buesing,
-              
-              Peter W. Battaglia,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SkeAaJrKDS.png" width="80%"/></center>
+    <!-- SlidesLive -->
+    <div class="container" style="background-color:white; padding: 0px;">
+    <div class="row m-2">
+      <div class="col-md-7 col-xs-12 my-auto p-2" >
+        <div id="presentation-embed-38915748" class="slp my-auto"></div>
+        <script src='https://slideslive.com/embed_presentation.js'></script>
+        <script>
+          embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+          presentationId: '38915748',
+          autoPlay: false, // change to true to autoplay the embedded presentation
+          verticalEnabled: true,
+          verticalWhenWidthLte: 2000,
+          allowHiddenControlsWhenPaused: true,
+          hideTitle: true
+          });
+        </script>
+      </div>
+      <!-- SlidesLive -->
+      <div class="container" style="background-color:white; padding: 0px;">
+        <div class="row m-2">
+          <div class="col-md-7 col-xs-12 my-auto p-2" >
+            <div id="presentation-embed-38915748" class="slp my-auto"></div>
+            <script src='https://slideslive.com/embed_presentation.js'></script>
+            <script>
+              embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+              presentationId: '38915748',
+              autoPlay: false, // change to true to autoplay the embedded presentation
+              verticalEnabled: true,
+              verticalWhenWidthLte: 2000,
+              allowHiddenControlsWhenPaused: true,
+              hideTitle: true
+              });
+            </script>
+          </div>
+          <div class="col-md-5 col-xs-12 p-2">
+            <div id="gitter" class="slp">
+              <center>
+                <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_75?layout=embedded" height="700px" width="100%" ></iframe>
+              </center>
+            </div>
           </div>
         </div>
       </div>
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_BJewlyStDr.html" class="text-muted">
-              <h5 class="card-title" align="center">On Bonus Based Exploration Methods In The Arcade Learning Environment</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Adrien Ali Taiga,
-              
-              William Fedus,
-              
-              Marlos C. Machado,
-              
-              Aaron Courville,
-              
-              Marc G. Bellemare,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJewlyStDr.png" width="80%"/></center>
+    </div>
+    <!-- Recs -->
+    <p></p>
+    <div  class="container" style="padding-bottom: 30px; padding-top:30px">
+      <center>
+        <h2> Similar Papers </h2>
+      </center>
+    </div>
+    <p></p>
+    <div  class="container" >
+      <div class="row">
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_SkeAaJrKDS.html" class="text-muted">
+                <h5 class="card-title" align="center">Combining Q-Learning and Search with Amortized Value Estimates</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Jessica B. Hamrick,
+                
+                Victor Bapst,
+                
+                Alvaro Sanchez-Gonzalez,
+                
+                Tobias Pfaff,
+                
+                Theophane Weber,
+                
+                Lars Buesing,
+                
+                Peter W. Battaglia,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/SkeAaJrKDS.png" width="80%"/></center>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_r1lOgyrKDS.html" class="text-muted">
-              <h5 class="card-title" align="center">Adaptive Correlated Monte Carlo for Contextual Categorical Sequence Generation</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Xinjie Fan,
-              
-              Yizhe Zhang,
-              
-              Zhendong Wang,
-              
-              Mingyuan Zhou,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/r1lOgyrKDS.png" width="80%"/></center>
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_BJewlyStDr.html" class="text-muted">
+                <h5 class="card-title" align="center">On Bonus Based Exploration Methods In The Arcade Learning Environment</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Adrien Ali Taiga,
+                
+                William Fedus,
+                
+                Marlos C. Machado,
+                
+                Aaron Courville,
+                
+                Marc G. Bellemare,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJewlyStDr.png" width="80%"/></center>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_ByedzkrKvH.html" class="text-muted">
-              <h5 class="card-title" align="center">Double Neural Counterfactual Regret Minimization</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Hui Li,
-              
-              Kailiang Hu,
-              
-              Shaohua Zhang,
-              
-              Yuan Qi,
-              
-              Le Song,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ByedzkrKvH.png" width="80%"/></center>
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_r1lOgyrKDS.html" class="text-muted">
+                <h5 class="card-title" align="center">Adaptive Correlated Monte Carlo for Contextual Categorical Sequence Generation</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Xinjie Fan,
+                
+                Yizhe Zhang,
+                
+                Zhendong Wang,
+                
+                Mingyuan Zhou,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/r1lOgyrKDS.png" width="80%"/></center>
+            </div>
           </div>
         </div>
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_ByedzkrKvH.html" class="text-muted">
+                <h5 class="card-title" align="center">Double Neural Counterfactual Regret Minimization</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Hui Li,
+                
+                Kailiang Hu,
+                
+                Shaohua Zhang,
+                
+                Yuan Qi,
+                
+                Le Song,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ByedzkrKvH.png" width="80%"/></center>
+            </div>
+          </div>
+        </div>
+        
       </div>
-      
-  </DIV>
-</DIV>
+    </div>
     <script type="text/javascript">
-
   $(document).ready(function () {
-
+  
   if (location.hash !== '') {
   $('a[href="' + location.hash + '"]').tab('show');
   }
-
+  
   $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
   var hash = $(e.target).attr("href");
   if (hash.substr(0,1) == "#") {
@@ -390,12 +357,11 @@
   $(window).scrollTop(position);
   }
   });
-
+  
   });
-
+  
   <!-- Global site tag (gtag.js) - Google Analytics -->
 </script>
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -404,4 +370,11 @@
   
   gtag('config', 'UA-163955028-1');
 </script>
-</body>
+<footer class="footer bg-light p-4">
+  <div class="container">
+    <p class="float-right"><a href="#">Back to Top</a></p>
+    <p class="text-center">© 2020 International Conference on Learning Representations</p>
+  </div>
+</footer>
+  </body>
+</html>

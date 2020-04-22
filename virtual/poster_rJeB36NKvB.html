@@ -2,71 +2,51 @@
 <html lang="en">
   
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="static/css/main.css">
-
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
-            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
-            crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
-    <script src="static/js/typeahead.bundle.js"></script>
-
-    <link rel="stylesheet" href="static/css/typeahead.css">
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-
-
-    <link rel="stylesheet" href="static/css/lazy_load.css">
-    <script src="static/js/lazy_load.js"></script>
-
-    <title> ICLR: How much Position Information Do Convolutional Neural Networks Encode? </title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="static/css/main.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+    integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="static/js/typeahead.bundle.js"></script>
+  <link rel="stylesheet" href="static/css/typeahead.css">
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/lazy_load.css">
+  <script src="static/js/lazy_load.js"></script>
+  <title> ICLR: How much Position Information Do Convolutional Neural Networks Encode? </title>
 </head>
-
-
   <body >
-
-<!-- NAV -->
-
+    <!-- NAV -->
+    
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
-            integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
-            crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
-            integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
-            crossorigin="anonymous">
-    </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+  integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
+  integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
+  crossorigin="anonymous"></script>
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="index.html">
-      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
-
+    <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
       <ul class="navbar-nav ml-auto">
@@ -97,10 +77,12 @@
         
         <li class="nav-item ">
           
-          <a class="nav-link" target="_blank" href="https://iclr.6connex.com/event/VirtualEvent/"><nobr>Sponsor Hall <svg class="bi bi-box-arrow-up-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <a class="nav-link" target="_blank" href="https://iclr.6connex.com/event/VirtualEvent/">
+            <nobr>Sponsor Hall <svg class="bi bi-box-arrow-up-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 003 14.5h8a1.5 1.5 0 001.5-1.5V9a.5.5 0 00-1 0v4a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V5a.5.5 0 01.5-.5h4a.5.5 0 000-1H3A1.5 1.5 0 001.5 5v8zm7-11a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V2.5H9a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
     <path fill-rule="evenodd" d="M14.354 1.646a.5.5 0 010 .708l-8 8a.5.5 0 01-.708-.708l8-8a.5.5 0 01.708 0z" clip-rule="evenodd"/>
-</svg></nobr></a>
+</svg></nobr>
+          </a>
           
         </li>
         
@@ -126,240 +108,225 @@
     </div>
   </div>
 </nav>
-
-
-<div class="container">
-
- <!-- Title -->
-
- <div class="pp-card m-3" style="">
-   <div class="card-header">
-     <h2 class="card-title main-title text-center" style="">
-       How much Position Information Do Convolutional Neural Networks Encode?
-     </h2>
-
-     <h3 class="card-subtitle mb-2 text-muted text-center">
-       
-       Md Amirul Islam,
-       
-       Sen Jia,
-       
-       Neil D. B. Bruce
-       
-     </h3>
-
-
-
-     <div class="text-center p-3">
-       <a class="card-link" data-toggle="collapse" role="button" href="#details">
-           Abstract
-       </a>
-
-       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/2267055f8221e283014aba7ef46092ba93ff450f.pdf">
-           Paper
-       </a>
-       
-
-       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=rJeB36NKvB">
-           Reviews
-       </a>
-
-       <!--  -->
-       <!-- <a href="" target="_blank"  class="card-link"> -->
-       <!--   Slides -->
-       <!-- </a> -->
-       <!--  -->
-
-       <!-- </div> -->
-
-     <!-- <div class="text-center "> -->
-
-       <a href="chat.html?room=channel/poster_542" target="_blank"  class="card-link">
-           Chat
-       </a>
-
-
-
-
-     </div>
-
-     <div class=" text-center text-muted text-monospace">
-       
-       <div> Mon Session 4  (17:00-19:00 GMT) 
-[<a href="https://us02web.zoom.us/j/89309408775?pwd=VFJSYXVIb0d6VHdkTWJoMmtJUzQxQT09" target="_blank"  class="card-link">Live</a>] 
-       </div>
-       
-       <div> Mon Session 5  (20:00-22:00 GMT) 
-[<a href="https://us02web.zoom.us/j/86922118985?pwd=dnhLMGphOVc3MXJJakQ2VE0zdmZUUT09" target="_blank"  class="card-link">Live</a>] 
-       </div>
-       
-       <div> Monday: Signals and Systems 
-       </div>
-       
-     </div>
-
-   </div>
-
-   </div>
-
- <div id="details" class="pp-card m-3 collapse">
-   <div class="card-body">
-     <p class="card-text">
-       <div id="abstractExample">
-         <span class="font-weight-bold">Abstract:</span>
-         In contrast to fully connected networks, Convolutional Neural Networks (CNNs) achieve efficiency by learning weights associated with local filters with a finite spatial extent. An implication of this is that a filter may know what it is looking at, but not where it is positioned in the image. Information concerning absolute position is inherently useful, and it is reasonable to assume that deep CNNs may implicitly learn to encode this information if there is a means to do so. In this paper, we test this hypothesis revealing the surprising degree of absolute position information that is encoded in commonly used neural networks. A comprehensive set of experiments show the validity of this hypothesis and shed light on how and where this information is represented while offering clues to where positional information is derived from in deep CNNs.
-       </div>
-
-     </p>
-
-     <p></p>
-     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-       
-       <a href="papers.html?filter=keywords&search=cnn" class="text-secondary text-decoration-none">cnn</a>
-       
-     </p>
-   </div>
- </div>
-
-</div>
-
-<!-- SlidesLive -->
- <div class="container" style="background-color:white; padding: 0px;">
-  <div class="row m-2">
-    <div class="col-md-7 col-xs-12 my-auto p-2" >
-      <div id="presentation-embed-38915748" class="slp my-auto"></div>
-      <script src='https://slideslive.com/embed_presentation.js'></script>
-      <script>
-        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
-        presentationId: '38915748',
-        autoPlay: false, // change to true to autoplay the embedded presentation
-        verticalEnabled: true,
-        verticalWhenWidthLte: 2000,
-        allowHiddenControlsWhenPaused: true,
-        hideTitle: true
-        });
-      </script>
-    </div>
-
-    <div class="col-md-5 col-xs-12 p-2">
-        <div id="gitter" class="slp">
-          <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_542?layout=embedded" height="700px" width="100%" ></iframe>
-          </center>
+    <div class="container">
+      <!-- Title -->
+      <div class="pp-card m-3" style="">
+        <div class="card-header">
+          <h2 class="card-title main-title text-center" style="">
+            How much Position Information Do Convolutional Neural Networks Encode?
+          </h2>
+          <h3 class="card-subtitle mb-2 text-muted text-center">
+            
+            <a href="papers.html?filter=authors&search=Md Amirul Islam" class="text-muted">Md Amirul Islam</a>,
+            
+            <a href="papers.html?filter=authors&search=Sen Jia" class="text-muted">Sen Jia</a>,
+            
+            <a href="papers.html?filter=authors&search=Neil D. B. Bruce" class="text-muted">Neil D. B. Bruce</a>
+            
+          </h3>
+          <p class="card-text text-center"><span class="">Keywords:</span>
+            
+            <a href="papers.html?filter=keywords&search=cnn" class="text-secondary text-decoration-none">cnn</a>
+            
+          </p>
+          <div class="text-center p-3">
+            <a class="card-link" data-toggle="collapse" role="button" href="#details">
+            Abstract
+            </a>
+            <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/2267055f8221e283014aba7ef46092ba93ff450f.pdf">
+            Paper
+            </a>
+            
+            <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=rJeB36NKvB">
+            Reviews
+            </a>
+            <!--  -->
+            <!-- <a href="" target="_blank"  class="card-link"> -->
+            <!--   Slides -->
+            <!-- </a> -->
+            <!--  -->
+            <!-- </div> -->
+            <!-- <div class="text-center "> -->
+            <a href="chat.html?room=channel/poster_542" target="_blank"  class="card-link">
+            Chat
+            </a>
+          </div>
+          <div class=" text-center text-muted text-monospace">
+            
+            <div> Mon Session 4  (17:00-19:00 GMT) 
+              [<a href="https://us02web.zoom.us/j/89309408775?pwd=VFJSYXVIb0d6VHdkTWJoMmtJUzQxQT09" target="_blank"  class="card-link">Live</a>] 
+            </div>
+            
+            <div> Mon Session 5  (20:00-22:00 GMT) 
+              [<a href="https://us02web.zoom.us/j/86922118985?pwd=dnhLMGphOVc3MXJJakQ2VE0zdmZUUT09" target="_blank"  class="card-link">Live</a>] 
+            </div>
+            
+            <div> Monday: Signals and Systems 
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div id="details" class="pp-card m-3 collapse">
+        <div class="card-body">
+          <p class="card-text">
+          <div id="abstractExample">
+            <span class="font-weight-bold">Abstract:</span>
+            In contrast to fully connected networks, Convolutional Neural Networks (CNNs) achieve efficiency by learning weights associated with local filters with a finite spatial extent. An implication of this is that a filter may know what it is looking at, but not where it is positioned in the image. Information concerning absolute position is inherently useful, and it is reasonable to assume that deep CNNs may implicitly learn to encode this information if there is a means to do so. In this paper, we test this hypothesis revealing the surprising degree of absolute position information that is encoded in commonly used neural networks. A comprehensive set of experiments show the validity of this hypothesis and shed light on how and where this information is represented while offering clues to where positional information is derived from in deep CNNs.
+          </div>
+          </p>
+          <p></p>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-  <!-- Recs -->
-  <p></p>
-
-
-  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
-  <center>
-    <h2> Similar Papers </h2>
-</div>
-<p></p>
-
-<div  class="container" >
-  <div class="row">
-
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_Hke-WTVtwr.html" class="text-muted">
-              <h5 class="card-title" align="center">Encoding word order in complex embeddings</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Benyou Wang,
-              
-              Donghao Zhao,
-              
-              Christina Lioma,
-              
-              Qiuchi Li,
-              
-              Peng Zhang,
-              
-              Jakob Grue Simonsen,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Hke-WTVtwr.png" width="80%"/></center>
+    <!-- SlidesLive -->
+    <div class="container" style="background-color:white; padding: 0px;">
+    <div class="row m-2">
+      <div class="col-md-7 col-xs-12 my-auto p-2" >
+        <div id="presentation-embed-38915748" class="slp my-auto"></div>
+        <script src='https://slideslive.com/embed_presentation.js'></script>
+        <script>
+          embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+          presentationId: '38915748',
+          autoPlay: false, // change to true to autoplay the embedded presentation
+          verticalEnabled: true,
+          verticalWhenWidthLte: 2000,
+          allowHiddenControlsWhenPaused: true,
+          hideTitle: true
+          });
+        </script>
+      </div>
+      <!-- SlidesLive -->
+      <div class="container" style="background-color:white; padding: 0px;">
+        <div class="row m-2">
+          <div class="col-md-7 col-xs-12 my-auto p-2" >
+            <div id="presentation-embed-38915748" class="slp my-auto"></div>
+            <script src='https://slideslive.com/embed_presentation.js'></script>
+            <script>
+              embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+              presentationId: '38915748',
+              autoPlay: false, // change to true to autoplay the embedded presentation
+              verticalEnabled: true,
+              verticalWhenWidthLte: 2000,
+              allowHiddenControlsWhenPaused: true,
+              hideTitle: true
+              });
+            </script>
+          </div>
+          <div class="col-md-5 col-xs-12 p-2">
+            <div id="gitter" class="slp">
+              <center>
+                <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_542?layout=embedded" height="700px" width="100%" ></iframe>
+              </center>
+            </div>
           </div>
         </div>
       </div>
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_HJxMYANtPH.html" class="text-muted">
-              <h5 class="card-title" align="center">The Local Elasticity of Neural Networks</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Hangfeng He,
-              
-              Weijie Su,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJxMYANtPH.png" width="80%"/></center>
+    </div>
+    <!-- Recs -->
+    <p></p>
+    <div  class="container" style="padding-bottom: 30px; padding-top:30px">
+      <center>
+        <h2> Similar Papers </h2>
+      </center>
+    </div>
+    <p></p>
+    <div  class="container" >
+      <div class="row">
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_Hke-WTVtwr.html" class="text-muted">
+                <h5 class="card-title" align="center">Encoding word order in complex embeddings</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Benyou Wang,
+                
+                Donghao Zhao,
+                
+                Christina Lioma,
+                
+                Qiuchi Li,
+                
+                Peng Zhang,
+                
+                Jakob Grue Simonsen,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Hke-WTVtwr.png" width="80%"/></center>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_rJxWxxSYvB.html" class="text-muted">
-              <h5 class="card-title" align="center">Spike-based causal inference for weight alignment</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Jordan Guerguiev,
-              
-              Konrad Kording,
-              
-              Blake Richards,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rJxWxxSYvB.png" width="80%"/></center>
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_HJxMYANtPH.html" class="text-muted">
+                <h5 class="card-title" align="center">The Local Elasticity of Neural Networks</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Hangfeng He,
+                
+                Weijie Su,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJxMYANtPH.png" width="80%"/></center>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_H1lj0nNFwB.html" class="text-muted">
-              <h5 class="card-title" align="center">The Implicit Bias of Depth: How Incremental Learning Drives Generalization</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Daniel Gissin,
-              
-              Shai Shalev-Shwartz,
-              
-              Amit Daniely,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1lj0nNFwB.png" width="80%"/></center>
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_rJxWxxSYvB.html" class="text-muted">
+                <h5 class="card-title" align="center">Spike-based causal inference for weight alignment</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Jordan Guerguiev,
+                
+                Konrad Kording,
+                
+                Blake Richards,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/rJxWxxSYvB.png" width="80%"/></center>
+            </div>
           </div>
         </div>
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_H1lj0nNFwB.html" class="text-muted">
+                <h5 class="card-title" align="center">The Implicit Bias of Depth: How Incremental Learning Drives Generalization</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Daniel Gissin,
+                
+                Shai Shalev-Shwartz,
+                
+                Amit Daniely,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1lj0nNFwB.png" width="80%"/></center>
+            </div>
+          </div>
+        </div>
+        
       </div>
-      
-  </DIV>
-</DIV>
+    </div>
     <script type="text/javascript">
-
   $(document).ready(function () {
-
+  
   if (location.hash !== '') {
   $('a[href="' + location.hash + '"]').tab('show');
   }
-
+  
   $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
   var hash = $(e.target).attr("href");
   if (hash.substr(0,1) == "#") {
@@ -368,12 +335,11 @@
   $(window).scrollTop(position);
   }
   });
-
+  
   });
-
+  
   <!-- Global site tag (gtag.js) - Google Analytics -->
 </script>
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -382,4 +348,11 @@
   
   gtag('config', 'UA-163955028-1');
 </script>
-</body>
+<footer class="footer bg-light p-4">
+  <div class="container">
+    <p class="float-right"><a href="#">Back to Top</a></p>
+    <p class="text-center">© 2020 International Conference on Learning Representations</p>
+  </div>
+</footer>
+  </body>
+</html>

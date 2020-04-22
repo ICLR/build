@@ -1,46 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
   
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="static/css/main.css">
-
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
-            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
-            crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
-    <script src="static/js/typeahead.bundle.js"></script>
-
-    <link rel="stylesheet" href="static/css/typeahead.css">
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-
-
-    <link rel="stylesheet" href="static/css/lazy_load.css">
-    <script src="static/js/lazy_load.js"></script>
-
-    <title> Workshop </title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="static/css/main.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+    integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="static/js/typeahead.bundle.js"></script>
+  <link rel="stylesheet" href="static/css/typeahead.css">
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/lazy_load.css">
+  <script src="static/js/lazy_load.js"></script>
+  <title> Workshop </title>
 </head>
-
   <body>
     <!-- NAV -->
     
@@ -50,23 +35,19 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
-            integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
-            crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
-            integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
-            crossorigin="anonymous">
-    </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+  integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
+  integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
+  crossorigin="anonymous"></script>
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="index.html">
-      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
-
+    <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
       <ul class="navbar-nav ml-auto">
@@ -97,10 +78,12 @@
         
         <li class="nav-item ">
           
-          <a class="nav-link" target="_blank" href="https://iclr.6connex.com/event/VirtualEvent/"><nobr>Sponsor Hall <svg class="bi bi-box-arrow-up-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <a class="nav-link" target="_blank" href="https://iclr.6connex.com/event/VirtualEvent/">
+            <nobr>Sponsor Hall <svg class="bi bi-box-arrow-up-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 003 14.5h8a1.5 1.5 0 001.5-1.5V9a.5.5 0 00-1 0v4a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V5a.5.5 0 01.5-.5h4a.5.5 0 000-1H3A1.5 1.5 0 001.5 5v8zm7-11a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V2.5H9a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
     <path fill-rule="evenodd" d="M14.354 1.646a.5.5 0 010 .708l-8 8a.5.5 0 01-.708-.708l8-8a.5.5 0 01.708 0z" clip-rule="evenodd"/>
-</svg></nobr></a>
+</svg></nobr>
+          </a>
           
         </li>
         
@@ -126,94 +109,98 @@
     </div>
   </div>
 </nav>
-<div class="container">
-<!-- Title -->
-
- <div class="pp-card m-3" style="">
-   <div class="card-header">
-     <h2 class="card-title main-title text-center" style="">
-       Beyond &#39;tabula rasa&#39; in reinforcement learning: agents that remember, adapt, and generalize
-     </h2>
-
-     <h3 class="card-subtitle mb-2 text-muted text-center">
-       Louis Kirsch · Ignasi Clavera · Kate Rakelly · Chelsea Finn · Jane Wang · Jeff Clune
-     </h3>
-
-     <div class="text-center p-3">
-       <a class="card-link" data-toggle="collapse" role="button" href="#details">
-           Description
-       </a>
-       <a href="http://www.betr-rl.ml/2020/" target="_blank"  class="card-link">
-          Site
-       </a>
-       <a href="" target="_blank"  class="card-link">
-           Video
-       </a>
-       <a href="chat.html?room=channel/workshop_betrrl" target="_blank"  class="card-link">
-           Chat
-       </a>
-
-
-     </div>
-   </div>
-
-   </div>
-
- <div id="details" class="pp-card m-3 collapse">
-   <div class="card-body">
-     <p class="card-text">
-       <div id="abstractExample">
-         <span class="font-weight-bold">Description:</span>
-         Recent work has demonstrated that current reinforcement learning methods are able to master complex tasks given enough resources. However, these successes have mainly been confined to single and unchanging environments. By contrast, the real world is both complex and dynamic, rendering it impossible to anticipate each new scenario. Many standard learning approaches require tremendous resources in data and compute to re-train. However, learning also offers the potential to develop versatile agents that adapt and continue to learn across environment changes and shifting goals and feedback.  To achieve this, agents must be able to apply knowledge gained in past experience to the situation at hand. We aim to bring together areas of research that provide different perspectives on how to extract and apply this knowledge. <br>The BeTR-RL workshop aims to bring together researchers from different backgrounds with a common interest in how to extend current reinforcement learning algorithms to operate in changing environments and tasks. Specifically, we are interested in the following lines of work: leveraging previous experience to learn representations or learning algorithms that transfer to new tasks (transfer and meta-learning), generalizing to new scenarios without any explicit adaptation (multi-task and goal-conditioned RL), and learning new capabilities while retaining the previously learned skills (continual learning). The workshop aims at further developing these research directions while determining similarities and trade-offs.
-       </div>
-
-     </p>
-
-     <p></p>
-   </div>
- </div>
-
-</div>
-
-<!-- SlidesLive -->
-
-
- <div class="container" style="background-color:white; padding: 0px;">
-  <div class="row m-2">
-    <div class="col-md-7 col-xs-12 my-auto p-2" >
-      <div id="presentation-embed-38915748" class="slp my-auto"></div>
-      <script src='https://slideslive.com/embed_presentation.js'></script>
-      <script>
-        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
-        presentationId: '38915748',
-        autoPlay: false, // change to true to autoplay the embedded presentation
-        verticalEnabled: true,
-        verticalWhenWidthLte: 2000,
-        allowHiddenControlsWhenPaused: true,
-        hideTitle: true
-        });
-      </script>
-    </div>
-
-    <div class="col-md-5 col-xs-12 p-2">
-        <div id="gitter" class="slp">
-          <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/workshop_betrrl?layout=embedded" height="700px" width="100%" ></iframe>
-          </center>
+    <div class="container">
+      <!-- Title -->
+      <div class="pp-card m-3" style="">
+        <div class="card-header">
+          <h2 class="card-title main-title text-center" style="">
+            Beyond &#39;tabula rasa&#39; in reinforcement learning: agents that remember, adapt, and generalize
+          </h2>
+          <h3 class="card-subtitle mb-2 text-muted text-center">
+            Louis Kirsch · Ignasi Clavera · Kate Rakelly · Chelsea Finn · Jane Wang · Jeff Clune
+          </h3>
+          <div class="text-center p-3">
+            <a class="card-link" data-toggle="collapse" role="button" href="#details">
+            Description
+            </a>
+            <a href="http://www.betr-rl.ml/2020/" target="_blank"  class="card-link">
+            Site
+            </a>
+            <a href="" target="_blank"  class="card-link">
+            Video
+            </a>
+            <a href="chat.html?room=channel/workshop_betrrl" target="_blank"  class="card-link">
+            Chat
+            </a>
+          </div>
+          <div class="text-center text-muted">
+            (Note: Workshop posters and instructions are on the workshop site.)
+          </div>
+        </div>
+      </div>
+      <div id="details" class="pp-card m-3 collapse">
+        <div class="card-body">
+          <p class="card-text">
+          <div id="abstractExample">
+            <span class="font-weight-bold">Description:</span>
+            Recent work has demonstrated that current reinforcement learning methods are able to master complex tasks given enough resources. However, these successes have mainly been confined to single and unchanging environments. By contrast, the real world is both complex and dynamic, rendering it impossible to anticipate each new scenario. Many standard learning approaches require tremendous resources in data and compute to re-train. However, learning also offers the potential to develop versatile agents that adapt and continue to learn across environment changes and shifting goals and feedback.  To achieve this, agents must be able to apply knowledge gained in past experience to the situation at hand. We aim to bring together areas of research that provide different perspectives on how to extract and apply this knowledge. <br>The BeTR-RL workshop aims to bring together researchers from different backgrounds with a common interest in how to extend current reinforcement learning algorithms to operate in changing environments and tasks. Specifically, we are interested in the following lines of work: leveraging previous experience to learn representations or learning algorithms that transfer to new tasks (transfer and meta-learning), generalizing to new scenarios without any explicit adaptation (multi-task and goal-conditioned RL), and learning new capabilities while retaining the previously learned skills (continual learning). The workshop aims at further developing these research directions while determining similarities and trade-offs.
+          </div>
+          </p>
+          <p></p>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
+    <!-- SlidesLive -->
+    <div class="container" style="background-color:white; padding: 0px;">
+    <div class="row m-2">
+      <div class="col-md-7 col-xs-12 my-auto p-2" >
+        <div id="presentation-embed-38915748" class="slp my-auto"></div>
+        <script src='https://slideslive.com/embed_presentation.js'></script>
+        <script>
+          embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+          presentationId: '38915748',
+          autoPlay: false, // change to true to autoplay the embedded presentation
+          verticalEnabled: true,
+          verticalWhenWidthLte: 2000,
+          allowHiddenControlsWhenPaused: true,
+          hideTitle: true
+          });
+        </script>
+      </div>
+      <!-- SlidesLive -->
+      <div class="container" style="background-color:white; padding: 0px;">
+        <div class="row m-2">
+          <div class="col-md-7 col-xs-12 my-auto p-2" >
+            <div id="presentation-embed-38915748" class="slp my-auto"></div>
+            <script src='https://slideslive.com/embed_presentation.js'></script>
+            <script>
+              embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+              presentationId: '38915748',
+              autoPlay: false, // change to true to autoplay the embedded presentation
+              verticalEnabled: true,
+              verticalWhenWidthLte: 2000,
+              allowHiddenControlsWhenPaused: true,
+              hideTitle: true
+              });
+            </script>
+          </div>
+          <div class="col-md-5 col-xs-12 p-2">
+            <div id="gitter" class="slp">
+              <center>
+                <iframe frameborder="0" src="https://iclr.rocket.chat/channel/workshop_betrrl?layout=embedded" height="700px" width="100%" ></iframe>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="text/javascript">
-
   $(document).ready(function () {
-
+  
   if (location.hash !== '') {
   $('a[href="' + location.hash + '"]').tab('show');
   }
-
+  
   $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
   var hash = $(e.target).attr("href");
   if (hash.substr(0,1) == "#") {
@@ -222,12 +209,11 @@
   $(window).scrollTop(position);
   }
   });
-
+  
   });
-
+  
   <!-- Global site tag (gtag.js) - Google Analytics -->
 </script>
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -236,5 +222,11 @@
   
   gtag('config', 'UA-163955028-1');
 </script>
+<footer class="footer bg-light p-4">
+  <div class="container">
+    <p class="float-right"><a href="#">Back to Top</a></p>
+    <p class="text-center">© 2020 International Conference on Learning Representations</p>
+  </div>
+</footer>
   </body>
 </html>

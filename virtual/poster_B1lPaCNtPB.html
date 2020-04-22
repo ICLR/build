@@ -2,71 +2,51 @@
 <html lang="en">
   
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="static/css/main.css">
-
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
-            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
-            crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
-    <script src="static/js/typeahead.bundle.js"></script>
-
-    <link rel="stylesheet" href="static/css/typeahead.css">
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-
-
-    <link rel="stylesheet" href="static/css/lazy_load.css">
-    <script src="static/js/lazy_load.js"></script>
-
-    <title> ICLR: Real or Not Real, that is the Question </title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="static/css/main.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+    integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="static/js/typeahead.bundle.js"></script>
+  <link rel="stylesheet" href="static/css/typeahead.css">
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/lazy_load.css">
+  <script src="static/js/lazy_load.js"></script>
+  <title> ICLR: Real or Not Real, that is the Question </title>
 </head>
-
-
   <body >
-
-<!-- NAV -->
-
+    <!-- NAV -->
+    
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
-            integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
-            crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
-            integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
-            crossorigin="anonymous">
-    </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+  integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
+  integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
+  crossorigin="anonymous"></script>
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="index.html">
-      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
-
+    <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
       <ul class="navbar-nav ml-auto">
@@ -97,10 +77,12 @@
         
         <li class="nav-item ">
           
-          <a class="nav-link" target="_blank" href="https://iclr.6connex.com/event/VirtualEvent/"><nobr>Sponsor Hall <svg class="bi bi-box-arrow-up-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <a class="nav-link" target="_blank" href="https://iclr.6connex.com/event/VirtualEvent/">
+            <nobr>Sponsor Hall <svg class="bi bi-box-arrow-up-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 003 14.5h8a1.5 1.5 0 001.5-1.5V9a.5.5 0 00-1 0v4a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V5a.5.5 0 01.5-.5h4a.5.5 0 000-1H3A1.5 1.5 0 001.5 5v8zm7-11a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V2.5H9a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
     <path fill-rule="evenodd" d="M14.354 1.646a.5.5 0 010 .708l-8 8a.5.5 0 01-.708-.708l8-8a.5.5 0 01.708 0z" clip-rule="evenodd"/>
-</svg></nobr></a>
+</svg></nobr>
+          </a>
           
         </li>
         
@@ -126,254 +108,239 @@
     </div>
   </div>
 </nav>
-
-
-<div class="container">
-
- <!-- Title -->
-
- <div class="pp-card m-3" style="">
-   <div class="card-header">
-     <h2 class="card-title main-title text-center" style="">
-       Real or Not Real, that is the Question
-     </h2>
-
-     <h3 class="card-subtitle mb-2 text-muted text-center">
-       
-       Yuanbo Xiangli,
-       
-       Yubin Deng,
-       
-       Bo Dai,
-       
-       Chen Change Loy,
-       
-       Dahua Lin
-       
-     </h3>
-
-
-
-     <div class="text-center p-3">
-       <a class="card-link" data-toggle="collapse" role="button" href="#details">
-           Abstract
-       </a>
-
-       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/42ef4a12b464ee694dcdcc0c7b25c618f8f014ea.pdf">
-           Paper
-       </a>
-       
-       <a href="https://github.com/kam1107/RealnessGAN" target="_blank"  class="card-link">
-           Code
-       </a>
-       
-
-       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=B1lPaCNtPB">
-           Reviews
-       </a>
-
-       <!--  -->
-       <!-- <a href="" target="_blank"  class="card-link"> -->
-       <!--   Slides -->
-       <!-- </a> -->
-       <!--  -->
-
-       <!-- </div> -->
-
-     <!-- <div class="text-center "> -->
-
-       <a href="chat.html?room=channel/poster_30" target="_blank"  class="card-link">
-           Chat
-       </a>
-
-
-
-
-     </div>
-
-     <div class=" text-center text-muted text-monospace">
-       
-       <div> Mon Session 2  (08:00-10:00 GMT) 
-[<a href="https://us02web.zoom.us/j/89425692327?pwd=QXZzQll6cmlYZUlyVFc4dHNqR1Eydz09" target="_blank"  class="card-link">Live</a>] 
-       </div>
-       
-       <div> Mon Session 3  (12:00-14:00 GMT) 
-[<a href="https://us02web.zoom.us/j/84263238113?pwd=NjdLbjN2dDdHVTdJbDRvYmRtQnV5QT09" target="_blank"  class="card-link">Live</a>] 
-       </div>
-       
-       <div> Monday: Generative models 
-       </div>
-       
-     </div>
-
-   </div>
-
-   </div>
-
- <div id="details" class="pp-card m-3 collapse">
-   <div class="card-body">
-     <p class="card-text">
-       <div id="abstractExample">
-         <span class="font-weight-bold">Abstract:</span>
-         While generative adversarial networks (GAN) have been widely adopted in various topics, in this paper we generalize the standard GAN to a new perspective by treating realness as a random variable that can be estimated from multiple angles. In this generalized framework, referred to as RealnessGAN, the discriminator outputs a distribution as the measure of realness. While RealnessGAN shares similar theoretical guarantees with the standard GAN, it provides more insights on adversarial learning. More importantly, compared to multiple baselines, RealnessGAN provides stronger guidance for the generator, achieving improvements on both synthetic and real-world datasets. Moreover, it enables the basic DCGAN architecture to generate realistic images at 1024*1024 resolution when trained from scratch.
-       </div>
-
-     </p>
-
-     <p></p>
-     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-       
-       <a href="papers.html?filter=keywords&search=adversarial" class="text-secondary text-decoration-none">adversarial</a>,
-       
-       <a href="papers.html?filter=keywords&search=generalization" class="text-secondary text-decoration-none">generalization</a>,
-       
-       <a href="papers.html?filter=keywords&search=gan" class="text-secondary text-decoration-none">gan</a>
-       
-     </p>
-   </div>
- </div>
-
-</div>
-
-<!-- SlidesLive -->
- <div class="container" style="background-color:white; padding: 0px;">
-  <div class="row m-2">
-    <div class="col-md-7 col-xs-12 my-auto p-2" >
-      <div id="presentation-embed-38915748" class="slp my-auto"></div>
-      <script src='https://slideslive.com/embed_presentation.js'></script>
-      <script>
-        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
-        presentationId: '38915748',
-        autoPlay: false, // change to true to autoplay the embedded presentation
-        verticalEnabled: true,
-        verticalWhenWidthLte: 2000,
-        allowHiddenControlsWhenPaused: true,
-        hideTitle: true
-        });
-      </script>
-    </div>
-
-    <div class="col-md-5 col-xs-12 p-2">
-        <div id="gitter" class="slp">
-          <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_30?layout=embedded" height="700px" width="100%" ></iframe>
-          </center>
+    <div class="container">
+      <!-- Title -->
+      <div class="pp-card m-3" style="">
+        <div class="card-header">
+          <h2 class="card-title main-title text-center" style="">
+            Real or Not Real, that is the Question
+          </h2>
+          <h3 class="card-subtitle mb-2 text-muted text-center">
+            
+            <a href="papers.html?filter=authors&search=Yuanbo Xiangli" class="text-muted">Yuanbo Xiangli</a>,
+            
+            <a href="papers.html?filter=authors&search=Yubin Deng" class="text-muted">Yubin Deng</a>,
+            
+            <a href="papers.html?filter=authors&search=Bo Dai" class="text-muted">Bo Dai</a>,
+            
+            <a href="papers.html?filter=authors&search=Chen Change Loy" class="text-muted">Chen Change Loy</a>,
+            
+            <a href="papers.html?filter=authors&search=Dahua Lin" class="text-muted">Dahua Lin</a>
+            
+          </h3>
+          <p class="card-text text-center"><span class="">Keywords:</span>
+            
+            <a href="papers.html?filter=keywords&search=adversarial" class="text-secondary text-decoration-none">adversarial</a>,
+            
+            <a href="papers.html?filter=keywords&search=generalization" class="text-secondary text-decoration-none">generalization</a>,
+            
+            <a href="papers.html?filter=keywords&search=gan" class="text-secondary text-decoration-none">gan</a>
+            
+          </p>
+          <div class="text-center p-3">
+            <a class="card-link" data-toggle="collapse" role="button" href="#details">
+            Abstract
+            </a>
+            <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/42ef4a12b464ee694dcdcc0c7b25c618f8f014ea.pdf">
+            Paper
+            </a>
+            
+            <a href="https://github.com/kam1107/RealnessGAN" target="_blank"  class="card-link">
+            Code
+            </a>
+            
+            <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=B1lPaCNtPB">
+            Reviews
+            </a>
+            <!--  -->
+            <!-- <a href="" target="_blank"  class="card-link"> -->
+            <!--   Slides -->
+            <!-- </a> -->
+            <!--  -->
+            <!-- </div> -->
+            <!-- <div class="text-center "> -->
+            <a href="chat.html?room=channel/poster_30" target="_blank"  class="card-link">
+            Chat
+            </a>
+          </div>
+          <div class=" text-center text-muted text-monospace">
+            
+            <div> Mon Session 2  (08:00-10:00 GMT) 
+              [<a href="https://us02web.zoom.us/j/89425692327?pwd=QXZzQll6cmlYZUlyVFc4dHNqR1Eydz09" target="_blank"  class="card-link">Live</a>] 
+            </div>
+            
+            <div> Mon Session 3  (12:00-14:00 GMT) 
+              [<a href="https://us02web.zoom.us/j/84263238113?pwd=NjdLbjN2dDdHVTdJbDRvYmRtQnV5QT09" target="_blank"  class="card-link">Live</a>] 
+            </div>
+            
+            <div> Monday: Generative models 
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div id="details" class="pp-card m-3 collapse">
+        <div class="card-body">
+          <p class="card-text">
+          <div id="abstractExample">
+            <span class="font-weight-bold">Abstract:</span>
+            While generative adversarial networks (GAN) have been widely adopted in various topics, in this paper we generalize the standard GAN to a new perspective by treating realness as a random variable that can be estimated from multiple angles. In this generalized framework, referred to as RealnessGAN, the discriminator outputs a distribution as the measure of realness. While RealnessGAN shares similar theoretical guarantees with the standard GAN, it provides more insights on adversarial learning. More importantly, compared to multiple baselines, RealnessGAN provides stronger guidance for the generator, achieving improvements on both synthetic and real-world datasets. Moreover, it enables the basic DCGAN architecture to generate realistic images at 1024*1024 resolution when trained from scratch.
+          </div>
+          </p>
+          <p></p>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-  <!-- Recs -->
-  <p></p>
-
-
-  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
-  <center>
-    <h2> Similar Papers </h2>
-</div>
-<p></p>
-
-<div  class="container" >
-  <div class="row">
-
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_HJeOekHKwr.html" class="text-muted">
-              <h5 class="card-title" align="center">Smoothness and Stability in GANs</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Casey Chu,
-              
-              Kentaro Minami,
-              
-              Kenji Fukumizu,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJeOekHKwr.png" width="80%"/></center>
+    <!-- SlidesLive -->
+    <div class="container" style="background-color:white; padding: 0px;">
+    <div class="row m-2">
+      <div class="col-md-7 col-xs-12 my-auto p-2" >
+        <div id="presentation-embed-38915748" class="slp my-auto"></div>
+        <script src='https://slideslive.com/embed_presentation.js'></script>
+        <script>
+          embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+          presentationId: '38915748',
+          autoPlay: false, // change to true to autoplay the embedded presentation
+          verticalEnabled: true,
+          verticalWhenWidthLte: 2000,
+          allowHiddenControlsWhenPaused: true,
+          hideTitle: true
+          });
+        </script>
+      </div>
+      <!-- SlidesLive -->
+      <div class="container" style="background-color:white; padding: 0px;">
+        <div class="row m-2">
+          <div class="col-md-7 col-xs-12 my-auto p-2" >
+            <div id="presentation-embed-38915748" class="slp my-auto"></div>
+            <script src='https://slideslive.com/embed_presentation.js'></script>
+            <script>
+              embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+              presentationId: '38915748',
+              autoPlay: false, // change to true to autoplay the embedded presentation
+              verticalEnabled: true,
+              verticalWhenWidthLte: 2000,
+              allowHiddenControlsWhenPaused: true,
+              hideTitle: true
+              });
+            </script>
+          </div>
+          <div class="col-md-5 col-xs-12 p-2">
+            <div id="gitter" class="slp">
+              <center>
+                <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_30?layout=embedded" height="700px" width="100%" ></iframe>
+              </center>
+            </div>
           </div>
         </div>
       </div>
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_S1lxKlSKPH.html" class="text-muted">
-              <h5 class="card-title" align="center">Consistency Regularization for Generative Adversarial Networks</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Han Zhang,
-              
-              Zizhao Zhang,
-              
-              Augustus Odena,
-              
-              Honglak Lee,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/S1lxKlSKPH.png" width="80%"/></center>
+    </div>
+    <!-- Recs -->
+    <p></p>
+    <div  class="container" style="padding-bottom: 30px; padding-top:30px">
+      <center>
+        <h2> Similar Papers </h2>
+      </center>
+    </div>
+    <p></p>
+    <div  class="container" >
+      <div class="row">
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_HJeOekHKwr.html" class="text-muted">
+                <h5 class="card-title" align="center">Smoothness and Stability in GANs</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Casey Chu,
+                
+                Kentaro Minami,
+                
+                Kenji Fukumizu,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJeOekHKwr.png" width="80%"/></center>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_Hye1RJHKwB.html" class="text-muted">
-              <h5 class="card-title" align="center">Training Generative Adversarial Networks from Incomplete Observations using Factorised Discriminators</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Daniel Stoller,
-              
-              Sebastian Ewert,
-              
-              Simon Dixon,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Hye1RJHKwB.png" width="80%"/></center>
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_S1lxKlSKPH.html" class="text-muted">
+                <h5 class="card-title" align="center">Consistency Regularization for Generative Adversarial Networks</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Han Zhang,
+                
+                Zizhao Zhang,
+                
+                Augustus Odena,
+                
+                Honglak Lee,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/S1lxKlSKPH.png" width="80%"/></center>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_H1x5wRVtvS.html" class="text-muted">
-              <h5 class="card-title" align="center">Variational Hetero-Encoder Randomized GANs for Joint Image-Text Modeling</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Hao Zhang,
-              
-              Bo Chen,
-              
-              Long Tian,
-              
-              Zhengjue Wang,
-              
-              Mingyuan Zhou,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1x5wRVtvS.png" width="80%"/></center>
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_Hye1RJHKwB.html" class="text-muted">
+                <h5 class="card-title" align="center">Training Generative Adversarial Networks from Incomplete Observations using Factorised Discriminators</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Daniel Stoller,
+                
+                Sebastian Ewert,
+                
+                Simon Dixon,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/Hye1RJHKwB.png" width="80%"/></center>
+            </div>
           </div>
         </div>
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_H1x5wRVtvS.html" class="text-muted">
+                <h5 class="card-title" align="center">Variational Hetero-Encoder Randomized GANs for Joint Image-Text Modeling</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Hao Zhang,
+                
+                Bo Chen,
+                
+                Long Tian,
+                
+                Zhengjue Wang,
+                
+                Mingyuan Zhou,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1x5wRVtvS.png" width="80%"/></center>
+            </div>
+          </div>
+        </div>
+        
       </div>
-      
-  </DIV>
-</DIV>
+    </div>
     <script type="text/javascript">
-
   $(document).ready(function () {
-
+  
   if (location.hash !== '') {
   $('a[href="' + location.hash + '"]').tab('show');
   }
-
+  
   $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
   var hash = $(e.target).attr("href");
   if (hash.substr(0,1) == "#") {
@@ -382,12 +349,11 @@
   $(window).scrollTop(position);
   }
   });
-
+  
   });
-
+  
   <!-- Global site tag (gtag.js) - Google Analytics -->
 </script>
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -396,4 +362,11 @@
   
   gtag('config', 'UA-163955028-1');
 </script>
-</body>
+<footer class="footer bg-light p-4">
+  <div class="container">
+    <p class="float-right"><a href="#">Back to Top</a></p>
+    <p class="text-center">© 2020 International Conference on Learning Representations</p>
+  </div>
+</footer>
+  </body>
+</html>

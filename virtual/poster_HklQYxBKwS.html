@@ -2,71 +2,51 @@
 <html lang="en">
   
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="static/css/main.css">
-
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
-            integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
-            crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
-    <script src="static/js/typeahead.bundle.js"></script>
-
-    <link rel="stylesheet" href="static/css/typeahead.css">
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-
-
-    <link rel="stylesheet" href="static/css/lazy_load.css">
-    <script src="static/js/lazy_load.js"></script>
-
-    <title> ICLR: Neural tangent kernels, transportation mappings, and universal approximation </title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="static/css/main.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+    integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="static/js/typeahead.bundle.js"></script>
+  <link rel="stylesheet" href="static/css/typeahead.css">
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/lazy_load.css">
+  <script src="static/js/lazy_load.js"></script>
+  <title> ICLR: Neural tangent kernels, transportation mappings, and universal approximation </title>
 </head>
-
-
   <body >
-
-<!-- NAV -->
-
+    <!-- NAV -->
+    
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
-            integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
-            crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
-            integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
-            crossorigin="anonymous">
-    </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+  integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
+  integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
+  crossorigin="anonymous"></script>
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
   <div class="container">
     <a class="navbar-brand" href="index.html">
-      <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
-
+    <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
       <ul class="navbar-nav ml-auto">
@@ -97,10 +77,12 @@
         
         <li class="nav-item ">
           
-          <a class="nav-link" target="_blank" href="https://iclr.6connex.com/event/VirtualEvent/"><nobr>Sponsor Hall <svg class="bi bi-box-arrow-up-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <a class="nav-link" target="_blank" href="https://iclr.6connex.com/event/VirtualEvent/">
+            <nobr>Sponsor Hall <svg class="bi bi-box-arrow-up-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 003 14.5h8a1.5 1.5 0 001.5-1.5V9a.5.5 0 00-1 0v4a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V5a.5.5 0 01.5-.5h4a.5.5 0 000-1H3A1.5 1.5 0 001.5 5v8zm7-11a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V2.5H9a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
     <path fill-rule="evenodd" d="M14.354 1.646a.5.5 0 010 .708l-8 8a.5.5 0 01-.708-.708l8-8a.5.5 0 01.708 0z" clip-rule="evenodd"/>
-</svg></nobr></a>
+</svg></nobr>
+          </a>
           
         </li>
         
@@ -126,240 +108,225 @@
     </div>
   </div>
 </nav>
+    <div class="container">
+      <!-- Title -->
+      <div class="pp-card m-3" style="">
+        <div class="card-header">
+          <h2 class="card-title main-title text-center" style="">
+            Neural tangent kernels, transportation mappings, and universal approximation
+          </h2>
+          <h3 class="card-subtitle mb-2 text-muted text-center">
+            
+            <a href="papers.html?filter=authors&search=Ziwei Ji" class="text-muted">Ziwei Ji</a>,
+            
+            <a href="papers.html?filter=authors&search=Matus Telgarsky" class="text-muted">Matus Telgarsky</a>,
+            
+            <a href="papers.html?filter=authors&search=Ruicheng Xian" class="text-muted">Ruicheng Xian</a>
+            
+          </h3>
+          <p class="card-text text-center"><span class="">Keywords:</span>
+            
+            <a href="papers.html?filter=keywords&search=universal approximation" class="text-secondary text-decoration-none">universal approximation</a>,
+            
+            <a href="papers.html?filter=keywords&search=relu networks" class="text-secondary text-decoration-none">relu networks</a>,
+            
+            <a href="papers.html?filter=keywords&search=neural tangent kernel" class="text-secondary text-decoration-none">neural tangent kernel</a>
+            
+          </p>
+          <div class="text-center p-3">
+            <a class="card-link" data-toggle="collapse" role="button" href="#details">
+            Abstract
+            </a>
+            <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/e51df8dc0f70e9c369628005d82e85332f09b1fb.pdf">
+            Paper
+            </a>
+            
+            <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=HklQYxBKwS">
+            Reviews
+            </a>
+            <!--  -->
+            <!-- <a href="" target="_blank"  class="card-link"> -->
+            <!--   Slides -->
+            <!-- </a> -->
+            <!--  -->
+            <!-- </div> -->
+            <!-- <div class="text-center "> -->
+            <a href="chat.html?room=channel/poster_280" target="_blank"  class="card-link">
+            Chat
+            </a>
+          </div>
+          <div class=" text-center text-muted text-monospace">
+            
+            <div> Mon Session 4  (17:00-19:00 GMT) 
+              [<a href="https://us02web.zoom.us/j/82226118847?pwd=TFNjU0FyOGhkYmpKMzFYQjJmeDhuUT09" target="_blank"  class="card-link">Live</a>] 
+            </div>
+            
+            <div> Mon Session 5  (20:00-22:00 GMT) 
+              [<a href="https://us02web.zoom.us/j/87093053285?pwd=NC9zaWhyOWcvQTR5TEplZ2tvdEZydz09" target="_blank"  class="card-link">Live</a>] 
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div id="details" class="pp-card m-3 collapse">
+        <div class="card-body">
+          <p class="card-text">
+          <div id="abstractExample">
+            <span class="font-weight-bold">Abstract:</span>
+            This paper establishes rates of universal approximation for the shallow neural tangent kernel (NTK): network weights are only allowed microscopic changes from random initialization, which entails that activations are mostly unchanged, and the network is nearly equivalent to its linearization. Concretely, the paper has two main contributions: a generic scheme to approximate functions with the NTK by sampling from transport mappings between the initial weights and their desired values, and the construction of transport mappings via Fourier transforms. Regarding the first contribution, the proof scheme provides another perspective on how the NTK regime arises from rescaling: redundancy in the weights due to resampling allows individual weights to be scaled down. Regarding the second contribution, the most notable transport mapping asserts that roughly $1 / \delta^{10d}$ nodes are sufficient to approximate continuous functions, where $\delta$ depends on the continuity properties of the target function. By contrast, nearly the same proof yields a bound of $1 / \delta^{2d}$ for shallow ReLU networks; this gap suggests a tantalizing direction for future work, separating shallow ReLU networks and their linearization.
 
-
-<div class="container">
-
- <!-- Title -->
-
- <div class="pp-card m-3" style="">
-   <div class="card-header">
-     <h2 class="card-title main-title text-center" style="">
-       Neural tangent kernels, transportation mappings, and universal approximation
-     </h2>
-
-     <h3 class="card-subtitle mb-2 text-muted text-center">
-       
-       Ziwei Ji,
-       
-       Matus Telgarsky,
-       
-       Ruicheng Xian
-       
-     </h3>
-
-
-
-     <div class="text-center p-3">
-       <a class="card-link" data-toggle="collapse" role="button" href="#details">
-           Abstract
-       </a>
-
-       <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf/e51df8dc0f70e9c369628005d82e85332f09b1fb.pdf">
-           Paper
-       </a>
-       
-
-       <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=HklQYxBKwS">
-           Reviews
-       </a>
-
-       <!--  -->
-       <!-- <a href="" target="_blank"  class="card-link"> -->
-       <!--   Slides -->
-       <!-- </a> -->
-       <!--  -->
-
-       <!-- </div> -->
-
-     <!-- <div class="text-center "> -->
-
-       <a href="chat.html?room=channel/poster_280" target="_blank"  class="card-link">
-           Chat
-       </a>
-
-
-
-
-     </div>
-
-     <div class=" text-center text-muted text-monospace">
-       
-       <div> Mon Session 4  (17:00-19:00 GMT) 
-[<a href="https://us02web.zoom.us/j/82226118847?pwd=TFNjU0FyOGhkYmpKMzFYQjJmeDhuUT09" target="_blank"  class="card-link">Live</a>] 
-       </div>
-       
-       <div> Mon Session 5  (20:00-22:00 GMT) 
-[<a href="https://us02web.zoom.us/j/87093053285?pwd=NC9zaWhyOWcvQTR5TEplZ2tvdEZydz09" target="_blank"  class="card-link">Live</a>] 
-       </div>
-       
-     </div>
-
-   </div>
-
-   </div>
-
- <div id="details" class="pp-card m-3 collapse">
-   <div class="card-body">
-     <p class="card-text">
-       <div id="abstractExample">
-         <span class="font-weight-bold">Abstract:</span>
-         This paper establishes rates of universal approximation for the shallow neural tangent kernel (NTK): network weights are only allowed microscopic changes from random initialization, which entails that activations are mostly unchanged, and the network is nearly equivalent to its linearization. Concretely, the paper has two main contributions: a generic scheme to approximate functions with the NTK by sampling from transport mappings between the initial weights and their desired values, and the construction of transport mappings via Fourier transforms. Regarding the first contribution, the proof scheme provides another perspective on how the NTK regime arises from rescaling: redundancy in the weights due to resampling allows individual weights to be scaled down. Regarding the second contribution, the most notable transport mapping asserts that roughly $1 / \delta^{10d}$ nodes are sufficient to approximate continuous functions, where $\delta$ depends on the continuity properties of the target function. By contrast, nearly the same proof yields a bound of $1 / \delta^{2d}$ for shallow ReLU networks; this gap suggests a tantalizing direction for future work, separating shallow ReLU networks and their linearization.
-
-       </div>
-
-     </p>
-
-     <p></p>
-     <p class="card-text"><span class="font-weight-bold">Keywords:</span>
-       
-       <a href="papers.html?filter=keywords&search=universal approximation" class="text-secondary text-decoration-none">universal approximation</a>,
-       
-       <a href="papers.html?filter=keywords&search=relu networks" class="text-secondary text-decoration-none">relu networks</a>,
-       
-       <a href="papers.html?filter=keywords&search=neural tangent kernel" class="text-secondary text-decoration-none">neural tangent kernel</a>
-       
-     </p>
-   </div>
- </div>
-
-</div>
-
-<!-- SlidesLive -->
- <div class="container" style="background-color:white; padding: 0px;">
-  <div class="row m-2">
-    <div class="col-md-7 col-xs-12 my-auto p-2" >
-      <div id="presentation-embed-38915748" class="slp my-auto"></div>
-      <script src='https://slideslive.com/embed_presentation.js'></script>
-      <script>
-        embed = new SlidesLiveEmbed('presentation-embed-38915748', {
-        presentationId: '38915748',
-        autoPlay: false, // change to true to autoplay the embedded presentation
-        verticalEnabled: true,
-        verticalWhenWidthLte: 2000,
-        allowHiddenControlsWhenPaused: true,
-        hideTitle: true
-        });
-      </script>
-    </div>
-
-    <div class="col-md-5 col-xs-12 p-2">
-        <div id="gitter" class="slp">
-          <center>
-             <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_280?layout=embedded" height="700px" width="100%" ></iframe>
-          </center>
+          </div>
+          </p>
+          <p></p>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-  <!-- Recs -->
-  <p></p>
-
-
-  <div  class="container" style="padding-bottom: 30px; padding-top:30px">
-  <center>
-    <h2> Similar Papers </h2>
-</div>
-<p></p>
-
-<div  class="container" >
-  <div class="row">
-
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_HygegyrYwH.html" class="text-muted">
-              <h5 class="card-title" align="center">Polylogarithmic width suffices for gradient descent to achieve arbitrarily small test error with shallow ReLU networks</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Ziwei Ji,
-              
-              Matus Telgarsky,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HygegyrYwH.png" width="80%"/></center>
+    <!-- SlidesLive -->
+    <div class="container" style="background-color:white; padding: 0px;">
+    <div class="row m-2">
+      <div class="col-md-7 col-xs-12 my-auto p-2" >
+        <div id="presentation-embed-38915748" class="slp my-auto"></div>
+        <script src='https://slideslive.com/embed_presentation.js'></script>
+        <script>
+          embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+          presentationId: '38915748',
+          autoPlay: false, // change to true to autoplay the embedded presentation
+          verticalEnabled: true,
+          verticalWhenWidthLte: 2000,
+          allowHiddenControlsWhenPaused: true,
+          hideTitle: true
+          });
+        </script>
+      </div>
+      <!-- SlidesLive -->
+      <div class="container" style="background-color:white; padding: 0px;">
+        <div class="row m-2">
+          <div class="col-md-7 col-xs-12 my-auto p-2" >
+            <div id="presentation-embed-38915748" class="slp my-auto"></div>
+            <script src='https://slideslive.com/embed_presentation.js'></script>
+            <script>
+              embed = new SlidesLiveEmbed('presentation-embed-38915748', {
+              presentationId: '38915748',
+              autoPlay: false, // change to true to autoplay the embedded presentation
+              verticalEnabled: true,
+              verticalWhenWidthLte: 2000,
+              allowHiddenControlsWhenPaused: true,
+              hideTitle: true
+              });
+            </script>
+          </div>
+          <div class="col-md-5 col-xs-12 p-2">
+            <div id="gitter" class="slp">
+              <center>
+                <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_280?layout=embedded" height="700px" width="100%" ></iframe>
+              </center>
+            </div>
           </div>
         </div>
       </div>
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_B1guLAVFDB.html" class="text-muted">
-              <h5 class="card-title" align="center">Span Recovery for Deep Neural Networks with Applications to Input Obfuscation</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Rajesh Jayaram,
-              
-              David P. Woodruff,
-              
-              Qiuyi Zhang,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/B1guLAVFDB.png" width="80%"/></center>
+    </div>
+    <!-- Recs -->
+    <p></p>
+    <div  class="container" style="padding-bottom: 30px; padding-top:30px">
+      <center>
+        <h2> Similar Papers </h2>
+      </center>
+    </div>
+    <p></p>
+    <div  class="container" >
+      <div class="row">
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_HygegyrYwH.html" class="text-muted">
+                <h5 class="card-title" align="center">Polylogarithmic width suffices for gradient descent to achieve arbitrarily small test error with shallow ReLU networks</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Ziwei Ji,
+                
+                Matus Telgarsky,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HygegyrYwH.png" width="80%"/></center>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_HJlxIJBFDr.html" class="text-muted">
-              <h5 class="card-title" align="center">Sample Efficient Policy Gradient Methods with Recursive Variance Reduction</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Pan Xu,
-              
-              Felicia Gao,
-              
-              Quanquan Gu,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJlxIJBFDr.png" width="80%"/></center>
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_B1guLAVFDB.html" class="text-muted">
+                <h5 class="card-title" align="center">Span Recovery for Deep Neural Networks with Applications to Input Obfuscation</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Rajesh Jayaram,
+                
+                David P. Woodruff,
+                
+                Qiuyi Zhang,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/B1guLAVFDB.png" width="80%"/></center>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="col-md-4 col-xs-6">
-        <div class="pp-card" >
-          <div class="pp-card-header" class="text-muted">
-            <a href="poster_H1gBsgBYwH.html" class="text-muted">
-              <h5 class="card-title" align="center">Generalization of Two-layer Neural Networks: An Asymptotic Viewpoint</h5></a>
-            <h6 class="card-subtitle text-muted" align="center">
-              
-              Jimmy Ba,
-              
-              Murat Erdogdu,
-              
-              Taiji Suzuki,
-              
-              Denny Wu,
-              
-              Tianzong Zhang,
-              
-            </h6>
-
-            <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1gBsgBYwH.png" width="80%"/></center>
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_HJlxIJBFDr.html" class="text-muted">
+                <h5 class="card-title" align="center">Sample Efficient Policy Gradient Methods with Recursive Variance Reduction</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Pan Xu,
+                
+                Felicia Gao,
+                
+                Quanquan Gu,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJlxIJBFDr.png" width="80%"/></center>
+            </div>
           </div>
         </div>
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_H1gBsgBYwH.html" class="text-muted">
+                <h5 class="card-title" align="center">Generalization of Two-layer Neural Networks: An Asymptotic Viewpoint</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Jimmy Ba,
+                
+                Murat Erdogdu,
+                
+                Taiji Suzuki,
+                
+                Denny Wu,
+                
+                Tianzong Zhang,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/H1gBsgBYwH.png" width="80%"/></center>
+            </div>
+          </div>
+        </div>
+        
       </div>
-      
-  </DIV>
-</DIV>
+    </div>
     <script type="text/javascript">
-
   $(document).ready(function () {
-
+  
   if (location.hash !== '') {
   $('a[href="' + location.hash + '"]').tab('show');
   }
-
+  
   $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
   var hash = $(e.target).attr("href");
   if (hash.substr(0,1) == "#") {
@@ -368,12 +335,11 @@
   $(window).scrollTop(position);
   }
   });
-
+  
   });
-
+  
   <!-- Global site tag (gtag.js) - Google Analytics -->
 </script>
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -382,4 +348,11 @@
   
   gtag('config', 'UA-163955028-1');
 </script>
-</body>
+<footer class="footer bg-light p-4">
+  <div class="container">
+    <p class="float-right"><a href="#">Back to Top</a></p>
+    <p class="text-center">© 2020 International Conference on Learning Representations</p>
+  </div>
+</footer>
+  </body>
+</html>
