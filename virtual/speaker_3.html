@@ -128,7 +128,7 @@
             </a>
           </div>
           <div class=" text-center text-muted text-monospace">
-            <div> Tuesday 14:00 GMT <a href="" target="_blank"  class="card-link">
+            <div> Tuesday <span class="session_times">(14:00-15:00 GMT)</span> <a href="" target="_blank"  class="card-link">
               Live QA       </a>
             </div>
           </div>
@@ -207,5 +207,12 @@
     <p class="text-center">© 2020 International Conference on Learning Representations</p>
   </div>
 </footer>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
+
   </body>
 </html>

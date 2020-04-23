@@ -128,7 +128,7 @@
             </a>
           </div>
           <div class=" text-center text-muted text-monospace">
-            <div> Thursday 16:00 GMT <a href="" target="_blank"  class="card-link">
+            <div> Thursday <span class="session_times">(16:00-17:00 GMT)</span> <a href="" target="_blank"  class="card-link">
               Live QA       </a>
             </div>
           </div>
@@ -208,5 +208,12 @@ Yann LeCun is VP and Chief AI Scientist at Facebook and Silver Professor at NYU 
     <p class="text-center">© 2020 International Conference on Learning Representations</p>
   </div>
 </footer>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
+
   </body>
 </html>
