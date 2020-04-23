@@ -128,11 +128,7 @@
             
             <a href="papers.html?filter=keywords&search=robotics" class="text-secondary text-decoration-none">robotics</a>,
             
-            <a href="papers.html?filter=keywords&search=exploration" class="text-secondary text-decoration-none">exploration</a>,
-            
-            <a href="papers.html?filter=keywords&search=unsupervised" class="text-secondary text-decoration-none">unsupervised</a>,
-            
-            <a href="papers.html?filter=keywords&search=gan" class="text-secondary text-decoration-none">gan</a>
+            <a href="papers.html?filter=keywords&search=unsupervised" class="text-secondary text-decoration-none">unsupervised</a>
             
           </p>
           <div class="text-center p-3">
@@ -163,11 +159,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Wed Session 3  (12:00-14:00 GMT) 
+            <div> Wed Session 3  <span class="session_times">(12:00-14:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/86922983470?pwd=YkZpdy9qNG9xanJSMEc0OFdMaGc4UT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Wed Session 5  (20:00-22:00 GMT) 
+            <div> Wed Session 5  <span class="session_times">(20:00-22:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/81572558952?pwd=ZDFPdkdVZi9VZysrajUzc0pEbzN5UT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -194,7 +190,7 @@
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -366,4 +362,10 @@
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

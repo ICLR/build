@@ -128,13 +128,13 @@
           </h3>
           <p class="card-text text-center"><span class="">Keywords:</span>
             
-            <a href="papers.html?filter=keywords&search=scalability" class="text-secondary text-decoration-none">scalability</a>,
-            
             <a href="papers.html?filter=keywords&search=generalization" class="text-secondary text-decoration-none">generalization</a>,
+            
+            <a href="papers.html?filter=keywords&search=generalization error" class="text-secondary text-decoration-none">generalization error</a>,
             
             <a href="papers.html?filter=keywords&search=nlp" class="text-secondary text-decoration-none">nlp</a>,
             
-            <a href="papers.html?filter=keywords&search=generalization error" class="text-secondary text-decoration-none">generalization error</a>
+            <a href="papers.html?filter=keywords&search=scalability" class="text-secondary text-decoration-none">scalability</a>
             
           </p>
           <div class="text-center p-3">
@@ -161,11 +161,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Wed Session 1  (05:00-07:00 GMT) 
+            <div> Wed Session 1  <span class="session_times">(05:00-07:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/82933999659?pwd=ZkU0RjhFOVI5M1VDWEFJTS92Zi84UT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Wed Session 4  (17:00-19:00 GMT) 
+            <div> Wed Session 4  <span class="session_times">(17:00-19:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/89057825770?pwd=WmFmNU5yZWJpQWhyWTZETUptdkVCUT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -189,7 +189,7 @@
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -343,4 +343,10 @@
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

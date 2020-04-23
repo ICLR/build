@@ -126,13 +126,15 @@
           </h3>
           <p class="card-text text-center"><span class="">Keywords:</span>
             
-            <a href="papers.html?filter=keywords&search=knowledge graphs" class="text-secondary text-decoration-none">knowledge graphs</a>,
-            
-            <a href="papers.html?filter=keywords&search=logical reasoning" class="text-secondary text-decoration-none">logical reasoning</a>,
+            <a href="papers.html?filter=keywords&search=reasoning" class="text-secondary text-decoration-none">reasoning</a>,
             
             <a href="papers.html?filter=keywords&search=knowledge graph embeddings" class="text-secondary text-decoration-none">knowledge graph embeddings</a>,
             
-            <a href="papers.html?filter=keywords&search=reasoning" class="text-secondary text-decoration-none">reasoning</a>
+            <a href="papers.html?filter=keywords&search=knowledge graphs" class="text-secondary text-decoration-none">knowledge graphs</a>,
+            
+            <a href="papers.html?filter=keywords&search=graph embedding" class="text-secondary text-decoration-none">graph embedding</a>,
+            
+            <a href="papers.html?filter=keywords&search=logical reasoning" class="text-secondary text-decoration-none">logical reasoning</a>
             
           </p>
           <div class="text-center p-3">
@@ -163,11 +165,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Wed Session 1  (05:00-07:00 GMT) 
+            <div> Wed Session 1  <span class="session_times">(05:00-07:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/84009218378?pwd=c3dGMmlUKzNtdWtKUmFwWHRhZm40QT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Wed Session 3  (12:00-14:00 GMT) 
+            <div> Wed Session 3  <span class="session_times">(12:00-14:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/87205858259?pwd=cGY1bWF4YlB0bXZCQzZLU1pMT2NqQT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -192,7 +194,7 @@
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -346,4 +348,10 @@
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

@@ -128,19 +128,21 @@
           </h3>
           <p class="card-text text-center"><span class="">Keywords:</span>
             
-            <a href="papers.html?filter=keywords&search=continual learning" class="text-secondary text-decoration-none">continual learning</a>,
+            <a href="papers.html?filter=keywords&search=catastrophic forgetting" class="text-secondary text-decoration-none">catastrophic forgetting</a>,
+            
+            <a href="papers.html?filter=keywords&search=uncertainty" class="text-secondary text-decoration-none">uncertainty</a>,
             
             <a href="papers.html?filter=keywords&search=pruning" class="text-secondary text-decoration-none">pruning</a>,
             
             <a href="papers.html?filter=keywords&search=learning rate" class="text-secondary text-decoration-none">learning rate</a>,
             
-            <a href="papers.html?filter=keywords&search=regularization" class="text-secondary text-decoration-none">regularization</a>,
+            <a href="papers.html?filter=keywords&search=deep learning theory" class="text-secondary text-decoration-none">deep learning theory</a>,
             
             <a href="papers.html?filter=keywords&search=capacity" class="text-secondary text-decoration-none">capacity</a>,
             
-            <a href="papers.html?filter=keywords&search=catastrophic forgetting" class="text-secondary text-decoration-none">catastrophic forgetting</a>,
+            <a href="papers.html?filter=keywords&search=continual learning" class="text-secondary text-decoration-none">continual learning</a>,
             
-            <a href="papers.html?filter=keywords&search=uncertainty" class="text-secondary text-decoration-none">uncertainty</a>
+            <a href="papers.html?filter=keywords&search=regularization" class="text-secondary text-decoration-none">regularization</a>
             
           </p>
           <div class="text-center p-3">
@@ -171,11 +173,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Wed Session 1  (05:00-07:00 GMT) 
+            <div> Wed Session 1  <span class="session_times">(05:00-07:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/86498068526?pwd=ejRDUWNUR2t0d2d0VXE3dm4xYXBpZz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Wed Session 4  (17:00-19:00 GMT) 
+            <div> Wed Session 4  <span class="session_times">(17:00-19:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/88299866690?pwd=azRlM1FkTHllWGQ0TUo0Q3hvVDdnQT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -200,7 +202,7 @@ and retains task performance after pruning by saving binary masks per tasks. We 
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -368,4 +370,10 @@ and retains task performance after pruning by saving binary masks per tasks. We 
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

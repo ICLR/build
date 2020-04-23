@@ -134,9 +134,11 @@
           </h3>
           <p class="card-text text-center"><span class="">Keywords:</span>
             
-            <a href="papers.html?filter=keywords&search=machine translation" class="text-secondary text-decoration-none">machine translation</a>,
+            <a href="papers.html?filter=keywords&search=nlp" class="text-secondary text-decoration-none">nlp</a>,
             
-            <a href="papers.html?filter=keywords&search=attention" class="text-secondary text-decoration-none">attention</a>
+            <a href="papers.html?filter=keywords&search=attention" class="text-secondary text-decoration-none">attention</a>,
+            
+            <a href="papers.html?filter=keywords&search=machine translation" class="text-secondary text-decoration-none">machine translation</a>
             
           </p>
           <div class="text-center p-3">
@@ -167,11 +169,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Thurs Session 1  (05:00-07:00 GMT) 
+            <div> Thurs Session 1  <span class="session_times">(05:00-07:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/82088197365?pwd=UGZhSWxDc1ZsbWlKYWNTOTBOTVo0UT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Thurs Session 3  (12:00-14:00 GMT) 
+            <div> Thurs Session 3  <span class="session_times">(12:00-14:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/87022407018?pwd=YU11eWpiUUJIc00ydG5mUjQ1b2laZz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -198,7 +200,7 @@
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -378,4 +380,10 @@
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

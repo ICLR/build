@@ -130,21 +130,25 @@
           </h3>
           <p class="card-text text-center"><span class="">Keywords:</span>
             
-            <a href="papers.html?filter=keywords&search=modelbased reinforcement learning" class="text-secondary text-decoration-none">modelbased reinforcement learning</a>,
-            
-            <a href="papers.html?filter=keywords&search=selfsupervised learning" class="text-secondary text-decoration-none">selfsupervised learning</a>,
-            
-            <a href="papers.html?filter=keywords&search=unsupervised" class="text-secondary text-decoration-none">unsupervised</a>,
+            <a href="papers.html?filter=keywords&search=reinforcement learning" class="text-secondary text-decoration-none">reinforcement learning</a>,
             
             <a href="papers.html?filter=keywords&search=video prediction" class="text-secondary text-decoration-none">video prediction</a>,
             
+            <a href="papers.html?filter=keywords&search=computer vision" class="text-secondary text-decoration-none">computer vision</a>,
+            
+            <a href="papers.html?filter=keywords&search=self supervised learning" class="text-secondary text-decoration-none">self supervised learning</a>,
+            
+            <a href="papers.html?filter=keywords&search=search" class="text-secondary text-decoration-none">search</a>,
+            
+            <a href="papers.html?filter=keywords&search=graph networks" class="text-secondary text-decoration-none">graph networks</a>,
+            
             <a href="papers.html?filter=keywords&search=planning" class="text-secondary text-decoration-none">planning</a>,
             
-            <a href="papers.html?filter=keywords&search=mcts" class="text-secondary text-decoration-none">mcts</a>,
+            <a href="papers.html?filter=keywords&search=model based reinforcement learning" class="text-secondary text-decoration-none">model based reinforcement learning</a>,
             
             <a href="papers.html?filter=keywords&search=relational learning" class="text-secondary text-decoration-none">relational learning</a>,
             
-            <a href="papers.html?filter=keywords&search=graph networks" class="text-secondary text-decoration-none">graph networks</a>
+            <a href="papers.html?filter=keywords&search=unsupervised" class="text-secondary text-decoration-none">unsupervised</a>
             
           </p>
           <div class="text-center p-3">
@@ -175,11 +179,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Thurs Session 2  (08:00-10:00 GMT) 
+            <div> Thurs Session 2  <span class="session_times">(08:00-10:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/83480543383?pwd=akNFd3pCSFMwWTNqVWZXNlo3L0QxUT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Thurs Session 5  (20:00-22:00 GMT) 
+            <div> Thurs Session 5  <span class="session_times">(20:00-22:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/82578975879?pwd=cnJzakVBZjVlZFBBb3dVdjVXTkdNZz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -204,7 +208,7 @@
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -364,4 +368,10 @@
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

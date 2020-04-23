@@ -126,17 +126,17 @@
           </h3>
           <p class="card-text text-center"><span class="">Keywords:</span>
             
-            <a href="papers.html?filter=keywords&search=generalization" class="text-secondary text-decoration-none">generalization</a>,
+            <a href="papers.html?filter=keywords&search=stability" class="text-secondary text-decoration-none">stability</a>,
             
             <a href="papers.html?filter=keywords&search=pruning" class="text-secondary text-decoration-none">pruning</a>,
             
-            <a href="papers.html?filter=keywords&search=stability" class="text-secondary text-decoration-none">stability</a>,
+            <a href="papers.html?filter=keywords&search=generalization" class="text-secondary text-decoration-none">generalization</a>,
             
             <a href="papers.html?filter=keywords&search=graph networks" class="text-secondary text-decoration-none">graph networks</a>,
             
-            <a href="papers.html?filter=keywords&search=convolutional networks" class="text-secondary text-decoration-none">convolutional networks</a>,
+            <a href="papers.html?filter=keywords&search=perturbation" class="text-secondary text-decoration-none">perturbation</a>,
             
-            <a href="papers.html?filter=keywords&search=perturbation" class="text-secondary text-decoration-none">perturbation</a>
+            <a href="papers.html?filter=keywords&search=cnn" class="text-secondary text-decoration-none">cnn</a>
             
           </p>
           <div class="text-center p-3">
@@ -163,11 +163,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Wed Session 1  (05:00-07:00 GMT) 
+            <div> Wed Session 1  <span class="session_times">(05:00-07:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/88441738064?pwd=WVBsd3VIdlMxaEhPTGVLZnZDS2ppUT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Wed Session 5  (20:00-22:00 GMT) 
+            <div> Wed Session 5  <span class="session_times">(20:00-22:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/82740461923?pwd=Z2Z6VFMxU1pGU3VtU1ArV2d5MnJkdz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -191,7 +191,7 @@
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -355,4 +355,10 @@
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

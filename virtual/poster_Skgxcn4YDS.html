@@ -126,17 +126,19 @@
           </h3>
           <p class="card-text text-center"><span class="">Keywords:</span>
             
-            <a href="papers.html?filter=keywords&search=memory" class="text-secondary text-decoration-none">memory</a>,
-            
-            <a href="papers.html?filter=keywords&search=lifelong learning" class="text-secondary text-decoration-none">lifelong learning</a>,
-            
-            <a href="papers.html?filter=keywords&search=nlp" class="text-secondary text-decoration-none">nlp</a>,
+            <a href="papers.html?filter=keywords&search=catastrophic forgetting" class="text-secondary text-decoration-none">catastrophic forgetting</a>,
             
             <a href="papers.html?filter=keywords&search=language modeling" class="text-secondary text-decoration-none">language modeling</a>,
             
+            <a href="papers.html?filter=keywords&search=nlp" class="text-secondary text-decoration-none">nlp</a>,
+            
+            <a href="papers.html?filter=keywords&search=memory" class="text-secondary text-decoration-none">memory</a>,
+            
+            <a href="papers.html?filter=keywords&search=nlp" class="text-secondary text-decoration-none">nlp</a>,
+            
             <a href="papers.html?filter=keywords&search=capacity" class="text-secondary text-decoration-none">capacity</a>,
             
-            <a href="papers.html?filter=keywords&search=catastrophic forgetting" class="text-secondary text-decoration-none">catastrophic forgetting</a>
+            <a href="papers.html?filter=keywords&search=lifelong learning" class="text-secondary text-decoration-none">lifelong learning</a>
             
           </p>
           <div class="text-center p-3">
@@ -167,11 +169,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Wed Session 1  (05:00-07:00 GMT) 
+            <div> Wed Session 1  <span class="session_times">(05:00-07:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/87476997698?pwd=ckE0T3daWHRwalUwZ1hndlN5UDd0QT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Wed Session 2  (08:00-10:00 GMT) 
+            <div> Wed Session 2  <span class="session_times">(08:00-10:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/88401306496?pwd=SUp4d3ZRSVFpTzJNTERHdHZLSHg2dz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -202,7 +204,7 @@ The source code is available at https://github.com/jojotenya/LAMOL.
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -392,4 +394,10 @@ The source code is available at https://github.com/jojotenya/LAMOL.
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

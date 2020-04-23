@@ -126,15 +126,13 @@
           </h3>
           <p class="card-text text-center"><span class="">Keywords:</span>
             
-            <a href="papers.html?filter=keywords&search=reading comprehension" class="text-secondary text-decoration-none">reading comprehension</a>,
+            <a href="papers.html?filter=keywords&search=reasoning" class="text-secondary text-decoration-none">reasoning</a>,
             
             <a href="papers.html?filter=keywords&search=reinforcement learning" class="text-secondary text-decoration-none">reinforcement learning</a>,
             
             <a href="papers.html?filter=keywords&search=nlp" class="text-secondary text-decoration-none">nlp</a>,
             
-            <a href="papers.html?filter=keywords&search=cnn" class="text-secondary text-decoration-none">cnn</a>,
-            
-            <a href="papers.html?filter=keywords&search=reasoning" class="text-secondary text-decoration-none">reasoning</a>
+            <a href="papers.html?filter=keywords&search=reading comprehension" class="text-secondary text-decoration-none">reading comprehension</a>
             
           </p>
           <div class="text-center p-3">
@@ -161,11 +159,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Thurs Session 1  (05:00-07:00 GMT) 
+            <div> Thurs Session 1  <span class="session_times">(05:00-07:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/85823573789?pwd=VXppOE40MWFhQUYrQWExZGVrYjZqdz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Thurs Session 4  (17:00-19:00 GMT) 
+            <div> Thurs Session 4  <span class="session_times">(17:00-19:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/89957830500?pwd=NXp4Q3hFWVgrd2FnWUtQZTA0ZFBtZz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -189,7 +187,7 @@
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -359,4 +357,10 @@
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

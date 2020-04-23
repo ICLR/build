@@ -124,11 +124,11 @@
           </h3>
           <p class="card-text text-center"><span class="">Keywords:</span>
             
-            <a href="papers.html?filter=keywords&search=adversarial" class="text-secondary text-decoration-none">adversarial</a>,
+            <a href="papers.html?filter=keywords&search=deep learning theory" class="text-secondary text-decoration-none">deep learning theory</a>,
             
             <a href="papers.html?filter=keywords&search=generalization" class="text-secondary text-decoration-none">generalization</a>,
             
-            <a href="papers.html?filter=keywords&search=deep learning theory" class="text-secondary text-decoration-none">deep learning theory</a>
+            <a href="papers.html?filter=keywords&search=adversarial" class="text-secondary text-decoration-none">adversarial</a>
             
           </p>
           <div class="text-center p-3">
@@ -155,11 +155,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Tues Session 1  (05:00-07:00 GMT) 
+            <div> Tues Session 1  <span class="session_times">(05:00-07:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/82109765868?pwd=NDc2bHFqeWN2MGNvUzNwUm16L1VLQT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Tues Session 3  (12:00-14:00 GMT) 
+            <div> Tues Session 3  <span class="session_times">(12:00-14:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/89946940578?pwd=VlNnT1hzZXlQcDlrT3JwSGZSb0MwUT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -183,7 +183,7 @@
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -337,4 +337,10 @@
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

@@ -136,13 +136,11 @@
           </h3>
           <p class="card-text text-center"><span class="">Keywords:</span>
             
-            <a href="papers.html?filter=keywords&search=question answering" class="text-secondary text-decoration-none">question answering</a>,
-            
-            <a href="papers.html?filter=keywords&search=exploration" class="text-secondary text-decoration-none">exploration</a>,
+            <a href="papers.html?filter=keywords&search=attention" class="text-secondary text-decoration-none">attention</a>,
             
             <a href="papers.html?filter=keywords&search=nlp" class="text-secondary text-decoration-none">nlp</a>,
             
-            <a href="papers.html?filter=keywords&search=attention" class="text-secondary text-decoration-none">attention</a>
+            <a href="papers.html?filter=keywords&search=question answering" class="text-secondary text-decoration-none">question answering</a>
             
           </p>
           <div class="text-center p-3">
@@ -169,11 +167,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Mon Session 1  (05:00-07:00 GMT) 
+            <div> Mon Session 1  <span class="session_times">(05:00-07:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/83755141887?pwd=T09RcUlEakNDdUsrM0N5SWF1RWxZdz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Mon Session 2  (08:00-10:00 GMT) 
+            <div> Mon Session 2  <span class="session_times">(08:00-10:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/86730595510?pwd=T0F0YkpyQTVSbDJad2NCeW9HcG4vZz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -199,7 +197,7 @@ The StructBERT with structural pre-training gives surprisingly good empirical re
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -377,4 +375,10 @@ The StructBERT with structural pre-training gives surprisingly good empirical re
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

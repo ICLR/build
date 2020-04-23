@@ -134,15 +134,17 @@
           </h3>
           <p class="card-text text-center"><span class="">Keywords:</span>
             
+            <a href="papers.html?filter=keywords&search=reinforcement learning" class="text-secondary text-decoration-none">reinforcement learning</a>,
+            
             <a href="papers.html?filter=keywords&search=navigation" class="text-secondary text-decoration-none">navigation</a>,
+            
+            <a href="papers.html?filter=keywords&search=attention" class="text-secondary text-decoration-none">attention</a>,
+            
+            <a href="papers.html?filter=keywords&search=policy gradient" class="text-secondary text-decoration-none">policy gradient</a>,
             
             <a href="papers.html?filter=keywords&search=reinforcement learning" class="text-secondary text-decoration-none">reinforcement learning</a>,
             
-            <a href="papers.html?filter=keywords&search=deep rl" class="text-secondary text-decoration-none">deep rl</a>,
-            
-            <a href="papers.html?filter=keywords&search=multiagent" class="text-secondary text-decoration-none">multiagent</a>,
-            
-            <a href="papers.html?filter=keywords&search=attention" class="text-secondary text-decoration-none">attention</a>
+            <a href="papers.html?filter=keywords&search=multi agent reinforcement learning" class="text-secondary text-decoration-none">multi agent reinforcement learning</a>
             
           </p>
           <div class="text-center p-3">
@@ -169,11 +171,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Tues Session 1  (05:00-07:00 GMT) 
+            <div> Tues Session 1  <span class="session_times">(05:00-07:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/82177636880?pwd=UnR6bHRzOXdib04wbWIxQ1ZHZGcrUT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Tues Session 2  (08:00-10:00 GMT) 
+            <div> Tues Session 2  <span class="session_times">(08:00-10:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/88050134247?pwd=U2hSTEczK05tRythRFViTHViNnNMUT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -197,7 +199,7 @@
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -357,4 +359,10 @@
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

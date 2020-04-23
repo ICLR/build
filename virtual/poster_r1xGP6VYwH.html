@@ -130,11 +130,7 @@
             
             <a href="papers.html?filter=keywords&search=reinforcement learning" class="text-secondary text-decoration-none">reinforcement learning</a>,
             
-            <a href="papers.html?filter=keywords&search=exploration" class="text-secondary text-decoration-none">exploration</a>,
-            
-            <a href="papers.html?filter=keywords&search=intrinsic motivation" class="text-secondary text-decoration-none">intrinsic motivation</a>,
-            
-            <a href="papers.html?filter=keywords&search=deep rl" class="text-secondary text-decoration-none">deep rl</a>
+            <a href="papers.html?filter=keywords&search=intrinsic motivation" class="text-secondary text-decoration-none">intrinsic motivation</a>
             
           </p>
           <div class="text-center p-3">
@@ -161,11 +157,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Mon Session 4  (17:00-19:00 GMT) 
+            <div> Mon Session 4  <span class="session_times">(17:00-19:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/89321384285?pwd=bFZ1a2FDY3c2ZTNVVmhLb1F4d0pEdz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Mon Session 5  (20:00-22:00 GMT) 
+            <div> Mon Session 5  <span class="session_times">(20:00-22:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/88994988900?pwd=RkpRaFl5L3k4Qk5mZkZSZXFpODFLQT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -189,7 +185,7 @@
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -351,4 +347,10 @@
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

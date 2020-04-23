@@ -132,9 +132,7 @@
             
             <a href="papers.html?filter=keywords&search=neural architecture search" class="text-secondary text-decoration-none">neural architecture search</a>,
             
-            <a href="papers.html?filter=keywords&search=architecture search" class="text-secondary text-decoration-none">architecture search</a>,
-            
-            <a href="papers.html?filter=keywords&search=random search" class="text-secondary text-decoration-none">random search</a>
+            <a href="papers.html?filter=keywords&search=search" class="text-secondary text-decoration-none">search</a>
             
           </p>
           <div class="text-center p-3">
@@ -165,11 +163,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Thurs Session 1  (05:00-07:00 GMT) 
+            <div> Thurs Session 1  <span class="session_times">(05:00-07:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/83285789814?pwd=NTNaeTQwMTRsVDFVMWtYUnByVjFNdz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Thurs Session 4  (17:00-19:00 GMT) 
+            <div> Thurs Session 4  <span class="session_times">(17:00-19:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/81129257854?pwd=cHhvNllLSjdvVXJrMkxITzhJUzVjUT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -196,7 +194,7 @@ We believe that our evaluation framework will be key to designing NAS strategies
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -346,4 +344,10 @@ We believe that our evaluation framework will be key to designing NAS strategies
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

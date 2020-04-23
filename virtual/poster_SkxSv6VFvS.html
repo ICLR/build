@@ -128,7 +128,7 @@
           </h3>
           <p class="card-text text-center"><span class="">Keywords:</span>
             
-            <a href="papers.html?filter=keywords&search=convolutional networks" class="text-secondary text-decoration-none">convolutional networks</a>,
+            <a href="papers.html?filter=keywords&search=cnn" class="text-secondary text-decoration-none">cnn</a>,
             
             <a href="papers.html?filter=keywords&search=capacity" class="text-secondary text-decoration-none">capacity</a>
             
@@ -161,11 +161,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Tues Session 4  (17:00-19:00 GMT) 
+            <div> Tues Session 4  <span class="session_times">(17:00-19:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/87007467437?pwd=YTdBdlhBRGVsa0JBb1I5Q04wUUlDUT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Tues Session 5  (20:00-22:00 GMT) 
+            <div> Tues Session 5  <span class="session_times">(20:00-22:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/87476953492?pwd=MnFvd2pLVTZ4T2wrK3VqYWl4aUxlUT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -189,7 +189,7 @@
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -343,4 +343,10 @@
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

@@ -157,11 +157,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Wed Session 4  (17:00-19:00 GMT) 
+            <div> Wed Session 4  <span class="session_times">(17:00-19:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/85441650270?pwd=dmRmYkFxa1Zib3UzcU1OR2lRSFp0QT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Wed Session 5  (20:00-22:00 GMT) 
+            <div> Wed Session 5  <span class="session_times">(20:00-22:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/84026559697?pwd=L3puRFBpUTVEc0UzSDFyT2hKdHFZdz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -185,7 +185,7 @@
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -333,4 +333,10 @@
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

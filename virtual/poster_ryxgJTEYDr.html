@@ -134,11 +134,17 @@
             
             <a href="papers.html?filter=keywords&search=reinforcement learning" class="text-secondary text-decoration-none">reinforcement learning</a>,
             
-            <a href="papers.html?filter=keywords&search=generalization" class="text-secondary text-decoration-none">generalization</a>,
-            
             <a href="papers.html?filter=keywords&search=hierarchical reinforcement learning" class="text-secondary text-decoration-none">hierarchical reinforcement learning</a>,
             
-            <a href="papers.html?filter=keywords&search=variational information bottleneck" class="text-secondary text-decoration-none">variational information bottleneck</a>
+            <a href="papers.html?filter=keywords&search=reinforcement learning" class="text-secondary text-decoration-none">reinforcement learning</a>,
+            
+            <a href="papers.html?filter=keywords&search=variational information bottleneck" class="text-secondary text-decoration-none">variational information bottleneck</a>,
+            
+            <a href="papers.html?filter=keywords&search=generalization" class="text-secondary text-decoration-none">generalization</a>,
+            
+            <a href="papers.html?filter=keywords&search=ensembles" class="text-secondary text-decoration-none">ensembles</a>,
+            
+            <a href="papers.html?filter=keywords&search=information bottleneck" class="text-secondary text-decoration-none">information bottleneck</a>
             
           </p>
           <div class="text-center p-3">
@@ -165,11 +171,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Thurs Session 3  (12:00-14:00 GMT) 
+            <div> Thurs Session 3  <span class="session_times">(12:00-14:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/81115995845?pwd=TnJESnJncG9TbU9SWTNDcTlaajNtUT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Thurs Session 4  (17:00-19:00 GMT) 
+            <div> Thurs Session 4  <span class="session_times">(17:00-19:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/81057386953?pwd=cmswMkVEL2VIR2hYcEp2UlBTNXk3dz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -195,7 +201,7 @@ We use an information-theoretic mechanism for enabling this decentralized decisi
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -349,4 +355,10 @@ We use an information-theoretic mechanism for enabling this decentralized decisi
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

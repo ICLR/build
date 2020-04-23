@@ -134,7 +134,7 @@
           </h3>
           <p class="card-text text-center"><span class="">Keywords:</span>
             
-            <a href="papers.html?filter=keywords&search=semisupervised learning" class="text-secondary text-decoration-none">semisupervised learning</a>
+            <a href="papers.html?filter=keywords&search=semi supervised learning" class="text-secondary text-decoration-none">semi supervised learning</a>
             
           </p>
           <div class="text-center p-3">
@@ -165,11 +165,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Thurs Session 1  (05:00-07:00 GMT) 
+            <div> Thurs Session 1  <span class="session_times">(05:00-07:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/81470177312?pwd=UDJaTzR5WkpVejRQT01nOWhPWDVlQT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Thurs Session 2  (08:00-10:00 GMT) 
+            <div> Thurs Session 2  <span class="session_times">(08:00-10:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/82921668313?pwd=NWRHY2RwajNsWDdpMTlnNENGWE9iZz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -199,7 +199,7 @@ Our new algorithm, dubbed ReMixMatch, is significantly more data-efficient than 
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -355,4 +355,10 @@ Our new algorithm, dubbed ReMixMatch, is significantly more data-efficient than 
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

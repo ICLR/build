@@ -136,8 +136,6 @@
             
             <a href="papers.html?filter=keywords&search=variance" class="text-secondary text-decoration-none">variance</a>,
             
-            <a href="papers.html?filter=keywords&search=generative model" class="text-secondary text-decoration-none">generative model</a>,
-            
             <a href="papers.html?filter=keywords&search=generative models" class="text-secondary text-decoration-none">generative models</a>
             
           </p>
@@ -169,11 +167,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Wed Session 2  (08:00-10:00 GMT) 
+            <div> Wed Session 2  <span class="session_times">(08:00-10:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/87462745491?pwd=UkQ0VmFVOWpvNngxcXMzRVY5UVR0dz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Wed Session 3  (12:00-14:00 GMT) 
+            <div> Wed Session 3  <span class="session_times">(12:00-14:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/82606096962?pwd=c2ttM2FNdlZGZncxemsrZkhFazF5Zz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -197,7 +195,7 @@
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -371,4 +369,10 @@
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>

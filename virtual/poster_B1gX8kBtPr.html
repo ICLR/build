@@ -130,7 +130,11 @@
             
             <a href="papers.html?filter=keywords&search=relu networks" class="text-secondary text-decoration-none">relu networks</a>,
             
+            <a href="papers.html?filter=keywords&search=deep learning theory" class="text-secondary text-decoration-none">deep learning theory</a>,
+            
             <a href="papers.html?filter=keywords&search=adversarial" class="text-secondary text-decoration-none">adversarial</a>,
+            
+            <a href="papers.html?filter=keywords&search=robustness" class="text-secondary text-decoration-none">robustness</a>,
             
             <a href="papers.html?filter=keywords&search=interval bound propagation" class="text-secondary text-decoration-none">interval bound propagation</a>,
             
@@ -165,11 +169,11 @@
           </div>
           <div class=" text-center text-muted text-monospace">
             
-            <div> Thurs Session 3  (12:00-14:00 GMT) 
+            <div> Thurs Session 3  <span class="session_times">(12:00-14:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/89374126852?pwd=RklLelZFaGRoQmpuQVRSdDdIMEdHUT09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
-            <div> Thurs Session 4  (17:00-19:00 GMT) 
+            <div> Thurs Session 4  <span class="session_times">(17:00-19:00 GMT)</span>
               [<a href="https://us02web.zoom.us/j/83468958202?pwd=K3BUZEVoT05zd2JyWkpBMU5Ra0ZQZz09" target="_blank"  class="card-link">Live</a>] 
             </div>
             
@@ -194,7 +198,7 @@
       <div class="row m-2">
         <div class="col-md-7 col-xs-12 my-auto p-2" >
           (Note: This video is a temporary placeholder.)
-          
+
           <div id="presentation-embed-38915748" class="slp my-auto"></div>
           <script src='https://slideslive.com/embed_presentation.js'></script>
           <script>
@@ -350,4 +354,10 @@
   </div>
 </footer>
   </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
 </html>
