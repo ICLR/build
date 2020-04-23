@@ -54,6 +54,9 @@ function make_cal(name) {
                                                 header :{left:'', center:'', right: ''},
                                                 
                                                 events: events,
+                                                eventClick: function(info) {
+                                                    $(window).scrollTop($("#" +info.event.title.split(" ").join("_")).position().top - 100);
+                                                },
                                                 eventRender: function (info) {
                                                     // console.log(info.event);
                                                     // append location
