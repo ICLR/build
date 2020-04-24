@@ -52,7 +52,13 @@ function make_cal(name) {
                                                     listDay: { buttonText: 'list day' }
                                                 },
                                                 header :{left:'', center:'', right: ''},
-                                                
+                                                eventTimeFormat: { // like '14:30:00'
+                                                    hour: '2-digit',
+                                                    minute: '2-digit',
+                                                    meridiem: false,
+                                                    hour12: false,
+                                                    timeZoneName: "long"
+                                                },
                                                 events: events,
                                                 eventClick: function(info) {
                                                     $(window).scrollTop($("#" +info.event.title.split(" ").join("_")).position().top - 100);
