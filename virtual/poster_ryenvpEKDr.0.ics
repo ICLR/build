@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: A Constructive Prediction of the Generalization Error A
+ cross Scales
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:A Constructive Prediction of the Generalization Error Across Scale

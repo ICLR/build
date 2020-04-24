@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Budgeted Training: Rethinking Deep Neural Network Train
+ ing Under Resource Constraints
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Budgeted Training: Rethinking Deep Neural Network Training Under R

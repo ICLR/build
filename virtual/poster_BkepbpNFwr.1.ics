@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Progressive Memory Banks for Incremental Domain Adaptat
+ ion
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Progressive Memory Banks for Incremental Domain Adaptation

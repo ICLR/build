@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Evaluating The Search Phase of Neural Architecture Sear
+ ch
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Evaluating The Search Phase of Neural Architecture Search

@@ -1,6 +1,7 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Duration-of-Stay Storage Assignment under Uncertainty
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Duration-of-Stay Storage Assignment under Uncertainty

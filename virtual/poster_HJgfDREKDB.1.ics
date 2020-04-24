@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Higher-Order Function Networks for Learning Composable 
+ 3D Object Representations
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Higher-Order Function Networks for Learning Composable 3D Object R

@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Linear Symmetric Quantization of Neural Networks for Lo
+ w-precision Integer Hardware
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Linear Symmetric Quantization of Neural Networks for Low-precision

@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Cross-Lingual Ability of Multilingual BERT: An Empirica
+ l Study
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Cross-Lingual Ability of Multilingual BERT: An Empirical Study

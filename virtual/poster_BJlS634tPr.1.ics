@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: PC-DARTS: Partial Channel Connections for Memory-Effici
+ ent Architecture Search
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:PC-DARTS: Partial Channel Connections for Memory-Efficient Archite

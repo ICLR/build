@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Harnessing Structures for Value-Based Planning and Rein
+ forcement Learning
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Harnessing Structures for Value-Based Planning and Reinforcement L

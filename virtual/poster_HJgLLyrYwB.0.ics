@@ -1,6 +1,7 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: State-only Imitation with Transition Dynamics Mismatch
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:State-only Imitation with Transition Dynamics Mismatch

@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Toward Evaluating Robustness of Deep Reinforcement Lear
+ ning with Continuous Control
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Toward Evaluating Robustness of Deep Reinforcement Learning with C

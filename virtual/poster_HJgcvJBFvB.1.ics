@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Network Randomization: A Simple Technique for Generaliz
+ ation in Deep Reinforcement Learning
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Network Randomization: A Simple Technique for Generalization in De

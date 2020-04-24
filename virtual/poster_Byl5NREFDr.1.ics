@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Thieves on Sesame Street! Model Extraction of BERT-base
+ d APIs
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Thieves on Sesame Street! Model Extraction of BERT-based APIs

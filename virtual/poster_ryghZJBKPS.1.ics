@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Deep Batch Active Learning by Diverse\, Uncertain Gradi
+ ent Lower Bounds
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Deep Batch Active Learning by Diverse\, Uncertain Gradient Lower B

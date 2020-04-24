@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: vq-wav2vec: Self-Supervised Learning of Discrete Speech
+  Representations
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:vq-wav2vec: Self-Supervised Learning of Discrete Speech Representa

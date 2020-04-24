@@ -1,6 +1,7 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: B-Spline CNNs on Lie groups
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:B-Spline CNNs on Lie groups

@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: In Search for a SAT-friendly Binarized Neural Network A
+ rchitecture
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:In Search for a SAT-friendly Binarized Neural Network Architecture

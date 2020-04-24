@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Pre-training Tasks for Embedding-based Large-scale Retr
+ ieval
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Pre-training Tasks for Embedding-based Large-scale Retrieval

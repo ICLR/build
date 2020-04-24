@@ -1,6 +1,7 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: NAS evaluation is frustratingly hard
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:NAS evaluation is frustratingly hard

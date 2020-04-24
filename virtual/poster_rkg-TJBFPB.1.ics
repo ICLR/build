@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: RIDE: Rewarding Impact-Driven Exploration for Procedura
+ lly-Generated Environments
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:RIDE: Rewarding Impact-Driven Exploration for Procedurally-Generat

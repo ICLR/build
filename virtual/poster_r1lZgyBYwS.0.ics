@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: HiLLoC: lossless image compression with hierarchical la
+ tent variable models
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:HiLLoC: lossless image compression with hierarchical latent variab

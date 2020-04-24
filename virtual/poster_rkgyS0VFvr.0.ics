@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: DBA: Distributed Backdoor Attacks against Federated Lea
+ rning
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:DBA: Distributed Backdoor Attacks against Federated Learning

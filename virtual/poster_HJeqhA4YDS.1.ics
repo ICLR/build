@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Denoising and Regularization via Exploiting the Structu
+ ral Bias of Convolutional Generators
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Denoising and Regularization via Exploiting the Structural Bias of

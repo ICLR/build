@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Economy Statistical Recurrent Units For Inferring Nonli
+ near Granger Causality
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Economy Statistical Recurrent Units For Inferring Nonlinear Grange

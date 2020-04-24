@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Simplified Action Decoder for Deep Multi-Agent Reinforc
+ ement Learning
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Simplified Action Decoder for Deep Multi-Agent Reinforcement Learn

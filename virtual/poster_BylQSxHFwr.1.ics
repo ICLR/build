@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: AtomNAS: Fine-Grained End-to-End Neural Architecture Se
+ arch
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:AtomNAS: Fine-Grained End-to-End Neural Architecture Search

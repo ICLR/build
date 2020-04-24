@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Robust Subspace Recovery Layer for Unsupervised Anomaly
+  Detection
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Robust Subspace Recovery Layer for Unsupervised Anomaly Detection

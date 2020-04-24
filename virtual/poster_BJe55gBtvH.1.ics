@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Depth-Width Trade-offs for ReLU Networks via Sharkovsky
+ 's Theorem
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Depth-Width Trade-offs for ReLU Networks via Sharkovsky's Theorem

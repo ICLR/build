@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Nesterov Accelerated Gradient and Scale Invariance for 
+ Adversarial Attacks
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Nesterov Accelerated Gradient and Scale Invariance for Adversarial

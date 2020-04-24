@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: Meta-Learning Acquisition Functions for Transfer Learni
+ ng in Bayesian Optimization
 X-WR-TIMEZONE:Etc/GMT
 BEGIN:VEVENT
 SUMMARY:Meta-Learning Acquisition Functions for Transfer Learning in Bayes
