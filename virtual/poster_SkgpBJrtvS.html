@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="static/css/main.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+    integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="static/js/typeahead.bundle.js"></script>
+  <link rel="stylesheet" href="static/css/typeahead.css">
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/lazy_load.css">
+  <script src="static/js/lazy_load.js"></script>
+  <title> ICLR: Contrastive Representation Distillation </title>
+</head>
+  <body >
+    <!-- NAV -->
+    
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel='stylesheet'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+  integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data.min.js"
+  integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww="
+  crossorigin="anonymous"></script>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mr-auto " id="main-nav" >
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+    <img class="logo" style='visibility: ' src="static/images/ICLR-logo.png"  width="180px" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item ">
+          
+          <a class="nav-link" href="index.html">Home</a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          
+          <a class="nav-link" href="calendar.html">Schedule</a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          
+          <a class="nav-link" href="workshops.html">Workshops</a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          
+          <a class="nav-link" href="papers.html">Papers</a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          
+          <a class="nav-link" target="_blank" href="https://iclr.6connex.com/event/VirtualEvent/">
+            <nobr>Sponsor Hall <svg class="bi bi-box-arrow-up-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 003 14.5h8a1.5 1.5 0 001.5-1.5V9a.5.5 0 00-1 0v4a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V5a.5.5 0 01.5-.5h4a.5.5 0 000-1H3A1.5 1.5 0 001.5 5v8zm7-11a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V2.5H9a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
+    <path fill-rule="evenodd" d="M14.354 1.646a.5.5 0 010 .708l-8 8a.5.5 0 01-.708-.708l8-8a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+</svg></nobr>
+          </a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          
+          <a class="nav-link" href="socials.html">Socials</a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          
+          <a class="nav-link" href="chat.html">Chat</a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          
+          <a class="nav-link" href="about.html">Help</a>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container">
+      <!-- Title -->
+      <div class="pp-card m-3" style="">
+        <div class="card-header">
+          <h2 class="card-title main-title text-center" style="">
+            Contrastive Representation Distillation
+          </h2>
+          <h3 class="card-subtitle mb-2 text-muted text-center">
+            
+            <a href="papers.html?filter=authors&search=Yonglong Tian" class="text-muted">Yonglong Tian</a>,
+            
+            <a href="papers.html?filter=authors&search=Dilip Krishnan" class="text-muted">Dilip Krishnan</a>,
+            
+            <a href="papers.html?filter=authors&search=Phillip Isola" class="text-muted">Phillip Isola</a>
+            
+          </h3>
+          <p class="card-text text-center"><span class="">Keywords:</span>
+            
+            <a href="papers.html?filter=keywords&search=compression" class="text-secondary text-decoration-none">compression</a>,
+            
+            <a href="papers.html?filter=keywords&search=knowledge distillation" class="text-secondary text-decoration-none">knowledge distillation</a>,
+            
+            <a href="papers.html?filter=keywords&search=model compression" class="text-secondary text-decoration-none">model compression</a>,
+            
+            <a href="papers.html?filter=keywords&search=mutual information" class="text-secondary text-decoration-none">mutual information</a>,
+            
+            <a href="papers.html?filter=keywords&search=representation learning" class="text-secondary text-decoration-none">representation learning</a>
+            
+          </p>
+          <div class="text-center p-3">
+            <a class="card-link" data-toggle="collapse" role="button" href="#details">
+            Abstract
+            </a>
+            <a class="card-link"  target="_blank" href="http://www.openreview.net/pdf?id=SkgpBJrtvS">
+            Paper
+            </a>
+            
+            <a href="https://github.com/HobbitLong/RepDistiller" target="_blank"  class="card-link">
+            Code
+            </a>
+            
+            <a class="card-link"  target="_blank"  href="http://www.openreview.net/forum?id=SkgpBJrtvS">
+            Reviews
+            </a>
+            <!--  -->
+            <!-- <a href="38925948" target="_blank"  class="card-link"> -->
+            <!--   Slides -->
+            <!-- </a> -->
+            <!--  -->
+            <!-- </div> -->
+            <!-- <div class="text-center "> -->
+            <a href="chat.html?room=channel/poster_448" target="_blank"  class="card-link">
+            Chat
+            </a>
+          </div>
+          <div class=" text-center text-muted text-monospace">
+            
+            <div> Tues Session 4  <span class="session_times">(17:00-19:00 GMT)</span>
+              [<a href="https://us02web.zoom.us/j/89324691317?pwd=ZjBvMlJtS2JoNDZOVENUUllUTnQwdz09" target="_blank"  class="card-link">Live</a>]
+              [<a target="_blank" href="webcal://iclr.github.io/iclr-images/calendars/poster_SkgpBJrtvS.0.ics">Cal</a>] 
+            </div>
+            
+            <div> Tues Session 5  <span class="session_times">(20:00-22:00 GMT)</span>
+              [<a href="https://us02web.zoom.us/j/85481087274?pwd=a0JzVkkzUWloelJBSGNGSDBsVDladz09" target="_blank"  class="card-link">Live</a>]
+              [<a target="_blank" href="webcal://iclr.github.io/iclr-images/calendars/poster_SkgpBJrtvS.1.ics">Cal</a>] 
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div id="details" class="pp-card m-3 collapse">
+        <div class="card-body">
+          <p class="card-text">
+          <div id="abstractExample">
+            <span class="font-weight-bold">Abstract:</span>
+              Often we wish to transfer representational knowledge from one neural network to another. Examples include distilling a large network into a smaller one, transferring knowledge from one sensory modality to a second, or ensembling a collection of models into a single estimator. Knowledge distillation, the standard approach to these problems, minimizes the KL divergence between the probabilistic outputs of a teacher and student network. We demonstrate that this objective ignores important structural knowledge of the teacher network. This motivates an alternative objective by which we train a student to capture significantly more information in the teacher&#39;s representation of the data. We formulate this objective as contrastive learning. Experiments demonstrate that our resulting new objective outperforms knowledge distillation on a variety of knowledge transfer tasks, including single model compression, ensemble distillation, and cross-modal transfer. When combined with knowledge distillation, our method sets a state of the art in many transfer tasks, sometimes even outperforming the teacher network.
+          </div>
+          </p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <!-- SlidesLive -->
+    <div class="container" style="background-color:white; padding: 0px;">
+      <div class="row m-2">
+        <div class="col-md-7 col-xs-12 my-auto p-2" >
+
+          <div id="presentation-embed-38925948" class="slp my-auto"></div>
+          <script src='https://slideslive.com/embed_presentation.js'></script>
+          <script>
+            embed = new SlidesLiveEmbed('presentation-embed-38925948', {
+            presentationId: '38925948',
+            autoPlay: false, // change to true to autoplay the embedded presentation
+            verticalEnabled: true,
+            verticalWhenWidthLte: 2000,
+            allowHiddenControlsWhenPaused: true,
+            hideTitle: true
+            });
+          </script>
+        </div>
+        <div class="col-md-5 col-xs-12 p-2">
+          <div id="gitter" class="slp">
+            <center>
+              <iframe frameborder="0" src="https://iclr.rocket.chat/channel/poster_448?layout=embedded" height="700px" width="100%" ></iframe>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recs -->
+    <p></p>
+    <div  class="container" style="padding-bottom: 30px; padding-top:30px">
+      <center>
+        <h2> Similar Papers </h2>
+      </center>
+    </div>
+    <p></p>
+    <div  class="container" >
+      <div class="row">
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_ryxyCeHtPB.html" class="text-muted">
+                <h5 class="card-title" align="center">Pay Attention to Features, Transfer Learn Faster CNNs</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Kafeng Wang,
+                
+                Xitong Gao,
+                
+                Yiren Zhao,
+                
+                Xingjian Li,
+                
+                Dejing Dou,
+                
+                Cheng-Zhong Xu,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/ryxyCeHtPB.png" width="80%"/></center>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_HJlA0C4tPS.html" class="text-muted">
+                <h5 class="card-title" align="center">A Probabilistic Formulation of Unsupervised Text Style Transfer</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Junxian He,
+                
+                Xinyi Wang,
+                
+                Graham Neubig,
+                
+                Taylor Berg-Kirkpatrick,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/HJlA0C4tPS.png" width="80%"/></center>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_BJgqQ6NYvB.html" class="text-muted">
+                <h5 class="card-title" align="center">FasterSeg: Searching for Faster Real-time Semantic Segmentation</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Wuyang Chen,
+                
+                Xinyu Gong,
+                
+                Xianming Liu,
+                
+                Qian Zhang,
+                
+                Yuan Li,
+                
+                Zhangyang Wang,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BJgqQ6NYvB.png" width="80%"/></center>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 col-xs-6">
+          <div class="pp-card" >
+            <div class="pp-card-header" class="text-muted">
+              <a href="poster_BygSP6Vtvr.html" class="text-muted">
+                <h5 class="card-title" align="center">Ensemble Distribution Distillation</h5>
+              </a>
+              <h6 class="card-subtitle text-muted" align="center">
+                
+                Andrey Malinin,
+                
+                Bruno Mlodozeniec,
+                
+                Mark Gales,
+                
+              </h6>
+              <center><img class="cards_img" src="https://iclr.github.io/iclr-images/BygSP6Vtvr.png" width="80%"/></center>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <script type="text/javascript">
+  $(document).ready(function () {
+  
+  if (location.hash !== '') {
+  $('a[href="' + location.hash + '"]').tab('show');
+  }
+  
+  $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+  var hash = $(e.target).attr("href");
+  if (hash.substr(0,1) == "#") {
+  var position = $(window).scrollTop();
+  location.replace("#" + hash.substr(1));
+  $(window).scrollTop(position);
+  }
+  });
+  
+  });
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163955028-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'UA-163955028-1');
+</script>
+<footer class="footer bg-light p-4">
+  <div class="container">
+    <p class="float-right"><a href="#">Back to Top</a></p>
+    <p class="text-center">© 2020 International Conference on Learning Representations</p>
+  </div>
+</footer>
+  </body>
+  <script src="static/js/time-extend.js"></script>
+<script>
+  $(document).ready(()=>{
+    add_local_tz('.session_times');
+  })
+</script>
+</html>
