@@ -26,6 +26,35 @@
   <script src="static/js/lazy_load.js"></script>
   <title> ICLR: CAQL: Continuous Action Q-Learning </title>
 </head>
+  <meta name="citation_title" content="CAQL: Continuous Action Q-Learning" />
+  
+  <meta name="citation_author" content="Moonkyung Ryu" />
+  
+  <meta name="citation_author" content="Yinlam Chow" />
+  
+  <meta name="citation_author" content="Ross Anderson" />
+  
+  <meta name="citation_author" content="Christian Tjandraatmadja" />
+  
+  <meta name="citation_author" content="Craig Boutilier" />
+  
+  <meta name="citation_publication_date" content="2020/04"/>
+  <meta name="citation_conference_title" content="Eighth International Conference on Learning Representations" />
+  <meta name="citation_abstract" content="Reinforcement learning (RL) with value-based methods (e.g., Q-learning) has shown success in a variety of domains such as
+games and recommender systems (RSs). When the action space is finite, these algorithms implicitly finds a policy by learning the optimal value function, which are often very efficient. 
+However, one major challenge of extending Q-learning to tackle continuous-action RL problems is that obtaining optimal Bellman backup requires solving a continuous action-maximization (max-Q) problem. While it is common to restrict the parameterization of the Q-function to be concave in actions to simplify the max-Q problem, such a restriction might lead to performance degradation. Alternatively, when the Q-function is parameterized with a generic feed-forward neural network (NN), the max-Q problem can be NP-hard. In this work, we propose the CAQL method which minimizes the Bellman residual using Q-learning with one of several plug-and-play action optimizers. In particular, leveraging the strides of optimization theories in deep NN, we show that max-Q problem can be solved optimally with mixed-integer programming (MIP)---when the Q-function has sufficient representation power, this MIP-based optimization induces better policies and is more robust than counterparts, e.g., CEM or GA, that approximate the max-Q solution. To speed up training of CAQL, we develop three techniques, namely (i) dynamic tolerance, (ii) dual filtering, and (iii) clustering.
+To speed up inference of CAQL, we introduce the action function that concurrently learns the optimal policy.
+To demonstrate the efficiency of CAQL we compare it with state-of-the-art RL algorithms on benchmark continuous control problems that have different degrees of action constraints and show that CAQL significantly outperforms policy-based methods in heavily constrained environments." />
+  <meta name="citation_pdf_url" content="http://www.openreview.net/pdf?id=BkxXe0Etwr" />
+  
+  <meta name="citation_keywords" content="clustering" />
+  
+  <meta name="citation_keywords" content="continuous control" />
+  
+  <meta name="citation_keywords" content="optimization" />
+  
+  <meta name="citation_keywords" content="reinforcement learning" />
+  
   <body >
     <!-- NAV -->
     

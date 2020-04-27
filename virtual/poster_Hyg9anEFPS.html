@@ -26,6 +26,26 @@
   <script src="static/js/lazy_load.js"></script>
   <title> ICLR: Image-guided Neural Object Rendering </title>
 </head>
+  <meta name="citation_title" content="Image-guided Neural Object Rendering" />
+  
+  <meta name="citation_author" content="Justus Thies" />
+  
+  <meta name="citation_author" content="Michael Zollhöfer" />
+  
+  <meta name="citation_author" content="Christian Theobalt" />
+  
+  <meta name="citation_author" content="Marc Stamminger" />
+  
+  <meta name="citation_author" content="Matthias Nießner" />
+  
+  <meta name="citation_publication_date" content="2020/04"/>
+  <meta name="citation_conference_title" content="Eighth International Conference on Learning Representations" />
+  <meta name="citation_abstract" content="We propose a learned image-guided rendering technique that combines the benefits of image-based rendering and GAN-based image synthesis. The goal of our method is to generate photo-realistic re-renderings of reconstructed objects for virtual and augmented reality applications (e.g., virtual showrooms, virtual tours and sightseeing, the digital inspection of historical artifacts). A core component of our work is the handling of view-dependent effects. Specifically, we directly train an object-specific deep neural network to synthesize the view-dependent appearance of an object.
+As input data we are using an RGB video of the object. This video is used to reconstruct a proxy geometry of the object via multi-view stereo. Based on this 3D proxy, the appearance of a captured view can be warped into a new target view as in classical image-based rendering. This warping assumes diffuse surfaces, in case of view-dependent effects, such as specular highlights, it leads to artifacts. To this end, we propose EffectsNet, a deep neural network that predicts view-dependent effects. Based on these estimations, we are able to convert observed images to diffuse images. These diffuse images can be projected into other views. In the target view, our pipeline reinserts the new view-dependent effects. To composite multiple reprojected images to a final output, we learn a composition network that outputs photo-realistic results. Using this image-guided approach, the network does not have to allocate capacity on ``remembering&#39;&#39; object appearance, instead it learns how to combine the appearance of captured images. We demonstrate the effectiveness of our approach both qualitatively and quantitatively on synthetic as well as on real data." />
+  <meta name="citation_pdf_url" content="http://www.openreview.net/pdf?id=Hyg9anEFPS" />
+  
+  <meta name="citation_keywords" content="capacity" />
+  
   <body >
     <!-- NAV -->
     
