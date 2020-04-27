@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ICLR//mxm.dk//
+X-WR-CALNAME:ICLR: On Solving Minimax Optimization Locally: A Follow-the-R
+ idge Approach
+X-WR-TIMEZONE:GMT
+BEGIN:VEVENT
+SUMMARY:On Solving Minimax Optimization Locally: A Follow-the-Ridge Approa
+ ch
+DTSTART;VALUE=DATE-TIME:20200427T120000Z
+DTEND;VALUE=DATE-TIME:20200427T140000Z
+DTSTAMP;VALUE=DATE-TIME:20200427T120000Z
+DESCRIPTION:<a href="http://iclr.cc/virtual/poster_Hkx7_1rKwS.html">Poster
+  Page</a>
+END:VEVENT
+END:VCALENDAR
